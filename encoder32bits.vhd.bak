@@ -1,0 +1,29 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY encoder32bits IS
+	generic(n: positive:=32);
+	PORT (
+		
+		input  : IN STD_LOGIC_VECTOR ((n-1) DOWNTO 0);
+		output : OUT STD_LOGIC_VECTOR(4 downto 0);
+		
+	);
+end entity encoder32bits;
+
+architecture behavioural of encoder32bits is
+begin
+	process (input) is
+	begin
+		variable compare : std_logic:= '1';
+		for i in 0 to (n-1) loop
+			compare:=compare or input(i);
+			if compare = '1' then
+				output <= i;
+				exit;
+			elsif compare = '0' then
+				compare = '1';
+			end if;
+		end loop;
+	end process;
+end architecture behavioural;
