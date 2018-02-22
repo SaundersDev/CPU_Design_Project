@@ -68,5 +68,12 @@ set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name BDF_FILE registerFile.bdf
 set_global_assignment -name VHDL_FILE MDRregister.vhd
 set_global_assignment -name VHDL_FILE multiplexerMDR.vhd
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name BDF_FILE MDR.bdf
+set_global_assignment -name VHDL_FILE band5exp1.vhd
+set_global_assignment -name BDF_FILE band5exp1.bdf
+set_global_assignment -name BDF_FILE aluComponent.bdf
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name QIP_FILE blah.qip
+set_global_assignment -name QIP_FILE aluAdderComponent.qip
+set_global_assignment -name BDF_FILE aluAdder.bdf
+set_global_assignment -name QIP_FILE aluSubtracterComponent.qip

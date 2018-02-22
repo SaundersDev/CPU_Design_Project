@@ -50,7 +50,7 @@ DUT : datapath
 	BusMuxOut	=>	BusMuxOut_tb
 	Clock 		=> 	Clock_tb);
 	
-	CLock_process:PROCESS
+	Clock_process:PROCESS
 	BEGIN
 		Clock_tb<='1';
 		Wait for 10ns;
