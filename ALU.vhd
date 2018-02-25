@@ -37,10 +37,13 @@ component boothMultiplier()
 	output			: out std_logic_vector(63 downto 0);
 	);
 end component boothMultiplier;	
-component aluAddert()
+component thirtyTwoBitRippleCarryAdder()
 	port(
-	inputA, inputB  							: in std_logic_vector(31 downto 0);
-	adderOutput, subtracterOutput			: out std_logic_vector(31 downto 0);
+		A		:   in std_logic_vector(31 downto 0);
+		B		:	in std_logic_vector(31 downto 0);
+		Cin	:  in std_logic;
+		S		:  out std_logic_vector(31 downto 0);
+		Cout 	:  out std_logic
 	);
 end component boothMultiplier;
 signal addResult, subResult, mulResult, divResult 	: std_logic_vector(31 downto 0);
@@ -49,20 +52,16 @@ signal rolResult, andResult, orResult, negResult	: std_logic_vector(31 downto 0)
 signal notResult	: std_logic_vector(31 downto 0);
 
 begin
-addResult <= adderOutput;
-subResult <= subtracterOutput;
+addResult <= S;
+subResult <= S;
 --mulResult <= 
 --divResult <= 
 shrResult <= B(30 downto 0) := B(31 downto 1)
 --B srl 1;
-
-
-
 --shraResult<= B() sra 1;
 shlResult <= B(31 downto 1) := B(30 downto 0);
 --rorResult <= B ror 1;
 --rolResult <= B rol 1;
-
 andResult <= A AND B;
 orResult  <= A OR B;
 negResult <= "00000000000000000000000000000000"
