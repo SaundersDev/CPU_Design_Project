@@ -45,43 +45,102 @@ component thirtyTwoBitRippleCarryAdder()
 		S		:  out std_logic_vector(31 downto 0);
 		Cout 	:  out std_logic
 	);
-end component boothMultiplier;
+end component thirtyTwoBitRippleCarryAdder;
+component andGate()
+	port(
+		A, B : in std_logic_vector(31 downto 0);
+		S : out std_logic_vector(31 downto 0);
+	);
+end component;
+component orGate()
+	port(
+		A, B : in std_logic_vector(31 downto 0);
+		S : out std_logic_vector(31 downto 0);
+	);
+end component;
+component notGate()
+	port(
+		B : in std_logic_vector(31 downto 0);
+		S : out std_logic_vector(31 downto 0);
+	);
+end component;
+component negGate()
+	port(
+		B : in std_logic_vector(31 downto 0);
+		S : out std_logic_vector(31 downto 0);
+	);
+end component;
+component shiftRotateComponent()
+	port(
+		B 					: in std_logic_vector(31 downto 0);
+		sL, sR, sR_A, rL, rR : out std_logic_vector(31 downto 0);
+	);
+end component;
+
 signal addResult, subResult, mulResult, divResult 	: std_logic_vector(31 downto 0);
 signal shrResult, shraResult, shlResult, rorResult	: std_logic_vector(31 downto 0);
 signal rolResult, andResult, orResult, negResult	: std_logic_vector(31 downto 0);
 signal notResult	: std_logic_vector(31 downto 0);
 
 begin
-addResult <= S;
-subResult <= S;
---mulResult <= 
---divResult <= 
-shrResult <= B(30 downto 0) := B(31 downto 1)
---B srl 1;
---shraResult<= B() sra 1;
-shlResult <= B(31 downto 1) := B(30 downto 0);
---rorResult <= B ror 1;
---rolResult <= B rol 1;
-andResult <= A AND B;
-orResult  <= A OR B;
-negResult <= "00000000000000000000000000000000"
-notResult <= A NOT B; --1's complement
+U0: thirtyTwoBitRippleCarryAdder	port map(
+		A		=> A,
+		B		=> B,
+				=> Cin,
+		addResult => S,
+				=> Cout 	
+	);
+
+U1: andGate port map(
+		A					=> A,
+		B					=> B,
+		andResult		=> S
+	);
+
+U2: orGate port map(
+		A					=> A,
+		B					=> B,
+		orResult		=> S
+	);
+
+U3: notGate	port map(
+		A					=> A,
+		B					=> B,
+		notResult		=> S
+	);
+	
+U4: negGate port map(
+		A					=> A,
+		B					=> B,
+		negResult		=> S
+	);
+
+U5: shiftRotateComponent port map(
+		A			=> A,
+		B			=> B,
+		shlResult=> sL,
+		shrResult=> sR,
+		shraResult = sR_A,
+		rolResult=> rL,
+		rorResult=> rR
+	);
+	
 process(B,control)
 begin
 	case control is
 		when "0000000000001" => result <= addResult--ADD 2's complement
-		when "0000000000010" => result <= addResult--SUB 2's complement
-		when "0000000000100" => result <= addResult--MUL 2's complement
-		when "0000000001000" =>	result <= addResult--DIV 2's complement
-		when "0000000010000" => result <= addResult--SHR 2's complement
-		when "0000000100000" => result <= addResult--SHRA 2's complement
-		when "0000001000000" => result <= addResult--SHL 2's complement
-		when "0000010000000" => result <= addResult--ROR 2's complement
-		when "0000100000000" => result <= addResult--ROL 2's complement
-		when "0001000000000" => result <= addResult--AND 2's complement
-		when "0010000000000" => result <= addResult--OR 2's complement
-		when "0100000000000" => result <= addResult--NEG 2's complement
-		when "1000000000000" => result <= addResult--NOT 1's complement
+		when "0000000000010" => result <= subResult--SUB 2's complement
+		when "0000000000100" => result <= mulResult--MUL 2's complement
+		when "0000000001000" =>	result <= divResult--DIV 2's complement
+		when "0000000010000" => result <= shrResult--SHR 2's complement
+		when "0000000100000" => result <= shraResult--SHRA 2's complement
+		when "0000001000000" => result <= shlResult--SHL 2's complement
+		when "0000010000000" => result <= rorResult--ROR 2's complement
+		when "0000100000000" => result <= rolResult--ROL 2's complement
+		when "0001000000000" => result <= andResult--AND 2's complement
+		when "0010000000000" => result <= orResult--OR 2's complement
+		when "0100000000000" => result <= negResult--NEG 2's complement
+		when "1000000000000" => result <= notResult--NOT 1's complement
 	end case;
 end process;
 end behaviour;	
