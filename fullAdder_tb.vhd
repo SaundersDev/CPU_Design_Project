@@ -33,7 +33,7 @@ architecture arch of fullAdder_tb is
 			sim_process: process
 		
 			begin
-				
+					wait for 0 ns;
 				a_tb <= '0';
 				b_tb <= '0';
 				cIn_tb <= '0';

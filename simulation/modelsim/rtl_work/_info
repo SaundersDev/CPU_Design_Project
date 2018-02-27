@@ -1,0 +1,145 @@
+m255
+K3
+13
+cModel Technology
+Z0 dZ:\ELEC374\CPU_Design_Project_Testing\simulation\modelsim
+Eaddersubtractor
+Z1 w1519662914
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dZ:\ELEC374\CPU_Design_Project_Testing\simulation\modelsim
+Z5 8Z:/ELEC374/CPU_Design_Project_Testing/addersubtractor.vhd
+Z6 FZ:/ELEC374/CPU_Design_Project_Testing/addersubtractor.vhd
+l0
+L24
+VNXaZd@kLX9>aGW<a>oCY?3
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1519696697.281000
+Z9 !s90 -reportprogress|300|-93|-work|work|Z:/ELEC374/CPU_Design_Project_Testing/addersubtractor.vhd|
+Z10 !s107 Z:/ELEC374/CPU_Design_Project_Testing/addersubtractor.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 5Ff]:z@e:imfH[TH:fnAi1
+!i10b 1
+Abdf_type
+R2
+R3
+DEx4 work 15 addersubtractor 0 22 NXaZd@kLX9>aGW<a>oCY?3
+l48
+L35
+V`NDze`=Zo]EJD5dCoFz^a3
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 6The3iJgLWK5EZg7B@Bk02
+!i10b 1
+Efulladder
+R1
+R2
+R3
+R4
+Z13 8Z:/ELEC374/CPU_Design_Project_Testing/fulladder.vhd
+Z14 FZ:/ELEC374/CPU_Design_Project_Testing/fulladder.vhd
+l0
+L4
+VjQIb<8O02KlO_?[U2?aE20
+R7
+31
+Z15 !s108 1519696698.109000
+Z16 !s90 -reportprogress|300|-93|-work|work|Z:/ELEC374/CPU_Design_Project_Testing/fulladder.vhd|
+Z17 !s107 Z:/ELEC374/CPU_Design_Project_Testing/fulladder.vhd|
+R11
+R12
+!s100 ihD<I@VF5EE]F<Z2?[L=53
+!i10b 1
+Abehaviour
+R2
+R3
+DEx4 work 9 fulladder 0 22 jQIb<8O02KlO_?[U2?aE20
+l13
+L11
+VVSWzSPH97e;KDda?FYSni2
+R7
+31
+R15
+R16
+R17
+R11
+R12
+!s100 z<2OL[72eRfPnS[3RjAj_0
+!i10b 1
+Ethirtytwobitripplecarryadder
+R1
+R2
+R3
+R4
+Z18 8Z:/ELEC374/CPU_Design_Project_Testing/thirtyTwoBitRippleCarryAdder.vhd
+Z19 FZ:/ELEC374/CPU_Design_Project_Testing/thirtyTwoBitRippleCarryAdder.vhd
+l0
+L6
+VX^UEIKPd<OIi>?[UFPJjk1
+R7
+31
+Z20 !s108 1519696696.452000
+Z21 !s90 -reportprogress|300|-93|-work|work|Z:/ELEC374/CPU_Design_Project_Testing/thirtyTwoBitRippleCarryAdder.vhd|
+Z22 !s107 Z:/ELEC374/CPU_Design_Project_Testing/thirtyTwoBitRippleCarryAdder.vhd|
+R11
+R12
+!s100 X=CoWA8_AY<>L`<>l[Jf52
+!i10b 1
+Abdf_type
+R2
+R3
+DEx4 work 28 thirtytwobitripplecarryadder 0 22 X^UEIKPd<OIi>?[UFPJjk1
+l33
+L17
+V1nVD9l4g2_lg;3KRHVmjg0
+R7
+31
+R20
+R21
+R22
+R11
+R12
+!s100 4GeILzB3@dojS:B?BZ0ib1
+!i10b 1
+Ethirtytwobitripplecarryadder_tb
+Z23 w1519696508
+R2
+R3
+R4
+Z24 8Z:/ELEC374/CPU_Design_Project_Testing/thirtyTwoBitRippleCarryAdder_tb.vhd
+Z25 FZ:/ELEC374/CPU_Design_Project_Testing/thirtyTwoBitRippleCarryAdder_tb.vhd
+l0
+L4
+V>28H=?OZJ?c@]`ojAGa>i3
+!s100 RGj=_aAa>=>XGlzU2>zm11
+R7
+31
+!i10b 1
+Z26 !s108 1519696698.922000
+Z27 !s90 -reportprogress|300|-93|-work|work|Z:/ELEC374/CPU_Design_Project_Testing/thirtyTwoBitRippleCarryAdder_tb.vhd|
+Z28 !s107 Z:/ELEC374/CPU_Design_Project_Testing/thirtyTwoBitRippleCarryAdder_tb.vhd|
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 31 thirtytwobitripplecarryadder_tb 0 22 >28H=?OZJ?c@]`ojAGa>i3
+l25
+L7
+Vzd`CgRVgAcj56RZ7@X;me0
+!s100 `bGF3D0E_C7Ez5A0Ym7351
+R7
+31
+!i10b 1
+R26
+R27
+R28
+R11
+R12
