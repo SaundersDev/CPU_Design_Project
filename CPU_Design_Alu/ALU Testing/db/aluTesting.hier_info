@@ -1,0 +1,3012 @@
+|ALU
+control[0] => Equal0.IN25
+control[0] => Equal1.IN25
+control[0] => Equal2.IN25
+control[0] => Equal3.IN25
+control[0] => Equal4.IN25
+control[0] => Equal5.IN25
+control[0] => Equal6.IN25
+control[0] => Equal7.IN25
+control[0] => Equal8.IN25
+control[0] => Equal9.IN25
+control[0] => Equal10.IN25
+control[0] => Equal11.IN25
+control[1] => Equal0.IN24
+control[1] => Equal1.IN24
+control[1] => Equal2.IN24
+control[1] => Equal3.IN24
+control[1] => Equal4.IN24
+control[1] => Equal5.IN24
+control[1] => Equal6.IN24
+control[1] => Equal7.IN24
+control[1] => Equal8.IN24
+control[1] => Equal9.IN24
+control[1] => Equal10.IN24
+control[1] => Equal11.IN24
+control[2] => Equal0.IN23
+control[2] => Equal1.IN23
+control[2] => Equal2.IN23
+control[2] => Equal3.IN23
+control[2] => Equal4.IN23
+control[2] => Equal5.IN23
+control[2] => Equal6.IN23
+control[2] => Equal7.IN23
+control[2] => Equal8.IN23
+control[2] => Equal9.IN23
+control[2] => Equal10.IN23
+control[2] => Equal11.IN23
+control[3] => Equal0.IN22
+control[3] => Equal1.IN22
+control[3] => Equal2.IN22
+control[3] => Equal3.IN22
+control[3] => Equal4.IN22
+control[3] => Equal5.IN22
+control[3] => Equal6.IN22
+control[3] => Equal7.IN22
+control[3] => Equal8.IN22
+control[3] => Equal9.IN22
+control[3] => Equal10.IN22
+control[3] => Equal11.IN22
+control[4] => Equal0.IN21
+control[4] => Equal1.IN21
+control[4] => Equal2.IN21
+control[4] => Equal3.IN21
+control[4] => Equal4.IN21
+control[4] => Equal5.IN21
+control[4] => Equal6.IN21
+control[4] => Equal7.IN21
+control[4] => Equal8.IN21
+control[4] => Equal9.IN21
+control[4] => Equal10.IN21
+control[4] => Equal11.IN21
+control[5] => Equal0.IN20
+control[5] => Equal1.IN20
+control[5] => Equal2.IN20
+control[5] => Equal3.IN20
+control[5] => Equal4.IN20
+control[5] => Equal5.IN20
+control[5] => Equal6.IN20
+control[5] => Equal7.IN20
+control[5] => Equal8.IN20
+control[5] => Equal9.IN20
+control[5] => Equal10.IN20
+control[5] => Equal11.IN20
+control[6] => Equal0.IN19
+control[6] => Equal1.IN19
+control[6] => Equal2.IN19
+control[6] => Equal3.IN19
+control[6] => Equal4.IN19
+control[6] => Equal5.IN19
+control[6] => Equal6.IN19
+control[6] => Equal7.IN19
+control[6] => Equal8.IN19
+control[6] => Equal9.IN19
+control[6] => Equal10.IN19
+control[6] => Equal11.IN19
+control[7] => Equal0.IN18
+control[7] => Equal1.IN18
+control[7] => Equal2.IN18
+control[7] => Equal3.IN18
+control[7] => Equal4.IN18
+control[7] => Equal5.IN18
+control[7] => Equal6.IN18
+control[7] => Equal7.IN18
+control[7] => Equal8.IN18
+control[7] => Equal9.IN18
+control[7] => Equal10.IN18
+control[7] => Equal11.IN18
+control[8] => Equal0.IN17
+control[8] => Equal1.IN17
+control[8] => Equal2.IN17
+control[8] => Equal3.IN17
+control[8] => Equal4.IN17
+control[8] => Equal5.IN17
+control[8] => Equal6.IN17
+control[8] => Equal7.IN17
+control[8] => Equal8.IN17
+control[8] => Equal9.IN17
+control[8] => Equal10.IN17
+control[8] => Equal11.IN17
+control[9] => Equal0.IN16
+control[9] => Equal1.IN16
+control[9] => Equal2.IN16
+control[9] => Equal3.IN16
+control[9] => Equal4.IN16
+control[9] => Equal5.IN16
+control[9] => Equal6.IN16
+control[9] => Equal7.IN16
+control[9] => Equal8.IN16
+control[9] => Equal9.IN16
+control[9] => Equal10.IN16
+control[9] => Equal11.IN16
+control[10] => Equal0.IN15
+control[10] => Equal1.IN15
+control[10] => Equal2.IN15
+control[10] => Equal3.IN15
+control[10] => Equal4.IN15
+control[10] => Equal5.IN15
+control[10] => Equal6.IN15
+control[10] => Equal7.IN15
+control[10] => Equal8.IN15
+control[10] => Equal9.IN15
+control[10] => Equal10.IN15
+control[10] => Equal11.IN15
+control[11] => Equal0.IN14
+control[11] => Equal1.IN14
+control[11] => Equal2.IN14
+control[11] => Equal3.IN14
+control[11] => Equal4.IN14
+control[11] => Equal5.IN14
+control[11] => Equal6.IN14
+control[11] => Equal7.IN14
+control[11] => Equal8.IN14
+control[11] => Equal9.IN14
+control[11] => Equal10.IN14
+control[11] => Equal11.IN14
+control[12] => Equal0.IN13
+control[12] => Equal1.IN13
+control[12] => Equal2.IN13
+control[12] => Equal3.IN13
+control[12] => Equal4.IN13
+control[12] => Equal5.IN13
+control[12] => Equal6.IN13
+control[12] => Equal7.IN13
+control[12] => Equal8.IN13
+control[12] => Equal9.IN13
+control[12] => Equal10.IN13
+control[12] => Equal11.IN13
+A[0] => thirtyTwoBitRippleCarryAdder:U0.A[0]
+A[0] => andGate:U1.A[0]
+A[0] => orGate:U2.A[0]
+A[0] => thirtyTwoBitRippleCarrySubtractor:U6.A[0]
+A[1] => thirtyTwoBitRippleCarryAdder:U0.A[1]
+A[1] => andGate:U1.A[1]
+A[1] => orGate:U2.A[1]
+A[1] => thirtyTwoBitRippleCarrySubtractor:U6.A[1]
+A[2] => thirtyTwoBitRippleCarryAdder:U0.A[2]
+A[2] => andGate:U1.A[2]
+A[2] => orGate:U2.A[2]
+A[2] => thirtyTwoBitRippleCarrySubtractor:U6.A[2]
+A[3] => thirtyTwoBitRippleCarryAdder:U0.A[3]
+A[3] => andGate:U1.A[3]
+A[3] => orGate:U2.A[3]
+A[3] => thirtyTwoBitRippleCarrySubtractor:U6.A[3]
+A[4] => thirtyTwoBitRippleCarryAdder:U0.A[4]
+A[4] => andGate:U1.A[4]
+A[4] => orGate:U2.A[4]
+A[4] => thirtyTwoBitRippleCarrySubtractor:U6.A[4]
+A[5] => thirtyTwoBitRippleCarryAdder:U0.A[5]
+A[5] => andGate:U1.A[5]
+A[5] => orGate:U2.A[5]
+A[5] => thirtyTwoBitRippleCarrySubtractor:U6.A[5]
+A[6] => thirtyTwoBitRippleCarryAdder:U0.A[6]
+A[6] => andGate:U1.A[6]
+A[6] => orGate:U2.A[6]
+A[6] => thirtyTwoBitRippleCarrySubtractor:U6.A[6]
+A[7] => thirtyTwoBitRippleCarryAdder:U0.A[7]
+A[7] => andGate:U1.A[7]
+A[7] => orGate:U2.A[7]
+A[7] => thirtyTwoBitRippleCarrySubtractor:U6.A[7]
+A[8] => thirtyTwoBitRippleCarryAdder:U0.A[8]
+A[8] => andGate:U1.A[8]
+A[8] => orGate:U2.A[8]
+A[8] => thirtyTwoBitRippleCarrySubtractor:U6.A[8]
+A[9] => thirtyTwoBitRippleCarryAdder:U0.A[9]
+A[9] => andGate:U1.A[9]
+A[9] => orGate:U2.A[9]
+A[9] => thirtyTwoBitRippleCarrySubtractor:U6.A[9]
+A[10] => thirtyTwoBitRippleCarryAdder:U0.A[10]
+A[10] => andGate:U1.A[10]
+A[10] => orGate:U2.A[10]
+A[10] => thirtyTwoBitRippleCarrySubtractor:U6.A[10]
+A[11] => thirtyTwoBitRippleCarryAdder:U0.A[11]
+A[11] => andGate:U1.A[11]
+A[11] => orGate:U2.A[11]
+A[11] => thirtyTwoBitRippleCarrySubtractor:U6.A[11]
+A[12] => thirtyTwoBitRippleCarryAdder:U0.A[12]
+A[12] => andGate:U1.A[12]
+A[12] => orGate:U2.A[12]
+A[12] => thirtyTwoBitRippleCarrySubtractor:U6.A[12]
+A[13] => thirtyTwoBitRippleCarryAdder:U0.A[13]
+A[13] => andGate:U1.A[13]
+A[13] => orGate:U2.A[13]
+A[13] => thirtyTwoBitRippleCarrySubtractor:U6.A[13]
+A[14] => thirtyTwoBitRippleCarryAdder:U0.A[14]
+A[14] => andGate:U1.A[14]
+A[14] => orGate:U2.A[14]
+A[14] => thirtyTwoBitRippleCarrySubtractor:U6.A[14]
+A[15] => thirtyTwoBitRippleCarryAdder:U0.A[15]
+A[15] => andGate:U1.A[15]
+A[15] => orGate:U2.A[15]
+A[15] => thirtyTwoBitRippleCarrySubtractor:U6.A[15]
+A[16] => thirtyTwoBitRippleCarryAdder:U0.A[16]
+A[16] => andGate:U1.A[16]
+A[16] => orGate:U2.A[16]
+A[16] => thirtyTwoBitRippleCarrySubtractor:U6.A[16]
+A[17] => thirtyTwoBitRippleCarryAdder:U0.A[17]
+A[17] => andGate:U1.A[17]
+A[17] => orGate:U2.A[17]
+A[17] => thirtyTwoBitRippleCarrySubtractor:U6.A[17]
+A[18] => thirtyTwoBitRippleCarryAdder:U0.A[18]
+A[18] => andGate:U1.A[18]
+A[18] => orGate:U2.A[18]
+A[18] => thirtyTwoBitRippleCarrySubtractor:U6.A[18]
+A[19] => thirtyTwoBitRippleCarryAdder:U0.A[19]
+A[19] => andGate:U1.A[19]
+A[19] => orGate:U2.A[19]
+A[19] => thirtyTwoBitRippleCarrySubtractor:U6.A[19]
+A[20] => thirtyTwoBitRippleCarryAdder:U0.A[20]
+A[20] => andGate:U1.A[20]
+A[20] => orGate:U2.A[20]
+A[20] => thirtyTwoBitRippleCarrySubtractor:U6.A[20]
+A[21] => thirtyTwoBitRippleCarryAdder:U0.A[21]
+A[21] => andGate:U1.A[21]
+A[21] => orGate:U2.A[21]
+A[21] => thirtyTwoBitRippleCarrySubtractor:U6.A[21]
+A[22] => thirtyTwoBitRippleCarryAdder:U0.A[22]
+A[22] => andGate:U1.A[22]
+A[22] => orGate:U2.A[22]
+A[22] => thirtyTwoBitRippleCarrySubtractor:U6.A[22]
+A[23] => thirtyTwoBitRippleCarryAdder:U0.A[23]
+A[23] => andGate:U1.A[23]
+A[23] => orGate:U2.A[23]
+A[23] => thirtyTwoBitRippleCarrySubtractor:U6.A[23]
+A[24] => thirtyTwoBitRippleCarryAdder:U0.A[24]
+A[24] => andGate:U1.A[24]
+A[24] => orGate:U2.A[24]
+A[24] => thirtyTwoBitRippleCarrySubtractor:U6.A[24]
+A[25] => thirtyTwoBitRippleCarryAdder:U0.A[25]
+A[25] => andGate:U1.A[25]
+A[25] => orGate:U2.A[25]
+A[25] => thirtyTwoBitRippleCarrySubtractor:U6.A[25]
+A[26] => thirtyTwoBitRippleCarryAdder:U0.A[26]
+A[26] => andGate:U1.A[26]
+A[26] => orGate:U2.A[26]
+A[26] => thirtyTwoBitRippleCarrySubtractor:U6.A[26]
+A[27] => thirtyTwoBitRippleCarryAdder:U0.A[27]
+A[27] => andGate:U1.A[27]
+A[27] => orGate:U2.A[27]
+A[27] => thirtyTwoBitRippleCarrySubtractor:U6.A[27]
+A[28] => thirtyTwoBitRippleCarryAdder:U0.A[28]
+A[28] => andGate:U1.A[28]
+A[28] => orGate:U2.A[28]
+A[28] => thirtyTwoBitRippleCarrySubtractor:U6.A[28]
+A[29] => thirtyTwoBitRippleCarryAdder:U0.A[29]
+A[29] => andGate:U1.A[29]
+A[29] => orGate:U2.A[29]
+A[29] => thirtyTwoBitRippleCarrySubtractor:U6.A[29]
+A[30] => thirtyTwoBitRippleCarryAdder:U0.A[30]
+A[30] => andGate:U1.A[30]
+A[30] => orGate:U2.A[30]
+A[30] => thirtyTwoBitRippleCarrySubtractor:U6.A[30]
+A[31] => thirtyTwoBitRippleCarryAdder:U0.A[31]
+A[31] => andGate:U1.A[31]
+A[31] => orGate:U2.A[31]
+A[31] => thirtyTwoBitRippleCarrySubtractor:U6.A[31]
+B[0] => thirtyTwoBitRippleCarryAdder:U0.B[0]
+B[0] => andGate:U1.B[0]
+B[0] => orGate:U2.B[0]
+B[0] => notGate:U3.B[0]
+B[0] => negGate:U4.B[0]
+B[0] => shiftRotateComponent:U5.B[0]
+B[0] => thirtyTwoBitRippleCarrySubtractor:U6.B[0]
+B[1] => thirtyTwoBitRippleCarryAdder:U0.B[1]
+B[1] => andGate:U1.B[1]
+B[1] => orGate:U2.B[1]
+B[1] => notGate:U3.B[1]
+B[1] => negGate:U4.B[1]
+B[1] => shiftRotateComponent:U5.B[1]
+B[1] => thirtyTwoBitRippleCarrySubtractor:U6.B[1]
+B[2] => thirtyTwoBitRippleCarryAdder:U0.B[2]
+B[2] => andGate:U1.B[2]
+B[2] => orGate:U2.B[2]
+B[2] => notGate:U3.B[2]
+B[2] => negGate:U4.B[2]
+B[2] => shiftRotateComponent:U5.B[2]
+B[2] => thirtyTwoBitRippleCarrySubtractor:U6.B[2]
+B[3] => thirtyTwoBitRippleCarryAdder:U0.B[3]
+B[3] => andGate:U1.B[3]
+B[3] => orGate:U2.B[3]
+B[3] => notGate:U3.B[3]
+B[3] => negGate:U4.B[3]
+B[3] => shiftRotateComponent:U5.B[3]
+B[3] => thirtyTwoBitRippleCarrySubtractor:U6.B[3]
+B[4] => thirtyTwoBitRippleCarryAdder:U0.B[4]
+B[4] => andGate:U1.B[4]
+B[4] => orGate:U2.B[4]
+B[4] => notGate:U3.B[4]
+B[4] => negGate:U4.B[4]
+B[4] => shiftRotateComponent:U5.B[4]
+B[4] => thirtyTwoBitRippleCarrySubtractor:U6.B[4]
+B[5] => thirtyTwoBitRippleCarryAdder:U0.B[5]
+B[5] => andGate:U1.B[5]
+B[5] => orGate:U2.B[5]
+B[5] => notGate:U3.B[5]
+B[5] => negGate:U4.B[5]
+B[5] => shiftRotateComponent:U5.B[5]
+B[5] => thirtyTwoBitRippleCarrySubtractor:U6.B[5]
+B[6] => thirtyTwoBitRippleCarryAdder:U0.B[6]
+B[6] => andGate:U1.B[6]
+B[6] => orGate:U2.B[6]
+B[6] => notGate:U3.B[6]
+B[6] => negGate:U4.B[6]
+B[6] => shiftRotateComponent:U5.B[6]
+B[6] => thirtyTwoBitRippleCarrySubtractor:U6.B[6]
+B[7] => thirtyTwoBitRippleCarryAdder:U0.B[7]
+B[7] => andGate:U1.B[7]
+B[7] => orGate:U2.B[7]
+B[7] => notGate:U3.B[7]
+B[7] => negGate:U4.B[7]
+B[7] => shiftRotateComponent:U5.B[7]
+B[7] => thirtyTwoBitRippleCarrySubtractor:U6.B[7]
+B[8] => thirtyTwoBitRippleCarryAdder:U0.B[8]
+B[8] => andGate:U1.B[8]
+B[8] => orGate:U2.B[8]
+B[8] => notGate:U3.B[8]
+B[8] => negGate:U4.B[8]
+B[8] => shiftRotateComponent:U5.B[8]
+B[8] => thirtyTwoBitRippleCarrySubtractor:U6.B[8]
+B[9] => thirtyTwoBitRippleCarryAdder:U0.B[9]
+B[9] => andGate:U1.B[9]
+B[9] => orGate:U2.B[9]
+B[9] => notGate:U3.B[9]
+B[9] => negGate:U4.B[9]
+B[9] => shiftRotateComponent:U5.B[9]
+B[9] => thirtyTwoBitRippleCarrySubtractor:U6.B[9]
+B[10] => thirtyTwoBitRippleCarryAdder:U0.B[10]
+B[10] => andGate:U1.B[10]
+B[10] => orGate:U2.B[10]
+B[10] => notGate:U3.B[10]
+B[10] => negGate:U4.B[10]
+B[10] => shiftRotateComponent:U5.B[10]
+B[10] => thirtyTwoBitRippleCarrySubtractor:U6.B[10]
+B[11] => thirtyTwoBitRippleCarryAdder:U0.B[11]
+B[11] => andGate:U1.B[11]
+B[11] => orGate:U2.B[11]
+B[11] => notGate:U3.B[11]
+B[11] => negGate:U4.B[11]
+B[11] => shiftRotateComponent:U5.B[11]
+B[11] => thirtyTwoBitRippleCarrySubtractor:U6.B[11]
+B[12] => thirtyTwoBitRippleCarryAdder:U0.B[12]
+B[12] => andGate:U1.B[12]
+B[12] => orGate:U2.B[12]
+B[12] => notGate:U3.B[12]
+B[12] => negGate:U4.B[12]
+B[12] => shiftRotateComponent:U5.B[12]
+B[12] => thirtyTwoBitRippleCarrySubtractor:U6.B[12]
+B[13] => thirtyTwoBitRippleCarryAdder:U0.B[13]
+B[13] => andGate:U1.B[13]
+B[13] => orGate:U2.B[13]
+B[13] => notGate:U3.B[13]
+B[13] => negGate:U4.B[13]
+B[13] => shiftRotateComponent:U5.B[13]
+B[13] => thirtyTwoBitRippleCarrySubtractor:U6.B[13]
+B[14] => thirtyTwoBitRippleCarryAdder:U0.B[14]
+B[14] => andGate:U1.B[14]
+B[14] => orGate:U2.B[14]
+B[14] => notGate:U3.B[14]
+B[14] => negGate:U4.B[14]
+B[14] => shiftRotateComponent:U5.B[14]
+B[14] => thirtyTwoBitRippleCarrySubtractor:U6.B[14]
+B[15] => thirtyTwoBitRippleCarryAdder:U0.B[15]
+B[15] => andGate:U1.B[15]
+B[15] => orGate:U2.B[15]
+B[15] => notGate:U3.B[15]
+B[15] => negGate:U4.B[15]
+B[15] => shiftRotateComponent:U5.B[15]
+B[15] => thirtyTwoBitRippleCarrySubtractor:U6.B[15]
+B[16] => thirtyTwoBitRippleCarryAdder:U0.B[16]
+B[16] => andGate:U1.B[16]
+B[16] => orGate:U2.B[16]
+B[16] => notGate:U3.B[16]
+B[16] => negGate:U4.B[16]
+B[16] => shiftRotateComponent:U5.B[16]
+B[16] => thirtyTwoBitRippleCarrySubtractor:U6.B[16]
+B[17] => thirtyTwoBitRippleCarryAdder:U0.B[17]
+B[17] => andGate:U1.B[17]
+B[17] => orGate:U2.B[17]
+B[17] => notGate:U3.B[17]
+B[17] => negGate:U4.B[17]
+B[17] => shiftRotateComponent:U5.B[17]
+B[17] => thirtyTwoBitRippleCarrySubtractor:U6.B[17]
+B[18] => thirtyTwoBitRippleCarryAdder:U0.B[18]
+B[18] => andGate:U1.B[18]
+B[18] => orGate:U2.B[18]
+B[18] => notGate:U3.B[18]
+B[18] => negGate:U4.B[18]
+B[18] => shiftRotateComponent:U5.B[18]
+B[18] => thirtyTwoBitRippleCarrySubtractor:U6.B[18]
+B[19] => thirtyTwoBitRippleCarryAdder:U0.B[19]
+B[19] => andGate:U1.B[19]
+B[19] => orGate:U2.B[19]
+B[19] => notGate:U3.B[19]
+B[19] => negGate:U4.B[19]
+B[19] => shiftRotateComponent:U5.B[19]
+B[19] => thirtyTwoBitRippleCarrySubtractor:U6.B[19]
+B[20] => thirtyTwoBitRippleCarryAdder:U0.B[20]
+B[20] => andGate:U1.B[20]
+B[20] => orGate:U2.B[20]
+B[20] => notGate:U3.B[20]
+B[20] => negGate:U4.B[20]
+B[20] => shiftRotateComponent:U5.B[20]
+B[20] => thirtyTwoBitRippleCarrySubtractor:U6.B[20]
+B[21] => thirtyTwoBitRippleCarryAdder:U0.B[21]
+B[21] => andGate:U1.B[21]
+B[21] => orGate:U2.B[21]
+B[21] => notGate:U3.B[21]
+B[21] => negGate:U4.B[21]
+B[21] => shiftRotateComponent:U5.B[21]
+B[21] => thirtyTwoBitRippleCarrySubtractor:U6.B[21]
+B[22] => thirtyTwoBitRippleCarryAdder:U0.B[22]
+B[22] => andGate:U1.B[22]
+B[22] => orGate:U2.B[22]
+B[22] => notGate:U3.B[22]
+B[22] => negGate:U4.B[22]
+B[22] => shiftRotateComponent:U5.B[22]
+B[22] => thirtyTwoBitRippleCarrySubtractor:U6.B[22]
+B[23] => thirtyTwoBitRippleCarryAdder:U0.B[23]
+B[23] => andGate:U1.B[23]
+B[23] => orGate:U2.B[23]
+B[23] => notGate:U3.B[23]
+B[23] => negGate:U4.B[23]
+B[23] => shiftRotateComponent:U5.B[23]
+B[23] => thirtyTwoBitRippleCarrySubtractor:U6.B[23]
+B[24] => thirtyTwoBitRippleCarryAdder:U0.B[24]
+B[24] => andGate:U1.B[24]
+B[24] => orGate:U2.B[24]
+B[24] => notGate:U3.B[24]
+B[24] => negGate:U4.B[24]
+B[24] => shiftRotateComponent:U5.B[24]
+B[24] => thirtyTwoBitRippleCarrySubtractor:U6.B[24]
+B[25] => thirtyTwoBitRippleCarryAdder:U0.B[25]
+B[25] => andGate:U1.B[25]
+B[25] => orGate:U2.B[25]
+B[25] => notGate:U3.B[25]
+B[25] => negGate:U4.B[25]
+B[25] => shiftRotateComponent:U5.B[25]
+B[25] => thirtyTwoBitRippleCarrySubtractor:U6.B[25]
+B[26] => thirtyTwoBitRippleCarryAdder:U0.B[26]
+B[26] => andGate:U1.B[26]
+B[26] => orGate:U2.B[26]
+B[26] => notGate:U3.B[26]
+B[26] => negGate:U4.B[26]
+B[26] => shiftRotateComponent:U5.B[26]
+B[26] => thirtyTwoBitRippleCarrySubtractor:U6.B[26]
+B[27] => thirtyTwoBitRippleCarryAdder:U0.B[27]
+B[27] => andGate:U1.B[27]
+B[27] => orGate:U2.B[27]
+B[27] => notGate:U3.B[27]
+B[27] => negGate:U4.B[27]
+B[27] => shiftRotateComponent:U5.B[27]
+B[27] => thirtyTwoBitRippleCarrySubtractor:U6.B[27]
+B[28] => thirtyTwoBitRippleCarryAdder:U0.B[28]
+B[28] => andGate:U1.B[28]
+B[28] => orGate:U2.B[28]
+B[28] => notGate:U3.B[28]
+B[28] => negGate:U4.B[28]
+B[28] => shiftRotateComponent:U5.B[28]
+B[28] => thirtyTwoBitRippleCarrySubtractor:U6.B[28]
+B[29] => thirtyTwoBitRippleCarryAdder:U0.B[29]
+B[29] => andGate:U1.B[29]
+B[29] => orGate:U2.B[29]
+B[29] => notGate:U3.B[29]
+B[29] => negGate:U4.B[29]
+B[29] => shiftRotateComponent:U5.B[29]
+B[29] => thirtyTwoBitRippleCarrySubtractor:U6.B[29]
+B[30] => thirtyTwoBitRippleCarryAdder:U0.B[30]
+B[30] => andGate:U1.B[30]
+B[30] => orGate:U2.B[30]
+B[30] => notGate:U3.B[30]
+B[30] => negGate:U4.B[30]
+B[30] => shiftRotateComponent:U5.B[30]
+B[30] => thirtyTwoBitRippleCarrySubtractor:U6.B[30]
+B[31] => thirtyTwoBitRippleCarryAdder:U0.B[31]
+B[31] => andGate:U1.B[31]
+B[31] => orGate:U2.B[31]
+B[31] => notGate:U3.B[31]
+B[31] => negGate:U4.B[31]
+B[31] => shiftRotateComponent:U5.B[31]
+B[31] => thirtyTwoBitRippleCarrySubtractor:U6.B[31]
+C[0] <= Selector31.DB_MAX_OUTPUT_PORT_TYPE
+C[1] <= Selector30.DB_MAX_OUTPUT_PORT_TYPE
+C[2] <= Selector29.DB_MAX_OUTPUT_PORT_TYPE
+C[3] <= Selector28.DB_MAX_OUTPUT_PORT_TYPE
+C[4] <= Selector27.DB_MAX_OUTPUT_PORT_TYPE
+C[5] <= Selector26.DB_MAX_OUTPUT_PORT_TYPE
+C[6] <= Selector25.DB_MAX_OUTPUT_PORT_TYPE
+C[7] <= Selector24.DB_MAX_OUTPUT_PORT_TYPE
+C[8] <= Selector23.DB_MAX_OUTPUT_PORT_TYPE
+C[9] <= Selector22.DB_MAX_OUTPUT_PORT_TYPE
+C[10] <= Selector21.DB_MAX_OUTPUT_PORT_TYPE
+C[11] <= Selector20.DB_MAX_OUTPUT_PORT_TYPE
+C[12] <= Selector19.DB_MAX_OUTPUT_PORT_TYPE
+C[13] <= Selector18.DB_MAX_OUTPUT_PORT_TYPE
+C[14] <= Selector17.DB_MAX_OUTPUT_PORT_TYPE
+C[15] <= Selector16.DB_MAX_OUTPUT_PORT_TYPE
+C[16] <= Selector15.DB_MAX_OUTPUT_PORT_TYPE
+C[17] <= Selector14.DB_MAX_OUTPUT_PORT_TYPE
+C[18] <= Selector13.DB_MAX_OUTPUT_PORT_TYPE
+C[19] <= Selector12.DB_MAX_OUTPUT_PORT_TYPE
+C[20] <= Selector11.DB_MAX_OUTPUT_PORT_TYPE
+C[21] <= Selector10.DB_MAX_OUTPUT_PORT_TYPE
+C[22] <= Selector9.DB_MAX_OUTPUT_PORT_TYPE
+C[23] <= Selector8.DB_MAX_OUTPUT_PORT_TYPE
+C[24] <= Selector7.DB_MAX_OUTPUT_PORT_TYPE
+C[25] <= Selector6.DB_MAX_OUTPUT_PORT_TYPE
+C[26] <= Selector5.DB_MAX_OUTPUT_PORT_TYPE
+C[27] <= Selector4.DB_MAX_OUTPUT_PORT_TYPE
+C[28] <= Selector3.DB_MAX_OUTPUT_PORT_TYPE
+C[29] <= Selector2.DB_MAX_OUTPUT_PORT_TYPE
+C[30] <= Selector1.DB_MAX_OUTPUT_PORT_TYPE
+C[31] <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0
+A[0] => fullAdder:U0.A
+A[1] => fullAdder:U1.A
+A[2] => fullAdder:U2.A
+A[3] => fullAdder:U3.A
+A[4] => fullAdder:U4.A
+A[5] => fullAdder:U5.A
+A[6] => fullAdder:U6.A
+A[7] => fullAdder:U7.A
+A[8] => fullAdder:U8.A
+A[9] => fullAdder:U9.A
+A[10] => fullAdder:U10.A
+A[11] => fullAdder:U11.A
+A[12] => fullAdder:U12.A
+A[13] => fullAdder:U13.A
+A[14] => fullAdder:U14.A
+A[15] => fullAdder:U15.A
+A[16] => fullAdder:U16.A
+A[17] => fullAdder:U17.A
+A[18] => fullAdder:U18.A
+A[19] => fullAdder:U19.A
+A[20] => fullAdder:U20.A
+A[21] => fullAdder:U21.A
+A[22] => fullAdder:U22.A
+A[23] => fullAdder:U23.A
+A[24] => fullAdder:U24.A
+A[25] => fullAdder:U25.A
+A[26] => fullAdder:U26.A
+A[27] => fullAdder:U27.A
+A[28] => fullAdder:U28.A
+A[29] => fullAdder:U29.A
+A[30] => fullAdder:U30.A
+A[31] => fullAdder:U31.A
+B[0] => fullAdder:U0.B
+B[1] => fullAdder:U1.B
+B[2] => fullAdder:U2.B
+B[3] => fullAdder:U3.B
+B[4] => fullAdder:U4.B
+B[5] => fullAdder:U5.B
+B[6] => fullAdder:U6.B
+B[7] => fullAdder:U7.B
+B[8] => fullAdder:U8.B
+B[9] => fullAdder:U9.B
+B[10] => fullAdder:U10.B
+B[11] => fullAdder:U11.B
+B[12] => fullAdder:U12.B
+B[13] => fullAdder:U13.B
+B[14] => fullAdder:U14.B
+B[15] => fullAdder:U15.B
+B[16] => fullAdder:U16.B
+B[17] => fullAdder:U17.B
+B[18] => fullAdder:U18.B
+B[19] => fullAdder:U19.B
+B[20] => fullAdder:U20.B
+B[21] => fullAdder:U21.B
+B[22] => fullAdder:U22.B
+B[23] => fullAdder:U23.B
+B[24] => fullAdder:U24.B
+B[25] => fullAdder:U25.B
+B[26] => fullAdder:U26.B
+B[27] => fullAdder:U27.B
+B[28] => fullAdder:U28.B
+B[29] => fullAdder:U29.B
+B[30] => fullAdder:U30.B
+B[31] => fullAdder:U31.B
+Cin => fullAdder:U0.Cin
+S[0] <= fullAdder:U0.S
+S[1] <= fullAdder:U1.S
+S[2] <= fullAdder:U2.S
+S[3] <= fullAdder:U3.S
+S[4] <= fullAdder:U4.S
+S[5] <= fullAdder:U5.S
+S[6] <= fullAdder:U6.S
+S[7] <= fullAdder:U7.S
+S[8] <= fullAdder:U8.S
+S[9] <= fullAdder:U9.S
+S[10] <= fullAdder:U10.S
+S[11] <= fullAdder:U11.S
+S[12] <= fullAdder:U12.S
+S[13] <= fullAdder:U13.S
+S[14] <= fullAdder:U14.S
+S[15] <= fullAdder:U15.S
+S[16] <= fullAdder:U16.S
+S[17] <= fullAdder:U17.S
+S[18] <= fullAdder:U18.S
+S[19] <= fullAdder:U19.S
+S[20] <= fullAdder:U20.S
+S[21] <= fullAdder:U21.S
+S[22] <= fullAdder:U22.S
+S[23] <= fullAdder:U23.S
+S[24] <= fullAdder:U24.S
+S[25] <= fullAdder:U25.S
+S[26] <= fullAdder:U26.S
+S[27] <= fullAdder:U27.S
+S[28] <= fullAdder:U28.S
+S[29] <= fullAdder:U29.S
+S[30] <= fullAdder:U30.S
+S[31] <= fullAdder:U31.S
+Cout <= fullAdder:U31.Cout
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U0
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U1
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U2
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U3
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U4
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U5
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U6
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U7
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U8
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U9
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U10
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U11
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U12
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U13
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U14
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U15
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U16
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U17
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U18
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U19
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U20
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U21
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U22
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U23
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U24
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U25
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U26
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U27
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U28
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U29
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U30
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U31
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|andGate:U1
+A[0] => S.IN0
+A[1] => S.IN0
+A[2] => S.IN0
+A[3] => S.IN0
+A[4] => S.IN0
+A[5] => S.IN0
+A[6] => S.IN0
+A[7] => S.IN0
+A[8] => S.IN0
+A[9] => S.IN0
+A[10] => S.IN0
+A[11] => S.IN0
+A[12] => S.IN0
+A[13] => S.IN0
+A[14] => S.IN0
+A[15] => S.IN0
+A[16] => S.IN0
+A[17] => S.IN0
+A[18] => S.IN0
+A[19] => S.IN0
+A[20] => S.IN0
+A[21] => S.IN0
+A[22] => S.IN0
+A[23] => S.IN0
+A[24] => S.IN0
+A[25] => S.IN0
+A[26] => S.IN0
+A[27] => S.IN0
+A[28] => S.IN0
+A[29] => S.IN0
+A[30] => S.IN0
+A[31] => S.IN0
+B[0] => S.IN1
+B[1] => S.IN1
+B[2] => S.IN1
+B[3] => S.IN1
+B[4] => S.IN1
+B[5] => S.IN1
+B[6] => S.IN1
+B[7] => S.IN1
+B[8] => S.IN1
+B[9] => S.IN1
+B[10] => S.IN1
+B[11] => S.IN1
+B[12] => S.IN1
+B[13] => S.IN1
+B[14] => S.IN1
+B[15] => S.IN1
+B[16] => S.IN1
+B[17] => S.IN1
+B[18] => S.IN1
+B[19] => S.IN1
+B[20] => S.IN1
+B[21] => S.IN1
+B[22] => S.IN1
+B[23] => S.IN1
+B[24] => S.IN1
+B[25] => S.IN1
+B[26] => S.IN1
+B[27] => S.IN1
+B[28] => S.IN1
+B[29] => S.IN1
+B[30] => S.IN1
+B[31] => S.IN1
+S[0] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[8] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[9] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[10] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[11] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[12] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[13] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[14] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[15] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[16] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[17] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[18] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[19] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[20] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[21] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[22] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[23] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[24] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[25] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[26] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[27] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[28] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[29] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[30] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[31] <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|orGate:U2
+A[0] => S.IN0
+A[1] => S.IN0
+A[2] => S.IN0
+A[3] => S.IN0
+A[4] => S.IN0
+A[5] => S.IN0
+A[6] => S.IN0
+A[7] => S.IN0
+A[8] => S.IN0
+A[9] => S.IN0
+A[10] => S.IN0
+A[11] => S.IN0
+A[12] => S.IN0
+A[13] => S.IN0
+A[14] => S.IN0
+A[15] => S.IN0
+A[16] => S.IN0
+A[17] => S.IN0
+A[18] => S.IN0
+A[19] => S.IN0
+A[20] => S.IN0
+A[21] => S.IN0
+A[22] => S.IN0
+A[23] => S.IN0
+A[24] => S.IN0
+A[25] => S.IN0
+A[26] => S.IN0
+A[27] => S.IN0
+A[28] => S.IN0
+A[29] => S.IN0
+A[30] => S.IN0
+A[31] => S.IN0
+B[0] => S.IN1
+B[1] => S.IN1
+B[2] => S.IN1
+B[3] => S.IN1
+B[4] => S.IN1
+B[5] => S.IN1
+B[6] => S.IN1
+B[7] => S.IN1
+B[8] => S.IN1
+B[9] => S.IN1
+B[10] => S.IN1
+B[11] => S.IN1
+B[12] => S.IN1
+B[13] => S.IN1
+B[14] => S.IN1
+B[15] => S.IN1
+B[16] => S.IN1
+B[17] => S.IN1
+B[18] => S.IN1
+B[19] => S.IN1
+B[20] => S.IN1
+B[21] => S.IN1
+B[22] => S.IN1
+B[23] => S.IN1
+B[24] => S.IN1
+B[25] => S.IN1
+B[26] => S.IN1
+B[27] => S.IN1
+B[28] => S.IN1
+B[29] => S.IN1
+B[30] => S.IN1
+B[31] => S.IN1
+S[0] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[8] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[9] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[10] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[11] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[12] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[13] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[14] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[15] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[16] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[17] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[18] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[19] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[20] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[21] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[22] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[23] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[24] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[25] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[26] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[27] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[28] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[29] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[30] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[31] <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|notGate:U3
+B[0] => S[0].DATAIN
+B[1] => S[1].DATAIN
+B[2] => S[2].DATAIN
+B[3] => S[3].DATAIN
+B[4] => S[4].DATAIN
+B[5] => S[5].DATAIN
+B[6] => S[6].DATAIN
+B[7] => S[7].DATAIN
+B[8] => S[8].DATAIN
+B[9] => S[9].DATAIN
+B[10] => S[10].DATAIN
+B[11] => S[11].DATAIN
+B[12] => S[12].DATAIN
+B[13] => S[13].DATAIN
+B[14] => S[14].DATAIN
+B[15] => S[15].DATAIN
+B[16] => S[16].DATAIN
+B[17] => S[17].DATAIN
+B[18] => S[18].DATAIN
+B[19] => S[19].DATAIN
+B[20] => S[20].DATAIN
+B[21] => S[21].DATAIN
+B[22] => S[22].DATAIN
+B[23] => S[23].DATAIN
+B[24] => S[24].DATAIN
+B[25] => S[25].DATAIN
+B[26] => S[26].DATAIN
+B[27] => S[27].DATAIN
+B[28] => S[28].DATAIN
+B[29] => S[29].DATAIN
+B[30] => S[30].DATAIN
+B[31] => S[31].DATAIN
+S[0] <= B[0].DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= B[1].DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= B[2].DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= B[3].DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= B[4].DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= B[5].DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= B[6].DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= B[7].DB_MAX_OUTPUT_PORT_TYPE
+S[8] <= B[8].DB_MAX_OUTPUT_PORT_TYPE
+S[9] <= B[9].DB_MAX_OUTPUT_PORT_TYPE
+S[10] <= B[10].DB_MAX_OUTPUT_PORT_TYPE
+S[11] <= B[11].DB_MAX_OUTPUT_PORT_TYPE
+S[12] <= B[12].DB_MAX_OUTPUT_PORT_TYPE
+S[13] <= B[13].DB_MAX_OUTPUT_PORT_TYPE
+S[14] <= B[14].DB_MAX_OUTPUT_PORT_TYPE
+S[15] <= B[15].DB_MAX_OUTPUT_PORT_TYPE
+S[16] <= B[16].DB_MAX_OUTPUT_PORT_TYPE
+S[17] <= B[17].DB_MAX_OUTPUT_PORT_TYPE
+S[18] <= B[18].DB_MAX_OUTPUT_PORT_TYPE
+S[19] <= B[19].DB_MAX_OUTPUT_PORT_TYPE
+S[20] <= B[20].DB_MAX_OUTPUT_PORT_TYPE
+S[21] <= B[21].DB_MAX_OUTPUT_PORT_TYPE
+S[22] <= B[22].DB_MAX_OUTPUT_PORT_TYPE
+S[23] <= B[23].DB_MAX_OUTPUT_PORT_TYPE
+S[24] <= B[24].DB_MAX_OUTPUT_PORT_TYPE
+S[25] <= B[25].DB_MAX_OUTPUT_PORT_TYPE
+S[26] <= B[26].DB_MAX_OUTPUT_PORT_TYPE
+S[27] <= B[27].DB_MAX_OUTPUT_PORT_TYPE
+S[28] <= B[28].DB_MAX_OUTPUT_PORT_TYPE
+S[29] <= B[29].DB_MAX_OUTPUT_PORT_TYPE
+S[30] <= B[30].DB_MAX_OUTPUT_PORT_TYPE
+S[31] <= B[31].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|negGate:U4
+B[0] => ~NO_FANOUT~
+B[1] => ~NO_FANOUT~
+B[2] => ~NO_FANOUT~
+B[3] => ~NO_FANOUT~
+B[4] => ~NO_FANOUT~
+B[5] => ~NO_FANOUT~
+B[6] => ~NO_FANOUT~
+B[7] => ~NO_FANOUT~
+B[8] => ~NO_FANOUT~
+B[9] => ~NO_FANOUT~
+B[10] => ~NO_FANOUT~
+B[11] => ~NO_FANOUT~
+B[12] => ~NO_FANOUT~
+B[13] => ~NO_FANOUT~
+B[14] => ~NO_FANOUT~
+B[15] => ~NO_FANOUT~
+B[16] => ~NO_FANOUT~
+B[17] => ~NO_FANOUT~
+B[18] => ~NO_FANOUT~
+B[19] => ~NO_FANOUT~
+B[20] => ~NO_FANOUT~
+B[21] => ~NO_FANOUT~
+B[22] => ~NO_FANOUT~
+B[23] => ~NO_FANOUT~
+B[24] => ~NO_FANOUT~
+B[25] => ~NO_FANOUT~
+B[26] => ~NO_FANOUT~
+B[27] => ~NO_FANOUT~
+B[28] => ~NO_FANOUT~
+B[29] => ~NO_FANOUT~
+B[30] => ~NO_FANOUT~
+B[31] => ~NO_FANOUT~
+S[0] <= <GND>
+S[1] <= <GND>
+S[2] <= <GND>
+S[3] <= <GND>
+S[4] <= <GND>
+S[5] <= <GND>
+S[6] <= <GND>
+S[7] <= <GND>
+S[8] <= <GND>
+S[9] <= <GND>
+S[10] <= <GND>
+S[11] <= <GND>
+S[12] <= <GND>
+S[13] <= <GND>
+S[14] <= <GND>
+S[15] <= <GND>
+S[16] <= <GND>
+S[17] <= <GND>
+S[18] <= <GND>
+S[19] <= <GND>
+S[20] <= <GND>
+S[21] <= <GND>
+S[22] <= <GND>
+S[23] <= <GND>
+S[24] <= <GND>
+S[25] <= <GND>
+S[26] <= <GND>
+S[27] <= <GND>
+S[28] <= <GND>
+S[29] <= <GND>
+S[30] <= <GND>
+S[31] <= <GND>
+
+
+|ALU|shiftRotateComponent:U5
+B[0] => rR[31].DATAIN
+B[0] => sL[1].DATAIN
+B[0] => rL[1].DATAIN
+B[1] => rR[0].DATAIN
+B[1] => sL[2].DATAIN
+B[1] => sR[0].DATAIN
+B[1] => sR_A[0].DATAIN
+B[1] => rL[2].DATAIN
+B[2] => rR[1].DATAIN
+B[2] => sL[3].DATAIN
+B[2] => sR[1].DATAIN
+B[2] => sR_A[1].DATAIN
+B[2] => rL[3].DATAIN
+B[3] => rR[2].DATAIN
+B[3] => sL[4].DATAIN
+B[3] => sR[2].DATAIN
+B[3] => sR_A[2].DATAIN
+B[3] => rL[4].DATAIN
+B[4] => rR[3].DATAIN
+B[4] => sL[5].DATAIN
+B[4] => sR[3].DATAIN
+B[4] => sR_A[3].DATAIN
+B[4] => rL[5].DATAIN
+B[5] => rR[4].DATAIN
+B[5] => sL[6].DATAIN
+B[5] => sR[4].DATAIN
+B[5] => sR_A[4].DATAIN
+B[5] => rL[6].DATAIN
+B[6] => rR[5].DATAIN
+B[6] => sL[7].DATAIN
+B[6] => sR[5].DATAIN
+B[6] => sR_A[5].DATAIN
+B[6] => rL[7].DATAIN
+B[7] => rR[6].DATAIN
+B[7] => sL[8].DATAIN
+B[7] => sR[6].DATAIN
+B[7] => sR_A[6].DATAIN
+B[7] => rL[8].DATAIN
+B[8] => rR[7].DATAIN
+B[8] => sL[9].DATAIN
+B[8] => sR[7].DATAIN
+B[8] => sR_A[7].DATAIN
+B[8] => rL[9].DATAIN
+B[9] => rR[8].DATAIN
+B[9] => sL[10].DATAIN
+B[9] => sR[8].DATAIN
+B[9] => sR_A[8].DATAIN
+B[9] => rL[10].DATAIN
+B[10] => rR[9].DATAIN
+B[10] => sL[11].DATAIN
+B[10] => sR[9].DATAIN
+B[10] => sR_A[9].DATAIN
+B[10] => rL[11].DATAIN
+B[11] => rR[10].DATAIN
+B[11] => sL[12].DATAIN
+B[11] => sR[10].DATAIN
+B[11] => sR_A[10].DATAIN
+B[11] => rL[12].DATAIN
+B[12] => rR[11].DATAIN
+B[12] => sL[13].DATAIN
+B[12] => sR[11].DATAIN
+B[12] => sR_A[11].DATAIN
+B[12] => rL[13].DATAIN
+B[13] => rR[12].DATAIN
+B[13] => sL[14].DATAIN
+B[13] => sR[12].DATAIN
+B[13] => sR_A[12].DATAIN
+B[13] => rL[14].DATAIN
+B[14] => rR[13].DATAIN
+B[14] => sL[15].DATAIN
+B[14] => sR[13].DATAIN
+B[14] => sR_A[13].DATAIN
+B[14] => rL[15].DATAIN
+B[15] => rR[14].DATAIN
+B[15] => sL[16].DATAIN
+B[15] => sR[14].DATAIN
+B[15] => sR_A[14].DATAIN
+B[15] => rL[16].DATAIN
+B[16] => rR[15].DATAIN
+B[16] => sL[17].DATAIN
+B[16] => sR[15].DATAIN
+B[16] => sR_A[15].DATAIN
+B[16] => rL[17].DATAIN
+B[17] => rR[16].DATAIN
+B[17] => sL[18].DATAIN
+B[17] => sR[16].DATAIN
+B[17] => sR_A[16].DATAIN
+B[17] => rL[18].DATAIN
+B[18] => rR[17].DATAIN
+B[18] => sL[19].DATAIN
+B[18] => sR[17].DATAIN
+B[18] => sR_A[17].DATAIN
+B[18] => rL[19].DATAIN
+B[19] => rR[18].DATAIN
+B[19] => sL[20].DATAIN
+B[19] => sR[18].DATAIN
+B[19] => sR_A[18].DATAIN
+B[19] => rL[20].DATAIN
+B[20] => rR[19].DATAIN
+B[20] => sL[21].DATAIN
+B[20] => sR[19].DATAIN
+B[20] => sR_A[19].DATAIN
+B[20] => rL[21].DATAIN
+B[21] => rR[20].DATAIN
+B[21] => sL[22].DATAIN
+B[21] => sR[20].DATAIN
+B[21] => sR_A[20].DATAIN
+B[21] => rL[22].DATAIN
+B[22] => rR[21].DATAIN
+B[22] => sL[23].DATAIN
+B[22] => sR[21].DATAIN
+B[22] => sR_A[21].DATAIN
+B[22] => rL[23].DATAIN
+B[23] => rR[22].DATAIN
+B[23] => sL[24].DATAIN
+B[23] => sR[22].DATAIN
+B[23] => sR_A[22].DATAIN
+B[23] => rL[24].DATAIN
+B[24] => rR[23].DATAIN
+B[24] => sL[25].DATAIN
+B[24] => sR[23].DATAIN
+B[24] => sR_A[23].DATAIN
+B[24] => rL[25].DATAIN
+B[25] => rR[24].DATAIN
+B[25] => sL[26].DATAIN
+B[25] => sR[24].DATAIN
+B[25] => sR_A[24].DATAIN
+B[25] => rL[26].DATAIN
+B[26] => rR[25].DATAIN
+B[26] => sL[27].DATAIN
+B[26] => sR[25].DATAIN
+B[26] => sR_A[25].DATAIN
+B[26] => rL[27].DATAIN
+B[27] => rR[26].DATAIN
+B[27] => sL[28].DATAIN
+B[27] => sR[26].DATAIN
+B[27] => sR_A[26].DATAIN
+B[27] => rL[28].DATAIN
+B[28] => rR[27].DATAIN
+B[28] => sL[29].DATAIN
+B[28] => sR[27].DATAIN
+B[28] => sR_A[27].DATAIN
+B[28] => rL[29].DATAIN
+B[29] => rR[28].DATAIN
+B[29] => sL[30].DATAIN
+B[29] => sR[28].DATAIN
+B[29] => sR_A[28].DATAIN
+B[29] => rL[30].DATAIN
+B[30] => rR[29].DATAIN
+B[30] => sL[31].DATAIN
+B[30] => sR[29].DATAIN
+B[30] => sR_A[29].DATAIN
+B[30] => rL[31].DATAIN
+B[31] => rR[30].DATAIN
+B[31] => sR[30].DATAIN
+B[31] => sR_A[31].DATAIN
+B[31] => sR_A[30].DATAIN
+B[31] => rL[0].DATAIN
+sL[0] <= <GND>
+sL[1] <= B[0].DB_MAX_OUTPUT_PORT_TYPE
+sL[2] <= B[1].DB_MAX_OUTPUT_PORT_TYPE
+sL[3] <= B[2].DB_MAX_OUTPUT_PORT_TYPE
+sL[4] <= B[3].DB_MAX_OUTPUT_PORT_TYPE
+sL[5] <= B[4].DB_MAX_OUTPUT_PORT_TYPE
+sL[6] <= B[5].DB_MAX_OUTPUT_PORT_TYPE
+sL[7] <= B[6].DB_MAX_OUTPUT_PORT_TYPE
+sL[8] <= B[7].DB_MAX_OUTPUT_PORT_TYPE
+sL[9] <= B[8].DB_MAX_OUTPUT_PORT_TYPE
+sL[10] <= B[9].DB_MAX_OUTPUT_PORT_TYPE
+sL[11] <= B[10].DB_MAX_OUTPUT_PORT_TYPE
+sL[12] <= B[11].DB_MAX_OUTPUT_PORT_TYPE
+sL[13] <= B[12].DB_MAX_OUTPUT_PORT_TYPE
+sL[14] <= B[13].DB_MAX_OUTPUT_PORT_TYPE
+sL[15] <= B[14].DB_MAX_OUTPUT_PORT_TYPE
+sL[16] <= B[15].DB_MAX_OUTPUT_PORT_TYPE
+sL[17] <= B[16].DB_MAX_OUTPUT_PORT_TYPE
+sL[18] <= B[17].DB_MAX_OUTPUT_PORT_TYPE
+sL[19] <= B[18].DB_MAX_OUTPUT_PORT_TYPE
+sL[20] <= B[19].DB_MAX_OUTPUT_PORT_TYPE
+sL[21] <= B[20].DB_MAX_OUTPUT_PORT_TYPE
+sL[22] <= B[21].DB_MAX_OUTPUT_PORT_TYPE
+sL[23] <= B[22].DB_MAX_OUTPUT_PORT_TYPE
+sL[24] <= B[23].DB_MAX_OUTPUT_PORT_TYPE
+sL[25] <= B[24].DB_MAX_OUTPUT_PORT_TYPE
+sL[26] <= B[25].DB_MAX_OUTPUT_PORT_TYPE
+sL[27] <= B[26].DB_MAX_OUTPUT_PORT_TYPE
+sL[28] <= B[27].DB_MAX_OUTPUT_PORT_TYPE
+sL[29] <= B[28].DB_MAX_OUTPUT_PORT_TYPE
+sL[30] <= B[29].DB_MAX_OUTPUT_PORT_TYPE
+sL[31] <= B[30].DB_MAX_OUTPUT_PORT_TYPE
+sR[0] <= B[1].DB_MAX_OUTPUT_PORT_TYPE
+sR[1] <= B[2].DB_MAX_OUTPUT_PORT_TYPE
+sR[2] <= B[3].DB_MAX_OUTPUT_PORT_TYPE
+sR[3] <= B[4].DB_MAX_OUTPUT_PORT_TYPE
+sR[4] <= B[5].DB_MAX_OUTPUT_PORT_TYPE
+sR[5] <= B[6].DB_MAX_OUTPUT_PORT_TYPE
+sR[6] <= B[7].DB_MAX_OUTPUT_PORT_TYPE
+sR[7] <= B[8].DB_MAX_OUTPUT_PORT_TYPE
+sR[8] <= B[9].DB_MAX_OUTPUT_PORT_TYPE
+sR[9] <= B[10].DB_MAX_OUTPUT_PORT_TYPE
+sR[10] <= B[11].DB_MAX_OUTPUT_PORT_TYPE
+sR[11] <= B[12].DB_MAX_OUTPUT_PORT_TYPE
+sR[12] <= B[13].DB_MAX_OUTPUT_PORT_TYPE
+sR[13] <= B[14].DB_MAX_OUTPUT_PORT_TYPE
+sR[14] <= B[15].DB_MAX_OUTPUT_PORT_TYPE
+sR[15] <= B[16].DB_MAX_OUTPUT_PORT_TYPE
+sR[16] <= B[17].DB_MAX_OUTPUT_PORT_TYPE
+sR[17] <= B[18].DB_MAX_OUTPUT_PORT_TYPE
+sR[18] <= B[19].DB_MAX_OUTPUT_PORT_TYPE
+sR[19] <= B[20].DB_MAX_OUTPUT_PORT_TYPE
+sR[20] <= B[21].DB_MAX_OUTPUT_PORT_TYPE
+sR[21] <= B[22].DB_MAX_OUTPUT_PORT_TYPE
+sR[22] <= B[23].DB_MAX_OUTPUT_PORT_TYPE
+sR[23] <= B[24].DB_MAX_OUTPUT_PORT_TYPE
+sR[24] <= B[25].DB_MAX_OUTPUT_PORT_TYPE
+sR[25] <= B[26].DB_MAX_OUTPUT_PORT_TYPE
+sR[26] <= B[27].DB_MAX_OUTPUT_PORT_TYPE
+sR[27] <= B[28].DB_MAX_OUTPUT_PORT_TYPE
+sR[28] <= B[29].DB_MAX_OUTPUT_PORT_TYPE
+sR[29] <= B[30].DB_MAX_OUTPUT_PORT_TYPE
+sR[30] <= B[31].DB_MAX_OUTPUT_PORT_TYPE
+sR[31] <= <GND>
+sR_A[0] <= B[1].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[1] <= B[2].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[2] <= B[3].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[3] <= B[4].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[4] <= B[5].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[5] <= B[6].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[6] <= B[7].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[7] <= B[8].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[8] <= B[9].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[9] <= B[10].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[10] <= B[11].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[11] <= B[12].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[12] <= B[13].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[13] <= B[14].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[14] <= B[15].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[15] <= B[16].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[16] <= B[17].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[17] <= B[18].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[18] <= B[19].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[19] <= B[20].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[20] <= B[21].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[21] <= B[22].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[22] <= B[23].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[23] <= B[24].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[24] <= B[25].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[25] <= B[26].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[26] <= B[27].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[27] <= B[28].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[28] <= B[29].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[29] <= B[30].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[30] <= B[31].DB_MAX_OUTPUT_PORT_TYPE
+sR_A[31] <= B[31].DB_MAX_OUTPUT_PORT_TYPE
+rL[0] <= B[31].DB_MAX_OUTPUT_PORT_TYPE
+rL[1] <= B[0].DB_MAX_OUTPUT_PORT_TYPE
+rL[2] <= B[1].DB_MAX_OUTPUT_PORT_TYPE
+rL[3] <= B[2].DB_MAX_OUTPUT_PORT_TYPE
+rL[4] <= B[3].DB_MAX_OUTPUT_PORT_TYPE
+rL[5] <= B[4].DB_MAX_OUTPUT_PORT_TYPE
+rL[6] <= B[5].DB_MAX_OUTPUT_PORT_TYPE
+rL[7] <= B[6].DB_MAX_OUTPUT_PORT_TYPE
+rL[8] <= B[7].DB_MAX_OUTPUT_PORT_TYPE
+rL[9] <= B[8].DB_MAX_OUTPUT_PORT_TYPE
+rL[10] <= B[9].DB_MAX_OUTPUT_PORT_TYPE
+rL[11] <= B[10].DB_MAX_OUTPUT_PORT_TYPE
+rL[12] <= B[11].DB_MAX_OUTPUT_PORT_TYPE
+rL[13] <= B[12].DB_MAX_OUTPUT_PORT_TYPE
+rL[14] <= B[13].DB_MAX_OUTPUT_PORT_TYPE
+rL[15] <= B[14].DB_MAX_OUTPUT_PORT_TYPE
+rL[16] <= B[15].DB_MAX_OUTPUT_PORT_TYPE
+rL[17] <= B[16].DB_MAX_OUTPUT_PORT_TYPE
+rL[18] <= B[17].DB_MAX_OUTPUT_PORT_TYPE
+rL[19] <= B[18].DB_MAX_OUTPUT_PORT_TYPE
+rL[20] <= B[19].DB_MAX_OUTPUT_PORT_TYPE
+rL[21] <= B[20].DB_MAX_OUTPUT_PORT_TYPE
+rL[22] <= B[21].DB_MAX_OUTPUT_PORT_TYPE
+rL[23] <= B[22].DB_MAX_OUTPUT_PORT_TYPE
+rL[24] <= B[23].DB_MAX_OUTPUT_PORT_TYPE
+rL[25] <= B[24].DB_MAX_OUTPUT_PORT_TYPE
+rL[26] <= B[25].DB_MAX_OUTPUT_PORT_TYPE
+rL[27] <= B[26].DB_MAX_OUTPUT_PORT_TYPE
+rL[28] <= B[27].DB_MAX_OUTPUT_PORT_TYPE
+rL[29] <= B[28].DB_MAX_OUTPUT_PORT_TYPE
+rL[30] <= B[29].DB_MAX_OUTPUT_PORT_TYPE
+rL[31] <= B[30].DB_MAX_OUTPUT_PORT_TYPE
+rR[0] <= B[1].DB_MAX_OUTPUT_PORT_TYPE
+rR[1] <= B[2].DB_MAX_OUTPUT_PORT_TYPE
+rR[2] <= B[3].DB_MAX_OUTPUT_PORT_TYPE
+rR[3] <= B[4].DB_MAX_OUTPUT_PORT_TYPE
+rR[4] <= B[5].DB_MAX_OUTPUT_PORT_TYPE
+rR[5] <= B[6].DB_MAX_OUTPUT_PORT_TYPE
+rR[6] <= B[7].DB_MAX_OUTPUT_PORT_TYPE
+rR[7] <= B[8].DB_MAX_OUTPUT_PORT_TYPE
+rR[8] <= B[9].DB_MAX_OUTPUT_PORT_TYPE
+rR[9] <= B[10].DB_MAX_OUTPUT_PORT_TYPE
+rR[10] <= B[11].DB_MAX_OUTPUT_PORT_TYPE
+rR[11] <= B[12].DB_MAX_OUTPUT_PORT_TYPE
+rR[12] <= B[13].DB_MAX_OUTPUT_PORT_TYPE
+rR[13] <= B[14].DB_MAX_OUTPUT_PORT_TYPE
+rR[14] <= B[15].DB_MAX_OUTPUT_PORT_TYPE
+rR[15] <= B[16].DB_MAX_OUTPUT_PORT_TYPE
+rR[16] <= B[17].DB_MAX_OUTPUT_PORT_TYPE
+rR[17] <= B[18].DB_MAX_OUTPUT_PORT_TYPE
+rR[18] <= B[19].DB_MAX_OUTPUT_PORT_TYPE
+rR[19] <= B[20].DB_MAX_OUTPUT_PORT_TYPE
+rR[20] <= B[21].DB_MAX_OUTPUT_PORT_TYPE
+rR[21] <= B[22].DB_MAX_OUTPUT_PORT_TYPE
+rR[22] <= B[23].DB_MAX_OUTPUT_PORT_TYPE
+rR[23] <= B[24].DB_MAX_OUTPUT_PORT_TYPE
+rR[24] <= B[25].DB_MAX_OUTPUT_PORT_TYPE
+rR[25] <= B[26].DB_MAX_OUTPUT_PORT_TYPE
+rR[26] <= B[27].DB_MAX_OUTPUT_PORT_TYPE
+rR[27] <= B[28].DB_MAX_OUTPUT_PORT_TYPE
+rR[28] <= B[29].DB_MAX_OUTPUT_PORT_TYPE
+rR[29] <= B[30].DB_MAX_OUTPUT_PORT_TYPE
+rR[30] <= B[31].DB_MAX_OUTPUT_PORT_TYPE
+rR[31] <= B[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6
+A[0] => thirtyTwoBitRippleCarryAdder:U2.A[0]
+A[1] => thirtyTwoBitRippleCarryAdder:U2.A[1]
+A[2] => thirtyTwoBitRippleCarryAdder:U2.A[2]
+A[3] => thirtyTwoBitRippleCarryAdder:U2.A[3]
+A[4] => thirtyTwoBitRippleCarryAdder:U2.A[4]
+A[5] => thirtyTwoBitRippleCarryAdder:U2.A[5]
+A[6] => thirtyTwoBitRippleCarryAdder:U2.A[6]
+A[7] => thirtyTwoBitRippleCarryAdder:U2.A[7]
+A[8] => thirtyTwoBitRippleCarryAdder:U2.A[8]
+A[9] => thirtyTwoBitRippleCarryAdder:U2.A[9]
+A[10] => thirtyTwoBitRippleCarryAdder:U2.A[10]
+A[11] => thirtyTwoBitRippleCarryAdder:U2.A[11]
+A[12] => thirtyTwoBitRippleCarryAdder:U2.A[12]
+A[13] => thirtyTwoBitRippleCarryAdder:U2.A[13]
+A[14] => thirtyTwoBitRippleCarryAdder:U2.A[14]
+A[15] => thirtyTwoBitRippleCarryAdder:U2.A[15]
+A[16] => thirtyTwoBitRippleCarryAdder:U2.A[16]
+A[17] => thirtyTwoBitRippleCarryAdder:U2.A[17]
+A[18] => thirtyTwoBitRippleCarryAdder:U2.A[18]
+A[19] => thirtyTwoBitRippleCarryAdder:U2.A[19]
+A[20] => thirtyTwoBitRippleCarryAdder:U2.A[20]
+A[21] => thirtyTwoBitRippleCarryAdder:U2.A[21]
+A[22] => thirtyTwoBitRippleCarryAdder:U2.A[22]
+A[23] => thirtyTwoBitRippleCarryAdder:U2.A[23]
+A[24] => thirtyTwoBitRippleCarryAdder:U2.A[24]
+A[25] => thirtyTwoBitRippleCarryAdder:U2.A[25]
+A[26] => thirtyTwoBitRippleCarryAdder:U2.A[26]
+A[27] => thirtyTwoBitRippleCarryAdder:U2.A[27]
+A[28] => thirtyTwoBitRippleCarryAdder:U2.A[28]
+A[29] => thirtyTwoBitRippleCarryAdder:U2.A[29]
+A[30] => thirtyTwoBitRippleCarryAdder:U2.A[30]
+A[31] => thirtyTwoBitRippleCarryAdder:U2.A[31]
+B[0] => notGate:U0.B[0]
+B[1] => notGate:U0.B[1]
+B[2] => notGate:U0.B[2]
+B[3] => notGate:U0.B[3]
+B[4] => notGate:U0.B[4]
+B[5] => notGate:U0.B[5]
+B[6] => notGate:U0.B[6]
+B[7] => notGate:U0.B[7]
+B[8] => notGate:U0.B[8]
+B[9] => notGate:U0.B[9]
+B[10] => notGate:U0.B[10]
+B[11] => notGate:U0.B[11]
+B[12] => notGate:U0.B[12]
+B[13] => notGate:U0.B[13]
+B[14] => notGate:U0.B[14]
+B[15] => notGate:U0.B[15]
+B[16] => notGate:U0.B[16]
+B[17] => notGate:U0.B[17]
+B[18] => notGate:U0.B[18]
+B[19] => notGate:U0.B[19]
+B[20] => notGate:U0.B[20]
+B[21] => notGate:U0.B[21]
+B[22] => notGate:U0.B[22]
+B[23] => notGate:U0.B[23]
+B[24] => notGate:U0.B[24]
+B[25] => notGate:U0.B[25]
+B[26] => notGate:U0.B[26]
+B[27] => notGate:U0.B[27]
+B[28] => notGate:U0.B[28]
+B[29] => notGate:U0.B[29]
+B[30] => notGate:U0.B[30]
+B[31] => notGate:U0.B[31]
+Cin => thirtyTwoBitRippleCarryAdder:U1.Cin
+Cin => thirtyTwoBitRippleCarryAdder:U2.Cin
+S[0] <= thirtyTwoBitRippleCarryAdder:U2.S[0]
+S[1] <= thirtyTwoBitRippleCarryAdder:U2.S[1]
+S[2] <= thirtyTwoBitRippleCarryAdder:U2.S[2]
+S[3] <= thirtyTwoBitRippleCarryAdder:U2.S[3]
+S[4] <= thirtyTwoBitRippleCarryAdder:U2.S[4]
+S[5] <= thirtyTwoBitRippleCarryAdder:U2.S[5]
+S[6] <= thirtyTwoBitRippleCarryAdder:U2.S[6]
+S[7] <= thirtyTwoBitRippleCarryAdder:U2.S[7]
+S[8] <= thirtyTwoBitRippleCarryAdder:U2.S[8]
+S[9] <= thirtyTwoBitRippleCarryAdder:U2.S[9]
+S[10] <= thirtyTwoBitRippleCarryAdder:U2.S[10]
+S[11] <= thirtyTwoBitRippleCarryAdder:U2.S[11]
+S[12] <= thirtyTwoBitRippleCarryAdder:U2.S[12]
+S[13] <= thirtyTwoBitRippleCarryAdder:U2.S[13]
+S[14] <= thirtyTwoBitRippleCarryAdder:U2.S[14]
+S[15] <= thirtyTwoBitRippleCarryAdder:U2.S[15]
+S[16] <= thirtyTwoBitRippleCarryAdder:U2.S[16]
+S[17] <= thirtyTwoBitRippleCarryAdder:U2.S[17]
+S[18] <= thirtyTwoBitRippleCarryAdder:U2.S[18]
+S[19] <= thirtyTwoBitRippleCarryAdder:U2.S[19]
+S[20] <= thirtyTwoBitRippleCarryAdder:U2.S[20]
+S[21] <= thirtyTwoBitRippleCarryAdder:U2.S[21]
+S[22] <= thirtyTwoBitRippleCarryAdder:U2.S[22]
+S[23] <= thirtyTwoBitRippleCarryAdder:U2.S[23]
+S[24] <= thirtyTwoBitRippleCarryAdder:U2.S[24]
+S[25] <= thirtyTwoBitRippleCarryAdder:U2.S[25]
+S[26] <= thirtyTwoBitRippleCarryAdder:U2.S[26]
+S[27] <= thirtyTwoBitRippleCarryAdder:U2.S[27]
+S[28] <= thirtyTwoBitRippleCarryAdder:U2.S[28]
+S[29] <= thirtyTwoBitRippleCarryAdder:U2.S[29]
+S[30] <= thirtyTwoBitRippleCarryAdder:U2.S[30]
+S[31] <= thirtyTwoBitRippleCarryAdder:U2.S[31]
+Cout <= thirtyTwoBitRippleCarryAdder:U2.Cout
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|notGate:U0
+B[0] => S[0].DATAIN
+B[1] => S[1].DATAIN
+B[2] => S[2].DATAIN
+B[3] => S[3].DATAIN
+B[4] => S[4].DATAIN
+B[5] => S[5].DATAIN
+B[6] => S[6].DATAIN
+B[7] => S[7].DATAIN
+B[8] => S[8].DATAIN
+B[9] => S[9].DATAIN
+B[10] => S[10].DATAIN
+B[11] => S[11].DATAIN
+B[12] => S[12].DATAIN
+B[13] => S[13].DATAIN
+B[14] => S[14].DATAIN
+B[15] => S[15].DATAIN
+B[16] => S[16].DATAIN
+B[17] => S[17].DATAIN
+B[18] => S[18].DATAIN
+B[19] => S[19].DATAIN
+B[20] => S[20].DATAIN
+B[21] => S[21].DATAIN
+B[22] => S[22].DATAIN
+B[23] => S[23].DATAIN
+B[24] => S[24].DATAIN
+B[25] => S[25].DATAIN
+B[26] => S[26].DATAIN
+B[27] => S[27].DATAIN
+B[28] => S[28].DATAIN
+B[29] => S[29].DATAIN
+B[30] => S[30].DATAIN
+B[31] => S[31].DATAIN
+S[0] <= B[0].DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= B[1].DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= B[2].DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= B[3].DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= B[4].DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= B[5].DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= B[6].DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= B[7].DB_MAX_OUTPUT_PORT_TYPE
+S[8] <= B[8].DB_MAX_OUTPUT_PORT_TYPE
+S[9] <= B[9].DB_MAX_OUTPUT_PORT_TYPE
+S[10] <= B[10].DB_MAX_OUTPUT_PORT_TYPE
+S[11] <= B[11].DB_MAX_OUTPUT_PORT_TYPE
+S[12] <= B[12].DB_MAX_OUTPUT_PORT_TYPE
+S[13] <= B[13].DB_MAX_OUTPUT_PORT_TYPE
+S[14] <= B[14].DB_MAX_OUTPUT_PORT_TYPE
+S[15] <= B[15].DB_MAX_OUTPUT_PORT_TYPE
+S[16] <= B[16].DB_MAX_OUTPUT_PORT_TYPE
+S[17] <= B[17].DB_MAX_OUTPUT_PORT_TYPE
+S[18] <= B[18].DB_MAX_OUTPUT_PORT_TYPE
+S[19] <= B[19].DB_MAX_OUTPUT_PORT_TYPE
+S[20] <= B[20].DB_MAX_OUTPUT_PORT_TYPE
+S[21] <= B[21].DB_MAX_OUTPUT_PORT_TYPE
+S[22] <= B[22].DB_MAX_OUTPUT_PORT_TYPE
+S[23] <= B[23].DB_MAX_OUTPUT_PORT_TYPE
+S[24] <= B[24].DB_MAX_OUTPUT_PORT_TYPE
+S[25] <= B[25].DB_MAX_OUTPUT_PORT_TYPE
+S[26] <= B[26].DB_MAX_OUTPUT_PORT_TYPE
+S[27] <= B[27].DB_MAX_OUTPUT_PORT_TYPE
+S[28] <= B[28].DB_MAX_OUTPUT_PORT_TYPE
+S[29] <= B[29].DB_MAX_OUTPUT_PORT_TYPE
+S[30] <= B[30].DB_MAX_OUTPUT_PORT_TYPE
+S[31] <= B[31].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1
+A[0] => fullAdder:U0.A
+A[1] => fullAdder:U1.A
+A[2] => fullAdder:U2.A
+A[3] => fullAdder:U3.A
+A[4] => fullAdder:U4.A
+A[5] => fullAdder:U5.A
+A[6] => fullAdder:U6.A
+A[7] => fullAdder:U7.A
+A[8] => fullAdder:U8.A
+A[9] => fullAdder:U9.A
+A[10] => fullAdder:U10.A
+A[11] => fullAdder:U11.A
+A[12] => fullAdder:U12.A
+A[13] => fullAdder:U13.A
+A[14] => fullAdder:U14.A
+A[15] => fullAdder:U15.A
+A[16] => fullAdder:U16.A
+A[17] => fullAdder:U17.A
+A[18] => fullAdder:U18.A
+A[19] => fullAdder:U19.A
+A[20] => fullAdder:U20.A
+A[21] => fullAdder:U21.A
+A[22] => fullAdder:U22.A
+A[23] => fullAdder:U23.A
+A[24] => fullAdder:U24.A
+A[25] => fullAdder:U25.A
+A[26] => fullAdder:U26.A
+A[27] => fullAdder:U27.A
+A[28] => fullAdder:U28.A
+A[29] => fullAdder:U29.A
+A[30] => fullAdder:U30.A
+A[31] => fullAdder:U31.A
+B[0] => fullAdder:U0.B
+B[1] => fullAdder:U1.B
+B[2] => fullAdder:U2.B
+B[3] => fullAdder:U3.B
+B[4] => fullAdder:U4.B
+B[5] => fullAdder:U5.B
+B[6] => fullAdder:U6.B
+B[7] => fullAdder:U7.B
+B[8] => fullAdder:U8.B
+B[9] => fullAdder:U9.B
+B[10] => fullAdder:U10.B
+B[11] => fullAdder:U11.B
+B[12] => fullAdder:U12.B
+B[13] => fullAdder:U13.B
+B[14] => fullAdder:U14.B
+B[15] => fullAdder:U15.B
+B[16] => fullAdder:U16.B
+B[17] => fullAdder:U17.B
+B[18] => fullAdder:U18.B
+B[19] => fullAdder:U19.B
+B[20] => fullAdder:U20.B
+B[21] => fullAdder:U21.B
+B[22] => fullAdder:U22.B
+B[23] => fullAdder:U23.B
+B[24] => fullAdder:U24.B
+B[25] => fullAdder:U25.B
+B[26] => fullAdder:U26.B
+B[27] => fullAdder:U27.B
+B[28] => fullAdder:U28.B
+B[29] => fullAdder:U29.B
+B[30] => fullAdder:U30.B
+B[31] => fullAdder:U31.B
+Cin => fullAdder:U0.Cin
+S[0] <= fullAdder:U0.S
+S[1] <= fullAdder:U1.S
+S[2] <= fullAdder:U2.S
+S[3] <= fullAdder:U3.S
+S[4] <= fullAdder:U4.S
+S[5] <= fullAdder:U5.S
+S[6] <= fullAdder:U6.S
+S[7] <= fullAdder:U7.S
+S[8] <= fullAdder:U8.S
+S[9] <= fullAdder:U9.S
+S[10] <= fullAdder:U10.S
+S[11] <= fullAdder:U11.S
+S[12] <= fullAdder:U12.S
+S[13] <= fullAdder:U13.S
+S[14] <= fullAdder:U14.S
+S[15] <= fullAdder:U15.S
+S[16] <= fullAdder:U16.S
+S[17] <= fullAdder:U17.S
+S[18] <= fullAdder:U18.S
+S[19] <= fullAdder:U19.S
+S[20] <= fullAdder:U20.S
+S[21] <= fullAdder:U21.S
+S[22] <= fullAdder:U22.S
+S[23] <= fullAdder:U23.S
+S[24] <= fullAdder:U24.S
+S[25] <= fullAdder:U25.S
+S[26] <= fullAdder:U26.S
+S[27] <= fullAdder:U27.S
+S[28] <= fullAdder:U28.S
+S[29] <= fullAdder:U29.S
+S[30] <= fullAdder:U30.S
+S[31] <= fullAdder:U31.S
+Cout <= fullAdder:U31.Cout
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U0
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U1
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U2
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U3
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U4
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U5
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U6
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U7
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U8
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U9
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U10
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U11
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U12
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U13
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U14
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U15
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U16
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U17
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U18
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U19
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U20
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U21
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U22
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U23
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U24
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U25
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U26
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U27
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U28
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U29
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U30
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U1|fullAdder:U31
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2
+A[0] => fullAdder:U0.A
+A[1] => fullAdder:U1.A
+A[2] => fullAdder:U2.A
+A[3] => fullAdder:U3.A
+A[4] => fullAdder:U4.A
+A[5] => fullAdder:U5.A
+A[6] => fullAdder:U6.A
+A[7] => fullAdder:U7.A
+A[8] => fullAdder:U8.A
+A[9] => fullAdder:U9.A
+A[10] => fullAdder:U10.A
+A[11] => fullAdder:U11.A
+A[12] => fullAdder:U12.A
+A[13] => fullAdder:U13.A
+A[14] => fullAdder:U14.A
+A[15] => fullAdder:U15.A
+A[16] => fullAdder:U16.A
+A[17] => fullAdder:U17.A
+A[18] => fullAdder:U18.A
+A[19] => fullAdder:U19.A
+A[20] => fullAdder:U20.A
+A[21] => fullAdder:U21.A
+A[22] => fullAdder:U22.A
+A[23] => fullAdder:U23.A
+A[24] => fullAdder:U24.A
+A[25] => fullAdder:U25.A
+A[26] => fullAdder:U26.A
+A[27] => fullAdder:U27.A
+A[28] => fullAdder:U28.A
+A[29] => fullAdder:U29.A
+A[30] => fullAdder:U30.A
+A[31] => fullAdder:U31.A
+B[0] => fullAdder:U0.B
+B[1] => fullAdder:U1.B
+B[2] => fullAdder:U2.B
+B[3] => fullAdder:U3.B
+B[4] => fullAdder:U4.B
+B[5] => fullAdder:U5.B
+B[6] => fullAdder:U6.B
+B[7] => fullAdder:U7.B
+B[8] => fullAdder:U8.B
+B[9] => fullAdder:U9.B
+B[10] => fullAdder:U10.B
+B[11] => fullAdder:U11.B
+B[12] => fullAdder:U12.B
+B[13] => fullAdder:U13.B
+B[14] => fullAdder:U14.B
+B[15] => fullAdder:U15.B
+B[16] => fullAdder:U16.B
+B[17] => fullAdder:U17.B
+B[18] => fullAdder:U18.B
+B[19] => fullAdder:U19.B
+B[20] => fullAdder:U20.B
+B[21] => fullAdder:U21.B
+B[22] => fullAdder:U22.B
+B[23] => fullAdder:U23.B
+B[24] => fullAdder:U24.B
+B[25] => fullAdder:U25.B
+B[26] => fullAdder:U26.B
+B[27] => fullAdder:U27.B
+B[28] => fullAdder:U28.B
+B[29] => fullAdder:U29.B
+B[30] => fullAdder:U30.B
+B[31] => fullAdder:U31.B
+Cin => fullAdder:U0.Cin
+S[0] <= fullAdder:U0.S
+S[1] <= fullAdder:U1.S
+S[2] <= fullAdder:U2.S
+S[3] <= fullAdder:U3.S
+S[4] <= fullAdder:U4.S
+S[5] <= fullAdder:U5.S
+S[6] <= fullAdder:U6.S
+S[7] <= fullAdder:U7.S
+S[8] <= fullAdder:U8.S
+S[9] <= fullAdder:U9.S
+S[10] <= fullAdder:U10.S
+S[11] <= fullAdder:U11.S
+S[12] <= fullAdder:U12.S
+S[13] <= fullAdder:U13.S
+S[14] <= fullAdder:U14.S
+S[15] <= fullAdder:U15.S
+S[16] <= fullAdder:U16.S
+S[17] <= fullAdder:U17.S
+S[18] <= fullAdder:U18.S
+S[19] <= fullAdder:U19.S
+S[20] <= fullAdder:U20.S
+S[21] <= fullAdder:U21.S
+S[22] <= fullAdder:U22.S
+S[23] <= fullAdder:U23.S
+S[24] <= fullAdder:U24.S
+S[25] <= fullAdder:U25.S
+S[26] <= fullAdder:U26.S
+S[27] <= fullAdder:U27.S
+S[28] <= fullAdder:U28.S
+S[29] <= fullAdder:U29.S
+S[30] <= fullAdder:U30.S
+S[31] <= fullAdder:U31.S
+Cout <= fullAdder:U31.Cout
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U0
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U1
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U2
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U3
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U4
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U5
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U6
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U7
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U8
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U9
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U10
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U11
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U12
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U13
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U14
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U15
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U16
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U17
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U18
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U19
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U20
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U21
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U22
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U23
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U24
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U25
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U26
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U27
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U28
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U29
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U30
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|thirtyTwoBitRippleCarrySubtractor:U6|thirtyTwoBitRippleCarryAdder:U2|fullAdder:U31
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
