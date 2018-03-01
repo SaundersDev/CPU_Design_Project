@@ -167,11 +167,11 @@ begin
 		when "0000000000010" => C <= nothing & subResult;--SUB 2's complement
 		when "0000000000100" => C <= nothing & addResult;--mulResult--MUL 2's complement
 		when "0000000001000" =>	C <= divResult1 & divResult2;--divResult--DIV 2's complement
-		when "0000000010000" => C <= nothing & shrResult;--SHR 2's complement
-		when "0000000100000" => C <= nothing & shraResult;--SHRA 2's complement
-		when "0000001000000" => C <= nothing & shlResult;--SHL 2's complement
-		when "0000010000000" => C <= nothing & rorResult;--ROR 2's complement
-		when "0000100000000" => C <= nothing & rolResult;--ROL 2's complement
+		when "0000000010000" => C <= nothing & shlResult;--SHR 2's complement
+		when "0000000100000" => C <= nothing & shrResult;--SHRA 2's complement
+		when "0000001000000" => C <= nothing & shraResult;--SHL 2's complement
+		when "0000010000000" => C <= nothing & rolResult;--ROR 2's complement
+		when "0000100000000" => C <= nothing & rorResult;--ROL 2's complement
 		when "0001000000000" => C <= nothing & andResult;--AND 2's complement
 		when "0010000000000" => C <= nothing & orResult;--OR 2's complement
 		when "0100000000000" => C <= nothing & negResult;--NEG 2's complement

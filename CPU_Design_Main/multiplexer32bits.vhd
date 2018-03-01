@@ -11,7 +11,6 @@ ENTITY multiplexer32bits IS
 		BusMuxIn_HI, BusMuxIn_LO, BusMuxIn_Zhigh, BusMuxIn_Zlow,
 		BusMuxIn_PC, BusMuxIn_MDR, BusMuxIn_InPort,
 		C_sign_extended: IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-		
 		BusMuxOut : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 		encoderSignal : IN STD_LOGIC_VECTOR(4 DOWNTO 0) 
 	);

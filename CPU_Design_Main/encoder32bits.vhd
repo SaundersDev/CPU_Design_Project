@@ -14,8 +14,6 @@ end entity encoder32bits;
 architecture behavioural of encoder32bits is
 begin
 	
-	
-	
 	output <= "00000" when (input(0) = '1')
 		else "00001" when (input(1) = '1')
 		else "00010" when (input(2) = '1')
@@ -40,8 +38,5 @@ begin
 		else "10101" when (input(21) = '1')
 		else "10110" when (input(22) = '1')
 		else "10111" when (input(23) = '1');
-	
-	
-	
 	
 end architecture behavioural;
