@@ -8,11 +8,11 @@ entity registerFile is
 	(
 		clk, clr 	: in std_logic;
 		Rin			: in std_logic_vector(15 downto 0);
-		BusMuxOut 	: in std_logic_vector(15 downto 0);
-		BusMuxIn-R0, BusMuxIn-R1, BusMuxIn-R2, BusMuxIn-R3,
-		BusMuxIn-R4, BusMuxIn-R5, BusMuxIn-R6, BusMuxIn-R7,
-		BusMuxIn-R8, BusMuxIn-R9, BusMuxIn-R10, BusMuxIn-R11,
-		BusMuxIn-R12, BusMuxIn-R13, BusMuxIn-R14, BusMuxIn-R15 : out std_logic_vector(15 downto 0)
+		BusMuxOut 	: in std_logic_vector(31 downto 0);
+		BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3,
+		BusMuxInR4, BusMuxInR5, BusMuxInR6, BusMuxInR7,
+		BusMuxInR8, BusMuxInR9, BusMuxInR10, BusMuxInR11,
+		BusMuxInR12, BusMuxInR13, BusMuxInR14, BusMuxInR15 : out std_logic_vector(31 downto 0)
 	);
 end registerFile;
 
@@ -25,7 +25,7 @@ component reg_32
 		clr			: in std_logic;
 		Rin 		: in std_logic;
 		BusMuxOut 	: in std_logic_vector(31 downto 0);
-		BusMuxIn 	: out std_logic_vector(31 downto 0));
+		BusMuxIn 	: out std_logic_vector(31 downto 0)
 	);
 end component;
 
@@ -33,113 +33,113 @@ begin
 U0: reg_32 PORT MAP(				
 					clk			=> clk,
 					clr			=> clr,
-					Rin 		=> Rin(0),
+					Rin 			=> Rin(0),
 					BusMuxOut 	=> BusMuxOut,
-					BusMuxIn 	=> BusMuxIn-R0
+					BusMuxIn 	=> BusMuxInR0
 				);
 U1: reg_32 PORT MAP(				
 					clk			=> clk,
 					clr			=> clr,
-					Rin 		=> Rin(1),
+					Rin 			=> Rin(1),
 					BusMuxOut 	=> BusMuxOut,
-					BusMuxIn 	=> BusMuxIn-R1
+					BusMuxIn 	=> BusMuxInR1
 				);
 U2: reg_32 PORT MAP(				
 					clk			=> clk,
 					clr			=> clr,
-					Rin 		=> Rin(2),
+					Rin 			=> Rin(2),
 					BusMuxOut 	=> BusMuxOut,
-					BusMuxIn 	=> BusMuxIn-R2
+					BusMuxIn 	=> BusMuxInR2
 				);
 U3: reg_32 PORT MAP(				
 					clk			=> clk,
 					clr			=> clr,
-					Rin 		=> Rin(3),
+					Rin 			=> Rin(3),
 					BusMuxOut 	=> BusMuxOut,
-					BusMuxIn 	=> BusMuxIn-R3
+					BusMuxIn 	=> BusMuxInR3
 				);
 U4: reg_32 PORT MAP(				
 					clk			=> clk,
 					clr			=> clr,
-					Rin 		=> Rin(4),
+					Rin 			=> Rin(4),
 					BusMuxOut 	=> BusMuxOut,
-					BusMuxIn 	=> BusMuxIn-R4
+					BusMuxIn 	=> BusMuxInR4
 				);
 U5: reg_32 PORT MAP(				
 					clk			=> clk,
 					clr			=> clr,
-					Rin 		=> Rin(5),
+					Rin 			=> Rin(5),
 					BusMuxOut 	=> BusMuxOut,
-					BusMuxIn 	=> BusMuxIn-R5
+					BusMuxIn 	=> BusMuxInR5
 				);
 U6: reg_32 PORT MAP(				
 					clk			=> clk,
 					clr			=> clr,
-					Rin 		=> Rin(6),
+					Rin 			=> Rin(6),
 					BusMuxOut 	=> BusMuxOut,
-					BusMuxIn 	=> BusMuxIn-R6
+					BusMuxIn 	=> BusMuxInR6
 				);
 U7: reg_32 PORT MAP(				
 					clk			=> clk,
 					clr			=> clr,
-					Rin 		=> Rin(7),
+					Rin 			=> Rin(7),
 					BusMuxOut 	=> BusMuxOut,
-					BusMuxIn 	=> BusMuxIn-R7
+					BusMuxIn 	=> BusMuxInR7
 				);
 U8: reg_32 PORT MAP(				
 					clk			=> clk,
 					clr			=> clr,
-					Rin 		=> Rin(8),
+					Rin 			=> Rin(8),
 					BusMuxOut 	=> BusMuxOut,
-					BusMuxIn 	=> BusMuxIn-R8
+					BusMuxIn 	=> BusMuxInR8
 				);
 U9: reg_32 PORT MAP(				
 					clk			=> clk,
 					clr			=> clr,
-					Rin 		=> Rin(9),
+					Rin 			=> Rin(9),
 					BusMuxOut 	=> BusMuxOut,
-					BusMuxIn 	=> BusMuxIn-R9
+					BusMuxIn 	=> BusMuxInR9
 				);
 U10: reg_32 PORT MAP(				
 					clk			=> clk,
 					clr			=> clr,
-					Rin 		=> Rin(10),
+					Rin 			=> Rin(10),
 					BusMuxOut 	=> BusMuxOut,
-					BusMuxIn 	=> BusMuxIn-R10
+					BusMuxIn 	=> BusMuxInR10
 				);				
 U11: reg_32 PORT MAP(				
 					clk			=> clk,
 					clr			=> clr,
-					Rin 		=> Rin(11),
+					Rin 			=> Rin(11),
 					BusMuxOut 	=> BusMuxOut,
-					BusMuxIn 	=> BusMuxIn-R11
+					BusMuxIn 	=> BusMuxInR11
 				);
 U12: reg_32 PORT MAP(				
 					clk			=> clk,
 					clr			=> clr,
-					Rin 		=> Rin(12),
+					Rin 			=> Rin(12),
 					BusMuxOut 	=> BusMuxOut,
-					BusMuxIn 	=> BusMuxIn-R12
+					BusMuxIn 	=> BusMuxInR12
 				);
 U13: reg_32 PORT MAP(				
 					clk			=> clk,
 					clr			=> clr,
-					Rin 		=> Rin(13),
+					Rin 			=> Rin(13),
 					BusMuxOut 	=> BusMuxOut,
-					BusMuxIn 	=> BusMuxIn-R13
+					BusMuxIn 	=> BusMuxInR13
 				);
 U14: reg_32 PORT MAP(				
 					clk			=> clk,
 					clr			=> clr,
-					Rin 		=> Rin(14),
+					Rin 			=> Rin(14),
 					BusMuxOut 	=> BusMuxOut,
-					BusMuxIn 	=> BusMuxIn-R14
+					BusMuxIn 	=> BusMuxInR14
 				);
 U15: reg_32 PORT MAP(				
 					clk			=> clk,
 					clr			=> clr,
-					Rin 		=> Rin(15),
+					Rin 			=> Rin(15),
 					BusMuxOut 	=> BusMuxOut,
-					BusMuxIn 	=> BusMuxIn-R15
+					BusMuxIn 	=> BusMuxInR15
 				);
 end behaviour; 
