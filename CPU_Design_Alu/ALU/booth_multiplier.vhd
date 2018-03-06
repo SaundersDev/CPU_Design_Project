@@ -5,25 +5,23 @@ USE ieee.STD_LOGIC_SIGNED.ALL;
 use IEEE.std_logic_arith.all;
 
 --this is setup Regsister entity with I/O declarations
-ENTITY booth_multiplier IS
+entity boothMultiplier IS
 	PORT (
 	A, B : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
 	C : OUT STD_LOGIC_VECTOR(63 DOWNTO 0)
 	);
-END booth_multiplier;
+end boothMultiplier;
 
 --Delcaring Register Architacture and define operation 
 --of register entity
-ARCHITECTURE behavioral OF booth_multiplier IS
-
+architecture behaviour of boothMultiplier is
+	shared variable multiplicand, multiplier, Answer : std_LOGIC_VECTOR(31 downto 0);
+	shared variable add : std_LOGIC_VECTOR(1 downto 0);
+	shared variable prevQ, change: std_logic;
 	
-BEGIN
-	booth_multiplication:
-	PROCESS (B)
-		variable multiplicand, multiplier, Answer : std_LOGIC_VECTOR(31 downto 0);
-		variable add : std_LOGIC_VECTOR(1 downto 0);
-		variable prevQ, change: std_logic;
-	BEGIN
+begin
+	booth_multiplication: process (B)
+	begin
 		multiplicand := A;
 		multiplier := B;
 		Answer := (others => '0');
@@ -31,8 +29,8 @@ BEGIN
 		
 		--If negative number
 		if (multiplicand(31) = '1') then
-			multiplicand(31) := multiplicand(31) XOR '1';
-			multiplier(31) := multiplier(31) XOR '1';
+			multiplicand := (NOT multiplicand) + 1;
+			multiplier := (NOT multiplier) + 1;
 		end if;
 		
 		for count in 0 to 15 loop
@@ -77,8 +75,8 @@ BEGIN
 			Answer(31) := Answer(29);  
 			Answer(30) := Answer(29);
 		end loop;
-		C(63 downto 32) <= Answer;
-		C(31 downto 0) <= multiplier;
-	END PROCESS;
+			C(63 downto 32) <= Answer;
+			C(31 downto 0) <= multiplier;
+	end process;
 	
- END behavioral;
+ end behaviour;
