@@ -5,16 +5,16 @@ USE ieee.STD_LOGIC_SIGNED.ALL;
 use IEEE.std_logic_arith.all;
 
 --this is setup Regsister entity with I/O declarations
-entity boothMultiplier IS
+entity booth_multiplier IS
 	PORT (
 	A, B : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
 	C : OUT STD_LOGIC_VECTOR(63 DOWNTO 0)
 	);
-end boothMultiplier;
+end booth_multiplier;
 
 --Delcaring Register Architacture and define operation 
 --of register entity
-architecture behaviour of boothMultiplier is
+architecture behaviour of booth_multiplier is
 	shared variable multiplicand, multiplier, Answer : std_LOGIC_VECTOR(31 downto 0);
 	shared variable add : std_LOGIC_VECTOR(1 downto 0);
 	shared variable prevQ, change: std_logic;

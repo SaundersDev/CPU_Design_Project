@@ -33,8 +33,15 @@ port(
 end entity;
 
 architecture behaviour of ALU is
-signal wastedCarryInAdd, wastedCarryOutAdd, wastedCarryInNeg, wastedCarryInSub, wastedCarryOutNeg, wastedCarryOutSub : std_logic := '0';
-signal nothing : std_logic_vector(31 downto 0) := "00000000000000000000000000000000";
+signal 	wastedCarryInAdd, wastedCarryOutAdd,
+			wastedCarryInNeg, wastedCarryInSub,
+			wastedCarryOutNeg, wastedCarryOutSub : std_logic := '0';
+			
+			
+signal nothing 		: std_logic_vector(31 downto 0) := "00000000000000000000000000000000";
+signal everything		: std_logic_vector(31 downto 0):= "11111111111111111111111111111111";
+signal chooseSignage : std_logic_vector(31 downto 0);
+
 
 component booth_multiplier is
 	port(
@@ -42,6 +49,7 @@ component booth_multiplier is
 		C : OUT STD_LOGIC_VECTOR(63 DOWNTO 0)
 	);
 end component booth_multiplier;
+
 component divider is
 	port(
 		denom			: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
@@ -50,42 +58,48 @@ component divider is
 		remain		: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
 	);
 end component divider;
+
 component thirtyTwoBitRippleCarryAdder is
 	port(
-		A		:   in std_logic_vector(31 downto 0);
+		A		:  in std_logic_vector(31 downto 0);
 		B		:	in std_logic_vector(31 downto 0);
 		Cin	:  in std_logic;
 		S		:  out std_logic_vector(31 downto 0);
 		Cout 	:  out std_logic
 	);
 end component thirtyTwoBitRippleCarryAdder;
+
 component thirtyTwoBitRippleCarrySubtractor is
 	port(
 		A		:  in std_logic_vector(31 downto 0);
 		B		:  in std_logic_vector(31 downto 0);
-		Cin		:  in std_logic;
+		Cin	:  in std_logic;
 		S		:  out std_logic_vector(31 downto 0);
 		Cout 	:  out std_logic
 	);
 end component thirtyTwoBitRippleCarrySubtractor;
+
 component andGate is
 	port(
 		A, B : in std_logic_vector(31 downto 0);
 		S : out std_logic_vector(31 downto 0)
 	);
 end component;
+
 component orGate is
 	port(
 		A, B : in std_logic_vector(31 downto 0);
 		S : out std_logic_vector(31 downto 0)
 	);
 end component;
+
 component notGate is
 	port(
 		B : in std_logic_vector(31 downto 0);
 		S : out std_logic_vector(31 downto 0)
 	);
 end component;
+
 component negGate is
 	port(
 		B		:	in std_logic_vector(31 downto 0);
@@ -94,18 +108,51 @@ component negGate is
 		Cout 	:	out std_logic
 	);
 end component;
-component shiftRotateComponent is
+
+component shiftLeft is
 	port(
-		B 					: in std_logic_vector(31 downto 0);
-		sL, sR, sR_A, rL, rR : out std_logic_vector(31 downto 0)
+		B		: in std_logic_vector(31 downto 0);
+		S		: out std_logic_vector(31 downto 0)
 	);
 end component;
 
-signal addResult, subResult, divResult1, divResult2 : std_logic_vector(31 downto 0);
-signal shrResult, shraResult, shlResult, rorResult	: std_logic_vector(31 downto 0);
-signal rolResult, andResult, orResult, negResult	: std_logic_vector(31 downto 0);
-signal notResult	: std_logic_vector(31 downto 0);
+component shiftRight is
+	port(
+		B	 	: in std_logic_vector(31 downto 0);
+		S		: out std_logic_vector(31 downto 0)
+	);
+end component;
+
+component shiftRightArithmetic is
+	port(
+		B	 	: in std_logic_vector(31 downto 0);
+		S		: out std_logic_vector(31 downto 0)
+	);
+end component;
+
+component rotateLeft is
+	port(
+		B	 	: in std_logic_vector(31 downto 0);
+		S		: out std_logic_vector(31 downto 0)
+	);
+end component;
+
+component rotateRight is
+	port(
+		B		: in std_logic_vector(31 downto 0);
+		S		: out std_logic_vector(31 downto 0)
+	);
+end component;
+
+signal addResult, subResult 				: std_logic_vector(31 downto 0);
+signal divResult1, divResult2 			: std_logic_vector(31 downto 0);
+signal shlResult								: std_logic_vector(31 downto 0);
+signal shrResult, shraResult				: std_logic_vector(31 downto 0);
+signal rolResult, rorResult				: std_logic_vector(31 downto 0);
+signal andResult, orResult					: std_logic_vector(31 downto 0);
+signal notResult, negResult				: std_logic_vector(31 downto 0);
 signal mulResult	: std_logic_vector(63 downto 0);
+
 
 begin
 
@@ -113,7 +160,7 @@ U0: thirtyTwoBitRippleCarryAdder	port map(
 		A		=> A,
 		B		=> B,
 		Cin	=> wastedCarryInAdd,
-		S		=> addResult,
+		S		=> addResult,					
 		Cout	=> wastedCarryOutAdd 	
 	);
 	
@@ -141,16 +188,32 @@ U4: negGate port map(
 		Cout			=> wastedCarryOutNeg
 	);
 
-U5: shiftRotateComponent port map(
-		B			=> B,
-		sL			=> shlResult,
-		sR			=> shrResult,
-		sR_A 		=> shraResult,
-		rL			=> rolResult,
-		rR			=> rorResult
+U5: shiftLeft port map(
+		B	=> B,
+		S => shlResult
 	);
 
-U6: thirtyTwoBitRippleCarrySubtractor	port map(
+U6: shiftRight port map(
+		B	=> B,
+		S => shrResult
+	);
+
+U7: shiftRightArithmetic port map(
+		B	=> B,
+		S => shraResult
+	);
+
+U8: rotateLeft port map(
+		B	=> B,
+		S => rolResult
+	);
+
+U9: rotateRight port map(
+		B	=> B,
+		S => rorResult
+	);	
+	
+U10: thirtyTwoBitRippleCarrySubtractor	port map(
 		A		=> A,
 		B		=> B,
 		Cin	=> wastedCarryInSub,
@@ -158,34 +221,48 @@ U6: thirtyTwoBitRippleCarrySubtractor	port map(
 		Cout	=> wastedCarryOutSub 	
 	);	
 	
-U7 : divider port map(
+U11: divider port map(
 		denom			=> A,
 		numer			=> B,
-		quotient		=> divResult2,
-		remain		=> divResult1
+		quotient		=> divResult1,
+		remain		=> divResult2
 	);
-U8 : booth_multiplier port map(
+U12: booth_multiplier port map(
 		A => A,
 		B => B,
 		C => mulResult
 );
 	
-process(control)
+process(control, addResult, subResult, mulResult, divResult1, divResult2, shlResult, shrResult, shraResult, rolResult, rorResult, andResult, orResult, negResult)
 begin
+	if addResult(31) = '1' and control = "0000000000001" then
+		chooseSignage <= everything;
+	elsif addResult(31) = '0' and control = "0000000000001" then
+		chooseSignage <= nothing;
+	end if;
+	
+	if subResult(31) = '0' and control = "0000000000010" then
+		chooseSignage <= everything;
+	elsif subResult(31) = '1' and control = "0000000000010" then
+		chooseSignage <= nothing;
+	end if;
+	
+	
+--	C <= nothing & shlResult;
 	case control is
-		when "0000000000001" => C <= nothing & addResult;--ADD 2's complement
-		when "0000000000010" => C <= nothing & subResult;--SUB 2's complement
-		when "0000000000100" => C <= mulResult;--mulResult--MUL 2's complement
-		when "0000000001000" =>	C <= divResult1 & divResult2;--divResult--DIV 2's complement
-		when "0000000010000" => C <= nothing & shlResult;--SHR 2's complement
-		when "0000000100000" => C <= nothing & shrResult;--SHRA 2's complement
-		when "0000001000000" => C <= nothing & shraResult;--SHL 2's complement
-		when "0000010000000" => C <= nothing & rolResult;--ROR 2's complement
-		when "0000100000000" => C <= nothing & rorResult;--ROL 2's complement
-		when "0001000000000" => C <= nothing & andResult;--AND 2's complement
-		when "0010000000000" => C <= nothing & orResult;--OR 2's complement
-		when "0100000000000" => C <= nothing & negResult;--NEG 2's complement
-		when others 			=> C <= nothing & notResult;--NOT 1's complement
+		when "0000000000001" => C <= chooseSignage & addResult;		--ADD 2's complement
+		when "0000000000010" => C <= chooseSignage & subResult;		--SUB 2's complement
+		when "0000000000100" => C <= mulResult;			 		--MUL 2's complement
+		when "0000000001000" =>	C <= divResult1 & divResult2;	--divResult--DIV 2's complement
+		when "0000000010000" => C <= nothing & shlResult;		--SHL 2's complement
+		when "0000000100000" => C <= nothing & shrResult;		--SHR 2's complement
+		when "0000001000000" => C <= nothing & shraResult;		--SHRA 2's complement
+		when "0000010000000" => C <= nothing & rolResult;		--ROR 2's complement
+		when "0000100000000" => C <= nothing & rorResult;		--ROL 2's complement
+		when "0001000000000" => C <= nothing & andResult;		--AND 2's complement
+		when "0010000000000" => C <= nothing & orResult;		--OR 2's complement
+		when "0100000000000" => C <= nothing & negResult;		--NEG 2's complement
+		when others 			=> C <= nothing & notResult;		--NOT 1's complement
 	end case;
 end process;
 
