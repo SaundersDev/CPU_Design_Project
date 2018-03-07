@@ -5,40 +5,114 @@ ENTITY datapath_tb IS
 END;
 
 ARCHITECTURE datapath_tb_arc OF datapath_tb IS
-
-SIGNAL	PCout_tb, Zlowout_tb, MDRout_tb 						:	std_logic;
-SIGNAL	MARin_tb, Zin_tb, PCin_tb, MDRin_tb, IRin_tb, Yin_tb:	std_logic;
-SIGNAL	IncPC_tb, Read_tb, AND_tb								:	std_logic;
-SIGNAL	Mdatain_tb, BusMuxOut_tb								:	std_logic_vector(31 downto 0);
-SIGNAL	Clock_tb														:	std_logic;
-signal 	registerOut_tb 											: std_logic_vector(31 downto 0);
-signal 	registerFileIn_tb 										: std_logic_vector(15 downto 0);
+signal	Clock_tb														: std_logic;
 signal 	clr_tb														: std_logic;
+signal	busR0_tb, busR1_tb, busR2_tb, busR3_tb, busR4_tb, 
+			busR5_tb, busR6_tb, busR7_tb, busR8_tb, busR9_tb, 
+			busR10_tb, busR11_tb, busR12_tb, 
+			busR13_tb, busR14_tb, busR15_tb						: std_logic_vector(31 downto 0); --outputs from each register
+signal busPCin_tb, busIRin_tb, busMARin_tb, busMDRin_tb					: std_logic_vector(31 downto 0);
+signal busInPortin_tb, busOutPortIn_tb, busHIin_tb, busLOin_tb			: std_logic_vector(31 downto 0);			
+signal busZhighin_tb, busZlowin_tb, busSignExtendedIn_tb	: std_logic_vector(31 downto 0);
+signal encoderControlBus_tb 										: std_logic_vector(4 downto 0);
+signal InPortin_tb, OutPortin_tb, HIin_tb, LOin_tb			: std_logic;
+signal registerOut_tb	 											: std_logic_vector(31 downto 0);
+signal PCout_tb, Zlowout_tb, MDRout_tb 						: std_logic;
+SIGNAL MARin_tb, Zin_tb, PCin_tb, MDRin_tb, IRin_tb, Yin_tb:	std_logic;
+SIGNAL	IncPC_tb, Read_tb, AND_tb								:	std_logic;
+SIGNAL	Mdatain_tb												:	std_logic_vector(31 downto 0);
+signal 	registerFileIn_tb 										: std_logic_vector(15 downto 0);
 signal	logicALUSelect_tb											: std_logic_vector(12 downto 0);
-signal	R0, R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15,
-			HI, LO, IR, BusMuxOut, Z 								: std_logic_vector(31 downto 0);
+
+signal	HI, LO, IR, BusMuxOut				: std_logic_vector(31 downto 0);
 TYPE	State IS(default, Reg_load1a, Reg_load1b, Reg_load2a, Reg_load2b, Reg_load3a, Reg_load3b, T0, T1, T2, T3, T4, T5);
 SIGNAL	Present_state:	State:=default;
 
 COMPONENT datapath is
 	PORT(
-		Clock											: in std_logic;
-		clr 											: in std_logic;
---		conFFLogicInControl 				: in std_logic;
+		Clock										: in std_logic;
+		clr 										: in std_logic;
+--bus signals coming out of register files into the bus
+		busR0										: inout std_logic_vector(31 downto 0);
+		busR1										: inout std_logic_vector(31 downto 0);
+		busR2										: inout std_logic_vector(31 downto 0);
+		busR3										: inout std_logic_vector(31 downto 0);
+		busR4										: inout std_logic_vector(31 downto 0);
+		busR5										: inout std_logic_vector(31 downto 0);
+		busR6										: inout std_logic_vector(31 downto 0);
+		busR7										: inout std_logic_vector(31 downto 0);
+		busR8										: inout std_logic_vector(31 downto 0);
+		busR9										: inout std_logic_vector(31 downto 0);
+		busR10									: inout std_logic_vector(31 downto 0); 
+		busR11									: inout std_logic_vector(31 downto 0);
+		busR12									: inout std_logic_vector(31 downto 0); 
+		busR13									: inout std_logic_vector(31 downto 0);
+		busR14									: inout std_logic_vector(31 downto 0); 
+		busR15 									: inout std_logic_vector(31 downto 0);
+		
+		busPCin 					: inout std_logic_vector(31 downto 0); 
+		busIRin  				: inout std_logic_vector(31 downto 0); 
+		busMARin  				: inout std_logic_vector(31 downto 0);
+		busMDRin  				: inout std_logic_vector(31 downto 0); 
+		busInPortin  			: inout std_logic_vector(31 downto 0); 
+		busOutPortin			: inout std_logic_vector(31 downto 0); 
+		busHIin  				: inout std_logic_vector(31 downto 0); 
+		busLOin  				: inout std_logic_vector(31 downto 0); 
+		busZhighin				: inout std_logic_vector(31 downto 0); 
+		busZlowin  				: inout std_logic_vector(31 downto 0); 
+		busSignExtendedIn  	: inout std_logic_vector(31 downto 0); 		
+		encoderControlBus 	: inout std_logic_vector(4 downto 0);		
+		
+		InPortin, OutPortin, HIin, LOin  : inout std_logic;		
+		
+--		conFFLogicInControl 					: in std_logic;
 		registerOut	 								: in std_logic_vector(31 downto 0); 
 		PCout, Zlowout, MDRout					: in std_logic;
 		MARin, Zin, PCin, MDRin, IRin, Yin	: in std_logic;		--Can't be used as Rin
 		IncPC, ReadChannel						: in std_logic;
+		ANDVar										: in std_logic;
 		Mdatain										: in std_logic_vector(31 downto 0);
 		registerFileIn 							: in std_logic_vector(15 downto 0);
-		logicALUSelect 							: in std_logic_vector(12 downto 0)		
+		logicALUSelect 							: in std_logic_vector(12 downto 0)
 	);
 END COMPONENT datapath;
 BEGIN
 
-DUT0 : datapath
---port mapping: between the dut and the testbench signals
-	PORT MAP (
+DUT0 : datapath	PORT MAP (
+	Clock => Clock_tb,
+	clr	=> clr_tb,
+	busR0 => busR0_tb,
+	busR1 => busR1_tb,
+	busR2 => busR2_tb,
+	busR3 => busR3_tb,
+	busR4 => busR4_tb,
+	busR5 => busR5_tb,
+	busR6 => busR6_tb,
+	busR7 => busR7_tb,
+	busR8 => busR8_tb,
+	busR9 => busR9_tb,
+	busR10=> busR10_tb,
+	busR11=> busR11_tb,
+	busR12=> busR12_tb,
+	busR13=> busR13_tb,
+	busR14=> busR14_tb,
+	busR15=> busR15_tb,
+	busPCin		=>busPCin_tb, 
+	busIRin		=>busIRin_tb, 
+	busMARin		=> busMARin_tb, 
+	busMDRin		=> busMDRin_tb,
+	busInPortin => busInPortin_tb, 
+	busOutPortin=> busOutPortIn_tb, 
+	busHIin		=>busHIin_tb, 
+	busLOin		=>busLOin_tb,
+	busZhighin	=>busZhighin_tb, 
+	busZlowin	=>busZlowin_tb, 
+	busSignExtendedIn=>busSignExtendedIn_tb,
+	encoderControlBus=>encoderControlBus_tb,
+	InPortin		=> InPortin_tb,
+	OutPortin	=> OutPortin_tb,
+	HIin			=> HIin_tb,
+	LOin			=> LOin_tb,
 	PCout 		=>	PCout_tb,
 	Zlowout 		=>	Zlowout_tb,
 	MDRout		=>	MDRout_tb,
@@ -52,11 +126,9 @@ DUT0 : datapath
 	registerFileIn	=>	registerFileIn_tb,
 	IncPC 		=>	IncPC_tb,
 	ReadChannel =>	Read_tb,
-	--AND		=>	AND_tb,
+	ANDVar		=>	AND_tb,
 	Mdatain 	=>	Mdatain_tb,
-	Clock 		=> 	Clock_tb,
-	clr			=> clr_tb,
-	logicALUSelect => logicALUSelect_tb
+	logicALUSelect => logicALUSelect_tb		
 	);
 	
 	Clock_process:PROCESS is
@@ -103,9 +175,11 @@ DUT0 : datapath
 			
 			when Default =>
 				PCout_tb <= '0'; 	Zlowout_tb <= '0';	MDRout_tb <= '0'; -- initialize the signals
-				registerOut_tb(1) 		<= '0'; 
-				registerOut_tb(2) 		<= '0'; 
-				registerOut_tb(3) 		<= '0'; 
+				clr_tb <= '1'; 
+				
+				for bowden in 1 to 15 loop
+					registerOut_tb(bowden) <='0';
+				end loop;
 				MARin_tb 				<= '0';
 				Zin_tb 					<= '0';
 				PCin_tb  				<= '0';
@@ -118,7 +192,7 @@ DUT0 : datapath
 				IncPC_tb 				<= '0';
 				Read_tb   				<= '0';
 				AND_tb 					<= '0';
-				logicALUSelect_tb		<= '0';
+				logicALUSelect_tb		<= "0000000000010";
 			WHEN Reg_load1a => 
 				Mdatain_tb <= x"00000012";
 				Read_tb   <= '0', '1' after 10 ns, '0' after 25 ns;
@@ -156,7 +230,7 @@ DUT0 : datapath
 				PCin_tb    				<= '1';
 				Read_tb   				<= '1';
 				MDRin_tb 				<= '1';
-				Mdatain_tb(31 downto 0) <= x"28918000"; -- opcode for and R1, R2, R3
+				Mdatain_tb(31 downto 0) <= x"28918000"; -- opcode for and R1_tb, R2_tb, R3_tb
 			
 			WHEN T2 =>
 			 MDRout_tb	<= '1';

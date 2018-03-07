@@ -3,16 +3,50 @@ use ieee.std_logic_1164.all;
 
 entity datapath is
 	port(
-		Clock										: in std_logic;
-		clr 										: in std_logic;
---		conFFLogicInControl 				: in std_logic;
-		registerOut	 							: in std_logic_vector(31 downto 0); 
-		PCout, Zlowout, MDRout				: in std_logic;
+		Clock						: in std_logic;
+		clr 						: in std_logic;
+--bus signals coming out of register files into the bus
+		busR0						: inout std_logic_vector(31 downto 0);
+		busR1						: inout std_logic_vector(31 downto 0);
+		busR2						: inout std_logic_vector(31 downto 0);
+		busR3						: inout std_logic_vector(31 downto 0);
+		busR4						: inout std_logic_vector(31 downto 0);
+		busR5						: inout std_logic_vector(31 downto 0);
+		busR6						: inout std_logic_vector(31 downto 0);
+		busR7						: inout std_logic_vector(31 downto 0);
+		busR8						: inout std_logic_vector(31 downto 0);
+		busR9						: inout std_logic_vector(31 downto 0);
+		busR10					: inout std_logic_vector(31 downto 0); 
+		busR11					: inout std_logic_vector(31 downto 0);
+		busR12					: inout std_logic_vector(31 downto 0); 
+		busR13					: inout std_logic_vector(31 downto 0);
+		busR14					: inout std_logic_vector(31 downto 0); 
+		busR15 					: inout std_logic_vector(31 downto 0);
+		
+		busPCin 					: inout std_logic_vector(31 downto 0); 
+		busIRin  				: inout std_logic_vector(31 downto 0); 
+		busMARin  				: inout std_logic_vector(31 downto 0);
+		busMDRin  				: inout std_logic_vector(31 downto 0); 
+		busInPortin  			: inout std_logic_vector(31 downto 0); 
+		busOutPortin			: inout std_logic_vector(31 downto 0); 
+		busHIin  				: inout std_logic_vector(31 downto 0); 
+		busLOin  				: inout std_logic_vector(31 downto 0); 
+		busZhighin				: inout std_logic_vector(31 downto 0); 
+		busZlowin  				: inout std_logic_vector(31 downto 0); 
+		busSignExtendedIn  	: inout std_logic_vector(31 downto 0); 		
+		encoderControlBus 	: inout std_logic_vector(4 downto 0);		
+		
+		InPortin, OutPortin, HIin, LOin  : inout std_logic;		
+		
+--		conFFLogicInControl 					: in std_logic;
+		registerOut	 								: in std_logic_vector(31 downto 0); 
+		PCout, Zlowout, MDRout					: in std_logic;
 		MARin, Zin, PCin, MDRin, IRin, Yin	: in std_logic;		--Can't be used as Rin
-		IncPC, ReadChannel					: in std_logic;
-		Mdatain									: in std_logic_vector(31 downto 0);
-		registerFileIn 						: in std_logic_vector(15 downto 0);
-		logicALUSelect 						: in std_logic_vector(12 downto 0)
+		IncPC, ReadChannel						: in std_logic;
+		ANDVar										: in std_logic;
+		Mdatain										: in std_logic_vector(31 downto 0);
+		registerFileIn 							: in std_logic_vector(15 downto 0);
+		logicALUSelect 							: in std_logic_vector(12 downto 0)
 	);
 end entity;
 
@@ -22,7 +56,7 @@ component reg_32
 	port(
 		clk			: in std_logic;
 		clr			: in std_logic;
-		Rin 		: in std_logic;
+		Rin 			: in std_logic;
 		BusMuxOut 	: in std_logic_vector(31 downto 0);
 		BusMuxIn 	: out std_logic_vector(31 downto 0)
 	);
@@ -86,19 +120,19 @@ end component;
 --the main data path bus aka BusMuxOut
 signal datapathBus : std_logic_vector(31 downto 0); 
 
---bus signals coming out of register files into the bus
-signal	busR0, busR1, busR2, busR3,
-		busR4, busR5, busR6, busR7,
-		busR8, busR9, busR10, busR11,
-		busR12, busR13, busR14, busR15 : std_logic_vector(31 downto 0);
-signal	busPCin, busIRin, busMARin, busMDRin,
-			busInPortin, busOutPortin, busHIin, busLOin,
-			busZhighin, busZlowin, busSignExtendedIn  : std_logic_vector(31 downto 0); 
-signal 	InPortin, OutPortin, HIin, LOin  : std_logic;
+----bus signals coming out of register files into the bus
+--signal	busR0, busR1, busR2, busR3,
+--		busR4, busR5, busR6, busR7,
+--		busR8, busR9, busR10, busR11,
+--		busR12, busR13, busR14, busR15 : std_logic_vector(31 downto 0);
+--signal	busPCin, busIRin, busMARin, busMDRin,
+--			busInPortin, busOutPortin, busHIin, busLOin,
+--			busZhighin, busZlowin, busSignExtendedIn  : std_logic_vector(31 downto 0); 
+--signal 	InPortin, OutPortin, HIin, LOin  : std_logic;
 
 --encoder signals
 --signal registerOut : std_logic_vector(22 downto 0);
-signal encoderControlBus : std_logic_vector(4 downto 0);
+--signal encoderControlBus : std_logic_vector(4 downto 0);
 
 --selecting signals going into registers
 --signal IRsel : std_logic;
@@ -180,7 +214,6 @@ U7: reg_32	port map(
 		BusMuxIn => busLOin
 );
 --regular registers
-
 U8: registerFile port map(
 		clk => Clock,
 		clr => clr, 
@@ -244,12 +277,12 @@ U12: multiplexer32bits port map(
 		BusMuxIn_R15 	=> busR15,
 		BusMuxIn_HI 	=> busHIin,
 		BusMuxIn_LO 	=> busLOin, 
-		BusMuxIn_Zhigh 	=> busZhighin,
+		BusMuxIn_Zhigh => busZhighin,
 		BusMuxIn_Zlow 	=> busZlowin,
 		BusMuxIn_PC 	=> busPCin,
 		BusMuxIn_MDR 	=> busMDRin,
-		BusMuxIn_InPort => busInPortin,
-		C_sign_extended => busSignExtendedIn,		
+		BusMuxIn_InPort=> busInPortin,
+		C_sign_extended=> busSignExtendedIn,		
 		BusMuxOut 		=> datapathBus,
 		encoderSignal 	=> encoderControlBus
 	);
