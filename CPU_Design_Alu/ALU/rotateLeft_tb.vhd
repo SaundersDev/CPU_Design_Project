@@ -1,10 +1,10 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
-ENTITY datapath_tb IS
+ENTITY shiftLeft_tb IS
 END;
 
-ARCHITECTURE datapath_tb_arc OF datapath_tb IS
+ARCHITECTURE datapath_tb_arc OF shiftLeft_tb IS
 signal	Clock_tb														: std_logic;
 signal 	clr_tb														: std_logic;
 signal	busR0_tb, busR1_tb, busR2_tb, busR3_tb, busR4_tb, 
@@ -179,14 +179,14 @@ DUT0 : datapath	PORT MAP (
 				registerFileIn_tb 	<= x"0000";			
 				IncPC_tb 				<= '0';
 				Read_tb   				<= '0';
-				logicALUSelect_tb 	<= "0001000000000";	
+				logicALUSelect_tb 	<= "0000000010000";
 			WHEN Reg_load1a => 
 				Mdatain_tb <= x"00000012";
 				Read_tb   <= '0', '1' after 10 ns, '0' after 25 ns;
 				MDRin_tb  <= '0', '1' after 10 ns, '0' after 25 ns;
 			WHEN Reg_load1b => 
 				registerOut_tb <= x"00100000" after 10 ns, x"00000000" after 25 ns;
-				registerFileIn_tb(1) <= '1' after 10 ns, '0' after 25 ns;	
+				registerFileIn_tb(6) <= '1' after 10 ns, '0' after 25 ns;	
 				
 			WHEN Reg_load2a => 
 				Mdatain_tb <= x"00000014";
@@ -194,7 +194,7 @@ DUT0 : datapath	PORT MAP (
 				MDRin_tb  <= '1' after 10 ns, '0' after 25 ns;
 			WHEN Reg_load2b => 
 				registerOut_tb <= x"00100000" after 10 ns, x"00000000" after 25 ns;
-				registerFileIn_tb(2) <= '1' after 10 ns, '0' after 25 ns;	
+				registerFileIn_tb(7) <= '1' after 10 ns, '0' after 25 ns;	
 			
 			WHEN Reg_load3a => 
 				Mdatain_tb <= x"00000016";
@@ -237,26 +237,24 @@ DUT0 : datapath	PORT MAP (
 				registerOut_tb(21) 	<= '0';
 				IRin_tb 	<= '0';
 				
-				registerOut_tb(1) 	<= '1';
+				registerOut_tb(3) 	<= '1';
 				Yin_tb 					<= '1';
 			
 			WHEN T4 =>
-				registerOut_tb(1) 	<= '0';
+				registerOut_tb(3) 	<= '0';
 				Yin_tb 					<= '0';
-				logicALUSelect_tb 	<= "0000001000000";			
-				registerOut_tb(2) 	<= '1';
+				logicALUSelect_tb 	<= "0000010000000";				
+				registerOut_tb(7) 	<= '1';
 				Zin_tb 					<= '1';
 			
 			WHEN T5 =>
-				registerOut_tb(2) 		<= '0';
+				registerOut_tb(7) 		<= '0';
 				Zin_tb 						<= '0';
 			
 				registerOut_tb(18) 		<= '1'; 
-				registerFileIn_tb(4) 	<= '1';
+				registerFileIn_tb(1) 	<= '1';
 			
 			WHEN OTHERS =>
 		END CASE;
 	END PROCESS;
-END ARCHITECTURE datapath_tb_arc;	
-				
-				
+END ARCHITECTURE datapath_tb_arc;

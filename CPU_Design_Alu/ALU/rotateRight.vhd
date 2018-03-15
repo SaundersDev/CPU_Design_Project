@@ -5,7 +5,7 @@ library work;
  
 entity rotateRight is
 	port(
-		B	 					: in std_logic_vector(31 downto 0);
+		A, B	 					: in std_logic_vector(31 downto 0);
 		S	: out std_logic_vector(31 downto 0)
 	);
 end rotateRight;

@@ -11,10 +11,14 @@ end andGate;
 architecture behaviour of andGate is
  
 begin
-	process(A)
+	process(A, B)
 	begin
 		for I in 0 to 31 loop
-			S(I) <= A(I) and B(I);
+			if(A(I) = '1' and B(I) = '1') then
+			S(I) <= '1';
+			else
+			S(I) <='0';
+			end if;
 		end loop;
 	end process;
 end behaviour;

@@ -111,35 +111,35 @@ end component;
 
 component shiftLeft is
 	port(
-		B		: in std_logic_vector(31 downto 0);
+		A, B		: in std_logic_vector(31 downto 0);
 		S		: out std_logic_vector(31 downto 0)
 	);
 end component;
 
 component shiftRight is
 	port(
-		B	 	: in std_logic_vector(31 downto 0);
+		A, B	 	: in std_logic_vector(31 downto 0);
 		S		: out std_logic_vector(31 downto 0)
 	);
 end component;
 
 component shiftRightArithmetic is
 	port(
-		B	 	: in std_logic_vector(31 downto 0);
+		A, B	 	: in std_logic_vector(31 downto 0);
 		S		: out std_logic_vector(31 downto 0)
 	);
 end component;
 
 component rotateLeft is
 	port(
-		B	 	: in std_logic_vector(31 downto 0);
+		A, B	 	: in std_logic_vector(31 downto 0);
 		S		: out std_logic_vector(31 downto 0)
 	);
 end component;
 
 component rotateRight is
 	port(
-		B		: in std_logic_vector(31 downto 0);
+		A, B		: in std_logic_vector(31 downto 0);
 		S		: out std_logic_vector(31 downto 0)
 	);
 end component;
@@ -189,26 +189,31 @@ U4: negGate port map(
 	);
 
 U5: shiftLeft port map(
+		A => A,
 		B	=> B,
 		S => shlResult
 	);
 
 U6: shiftRight port map(
+		A => A,
 		B	=> B,
 		S => shrResult
 	);
 
 U7: shiftRightArithmetic port map(
+		A => A,
 		B	=> B,
 		S => shraResult
 	);
 
 U8: rotateLeft port map(
+		A => A,		
 		B	=> B,
 		S => rolResult
 	);
 
 U9: rotateRight port map(
+		A => A,
 		B	=> B,
 		S => rorResult
 	);	

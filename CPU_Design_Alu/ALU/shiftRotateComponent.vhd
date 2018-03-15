@@ -13,6 +13,15 @@ end shiftRotateComponent;
 architecture behaviour of shiftRotateComponent is
 	signal tempsL, tempsR, tempsRA, temprL, temprR : std_logic_vector(31 downto 0);
  
+ entity shiftLeft is
+	port(
+		A, B	 	: in std_logic_vector(31 downto 0);
+		S		: out std_logic_vector(31 downto 0)
+	);
+end shiftLeft;
+ 
+ 
+ 
 	begin
 	tempsL(31 downto 1) <= B(30 downto 0);
 	tempsL(0) <= '0';

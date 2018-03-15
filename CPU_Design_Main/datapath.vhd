@@ -35,15 +35,13 @@ entity datapath is
 		busZlowin  				: inout std_logic_vector(31 downto 0); 
 		busSignExtendedIn  	: inout std_logic_vector(31 downto 0); 		
 		encoderControlBus 	: inout std_logic_vector(4 downto 0);		
-		
+		BusMuxOut 				: inout std_logic_vector(31 downto 0); 
 		InPortin, OutPortin, HIin, LOin  : inout std_logic;		
 		
 --		conFFLogicInControl 					: in std_logic;
 		registerOut	 								: in std_logic_vector(31 downto 0); 
-		PCout, Zlowout, MDRout					: in std_logic;
 		MARin, Zin, PCin, MDRin, IRin, Yin	: in std_logic;		--Can't be used as Rin
 		IncPC, ReadChannel						: in std_logic;
-		ANDVar										: in std_logic;
 		Mdatain										: in std_logic_vector(31 downto 0);
 		registerFileIn 							: in std_logic_vector(15 downto 0);
 		logicALUSelect 							: in std_logic_vector(12 downto 0)
@@ -89,22 +87,21 @@ component multiplexer32bits
 		BusMuxIn_PC, BusMuxIn_MDR, BusMuxIn_InPort,
 		C_sign_extended: IN STD_LOGIC_VECTOR(31 DOWNTO 0);
 		
-		BusMuxOut : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-		encoderSignal : IN STD_LOGIC_VECTOR(4 DOWNTO 0) 
+		BusMuxOut 		: OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+		encoderSignal	: IN STD_LOGIC_VECTOR(4 DOWNTO 0) 
 	);
 end component;
 component multiplexerMDR
 	port(
 		BusMuxOut, Mdatain: IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-		ReadChannel : IN STD_LOGIC; 
-		MDRMuxOut : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+		ReadChannel 		: IN STD_LOGIC; 
+		MDRMuxOut 			: OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
 		);
 end component;
 component encoder32bits
-	generic(n: positive:=32);
 	port (
 		
-		input  : IN STD_LOGIC_VECTOR ((n-1) DOWNTO 0);
+		input  : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
 		output : OUT STD_LOGIC_VECTOR(4 downto 0)
 		
 	);
@@ -113,12 +110,12 @@ component ALU
 	port(
 		control						: in std_logic_vector(12 downto 0);
 		A, B     					: in std_logic_vector(31 downto 0);
-		C							: out std_logic_vector(63 downto 0)
+		C								: out std_logic_vector(63 downto 0)
 	);
 end component;
 
 --the main data path bus aka BusMuxOut
-signal datapathBus : std_logic_vector(31 downto 0); 
+
 
 ----bus signals coming out of register files into the bus
 --signal	busR0, busR1, busR2, busR3,
@@ -151,7 +148,7 @@ U0: reg_32	port map(
 		clk => Clock,
 		clr	=> clr,
 		Rin => PCin,
-		BusMuxOut => datapathBus,
+		BusMuxOut => BusMuxOut,
 		BusMuxIn => busPCin
 	);
 --IR: Instruction Register
@@ -162,7 +159,7 @@ U1: reg_32	port map(
 		clk => Clock,
 		clr	=> clr,
 		Rin => IRin,
-		BusMuxOut => datapathBus,
+		BusMuxOut => BusMuxOut,
 		BusMuxIn => busIRin
 	);
 --mar	
@@ -170,7 +167,7 @@ U2: reg_32	port map(
 		clk => Clock,
 		clr	=> clr,
 		Rin => MARin,
-		BusMuxOut => datapathBus,
+		BusMuxOut => BusMuxOut,
 		BusMuxIn => busMARin
 	);
 --mdr	
@@ -186,7 +183,7 @@ U4: reg_32	port map(
 		clk => Clock,
 		clr	=> clr,
 		Rin => InPortin,
-		BusMuxOut => datapathBus,
+		BusMuxOut => BusMuxOut,
 		BusMuxIn => busInPortin
 );	
 --outport
@@ -194,7 +191,7 @@ U5: reg_32	port map(
 		clk => Clock,
 		clr	=> clr,
 		Rin => OutPortin,
-		BusMuxOut => datapathBus,
+		BusMuxOut => BusMuxOut,
 		BusMuxIn => busOutPortin
 );
 --hi
@@ -202,7 +199,7 @@ U6: reg_32	port map(
 		clk => Clock,
 		clr	=> clr,
 		Rin => HIin,
-		BusMuxOut => datapathBus,
+		BusMuxOut => BusMuxOut,
 		BusMuxIn => busHIin
 );
 --lo
@@ -210,7 +207,7 @@ U7: reg_32	port map(
 		clk => Clock,
 		clr	=> clr,
 		Rin => LOin,
-		BusMuxOut => datapathBus,
+		BusMuxOut => BusMuxOut,
 		BusMuxIn => busLOin
 );
 --regular registers
@@ -218,7 +215,7 @@ U8: registerFile port map(
 		clk => Clock,
 		clr => clr, 
 		Rin => registerFileIn,
-		BusMuxOut => datapathBus,
+		BusMuxOut => BusMuxOut,
 		BusMuxInR0 => busR0, 
 		BusMuxInR1 => busR1, 
 		BusMuxInR2 => busR2, 
@@ -242,7 +239,7 @@ U9: reg_32	port map(
 		clk => Clock,
 		clr	=> clr,
 		Rin => Yin,
-		BusMuxOut => datapathBus,
+		BusMuxOut => BusMuxOut,
 		BusMuxIn => YtoA
 );
 --z register	
@@ -283,19 +280,19 @@ U12: multiplexer32bits port map(
 		BusMuxIn_MDR 	=> busMDRin,
 		BusMuxIn_InPort=> busInPortin,
 		C_sign_extended=> busSignExtendedIn,		
-		BusMuxOut 		=> datapathBus,
+		BusMuxOut 		=> BusMuxOut,
 		encoderSignal 	=> encoderControlBus
 	);
 --alu	
 U13: ALU port map(
 		control => logicALUSelect,
 		A => YtoA,
-		B => datapathBus,
+		B => BusMuxOut,
 		C => CtoZ
 	);
 --multiplexerMDR
 U14: multiplexerMDR port map(
-		BusMuxOut 	=> datapathBus,
+		BusMuxOut 	=> BusMuxOut,
 		Mdatain 		=> Mdatain,
 		ReadChannel => ReadChannel, 
 		MDRMuxOut 	=> MDMuxToMDR
