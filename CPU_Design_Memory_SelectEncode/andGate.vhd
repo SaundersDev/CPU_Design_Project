@@ -2,7 +2,7 @@ library IEEE;
 use ieee.std_logic_1164.all;
  
 entity andGate is
-	generic(width: integer := 31)
+	generic(width: integer := 31);
 	port(
 		A		: in std_logic_vector(width downto 0);
 		B	 	: in std_logic_vector(width downto 0);
