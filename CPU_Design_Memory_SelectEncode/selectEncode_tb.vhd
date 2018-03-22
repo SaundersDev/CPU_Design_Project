@@ -52,8 +52,10 @@ begin
 		Grc_tb <= '0';
 		Rin_tb <= '1';
 		Rout_tb <= '1';
-		BAout_tb <= '1';					
-		wait for 9 ns;		
+		BAout_tb <= '1';
+		BusMuxOut_tb <= x"ffff0000";
+		wait for 9 ns;
+		IRin_tb <= x"07fb8000";		
 		Gra_tb <= '0';
 		Grb_tb <= '1';
 		wait for 10 ns;
@@ -63,3 +65,5 @@ begin
 		wait;
 	end process sim_process;
 end behaviour;
+
+--CONFIRMED TO WORK

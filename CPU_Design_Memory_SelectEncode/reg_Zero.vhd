@@ -25,7 +25,7 @@ component andGate_31vs1 is
 	port(
 		A		: in std_logic_vector(31 downto 0);
 		B	 	: in std_logic;
-		S		: out std_logic_vector(width downto 0)
+		S		: out std_logic_vector(31 downto 0)
 	);
 end component;
 

@@ -7,7 +7,7 @@ entity conFF is
 		IRout										: in std_logic_vector(31 downto 0);
 		BusMuxOut								: in std_logic_vector(31 downto 0);
 		CONin										: in std_logic;
-		CONout									: out std_logic;
+		CONout									: out std_logic
 	);
 end entity;
 
@@ -24,7 +24,7 @@ component conFFSubComponent1 is
 	port(
 		decoderOutput							: in std_logic_vector(3 downto 0);
 		BusMuxOut								: in std_logic_vector(31 downto 0);
-		conFFOutput								: out std_logic;
+		conFFOutput								: out std_logic
 	);
 end component;
 
@@ -43,7 +43,7 @@ signal orGateToFlipFlop, conFFOutput	: std_logic;
 
 begin
 			  
-U0: decoder16bits port map(
+U0: decoder4bits port map(
 		input  => decoderInput,
 		output => decoderOutput
 );			  

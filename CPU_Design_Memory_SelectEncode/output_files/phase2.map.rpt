@@ -1,5 +1,5 @@
 Analysis & Elaboration report for phase2
-Thu Mar 22 01:52:09 2018
+Thu Mar 22 16:17:01 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Thu Mar 22 01:52:09 2018           ;
+; Analysis & Elaboration Status      ; Successful - Thu Mar 22 16:17:01 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; phase2                                          ;
 ; Top-level Entity Name              ; selectAndEncodeLogic                            ;
@@ -157,7 +157,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Elaboration
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Mar 22 01:52:08 2018
+    Info: Processing started: Thu Mar 22 16:17:00 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off phase2 -c phase2 --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file orgate_tb.vhd
@@ -208,6 +208,27 @@ Info (12021): Found 2 design units, including 1 entities, in source file reg_ir.
 Info (12021): Found 2 design units, including 1 entities, in source file reg_ir_tb.vhd
     Info (12022): Found design unit 1: reg_IR_tb-behaviour
     Info (12023): Found entity 1: reg_IR_tb
+Info (12021): Found 2 design units, including 1 entities, in source file conff.vhd
+    Info (12022): Found design unit 1: conFF-behaviour
+    Info (12023): Found entity 1: conFF
+Info (12021): Found 2 design units, including 1 entities, in source file conffsubcomponent1.vhd
+    Info (12022): Found design unit 1: conFFSubComponent1-behaviour
+    Info (12023): Found entity 1: conFFSubComponent1
+Info (12021): Found 2 design units, including 1 entities, in source file reg_zero.vhd
+    Info (12022): Found design unit 1: reg_Zero-behaviour
+    Info (12023): Found entity 1: reg_Zero
+Info (12021): Found 2 design units, including 1 entities, in source file andgate_32vs1.vhd
+    Info (12022): Found design unit 1: andGate_32vs1-behaviour
+    Info (12023): Found entity 1: andGate_32vs1
+Info (12021): Found 2 design units, including 1 entities, in source file decoder4bits.vhd
+    Info (12022): Found design unit 1: decoder4bits-behavioural
+    Info (12023): Found entity 1: decoder4bits
+Info (12021): Found 2 design units, including 1 entities, in source file flipflop.vhd
+    Info (12022): Found design unit 1: flipFlop-behaviour
+    Info (12023): Found entity 1: flipFlop
+Info (12021): Found 2 design units, including 1 entities, in source file selectandencodesubcomponent3.vhd
+    Info (12022): Found design unit 1: selectAndEncodeSubComponent3-behaviour
+    Info (12023): Found entity 1: selectAndEncodeSubComponent3
 Info (12127): Elaborating entity "selectAndEncodeLogic" for the top level hierarchy
 Info (12128): Elaborating entity "selectAndEncodeSubComponent1" for hierarchy "selectAndEncodeSubComponent1:U0"
 Info (10041): Inferred latch for "output[0]" at selectAndEncodeSubComponent1.vhd(19)
@@ -232,10 +253,10 @@ Info (10041): Inferred latch for "output[13]" at decoder16bits.vhd(16)
 Info (10041): Inferred latch for "output[14]" at decoder16bits.vhd(16)
 Info (10041): Inferred latch for "output[15]" at decoder16bits.vhd(16)
 Info (12128): Elaborating entity "selectAndEncodeSubComponent2" for hierarchy "selectAndEncodeSubComponent2:U2"
-Warning (10541): VHDL Signal Declaration warning at selectAndEncodeSubComponent2.vhd(8): used implicit default value for signal "C_sign_extended" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 2 warnings
+Info (12128): Elaborating entity "selectAndEncodeSubComponent3" for hierarchy "selectAndEncodeSubComponent3:U3"
+Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 540 megabytes
-    Info: Processing ended: Thu Mar 22 01:52:09 2018
+    Info: Processing ended: Thu Mar 22 16:17:01 2018
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

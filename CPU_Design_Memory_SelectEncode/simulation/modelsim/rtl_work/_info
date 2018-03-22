@@ -15,7 +15,7 @@ L4
 VDm;ZKSb?^>[SZ2n<P`Bk;0
 Z7 OV;C;10.1d;51
 31
-Z8 !s108 1521697941.541000
+Z8 !s108 1521750368.374000
 Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/decoder16bits.vhd|
 Z10 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/decoder16bits.vhd|
 Z11 o-93 -work work -O0
@@ -38,56 +38,21 @@ R11
 R12
 !s100 6?IMLMG5:h3SjUZ1:kK>`1
 !i10b 1
-Ereg_ir_tb
-Z13 w1521697922
-R2
-R3
-R4
-Z14 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/reg_IR_tb.vhd
-Z15 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/reg_IR_tb.vhd
-l0
-L6
-VG14^`_9L1Pz0B>ClQePjb0
-!s100 aKCEbf;GUhnTjniRK_NT;3
-R7
-31
-!i10b 1
-Z16 !s108 1521697942.344000
-Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/reg_IR_tb.vhd|
-Z18 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/reg_IR_tb.vhd|
-R11
-R12
-Abehaviour
-R2
-R3
-DEx4 work 9 reg_ir_tb 0 22 G14^`_9L1Pz0B>ClQePjb0
-l23
-L9
-VLSMPzGHzb4^HE4HLa63I21
-!s100 a;3591FgKBSSfXXoHL;XN0
-R7
-31
-!i10b 1
-R16
-R17
-R18
-R11
-R12
 Eselectandencodelogic
-R1
+Z13 w1521749549
 R2
 R3
 R4
-Z19 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeLogic.vhd
-Z20 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeLogic.vhd
+Z14 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeLogic.vhd
+Z15 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeLogic.vhd
 l0
 L4
 VBz9:MRAc;fn3MKX3LE?:k2
 R7
 31
-Z21 !s108 1521697941.285000
-Z22 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeLogic.vhd|
-Z23 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeLogic.vhd|
+Z16 !s108 1521750368.084000
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeLogic.vhd|
+Z18 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeLogic.vhd|
 R11
 R12
 !s100 b4WAeoEzz=gi?BFk0^z1b3
@@ -96,33 +61,33 @@ Abehaviour
 R2
 R3
 DEx4 work 20 selectandencodelogic 0 22 Bz9:MRAc;fn3MKX3LE?:k2
-l44
+l49
 L15
-V51YM1Cnbke[KP_oPDgCI43
+VnRo73<RUiPYF<PO<Y<BDb0
 R7
 31
-R21
-R22
-R23
+R16
+R17
+R18
 R11
 R12
-!s100 1?jae2BjYXXgD`C;d0S`e0
+!s100 <>`8cH_>o[MDZk`GWSB5W3
 !i10b 1
 Eselectandencodesubcomponent1
-Z24 w1521693928
+Z19 w1521747084
 R2
 R3
 R4
-Z25 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent1.vhd
-Z26 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent1.vhd
+Z20 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent1.vhd
+Z21 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent1.vhd
 l0
 L4
 V@meZ3@07mjR[P8:C2;g;93
 R7
 31
-Z27 !s108 1521697941.738000
-Z28 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent1.vhd|
-Z29 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent1.vhd|
+Z22 !s108 1521750368.640000
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent1.vhd|
+Z24 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent1.vhd|
 R11
 R12
 !s100 fRKOaL5?bKAVckm?^`Y:@1
@@ -136,45 +101,115 @@ L12
 V;Lzc=WcLWUzVGL`]W^oUi2
 R7
 31
-R27
-R28
-R29
+R22
+R23
+R24
 R11
 R12
 !s100 oe83jXC_?ZWzL;8a5gEHD3
 !i10b 1
 Eselectandencodesubcomponent2
-R1
+Z25 w1521748657
 R2
 R3
 R4
-Z30 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent2.vhd
-Z31 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent2.vhd
+Z26 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent2.vhd
+Z27 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent2.vhd
 l0
 L4
-VedGO;SAChXXz?ciXTmo4b1
+VJiNOceB8O=7;Pc_n2X0DD1
 R7
 31
-Z32 !s108 1521697941.933000
-Z33 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent2.vhd|
-Z34 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent2.vhd|
+Z28 !s108 1521750368.895000
+Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent2.vhd|
+Z30 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent2.vhd|
 R11
 R12
-!s100 X`Z>TKk?XW7OdBLhhjY7]0
+!s100 3;_?bBUU?lAz7NHoR_KJI2
 !i10b 1
 Abehaviour
 R2
 R3
-DEx4 work 28 selectandencodesubcomponent2 0 22 edGO;SAChXXz?ciXTmo4b1
-l16
-L14
+DEx4 work 28 selectandencodesubcomponent2 0 22 JiNOceB8O=7;Pc_n2X0DD1
+l14
+L13
 VdYTFK105IC_ga82eLUJ<92
 R7
 31
-R32
-R33
-R34
+R28
+R29
+R30
 R11
 R12
-!s100 g0:;>Cz@eGN=RJg6XXB4W0
+!s100 m?;dcoUeVkUKh0Al>QX=j0
 !i10b 1
+Eselectandencodesubcomponent3
+Z31 w1521750238
+R2
+R3
+R4
+Z32 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent3.vhd
+Z33 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent3.vhd
+l0
+L5
+V]aWaeFXgX=<WB:`eOE7eH3
+R7
+31
+Z34 !s108 1521750369.237000
+Z35 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent3.vhd|
+Z36 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent3.vhd|
+R11
+R12
+!s100 K8FNGRlDXjCjFed]g=LMA0
+!i10b 1
+Abehaviour
+R2
+R3
+DEx4 work 28 selectandencodesubcomponent3 0 22 ]aWaeFXgX=<WB:`eOE7eH3
+l14
+L12
+VjjoBo@[n?RZaWM:kj4gQZ1
+R7
+31
+R34
+R35
+R36
+R11
+R12
+!s100 [lDn=UYVZz=^lYO_3G0Ym3
+!i10b 1
+Eselectencode_tb
+Z37 w1521750354
+R2
+R3
+R4
+Z38 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectEncode_tb.vhd
+Z39 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectEncode_tb.vhd
+l0
+L6
+VJWIcfI;^lXA0HPA^fZl7D2
+!s100 kSE?CS9IBBUm3f?jg`cW@1
+R7
+31
+!i10b 1
+Z40 !s108 1521750369.496000
+Z41 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectEncode_tb.vhd|
+Z42 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectEncode_tb.vhd|
+R11
+R12
+Abehaviour
+R2
+R3
+DEx4 work 15 selectencode_tb 0 22 JWIcfI;^lXA0HPA^fZl7D2
+l30
+L9
+Vd@g^f@9X6YEo;53j=T9IY3
+!s100 eL;=RMlHh8Z[k_>J2a@PU1
+R7
+31
+!i10b 1
+R40
+R41
+R42
+R11
+R12

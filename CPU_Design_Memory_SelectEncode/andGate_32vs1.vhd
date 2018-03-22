@@ -5,9 +5,9 @@ entity andGate_32vs1 is
 	port(
 		A		: in std_logic_vector(31 downto 0);
 		B	 	: in std_logic;
-		S		: out std_logic_vector(width downto 0)
+		S		: out std_logic_vector(31 downto 0)
 	);
-end andGate;
+end andGate_32vs1;
  
 architecture behaviour of andGate_32vs1 is
  

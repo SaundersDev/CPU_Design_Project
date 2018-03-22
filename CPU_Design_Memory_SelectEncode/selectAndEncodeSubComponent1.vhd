@@ -20,3 +20,5 @@ output <= IRin(26 downto 23) when (Gra = '1' and Grb = '0' and Grc = '0')
 			  else IRin(22 downto 19) when (Gra = '0' and Grb = '1' and Grc = '0')
 			  else IRin(18 downto 15) when (Gra = '0' and Grb = '0' and Grc = '1');
 end architecture;
+
+--CONFIRMED TO WORK

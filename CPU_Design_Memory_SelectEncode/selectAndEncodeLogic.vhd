@@ -25,9 +25,14 @@ component selectAndEncodeSubComponent2 is
 	port(
 		input							: in std_logic_vector(15 downto 0);
 		Rin, Rout, BAout			: in std_logic;
-		C_sign_extended			: out std_logic_vector(31 downto 0);
 		r0in_r15in_Decoded		: out std_logic_vector(15 downto 0);
 		r0out_r15out_Decoded		: out std_logic_vector(15 downto 0)
+	);
+end component;
+component selectAndEncodeSubComponent3 is
+	port(
+		input 					: in std_logic_vector(31 downto 0);
+		output					: out std_logic_vector(31 downto 0)
 	);
 end component;
 component decoder16bits is
@@ -60,10 +65,14 @@ U2: selectAndEncodeSubComponent2 port map(
 		Rin						=> Rin,
 		Rout						=> Rout,
 		BAout						=> BAout,		
-		C_sign_extended		=> C_sign_extended,
 		r0in_r15in_Decoded	=> r0in_r15in_Decoded,
 		r0out_r15out_Decoded => r0out_r15out_Decoded
 );
-
+U3: selectAndEncodeSubComponent3 port map(
+		input => IRin,
+		output => C_sign_extended
+);
 end architecture;
  
+ 
+--CONFIRMED TO WORK 
