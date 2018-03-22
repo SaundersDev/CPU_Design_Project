@@ -5,3 +5,4 @@ CPU_Design_Main/encoder32bits.vhd
 CPU_Design_Main/multiplexer32bits.vhd
 CPU_Design_Main/multiplexerMDR.vhd
 CPU_Design_Main/reg_32.vhd
+*.flock
