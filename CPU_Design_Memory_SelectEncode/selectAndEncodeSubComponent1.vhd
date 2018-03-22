@@ -11,6 +11,11 @@ end entity;
 
 architecture behaviour of selectAndEncodeSubComponent1 is
 begin
+--The IR register is split into the following fields
+--5 bits for opcode
+--4 bits for Ra
+--4 bits for Rb
+--4 bits for Rc
 output <= IRin(26 downto 23) when (Gra = '1' and Grb = '0' and Grc = '0')
 			  else IRin(22 downto 19) when (Gra = '0' and Grb = '1' and Grc = '0')
 			  else IRin(18 downto 15) when (Gra = '0' and Grb = '0' and Grc = '1');

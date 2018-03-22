@@ -39,32 +39,26 @@
 # -- Compiling entity selectAndEncodeSubComponent2
 # -- Compiling architecture behaviour of selectAndEncodeSubComponent2
 # 
-# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectEncode_tb.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/reg_IR_tb.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity selectEncode_tb
-# -- Compiling architecture behaviour of selectEncode_tb
+# -- Compiling entity reg_IR_tb
+# -- Compiling architecture behaviour of reg_IR_tb
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  selectEncode_tb
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps selectEncode_tb 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  reg_IR_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps reg_IR_tb 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.selectencode_tb(behaviour)
-# Loading work.selectandencodelogic(behaviour)
-# Loading work.selectandencodesubcomponent1(behaviour)
-# Loading work.decoder16bits(behavioural)
-# Loading work.selectandencodesubcomponent2(behaviour)
-# ** Warning: (vsim-8683) Uninitialized out port /selectencode_tb/DUT1/U2/C_sign_extended(31 downto 0) has no driver.
-# 
-# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
-# 
+# Loading work.reg_ir_tb(behaviour)
+# ** Warning: (vsim-3473) Component instance "DUT1 : reg_IR" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /reg_ir_tb File: C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/reg_IR_tb.vhd
 # 
 # add wave *
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
-# run 200 ns
+# run 100 ns

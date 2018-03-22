@@ -1,5 +1,5 @@
 Flow report for phase2
-Fri Mar 16 17:16:43 2018
+Thu Mar 22 01:52:09 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Fri Mar 16 17:16:43 2018           ;
+; Flow Status                        ; Successful - Thu Mar 22 01:52:09 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; phase2                                          ;
 ; Top-level Entity Name              ; selectAndEncodeLogic                            ;
@@ -64,41 +64,51 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/16/2018 17:16:43 ;
+; Start date & time ; 03/22/2018 01:52:09 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; phase2              ;
 +-------------------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                      ;
-+--------------------------------------+---------------------------------------+---------------+----------------------+-----------------+
-; Assignment Name                      ; Value                                 ; Default Value ; Entity Name          ; Section Id      ;
-+--------------------------------------+---------------------------------------+---------------+----------------------+-----------------+
-; COMPILER_SIGNATURE_ID                ; 1098493511446.152123500208204         ; --            ; --                   ; --              ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --                   ; selectEncode_tb ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; selectEncode_tb                       ; --            ; --                   ; eda_simulation  ;
-; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                  ; --            ; --                   ; eda_simulation  ;
-; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                ; <None>        ; --                   ; --              ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --                   ; eda_simulation  ;
-; EDA_TEST_BENCH_FILE                  ; selectEncode_tb.vhd                   ; --            ; --                   ; selectEncode_tb ;
-; EDA_TEST_BENCH_MODULE_NAME           ; selectEncode_tb                       ; --            ; --                   ; selectEncode_tb ;
-; EDA_TEST_BENCH_NAME                  ; selectEncode_tb                       ; --            ; --                   ; eda_simulation  ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 200 ns                                ; --            ; --                   ; selectEncode_tb ;
-; IP_TOOL_NAME                         ; RAM: 1-PORT                           ; --            ; --                   ; --              ;
-; IP_TOOL_VERSION                      ; 13.0                                  ; --            ; --                   ; --              ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --                   ; --              ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --                   ; --              ;
-; MISC_FILE                            ; ram.cmp                               ; --            ; --                   ; --              ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --            ; --                   ; --              ;
-; PARTITION_COLOR                      ; 16764057                              ; --            ; selectAndEncodeLogic ; Top             ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; selectAndEncodeLogic ; Top             ;
-; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; selectAndEncodeLogic ; Top             ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --                   ; --              ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --                   ; --              ;
-; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --            ; --                   ; --              ;
-; TOP_LEVEL_ENTITY                     ; selectAndEncodeLogic                  ; phase2        ; --                   ; --              ;
-+--------------------------------------+---------------------------------------+---------------+----------------------+-----------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                      ;
++--------------------------------------+---------------------------------------+---------------+----------------------+---------------------------------+
+; Assignment Name                      ; Value                                 ; Default Value ; Entity Name          ; Section Id                      ;
++--------------------------------------+---------------------------------------+---------------+----------------------+---------------------------------+
+; COMPILER_SIGNATURE_ID                ; 1098493511446.152169792804328         ; --            ; --                   ; --                              ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --                   ; selectEncode_tb                 ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --                   ; selectAndEncodeSubComponent1_tb ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --                   ; reg_IR_tb                       ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; reg_IR_tb                             ; --            ; --                   ; eda_simulation                  ;
+; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                  ; --            ; --                   ; eda_simulation                  ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                ; <None>        ; --                   ; --                              ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --                   ; eda_simulation                  ;
+; EDA_TEST_BENCH_FILE                  ; selectEncode_tb.vhd                   ; --            ; --                   ; selectEncode_tb                 ;
+; EDA_TEST_BENCH_FILE                  ; selectAndEncodeSubComponent1_tb.vhd   ; --            ; --                   ; selectAndEncodeSubComponent1_tb ;
+; EDA_TEST_BENCH_FILE                  ; reg_IR_tb.vhd                         ; --            ; --                   ; reg_IR_tb                       ;
+; EDA_TEST_BENCH_MODULE_NAME           ; selectEncode_tb                       ; --            ; --                   ; selectEncode_tb                 ;
+; EDA_TEST_BENCH_MODULE_NAME           ; selectAndEncodeSubComponent1_tb       ; --            ; --                   ; selectAndEncodeSubComponent1_tb ;
+; EDA_TEST_BENCH_MODULE_NAME           ; reg_IR_tb                             ; --            ; --                   ; reg_IR_tb                       ;
+; EDA_TEST_BENCH_NAME                  ; selectEncode_tb                       ; --            ; --                   ; eda_simulation                  ;
+; EDA_TEST_BENCH_NAME                  ; selectAndEncodeSubComponent1_tb       ; --            ; --                   ; eda_simulation                  ;
+; EDA_TEST_BENCH_NAME                  ; reg_IR_tb                             ; --            ; --                   ; eda_simulation                  ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 200 ns                                ; --            ; --                   ; selectEncode_tb                 ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 400 ns                                ; --            ; --                   ; selectAndEncodeSubComponent1_tb ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 100 ns                                ; --            ; --                   ; reg_IR_tb                       ;
+; IP_TOOL_NAME                         ; RAM: 1-PORT                           ; --            ; --                   ; --                              ;
+; IP_TOOL_VERSION                      ; 13.0                                  ; --            ; --                   ; --                              ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --                   ; --                              ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --                   ; --                              ;
+; MISC_FILE                            ; ram.cmp                               ; --            ; --                   ; --                              ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --            ; --                   ; --                              ;
+; PARTITION_COLOR                      ; 16764057                              ; --            ; selectAndEncodeLogic ; Top                             ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; selectAndEncodeLogic ; Top                             ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; selectAndEncodeLogic ; Top                             ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --                   ; --                              ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --                   ; --                              ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --            ; --                   ; --                              ;
+; TOP_LEVEL_ENTITY                     ; selectAndEncodeLogic                  ; phase2        ; --                   ; --                              ;
++--------------------------------------+---------------------------------------+---------------+----------------------+---------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------+

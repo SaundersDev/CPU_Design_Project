@@ -46,7 +46,7 @@ begin
 	begin
 	
 		wait for 1 ns;
-		IRin_tb <= x"0af30000";
+		IRin_tb <= x"07ff8000";
 		Gra_tb <= '1';
 		Grb_tb <= '0';
 		Grc_tb <= '0';
