@@ -92,3 +92,4 @@ set_global_assignment -name VHDL_FILE conFF.vhd
 set_global_assignment -name VHDL_FILE conFFSubComponent1.vhd
 set_global_assignment -name VHDL_FILE reg_Zero.vhd
 set_global_assignment -name VHDL_FILE andGate_32vs1.vhd
+set_global_assignment -name VHDL_FILE decoder4bits.vhd

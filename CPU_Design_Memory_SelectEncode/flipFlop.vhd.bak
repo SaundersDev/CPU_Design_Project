@@ -1,0 +1,30 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity flipFlip is
+   port
+   (
+      clk			: in std_logic;
+      clr			: in std_logic;
+      preset		: in std_logic;
+      clkEnable	: in std_logic;
+      D 				: in std_logic;
+      Q				: out std_logic
+   );
+end entity D_FF_VHDL;
+ 
+architecture Behavioral of D_FF_VHDL is
+begin
+   process (clk) is
+   begin
+      if rising_edge(clk) then  
+         if (clr='1') then   
+            Q <= '0';
+         elsif (preset='1') then
+            Q <= '1';
+         elsif (clkEnable='1') then
+            Q <= D;
+         end if;
+      end if;
+   end process;
+end architecture Behavioral;
