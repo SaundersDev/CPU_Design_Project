@@ -12,7 +12,6 @@ entity selectAndEncodeSubComponent2 is
 end entity;
 
 architecture behaviour of selectAndEncodeSubComponent2 is
-
 begin
 	process(Rin, input, BAout, Rout)
 	begin
