@@ -1,6 +1,7 @@
 library IEEE;
 use ieee.std_logic_1164.all;
  
+library work; 
 entity andGate_32vs1 is
 	port(
 		A		: in std_logic_vector(31 downto 0);
@@ -15,11 +16,7 @@ begin
 	process(A, B)
 	begin
 		for I in 0 to 31 loop
-			if(A(I) = '1' and B = '1') then
-			S(I) <= '1';
-			else
-			S(I) <='0';
-			end if;
+			S(I) <= (A(I) and B);
 		end loop;
 	end process;
 end behaviour;
