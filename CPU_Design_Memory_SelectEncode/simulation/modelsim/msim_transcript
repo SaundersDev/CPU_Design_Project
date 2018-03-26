@@ -51,6 +51,7 @@
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
 # -- Compiling entity andGate_tb
 # -- Compiling architecture behaviour of andGate_tb
 # 
@@ -59,6 +60,7 @@
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
 # Loading work.andgate_tb(behaviour)
 # ** Warning: (vsim-3473) Component instance "DUT1 : andGate" is not bound.
 #    Time: 0 ps  Iteration: 0  Instance: /andgate_tb File: C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/andGate_tb.vhd

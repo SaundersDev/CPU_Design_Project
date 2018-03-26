@@ -12,5 +12,8 @@ end andGate;
 architecture behaviour of andGate is
  
 begin
-	S <= A and B;
+process(A, B) is
+begin
+	S <= (A and B);
+	end process;
 end behaviour;
