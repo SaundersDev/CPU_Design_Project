@@ -1,4 +1,89 @@
-|conFFSubComponent1
+|conFF
+clk => ~NO_FANOUT~
+IRout[0] => ~NO_FANOUT~
+IRout[1] => ~NO_FANOUT~
+IRout[2] => ~NO_FANOUT~
+IRout[3] => ~NO_FANOUT~
+IRout[4] => ~NO_FANOUT~
+IRout[5] => ~NO_FANOUT~
+IRout[6] => ~NO_FANOUT~
+IRout[7] => ~NO_FANOUT~
+IRout[8] => ~NO_FANOUT~
+IRout[9] => ~NO_FANOUT~
+IRout[10] => ~NO_FANOUT~
+IRout[11] => ~NO_FANOUT~
+IRout[12] => ~NO_FANOUT~
+IRout[13] => ~NO_FANOUT~
+IRout[14] => ~NO_FANOUT~
+IRout[15] => ~NO_FANOUT~
+IRout[16] => ~NO_FANOUT~
+IRout[17] => ~NO_FANOUT~
+IRout[18] => ~NO_FANOUT~
+IRout[19] => decoder4bits:U0.input[0]
+IRout[20] => decoder4bits:U0.input[1]
+IRout[21] => ~NO_FANOUT~
+IRout[22] => ~NO_FANOUT~
+IRout[23] => ~NO_FANOUT~
+IRout[24] => ~NO_FANOUT~
+IRout[25] => ~NO_FANOUT~
+IRout[26] => ~NO_FANOUT~
+IRout[27] => ~NO_FANOUT~
+IRout[28] => ~NO_FANOUT~
+IRout[29] => ~NO_FANOUT~
+IRout[30] => ~NO_FANOUT~
+IRout[31] => ~NO_FANOUT~
+BusMuxOut[0] => conFFSubComponent1:U1.BusMuxOut[0]
+BusMuxOut[1] => conFFSubComponent1:U1.BusMuxOut[1]
+BusMuxOut[2] => conFFSubComponent1:U1.BusMuxOut[2]
+BusMuxOut[3] => conFFSubComponent1:U1.BusMuxOut[3]
+BusMuxOut[4] => conFFSubComponent1:U1.BusMuxOut[4]
+BusMuxOut[5] => conFFSubComponent1:U1.BusMuxOut[5]
+BusMuxOut[6] => conFFSubComponent1:U1.BusMuxOut[6]
+BusMuxOut[7] => conFFSubComponent1:U1.BusMuxOut[7]
+BusMuxOut[8] => conFFSubComponent1:U1.BusMuxOut[8]
+BusMuxOut[9] => conFFSubComponent1:U1.BusMuxOut[9]
+BusMuxOut[10] => conFFSubComponent1:U1.BusMuxOut[10]
+BusMuxOut[11] => conFFSubComponent1:U1.BusMuxOut[11]
+BusMuxOut[12] => conFFSubComponent1:U1.BusMuxOut[12]
+BusMuxOut[13] => conFFSubComponent1:U1.BusMuxOut[13]
+BusMuxOut[14] => conFFSubComponent1:U1.BusMuxOut[14]
+BusMuxOut[15] => conFFSubComponent1:U1.BusMuxOut[15]
+BusMuxOut[16] => conFFSubComponent1:U1.BusMuxOut[16]
+BusMuxOut[17] => conFFSubComponent1:U1.BusMuxOut[17]
+BusMuxOut[18] => conFFSubComponent1:U1.BusMuxOut[18]
+BusMuxOut[19] => conFFSubComponent1:U1.BusMuxOut[19]
+BusMuxOut[20] => conFFSubComponent1:U1.BusMuxOut[20]
+BusMuxOut[21] => conFFSubComponent1:U1.BusMuxOut[21]
+BusMuxOut[22] => conFFSubComponent1:U1.BusMuxOut[22]
+BusMuxOut[23] => conFFSubComponent1:U1.BusMuxOut[23]
+BusMuxOut[24] => conFFSubComponent1:U1.BusMuxOut[24]
+BusMuxOut[25] => conFFSubComponent1:U1.BusMuxOut[25]
+BusMuxOut[26] => conFFSubComponent1:U1.BusMuxOut[26]
+BusMuxOut[27] => conFFSubComponent1:U1.BusMuxOut[27]
+BusMuxOut[28] => conFFSubComponent1:U1.BusMuxOut[28]
+BusMuxOut[29] => conFFSubComponent1:U1.BusMuxOut[29]
+BusMuxOut[30] => conFFSubComponent1:U1.BusMuxOut[30]
+BusMuxOut[31] => conFFSubComponent1:U1.BusMuxOut[31]
+CONin => ~NO_FANOUT~
+CONout <= conFFSubComponent1:U1.conFFOutput
+
+
+|conFF|decoder4bits:U0
+input[0] => Equal0.IN1
+input[0] => Equal1.IN0
+input[0] => Equal2.IN1
+input[0] => Equal3.IN1
+input[1] => Equal0.IN0
+input[1] => Equal1.IN1
+input[1] => Equal2.IN0
+input[1] => Equal3.IN0
+output[0] <= output[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= output[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= output[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= output[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|conFF|conFFSubComponent1:U1
 decoderOutput[0] => and0.IN1
 decoderOutput[1] => and1.IN1
 decoderOutput[2] => and2.IN0

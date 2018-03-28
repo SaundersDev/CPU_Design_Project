@@ -24,7 +24,8 @@ component conFFSubComponent1 is
 	port(
 		decoderOutput							: in std_logic_vector(3 downto 0);
 		BusMuxOut								: in std_logic_vector(31 downto 0);
-		conFFOutput								: out std_logic
+		conFFOutput								: out std_logic;
+		busOrOut									: inout std_logic
 	);
 end component;
 
@@ -37,11 +38,12 @@ component flipFlop is
    );
 end component;
 
-signal decoderInput	: std_logic_vector(1 downto 0) := IRout(20 downto 19);
+signal decoderInput	: std_logic_vector(1 downto 0);
 signal decoderOutput	: std_logic_vector(3 downto 0);
-signal orGateToFlipFlop, conFFOutput	: std_logic;
+signal orGateToFlipFlop, conFFOutput, busOrOutInternal	: std_logic;
 
 begin
+decoderInput <= IRout(20 downto 19);
 			  
 U0: decoder4bits port map(
 		input  => decoderInput,
@@ -51,7 +53,8 @@ U0: decoder4bits port map(
 U1: conFFSubComponent1 port map(
 		decoderOutput => decoderOutput,
 		BusMuxOut => BusMuxOut,
-		conFFOutput => CONout--orGateToFlipFlop
+		conFFOutput => CONout,--orGateToFlipFlop,
+		busOrOut => busOrOutInternal 
 );
 
 --U2: flipFlop port map(

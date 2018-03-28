@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone III"
 set_global_assignment -name DEVICE EP3C16F484C6
-set_global_assignment -name TOP_LEVEL_ENTITY conFFSubComponent1
+set_global_assignment -name TOP_LEVEL_ENTITY conFF
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:40:59  MARCH 15, 2018"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
@@ -63,7 +63,7 @@ set_global_assignment -name VHDL_FILE selectAndEncodeSubComponent1.vhd
 set_global_assignment -name VHDL_FILE selectAndEncodeSubComponent2.vhd
 set_global_assignment -name VHDL_FILE selectEncode_tb.vhd
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH conFFSubComponent1_tb -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH conFF_tb -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME selectEncode_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id selectEncode_tb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "200 ns" -section_id selectEncode_tb
@@ -114,6 +114,18 @@ set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id conFF_tb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id conFF_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME conFF_tb -section_id conFF_tb
 set_global_assignment -name VHDL_FILE conFFSubComponent1_tb.vhd
+set_global_assignment -name EDA_TEST_BENCH_NAME conFFSubComponent1_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id conFFSubComponent1_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "100 ns" -section_id conFFSubComponent1_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME conFFSubComponent1_tb -section_id conFFSubComponent1_tb
+set_global_assignment -name VHDL_FILE flipFlop_tb.vhd
+set_global_assignment -name EDA_TEST_BENCH_NAME flipFlop_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id flipFlop_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "100 ns" -section_id flipFlop_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME flipFlop_tb -section_id flipFlop_tb
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name EDA_TEST_BENCH_FILE selectEncode_tb.vhd -section_id selectEncode_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE selectAndEncodeSubComponent1_tb.vhd -section_id selectAndEncodeSubComponent1_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE reg_IR_tb.vhd -section_id reg_IR_tb
@@ -122,12 +134,6 @@ set_global_assignment -name EDA_TEST_BENCH_FILE andGate_32vs1_tb.vhd -section_id
 set_global_assignment -name EDA_TEST_BENCH_FILE andGate_tb.vhd -section_id andGate_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE regZero_tb.vhd -section_id regZero_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE conFF_tb.vhd -section_id conFF_tb
-set_global_assignment -name EDA_TEST_BENCH_NAME conFFSubComponent1_tb -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id conFFSubComponent1_tb
-set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "100 ns" -section_id conFFSubComponent1_tb
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME conFFSubComponent1_tb -section_id conFFSubComponent1_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE conFFSubComponent1_tb.vhd -section_id conFFSubComponent1_tb
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name EDA_TEST_BENCH_FILE flipFlop_tb.vhd -section_id flipFlop_tb
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -29,7 +29,7 @@ and1 <= decoderOutput(1) and busOrOut;
 and2 <= decoderOutput(2) and not BusMuxOut(31);
 and3 <= decoderOutput(3) and BusMuxOut(31);
 finalOrOutput <= and0 or and1 or and2 or and3;
-conFFOutput	<= not finalOrOutput;
+conFFOutput	<= finalOrOutput;
 				 
 
 end architecture;
