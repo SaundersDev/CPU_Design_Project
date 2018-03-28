@@ -1,5 +1,5 @@
 Analysis & Elaboration report for phase2
-Mon Mar 26 19:53:53 2018
+Tue Mar 27 21:39:36 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Mon Mar 26 19:53:53 2018           ;
+; Analysis & Elaboration Status      ; Successful - Tue Mar 27 21:39:36 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; phase2                                          ;
 ; Top-level Entity Name              ; andGate                                         ;
@@ -157,7 +157,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Elaboration
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Mar 26 19:53:51 2018
+    Info: Processing started: Tue Mar 27 21:39:35 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off phase2 -c phase2 --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file orgate_tb.vhd
@@ -236,11 +236,10 @@ Info (12021): Found 2 design units, including 1 entities, in source file andgate
     Info (12022): Found design unit 1: andgate_31vs1_tb-behaviour
     Info (12023): Found entity 1: andgate_31vs1_tb
 Info (12127): Elaborating entity "andGate" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at andGate.vhd(17): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 2 warnings
+Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 540 megabytes
-    Info: Processing ended: Mon Mar 26 19:53:53 2018
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Tue Mar 27 21:39:36 2018
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

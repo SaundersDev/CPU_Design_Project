@@ -4,7 +4,7 @@ K3
 cModel Technology
 Z0 dC:\Users\Master\Documents\GitHub\CPU_Design_Project\CPU_Design_Memory_SelectEncode\simulation\modelsim
 Eandgate
-Z1 w1522108902
+Z1 w1522201112
 Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 Z4 dC:\Users\Master\Documents\GitHub\CPU_Design_Project\CPU_Design_Memory_SelectEncode\simulation\modelsim
@@ -12,23 +12,23 @@ Z5 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_Select
 Z6 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/andGate.vhd
 l0
 L6
-Vod<]EjikNL;VhNc2XXiI=3
+VY1FKzbc0XD9?36_83YGQ^2
 Z7 OV;C;10.1d;51
 31
-Z8 !s108 1522108965.445000
+Z8 !s108 1522201190.862000
 Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/andGate.vhd|
 Z10 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/andGate.vhd|
 Z11 o-93 -work work -O0
 Z12 tExplicit 1
-!s100 K>mRbEgOH0j;2@9dfUz:R2
+!s100 f]YJcSiWc;Th<_c5Oi3oh1
 !i10b 1
 Abehaviour
 R2
 R3
-DEx4 work 7 andgate 0 22 od<]EjikNL;VhNc2XXiI=3
-l15
-L13
-VTzCaSV=KRAoloAmdNhhkh1
+DEx4 work 7 andgate 0 22 Y1FKzbc0XD9?36_83YGQ^2
+l16
+L14
+Vg=>9d8P2@jGVFQK;l0Cfc2
 R7
 31
 R8
@@ -36,10 +36,10 @@ R9
 R10
 R11
 R12
-!s100 ]jeaM;o2k:>A8_on^dY;o0
+!s100 WS=ZjXHmAiM^<I72Thzi>2
 !i10b 1
 Eandgate_tb
-Z13 w1522108426
+Z13 w1522201171
 R2
 R3
 R4
@@ -52,7 +52,7 @@ V3WI?9VOg@5d=A4FNQSMH]2
 R7
 31
 !i10b 1
-Z16 !s108 1522108965.733000
+Z16 !s108 1522201191.394000
 Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/andGate_tb.vhd|
 Z18 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/andGate_tb.vhd|
 R11
@@ -63,8 +63,8 @@ R3
 DEx4 work 10 andgate_tb 0 22 3WI?9VOg@5d=A4FNQSMH]2
 l21
 L8
-V[YV<zB:1Jo4jJVn6Zh0h33
-!s100 ZJzd=j92:TTb4fORWLn6?0
+VfCZiMZT4mAXT[3L<4HJD43
+!s100 Jc:^n9^]e[><7NA0c1AAH1
 R7
 31
 !i10b 1

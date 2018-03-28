@@ -41,15 +41,3 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 500 ns
-vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps work.andgate_tb
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps work.andgate_tb 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.andgate_tb(behaviour)
-# Loading work.andgate(behaviour)
-# WARNING: No extended dataflow license exists
-add wave -position insertpoint  \
-sim:/andgate_tb/A_tb \
-sim:/andgate_tb/B_tb \
-sim:/andgate_tb/S_tb

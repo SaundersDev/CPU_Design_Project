@@ -5,7 +5,8 @@ library work;
  
 entity andGate is
 	port(
-		A, B	 	: in std_logic_vector(31 downto 0);
+		A	:in std_logic;
+		B	 	: in std_logic_vector(31 downto 0);
 		S			: out std_logic_vector(31 downto 0)
 	);
 end andGate;
@@ -13,10 +14,10 @@ end andGate;
 architecture behaviour of andGate is
  
 begin
-	process(A)
+	process(A, B)
 	begin
 		for I in 0 to 31 loop
-			S(I) <= A(I) and B(I);
+			S(I) <= A and B(I);
 		end loop;
 	end process;
 end behaviour;
