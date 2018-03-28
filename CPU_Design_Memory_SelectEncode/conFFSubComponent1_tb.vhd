@@ -33,7 +33,7 @@ begin
 	begin
 	
 		wait for 1 ns;
-		busOrOut_tb <= '0';
+--		busOrOut_tb <= '0';
 		decoderOutput_tb	<= "0001";
 		BusMuxOut_tb		<= x"07ff0000";		
 		wait for 9 ns;
