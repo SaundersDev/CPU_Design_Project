@@ -21,10 +21,10 @@ component reg_32 IS
 		);
 END component;
 
-component andGate_31vs1 is
+component andGate_32vs1 is
 	port(
-		A		: in std_logic_vector(31 downto 0);
-		B	 	: in std_logic;
+		A		: in std_logic;
+		B	 	: in std_logic_vector(31 downto 0);
 		S		: out std_logic_vector(31 downto 0)
 	);
 end component;
@@ -37,9 +37,9 @@ U0: reg_32 port map(
 	BusMuxOut => BusMuxOut,
 	BusMuxIn => regToAnd
 );
-U1: andGate_31vs1 port map(
-	A => regToAnd,
-	B => BAout,
+U1: andGate_32vs1 port map(
+	A => BAout,
+	B => regToAnd,
 	S => BusMuxIn
 );
 

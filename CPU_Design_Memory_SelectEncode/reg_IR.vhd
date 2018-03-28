@@ -18,11 +18,11 @@ BEGIN
 			IF (clr = '0') THEN
 				BusMuxIn <= (others => '0' );
 			ELSIF(clr = '1' and BusMuxOut(18) = '1') THEN
-				BusMuxIn(31 downto 18) <= BusMuxOut(31 downto 18);
-				BusMuxIn(17 downto 0) <= "111111111111111111";
+				BusMuxIn(17 downto 0) <= BusMuxOut(17 downto 0);
+				BusMuxIn(31 downto 18) <= "11111111111111";
 			ELSE
-				BusMuxIn(31 downto 18) <= BusMuxOut(31 downto 18);
-				BusMuxIn(17 downto 0) <= "000000000000000000";
+				BusMuxIn(17 downto 0) <= BusMuxOut(17 downto 0);
+				BusMuxIn(31 downto 18) <= "00000000000000";
 			END IF;
 		END IF;
 	END PROCESS;

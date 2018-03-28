@@ -37,8 +37,8 @@ component flipFlop is
    );
 end component;
 
-signal decoderInput	: std_logic_vector(2 downto 0) := IRout(20 downto 19);
-signal decoderOutput	: std_logic_vector(15 downto 0);
+signal decoderInput	: std_logic_vector(1 downto 0) := IRout(20 downto 19);
+signal decoderOutput	: std_logic_vector(3 downto 0);
 signal orGateToFlipFlop, conFFOutput	: std_logic;
 
 begin
@@ -51,13 +51,13 @@ U0: decoder4bits port map(
 U1: conFFSubComponent1 port map(
 		decoderOutput => decoderOutput,
 		BusMuxOut => BusMuxOut,
-		conFFOutput => orGateToFlipFlop
+		conFFOutput => CONout--orGateToFlipFlop
 );
 
-U2: flipFlop port map(
-		clk => clk,
-		clkEnable => CONin,
-		D => orGateToFlipFlop,
-		Q => CONout
-);
+--U2: flipFlop port map(
+--		clk => clk,
+--		clkEnable => CONin,
+--		D => orGateToFlipFlop,
+--		Q => CONout
+--);
 end architecture;

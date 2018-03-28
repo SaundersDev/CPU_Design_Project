@@ -7,7 +7,7 @@ entity andGate_tb is
 end entity;
 architecture behaviour of andGate_tb is
 
-component andGate is
+component andGate_32vs1 is
 	port(
 		A		: in std_logic;
 		B	 	: in std_logic_vector(31 downto 0);
@@ -19,7 +19,7 @@ signal A_tb : std_logic;
 signal B_tb : std_logic_vector(31 downto 0);
 signal S_tb : std_logic_vector(31 downto 0); 
 begin
-	DUT1 : andGate port map(
+	DUT1 : andGate_32vs1 port map(
 		A => A_tb,
 		B => B_tb,
 		S => S_tb
