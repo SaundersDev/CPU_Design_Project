@@ -35,7 +35,11 @@ entity datapath is
 		busZlowin  				: inout std_logic_vector(31 downto 0); 
 		busSignExtendedIn  	: inout std_logic_vector(31 downto 0); 		
 		encoderControlBus 	: inout std_logic_vector(4 downto 0);		
-		BusMuxOut 				: inout std_logic_vector(31 downto 0); 
+		BusMuxOut 				: inout std_logic_vector(31 downto 0);
+		
+	   --CONFF control signals ADDED
+		CON_in		:		STD_LOGIC;
+		CON_to_control 	: 	OUT std_LOGIC;	
 		InPortin, OutPortin, HIin, LOin  : inout std_logic;		
 		
 --		conFFLogicInControl 					: in std_logic;
@@ -50,6 +54,20 @@ end entity;
 
 architecture datapath_arc of datapath is
 
+COMPONENT conFF
+	PORT
+	(
+		clk		:	 IN STD_LOGIC;
+		IRout		:	 IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		BusMuxOut		:	 IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		CONin		:	 IN STD_LOGIC;
+		CONout		:	 OUT STD_LOGIC
+	);
+END COMPONENT;
+
+
+
+
 component reg_32
 	port(
 		clk			: in std_logic;
@@ -58,7 +76,11 @@ component reg_32
 		BusMuxOut 	: in std_logic_vector(31 downto 0);
 		BusMuxIn 	: out std_logic_vector(31 downto 0)
 	);
-end component;
+	
+end component;	
+
+
+
 component zRegister
 	port(
 	C : in std_logic_vector(63 downto 0);
@@ -111,6 +133,17 @@ component ALU
 		control						: in std_logic_vector(12 downto 0);
 		A, B     					: in std_logic_vector(31 downto 0);
 		C								: out std_logic_vector(63 downto 0)
+	);
+end component;
+
+component selectAndEncodeLogic is
+	port(
+		IRin										: in std_logic_vector(31 downto 0);
+		Gra, Grb, Grc, Rin, Rout, BAout	: in std_logic;
+		BusMuxOut								: in std_logic_vector(31 downto 0);
+		C_sign_extended						: out std_logic_vector(31 downto 0);
+		r0in_r15in_Decoded					: out std_logic_vector(15 downto 0);
+		r0out_r15out_Decoded					: out std_logic_vector(15 downto 0)
 	);
 end component;
 
@@ -211,7 +244,7 @@ U7: reg_32	port map(
 		BusMuxIn => busLOin
 );
 --regular registers
-U8: registerFile port map(
+datapath_register_file: registerFile port map(
 		clk => Clock,
 		clr => clr, 
 		Rin => registerFileIn,
@@ -297,6 +330,16 @@ U14: multiplexerMDR port map(
 		ReadChannel => ReadChannel, 
 		MDRMuxOut 	=> MDMuxToMDR
 	);
+	
+U15: conFF PORT MAP(
+		clk	=> Clock,
+		IRout	=>busIRin,
+		BusMuxOut => BusMuxOut,
+		CONout	=> con_to_control
+
+);
+
+U16: selectEncode
 	
 	
 end architecture datapath_arc;	

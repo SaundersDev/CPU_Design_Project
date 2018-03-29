@@ -6,7 +6,6 @@ entity conFF is
 		clk										: in std_logic;
 		IRout										: in std_logic_vector(31 downto 0);
 		BusMuxOut								: in std_logic_vector(31 downto 0);
-		CONin										: in std_logic;
 		CONout									: out std_logic
 	);
 end entity;
@@ -52,13 +51,13 @@ U0: decoder4bits port map(
 U1: conFFSubComponent1 port map(
 		decoderOutput => decoderOutput,
 		BusMuxOut => BusMuxOut,
-		conFFOutput => orGateToFlipFlop,
+		conFFOutput => CONout,--orGateToFlipFlop,
 		busOrOut => busOrOutInternal 
 );
 
 U2: flipFlop port map(
-		clk => clk,	--aka CONin
+		clk => clk,
 		D => orGateToFlipFlop,
 		Q => CONout
-);
+--);
 end architecture;

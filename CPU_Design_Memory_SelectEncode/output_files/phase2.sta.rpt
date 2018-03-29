@@ -1,0 +1,784 @@
+TimeQuest Timing Analyzer report for phase2
+Thu Mar 29 10:38:06 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Propagation Delay
+ 13. Minimum Propagation Delay
+ 14. Slow 1200mV 85C Model Metastability Report
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 21. Propagation Delay
+ 22. Minimum Propagation Delay
+ 23. Slow 1200mV 0C Model Metastability Report
+ 24. Fast 1200mV 0C Model Setup Summary
+ 25. Fast 1200mV 0C Model Hold Summary
+ 26. Fast 1200mV 0C Model Recovery Summary
+ 27. Fast 1200mV 0C Model Removal Summary
+ 28. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 29. Propagation Delay
+ 30. Minimum Propagation Delay
+ 31. Fast 1200mV 0C Model Metastability Report
+ 32. Multicorner Timing Analysis Summary
+ 33. Progagation Delay
+ 34. Minimum Progagation Delay
+ 35. Board Trace Model Assignments
+ 36. Input Transition Times
+ 37. Slow Corner Signal Integrity Metrics
+ 38. Fast Corner Signal Integrity Metrics
+ 39. Clock Transfers
+ 40. Report TCCS
+ 41. Report RSKM
+ 42. Unconstrained Paths
+ 43. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                       ;
++--------------------+--------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version ;
+; Revision Name      ; phase2                                                             ;
+; Device Family      ; Cyclone III                                                        ;
+; Device Name        ; EP3C16F484C6                                                       ;
+; Timing Models      ; Final                                                              ;
+; Delay Model        ; Combined                                                           ;
+; Rise/Fall Delays   ; Enabled                                                            ;
++--------------------+--------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ; < 0.1%      ;
+;     Processors 5-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
+----------
+; Clocks ;
+----------
+No clocks to report.
+
+
+--------------------------------------
+; Slow 1200mV 85C Model Fmax Summary ;
+--------------------------------------
+No paths to report.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
+---------------------------------------
+; Slow 1200mV 85C Model Setup Summary ;
+---------------------------------------
+No paths to report.
+
+
+--------------------------------------
+; Slow 1200mV 85C Model Hold Summary ;
+--------------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
+-----------------------------------------------------
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
+-----------------------------------------------------
+No paths to report.
+
+
++-----------------------------------------------------------------+
+; Propagation Delay                                               ;
++---------------+-------------+--------+--------+--------+--------+
+; Input Port    ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++---------------+-------------+--------+--------+--------+--------+
+; BusMuxOut[0]  ; CONout      ; 9.905  ; 9.905  ; 10.557 ; 10.430 ;
+; BusMuxOut[1]  ; CONout      ; 10.080 ; 10.080 ; 10.705 ; 10.578 ;
+; BusMuxOut[2]  ; CONout      ; 9.869  ; 9.869  ; 10.510 ; 10.383 ;
+; BusMuxOut[3]  ; CONout      ; 9.725  ; 9.725  ; 10.357 ; 10.230 ;
+; BusMuxOut[4]  ; CONout      ; 10.088 ; 10.088 ; 10.769 ; 10.642 ;
+; BusMuxOut[5]  ; CONout      ; 10.024 ; 10.024 ; 10.660 ; 10.533 ;
+; BusMuxOut[6]  ; CONout      ; 9.920  ; 9.920  ; 10.555 ; 10.428 ;
+; BusMuxOut[7]  ; CONout      ; 9.885  ; 9.885  ; 10.558 ; 10.431 ;
+; BusMuxOut[8]  ; CONout      ; 10.366 ; 10.366 ; 11.066 ; 10.939 ;
+; BusMuxOut[9]  ; CONout      ; 9.785  ; 9.785  ; 10.438 ; 10.311 ;
+; BusMuxOut[10] ; CONout      ; 10.013 ; 10.013 ; 10.670 ; 10.543 ;
+; BusMuxOut[11] ; CONout      ; 10.049 ; 10.049 ; 10.694 ; 10.567 ;
+; BusMuxOut[12] ; CONout      ; 9.772  ; 9.772  ; 10.384 ; 10.257 ;
+; BusMuxOut[13] ; CONout      ; 9.989  ; 9.989  ; 10.639 ; 10.512 ;
+; BusMuxOut[14] ; CONout      ; 9.625  ; 9.625  ; 10.228 ; 10.101 ;
+; BusMuxOut[15] ; CONout      ; 9.575  ; 9.575  ; 10.179 ; 10.052 ;
+; BusMuxOut[16] ; CONout      ; 9.158  ; 9.158  ; 9.758  ; 9.631  ;
+; BusMuxOut[17] ; CONout      ; 9.212  ; 9.212  ; 9.783  ; 9.656  ;
+; BusMuxOut[18] ; CONout      ; 9.014  ; 9.014  ; 9.611  ; 9.484  ;
+; BusMuxOut[19] ; CONout      ; 9.044  ; 9.044  ; 9.614  ; 9.487  ;
+; BusMuxOut[20] ; CONout      ; 9.809  ; 9.809  ; 10.429 ; 10.302 ;
+; BusMuxOut[21] ; CONout      ; 9.767  ; 9.767  ; 10.375 ; 10.248 ;
+; BusMuxOut[22] ; CONout      ; 9.816  ; 9.816  ; 10.413 ; 10.286 ;
+; BusMuxOut[23] ; CONout      ; 10.390 ; 10.390 ; 11.069 ; 10.942 ;
+; BusMuxOut[24] ; CONout      ; 9.771  ; 9.771  ; 10.393 ; 10.266 ;
+; BusMuxOut[25] ; CONout      ; 9.670  ; 9.670  ; 10.292 ; 10.165 ;
+; BusMuxOut[26] ; CONout      ; 9.838  ; 9.838  ; 10.469 ; 10.342 ;
+; BusMuxOut[27] ; CONout      ; 10.014 ; 10.014 ; 10.654 ; 10.527 ;
+; BusMuxOut[28] ; CONout      ; 8.910  ; 8.910  ; 9.483  ; 9.356  ;
+; BusMuxOut[29] ; CONout      ; 9.816  ; 9.816  ; 10.427 ; 10.300 ;
+; BusMuxOut[30] ; CONout      ; 9.504  ; 9.504  ; 10.078 ; 9.951  ;
+; BusMuxOut[31] ; CONout      ; 6.200  ; 6.124  ; 6.603  ; 6.560  ;
+; IRout[19]     ; CONout      ; 6.120  ; 6.047  ; 6.534  ; 6.452  ;
+; IRout[20]     ; CONout      ; 6.347  ; 6.265  ; 6.758  ; 6.728  ;
++---------------+-------------+--------+--------+--------+--------+
+
+
++-----------------------------------------------------------------+
+; Minimum Propagation Delay                                       ;
++---------------+-------------+--------+--------+--------+--------+
+; Input Port    ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++---------------+-------------+--------+--------+--------+--------+
+; BusMuxOut[0]  ; CONout      ; 9.615  ; 9.613  ; 10.245 ; 10.121 ;
+; BusMuxOut[1]  ; CONout      ; 9.784  ; 9.782  ; 10.387 ; 10.263 ;
+; BusMuxOut[2]  ; CONout      ; 9.581  ; 9.579  ; 10.200 ; 10.076 ;
+; BusMuxOut[3]  ; CONout      ; 9.442  ; 9.440  ; 10.052 ; 9.928  ;
+; BusMuxOut[4]  ; CONout      ; 9.792  ; 9.790  ; 10.449 ; 10.325 ;
+; BusMuxOut[5]  ; CONout      ; 9.730  ; 9.728  ; 10.345 ; 10.221 ;
+; BusMuxOut[6]  ; CONout      ; 9.630  ; 9.628  ; 10.243 ; 10.119 ;
+; BusMuxOut[7]  ; CONout      ; 9.591  ; 9.589  ; 10.244 ; 10.120 ;
+; BusMuxOut[8]  ; CONout      ; 10.056 ; 10.054 ; 10.732 ; 10.608 ;
+; BusMuxOut[9]  ; CONout      ; 9.500  ; 9.498  ; 10.130 ; 10.006 ;
+; BusMuxOut[10] ; CONout      ; 9.720  ; 9.718  ; 10.354 ; 10.230 ;
+; BusMuxOut[11] ; CONout      ; 9.754  ; 9.752  ; 10.378 ; 10.254 ;
+; BusMuxOut[12] ; CONout      ; 9.488  ; 9.486  ; 10.079 ; 9.955  ;
+; BusMuxOut[13] ; CONout      ; 9.696  ; 9.694  ; 10.323 ; 10.199 ;
+; BusMuxOut[14] ; CONout      ; 9.346  ; 9.344  ; 9.929  ; 9.805  ;
+; BusMuxOut[15] ; CONout      ; 9.299  ; 9.297  ; 9.882  ; 9.758  ;
+; BusMuxOut[16] ; CONout      ; 8.897  ; 8.895  ; 9.477  ; 9.353  ;
+; BusMuxOut[17] ; CONout      ; 8.950  ; 8.948  ; 9.502  ; 9.378  ;
+; BusMuxOut[18] ; CONout      ; 8.755  ; 8.753  ; 9.334  ; 9.210  ;
+; BusMuxOut[19] ; CONout      ; 8.789  ; 8.787  ; 9.340  ; 9.216  ;
+; BusMuxOut[20] ; CONout      ; 9.521  ; 9.519  ; 10.121 ; 9.997  ;
+; BusMuxOut[21] ; CONout      ; 9.482  ; 9.480  ; 10.070 ; 9.946  ;
+; BusMuxOut[22] ; CONout      ; 9.530  ; 9.528  ; 10.107 ; 9.983  ;
+; BusMuxOut[23] ; CONout      ; 10.080 ; 10.078 ; 10.736 ; 10.612 ;
+; BusMuxOut[24] ; CONout      ; 9.487  ; 9.485  ; 10.088 ; 9.964  ;
+; BusMuxOut[25] ; CONout      ; 9.389  ; 9.387  ; 9.990  ; 9.866  ;
+; BusMuxOut[26] ; CONout      ; 9.551  ; 9.549  ; 10.161 ; 10.037 ;
+; BusMuxOut[27] ; CONout      ; 9.718  ; 9.716  ; 10.337 ; 10.213 ;
+; BusMuxOut[28] ; CONout      ; 8.660  ; 8.658  ; 9.215  ; 9.091  ;
+; BusMuxOut[29] ; CONout      ; 9.529  ; 9.527  ; 10.121 ; 9.997  ;
+; BusMuxOut[30] ; CONout      ; 9.229  ; 9.227  ; 9.785  ; 9.661  ;
+; BusMuxOut[31] ; CONout      ; 6.053  ; 5.978  ; 6.448  ; 6.404  ;
+; IRout[19]     ; CONout      ; 5.977  ; 5.904  ; 6.382  ; 6.300  ;
+; IRout[20]     ; CONout      ; 6.194  ; 6.113  ; 6.596  ; 6.565  ;
++---------------+-------------+--------+--------+--------+--------+
+
+
+----------------------------------------------
+; Slow 1200mV 85C Model Metastability Report ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
+-------------------------------------
+; Slow 1200mV 0C Model Fmax Summary ;
+-------------------------------------
+No paths to report.
+
+
+--------------------------------------
+; Slow 1200mV 0C Model Setup Summary ;
+--------------------------------------
+No paths to report.
+
+
+-------------------------------------
+; Slow 1200mV 0C Model Hold Summary ;
+-------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
+----------------------------------------------------
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
+----------------------------------------------------
+No paths to report.
+
+
++--------------------------------------------------------------+
+; Propagation Delay                                            ;
++---------------+-------------+-------+-------+--------+-------+
+; Input Port    ; Output Port ; RR    ; RF    ; FR     ; FF    ;
++---------------+-------------+-------+-------+--------+-------+
+; BusMuxOut[0]  ; CONout      ; 9.165 ; 9.140 ; 9.599  ; 9.461 ;
+; BusMuxOut[1]  ; CONout      ; 9.348 ; 9.323 ; 9.750  ; 9.612 ;
+; BusMuxOut[2]  ; CONout      ; 9.133 ; 9.108 ; 9.583  ; 9.445 ;
+; BusMuxOut[3]  ; CONout      ; 9.002 ; 8.977 ; 9.452  ; 9.314 ;
+; BusMuxOut[4]  ; CONout      ; 9.336 ; 9.311 ; 9.787  ; 9.649 ;
+; BusMuxOut[5]  ; CONout      ; 9.286 ; 9.261 ; 9.694  ; 9.556 ;
+; BusMuxOut[6]  ; CONout      ; 9.179 ; 9.154 ; 9.619  ; 9.481 ;
+; BusMuxOut[7]  ; CONout      ; 9.151 ; 9.126 ; 9.613  ; 9.475 ;
+; BusMuxOut[8]  ; CONout      ; 9.605 ; 9.580 ; 10.064 ; 9.926 ;
+; BusMuxOut[9]  ; CONout      ; 9.077 ; 9.052 ; 9.511  ; 9.373 ;
+; BusMuxOut[10] ; CONout      ; 9.271 ; 9.246 ; 9.737  ; 9.599 ;
+; BusMuxOut[11] ; CONout      ; 9.307 ; 9.282 ; 9.745  ; 9.607 ;
+; BusMuxOut[12] ; CONout      ; 9.049 ; 9.024 ; 9.451  ; 9.313 ;
+; BusMuxOut[13] ; CONout      ; 9.265 ; 9.240 ; 9.687  ; 9.549 ;
+; BusMuxOut[14] ; CONout      ; 8.922 ; 8.897 ; 9.336  ; 9.198 ;
+; BusMuxOut[15] ; CONout      ; 8.867 ; 8.842 ; 9.269  ; 9.131 ;
+; BusMuxOut[16] ; CONout      ; 8.497 ; 8.472 ; 8.902  ; 8.764 ;
+; BusMuxOut[17] ; CONout      ; 8.547 ; 8.522 ; 8.932  ; 8.794 ;
+; BusMuxOut[18] ; CONout      ; 8.374 ; 8.349 ; 8.768  ; 8.630 ;
+; BusMuxOut[19] ; CONout      ; 8.402 ; 8.377 ; 8.772  ; 8.634 ;
+; BusMuxOut[20] ; CONout      ; 9.094 ; 9.069 ; 9.501  ; 9.363 ;
+; BusMuxOut[21] ; CONout      ; 9.051 ; 9.026 ; 9.455  ; 9.317 ;
+; BusMuxOut[22] ; CONout      ; 9.093 ; 9.068 ; 9.496  ; 9.358 ;
+; BusMuxOut[23] ; CONout      ; 9.638 ; 9.613 ; 10.075 ; 9.937 ;
+; BusMuxOut[24] ; CONout      ; 9.052 ; 9.027 ; 9.473  ; 9.335 ;
+; BusMuxOut[25] ; CONout      ; 8.958 ; 8.933 ; 9.374  ; 9.236 ;
+; BusMuxOut[26] ; CONout      ; 9.109 ; 9.084 ; 9.527  ; 9.389 ;
+; BusMuxOut[27] ; CONout      ; 9.266 ; 9.241 ; 9.702  ; 9.564 ;
+; BusMuxOut[28] ; CONout      ; 8.279 ; 8.254 ; 8.675  ; 8.537 ;
+; BusMuxOut[29] ; CONout      ; 9.109 ; 9.084 ; 9.489  ; 9.351 ;
+; BusMuxOut[30] ; CONout      ; 8.813 ; 8.788 ; 9.191  ; 9.053 ;
+; BusMuxOut[31] ; CONout      ; 5.763 ; 5.669 ; 6.100  ; 6.035 ;
+; IRout[19]     ; CONout      ; 5.685 ; 5.593 ; 6.041  ; 5.941 ;
+; IRout[20]     ; CONout      ; 5.881 ; 5.781 ; 6.228  ; 6.178 ;
++---------------+-------------+-------+-------+--------+-------+
+
+
++-------------------------------------------------------------+
+; Minimum Propagation Delay                                   ;
++---------------+-------------+-------+-------+-------+-------+
+; Input Port    ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++---------------+-------------+-------+-------+-------+-------+
+; BusMuxOut[0]  ; CONout      ; 8.907 ; 8.881 ; 9.325 ; 9.191 ;
+; BusMuxOut[1]  ; CONout      ; 9.083 ; 9.057 ; 9.473 ; 9.339 ;
+; BusMuxOut[2]  ; CONout      ; 8.877 ; 8.851 ; 9.312 ; 9.178 ;
+; BusMuxOut[3]  ; CONout      ; 8.751 ; 8.725 ; 9.186 ; 9.052 ;
+; BusMuxOut[4]  ; CONout      ; 9.073 ; 9.047 ; 9.507 ; 9.373 ;
+; BusMuxOut[5]  ; CONout      ; 9.025 ; 8.999 ; 9.418 ; 9.284 ;
+; BusMuxOut[6]  ; CONout      ; 8.921 ; 8.895 ; 9.345 ; 9.211 ;
+; BusMuxOut[7]  ; CONout      ; 8.890 ; 8.864 ; 9.339 ; 9.205 ;
+; BusMuxOut[8]  ; CONout      ; 9.329 ; 9.303 ; 9.772 ; 9.638 ;
+; BusMuxOut[9]  ; CONout      ; 8.824 ; 8.798 ; 9.244 ; 9.110 ;
+; BusMuxOut[10] ; CONout      ; 9.012 ; 8.986 ; 9.461 ; 9.327 ;
+; BusMuxOut[11] ; CONout      ; 9.045 ; 9.019 ; 9.468 ; 9.334 ;
+; BusMuxOut[12] ; CONout      ; 8.797 ; 8.771 ; 9.185 ; 9.051 ;
+; BusMuxOut[13] ; CONout      ; 9.004 ; 8.978 ; 9.413 ; 9.279 ;
+; BusMuxOut[14] ; CONout      ; 8.675 ; 8.649 ; 9.075 ; 8.941 ;
+; BusMuxOut[15] ; CONout      ; 8.622 ; 8.596 ; 9.010 ; 8.876 ;
+; BusMuxOut[16] ; CONout      ; 8.265 ; 8.239 ; 8.658 ; 8.524 ;
+; BusMuxOut[17] ; CONout      ; 8.314 ; 8.288 ; 8.688 ; 8.554 ;
+; BusMuxOut[18] ; CONout      ; 8.144 ; 8.118 ; 8.529 ; 8.395 ;
+; BusMuxOut[19] ; CONout      ; 8.176 ; 8.150 ; 8.534 ; 8.400 ;
+; BusMuxOut[20] ; CONout      ; 8.841 ; 8.815 ; 9.236 ; 9.102 ;
+; BusMuxOut[21] ; CONout      ; 8.799 ; 8.773 ; 9.191 ; 9.057 ;
+; BusMuxOut[22] ; CONout      ; 8.839 ; 8.813 ; 9.231 ; 9.097 ;
+; BusMuxOut[23] ; CONout      ; 9.363 ; 9.337 ; 9.788 ; 9.654 ;
+; BusMuxOut[24] ; CONout      ; 8.799 ; 8.773 ; 9.208 ; 9.074 ;
+; BusMuxOut[25] ; CONout      ; 8.708 ; 8.682 ; 9.111 ; 8.977 ;
+; BusMuxOut[26] ; CONout      ; 8.854 ; 8.828 ; 9.258 ; 9.124 ;
+; BusMuxOut[27] ; CONout      ; 9.003 ; 8.977 ; 9.426 ; 9.292 ;
+; BusMuxOut[28] ; CONout      ; 8.058 ; 8.032 ; 8.442 ; 8.308 ;
+; BusMuxOut[29] ; CONout      ; 8.855 ; 8.829 ; 9.224 ; 9.090 ;
+; BusMuxOut[30] ; CONout      ; 8.570 ; 8.544 ; 8.936 ; 8.802 ;
+; BusMuxOut[31] ; CONout      ; 5.638 ; 5.545 ; 5.969 ; 5.904 ;
+; IRout[19]     ; CONout      ; 5.564 ; 5.473 ; 5.911 ; 5.814 ;
+; IRout[20]     ; CONout      ; 5.751 ; 5.654 ; 6.091 ; 6.040 ;
++---------------+-------------+-------+-------+-------+-------+
+
+
+---------------------------------------------
+; Slow 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
+--------------------------------------
+; Fast 1200mV 0C Model Setup Summary ;
+--------------------------------------
+No paths to report.
+
+
+-------------------------------------
+; Fast 1200mV 0C Model Hold Summary ;
+-------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
+----------------------------------------------------
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
+----------------------------------------------------
+No paths to report.
+
+
++-------------------------------------------------------------+
+; Propagation Delay                                           ;
++---------------+-------------+-------+-------+-------+-------+
+; Input Port    ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++---------------+-------------+-------+-------+-------+-------+
+; BusMuxOut[0]  ; CONout      ; 5.676 ; 5.722 ; 6.491 ; 6.467 ;
+; BusMuxOut[1]  ; CONout      ; 5.805 ; 5.851 ; 6.642 ; 6.618 ;
+; BusMuxOut[2]  ; CONout      ; 5.661 ; 5.707 ; 6.491 ; 6.467 ;
+; BusMuxOut[3]  ; CONout      ; 5.572 ; 5.618 ; 6.399 ; 6.375 ;
+; BusMuxOut[4]  ; CONout      ; 5.800 ; 5.846 ; 6.642 ; 6.618 ;
+; BusMuxOut[5]  ; CONout      ; 5.734 ; 5.780 ; 6.554 ; 6.530 ;
+; BusMuxOut[6]  ; CONout      ; 5.676 ; 5.722 ; 6.507 ; 6.483 ;
+; BusMuxOut[7]  ; CONout      ; 5.677 ; 5.723 ; 6.530 ; 6.506 ;
+; BusMuxOut[8]  ; CONout      ; 5.928 ; 5.974 ; 6.817 ; 6.793 ;
+; BusMuxOut[9]  ; CONout      ; 5.625 ; 5.671 ; 6.467 ; 6.443 ;
+; BusMuxOut[10] ; CONout      ; 5.774 ; 5.820 ; 6.610 ; 6.586 ;
+; BusMuxOut[11] ; CONout      ; 5.778 ; 5.824 ; 6.621 ; 6.597 ;
+; BusMuxOut[12] ; CONout      ; 5.609 ; 5.655 ; 6.416 ; 6.392 ;
+; BusMuxOut[13] ; CONout      ; 5.732 ; 5.778 ; 6.595 ; 6.571 ;
+; BusMuxOut[14] ; CONout      ; 5.532 ; 5.578 ; 6.350 ; 6.326 ;
+; BusMuxOut[15] ; CONout      ; 5.481 ; 5.527 ; 6.278 ; 6.254 ;
+; BusMuxOut[16] ; CONout      ; 5.276 ; 5.322 ; 6.068 ; 6.044 ;
+; BusMuxOut[17] ; CONout      ; 5.315 ; 5.361 ; 6.100 ; 6.076 ;
+; BusMuxOut[18] ; CONout      ; 5.209 ; 5.255 ; 6.016 ; 5.992 ;
+; BusMuxOut[19] ; CONout      ; 5.219 ; 5.265 ; 5.989 ; 5.965 ;
+; BusMuxOut[20] ; CONout      ; 5.626 ; 5.672 ; 6.457 ; 6.433 ;
+; BusMuxOut[21] ; CONout      ; 5.615 ; 5.661 ; 6.429 ; 6.405 ;
+; BusMuxOut[22] ; CONout      ; 5.639 ; 5.685 ; 6.454 ; 6.430 ;
+; BusMuxOut[23] ; CONout      ; 5.983 ; 6.029 ; 6.872 ; 6.848 ;
+; BusMuxOut[24] ; CONout      ; 5.624 ; 5.670 ; 6.445 ; 6.421 ;
+; BusMuxOut[25] ; CONout      ; 5.540 ; 5.586 ; 6.339 ; 6.315 ;
+; BusMuxOut[26] ; CONout      ; 5.637 ; 5.683 ; 6.446 ; 6.422 ;
+; BusMuxOut[27] ; CONout      ; 5.746 ; 5.792 ; 6.574 ; 6.550 ;
+; BusMuxOut[28] ; CONout      ; 5.188 ; 5.234 ; 5.969 ; 5.945 ;
+; BusMuxOut[29] ; CONout      ; 5.664 ; 5.710 ; 6.481 ; 6.457 ;
+; BusMuxOut[30] ; CONout      ; 5.450 ; 5.496 ; 6.252 ; 6.228 ;
+; BusMuxOut[31] ; CONout      ; 3.632 ; 3.641 ; 4.192 ; 4.220 ;
+; IRout[19]     ; CONout      ; 3.586 ; 3.599 ; 4.158 ; 4.164 ;
+; IRout[20]     ; CONout      ; 3.705 ; 3.707 ; 4.279 ; 4.309 ;
++---------------+-------------+-------+-------+-------+-------+
+
+
++-------------------------------------------------------------+
+; Minimum Propagation Delay                                   ;
++---------------+-------------+-------+-------+-------+-------+
+; Input Port    ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++---------------+-------------+-------+-------+-------+-------+
+; BusMuxOut[0]  ; CONout      ; 5.513 ; 5.556 ; 6.314 ; 6.289 ;
+; BusMuxOut[1]  ; CONout      ; 5.637 ; 5.680 ; 6.459 ; 6.434 ;
+; BusMuxOut[2]  ; CONout      ; 5.500 ; 5.543 ; 6.315 ; 6.290 ;
+; BusMuxOut[3]  ; CONout      ; 5.414 ; 5.457 ; 6.226 ; 6.201 ;
+; BusMuxOut[4]  ; CONout      ; 5.632 ; 5.675 ; 6.459 ; 6.434 ;
+; BusMuxOut[5]  ; CONout      ; 5.569 ; 5.612 ; 6.374 ; 6.349 ;
+; BusMuxOut[6]  ; CONout      ; 5.514 ; 5.557 ; 6.329 ; 6.304 ;
+; BusMuxOut[7]  ; CONout      ; 5.514 ; 5.557 ; 6.350 ; 6.325 ;
+; BusMuxOut[8]  ; CONout      ; 5.755 ; 5.798 ; 6.626 ; 6.601 ;
+; BusMuxOut[9]  ; CONout      ; 5.464 ; 5.507 ; 6.291 ; 6.266 ;
+; BusMuxOut[10] ; CONout      ; 5.609 ; 5.652 ; 6.430 ; 6.405 ;
+; BusMuxOut[11] ; CONout      ; 5.614 ; 5.657 ; 6.440 ; 6.415 ;
+; BusMuxOut[12] ; CONout      ; 5.450 ; 5.493 ; 6.242 ; 6.217 ;
+; BusMuxOut[13] ; CONout      ; 5.566 ; 5.609 ; 6.414 ; 6.389 ;
+; BusMuxOut[14] ; CONout      ; 5.375 ; 5.418 ; 6.178 ; 6.153 ;
+; BusMuxOut[15] ; CONout      ; 5.326 ; 5.369 ; 6.109 ; 6.084 ;
+; BusMuxOut[16] ; CONout      ; 5.129 ; 5.172 ; 5.907 ; 5.882 ;
+; BusMuxOut[17] ; CONout      ; 5.168 ; 5.211 ; 5.939 ; 5.914 ;
+; BusMuxOut[18] ; CONout      ; 5.065 ; 5.108 ; 5.857 ; 5.832 ;
+; BusMuxOut[19] ; CONout      ; 5.074 ; 5.117 ; 5.832 ; 5.807 ;
+; BusMuxOut[20] ; CONout      ; 5.465 ; 5.508 ; 6.280 ; 6.255 ;
+; BusMuxOut[21] ; CONout      ; 5.456 ; 5.499 ; 6.254 ; 6.229 ;
+; BusMuxOut[22] ; CONout      ; 5.478 ; 5.521 ; 6.278 ; 6.253 ;
+; BusMuxOut[23] ; CONout      ; 5.808 ; 5.851 ; 6.679 ; 6.654 ;
+; BusMuxOut[24] ; CONout      ; 5.464 ; 5.507 ; 6.270 ; 6.245 ;
+; BusMuxOut[25] ; CONout      ; 5.383 ; 5.426 ; 6.168 ; 6.143 ;
+; BusMuxOut[26] ; CONout      ; 5.477 ; 5.520 ; 6.272 ; 6.247 ;
+; BusMuxOut[27] ; CONout      ; 5.581 ; 5.624 ; 6.393 ; 6.368 ;
+; BusMuxOut[28] ; CONout      ; 5.045 ; 5.088 ; 5.812 ; 5.787 ;
+; BusMuxOut[29] ; CONout      ; 5.503 ; 5.546 ; 6.304 ; 6.279 ;
+; BusMuxOut[30] ; CONout      ; 5.298 ; 5.341 ; 6.084 ; 6.059 ;
+; BusMuxOut[31] ; CONout      ; 3.551 ; 3.558 ; 4.103 ; 4.129 ;
+; IRout[19]     ; CONout      ; 3.507 ; 3.519 ; 4.071 ; 4.076 ;
+; IRout[20]     ; CONout      ; 3.621 ; 3.621 ; 4.187 ; 4.213 ;
++---------------+-------------+-------+-------+-------+-------+
+
+
+---------------------------------------------
+; Fast 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                        ;
++------------------+-------+------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
++------------------+-------+------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------+
+; Progagation Delay                                               ;
++---------------+-------------+--------+--------+--------+--------+
+; Input Port    ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++---------------+-------------+--------+--------+--------+--------+
+; BusMuxOut[0]  ; CONout      ; 9.905  ; 9.905  ; 10.557 ; 10.430 ;
+; BusMuxOut[1]  ; CONout      ; 10.080 ; 10.080 ; 10.705 ; 10.578 ;
+; BusMuxOut[2]  ; CONout      ; 9.869  ; 9.869  ; 10.510 ; 10.383 ;
+; BusMuxOut[3]  ; CONout      ; 9.725  ; 9.725  ; 10.357 ; 10.230 ;
+; BusMuxOut[4]  ; CONout      ; 10.088 ; 10.088 ; 10.769 ; 10.642 ;
+; BusMuxOut[5]  ; CONout      ; 10.024 ; 10.024 ; 10.660 ; 10.533 ;
+; BusMuxOut[6]  ; CONout      ; 9.920  ; 9.920  ; 10.555 ; 10.428 ;
+; BusMuxOut[7]  ; CONout      ; 9.885  ; 9.885  ; 10.558 ; 10.431 ;
+; BusMuxOut[8]  ; CONout      ; 10.366 ; 10.366 ; 11.066 ; 10.939 ;
+; BusMuxOut[9]  ; CONout      ; 9.785  ; 9.785  ; 10.438 ; 10.311 ;
+; BusMuxOut[10] ; CONout      ; 10.013 ; 10.013 ; 10.670 ; 10.543 ;
+; BusMuxOut[11] ; CONout      ; 10.049 ; 10.049 ; 10.694 ; 10.567 ;
+; BusMuxOut[12] ; CONout      ; 9.772  ; 9.772  ; 10.384 ; 10.257 ;
+; BusMuxOut[13] ; CONout      ; 9.989  ; 9.989  ; 10.639 ; 10.512 ;
+; BusMuxOut[14] ; CONout      ; 9.625  ; 9.625  ; 10.228 ; 10.101 ;
+; BusMuxOut[15] ; CONout      ; 9.575  ; 9.575  ; 10.179 ; 10.052 ;
+; BusMuxOut[16] ; CONout      ; 9.158  ; 9.158  ; 9.758  ; 9.631  ;
+; BusMuxOut[17] ; CONout      ; 9.212  ; 9.212  ; 9.783  ; 9.656  ;
+; BusMuxOut[18] ; CONout      ; 9.014  ; 9.014  ; 9.611  ; 9.484  ;
+; BusMuxOut[19] ; CONout      ; 9.044  ; 9.044  ; 9.614  ; 9.487  ;
+; BusMuxOut[20] ; CONout      ; 9.809  ; 9.809  ; 10.429 ; 10.302 ;
+; BusMuxOut[21] ; CONout      ; 9.767  ; 9.767  ; 10.375 ; 10.248 ;
+; BusMuxOut[22] ; CONout      ; 9.816  ; 9.816  ; 10.413 ; 10.286 ;
+; BusMuxOut[23] ; CONout      ; 10.390 ; 10.390 ; 11.069 ; 10.942 ;
+; BusMuxOut[24] ; CONout      ; 9.771  ; 9.771  ; 10.393 ; 10.266 ;
+; BusMuxOut[25] ; CONout      ; 9.670  ; 9.670  ; 10.292 ; 10.165 ;
+; BusMuxOut[26] ; CONout      ; 9.838  ; 9.838  ; 10.469 ; 10.342 ;
+; BusMuxOut[27] ; CONout      ; 10.014 ; 10.014 ; 10.654 ; 10.527 ;
+; BusMuxOut[28] ; CONout      ; 8.910  ; 8.910  ; 9.483  ; 9.356  ;
+; BusMuxOut[29] ; CONout      ; 9.816  ; 9.816  ; 10.427 ; 10.300 ;
+; BusMuxOut[30] ; CONout      ; 9.504  ; 9.504  ; 10.078 ; 9.951  ;
+; BusMuxOut[31] ; CONout      ; 6.200  ; 6.124  ; 6.603  ; 6.560  ;
+; IRout[19]     ; CONout      ; 6.120  ; 6.047  ; 6.534  ; 6.452  ;
+; IRout[20]     ; CONout      ; 6.347  ; 6.265  ; 6.758  ; 6.728  ;
++---------------+-------------+--------+--------+--------+--------+
+
+
++-------------------------------------------------------------+
+; Minimum Progagation Delay                                   ;
++---------------+-------------+-------+-------+-------+-------+
+; Input Port    ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++---------------+-------------+-------+-------+-------+-------+
+; BusMuxOut[0]  ; CONout      ; 5.513 ; 5.556 ; 6.314 ; 6.289 ;
+; BusMuxOut[1]  ; CONout      ; 5.637 ; 5.680 ; 6.459 ; 6.434 ;
+; BusMuxOut[2]  ; CONout      ; 5.500 ; 5.543 ; 6.315 ; 6.290 ;
+; BusMuxOut[3]  ; CONout      ; 5.414 ; 5.457 ; 6.226 ; 6.201 ;
+; BusMuxOut[4]  ; CONout      ; 5.632 ; 5.675 ; 6.459 ; 6.434 ;
+; BusMuxOut[5]  ; CONout      ; 5.569 ; 5.612 ; 6.374 ; 6.349 ;
+; BusMuxOut[6]  ; CONout      ; 5.514 ; 5.557 ; 6.329 ; 6.304 ;
+; BusMuxOut[7]  ; CONout      ; 5.514 ; 5.557 ; 6.350 ; 6.325 ;
+; BusMuxOut[8]  ; CONout      ; 5.755 ; 5.798 ; 6.626 ; 6.601 ;
+; BusMuxOut[9]  ; CONout      ; 5.464 ; 5.507 ; 6.291 ; 6.266 ;
+; BusMuxOut[10] ; CONout      ; 5.609 ; 5.652 ; 6.430 ; 6.405 ;
+; BusMuxOut[11] ; CONout      ; 5.614 ; 5.657 ; 6.440 ; 6.415 ;
+; BusMuxOut[12] ; CONout      ; 5.450 ; 5.493 ; 6.242 ; 6.217 ;
+; BusMuxOut[13] ; CONout      ; 5.566 ; 5.609 ; 6.414 ; 6.389 ;
+; BusMuxOut[14] ; CONout      ; 5.375 ; 5.418 ; 6.178 ; 6.153 ;
+; BusMuxOut[15] ; CONout      ; 5.326 ; 5.369 ; 6.109 ; 6.084 ;
+; BusMuxOut[16] ; CONout      ; 5.129 ; 5.172 ; 5.907 ; 5.882 ;
+; BusMuxOut[17] ; CONout      ; 5.168 ; 5.211 ; 5.939 ; 5.914 ;
+; BusMuxOut[18] ; CONout      ; 5.065 ; 5.108 ; 5.857 ; 5.832 ;
+; BusMuxOut[19] ; CONout      ; 5.074 ; 5.117 ; 5.832 ; 5.807 ;
+; BusMuxOut[20] ; CONout      ; 5.465 ; 5.508 ; 6.280 ; 6.255 ;
+; BusMuxOut[21] ; CONout      ; 5.456 ; 5.499 ; 6.254 ; 6.229 ;
+; BusMuxOut[22] ; CONout      ; 5.478 ; 5.521 ; 6.278 ; 6.253 ;
+; BusMuxOut[23] ; CONout      ; 5.808 ; 5.851 ; 6.679 ; 6.654 ;
+; BusMuxOut[24] ; CONout      ; 5.464 ; 5.507 ; 6.270 ; 6.245 ;
+; BusMuxOut[25] ; CONout      ; 5.383 ; 5.426 ; 6.168 ; 6.143 ;
+; BusMuxOut[26] ; CONout      ; 5.477 ; 5.520 ; 6.272 ; 6.247 ;
+; BusMuxOut[27] ; CONout      ; 5.581 ; 5.624 ; 6.393 ; 6.368 ;
+; BusMuxOut[28] ; CONout      ; 5.045 ; 5.088 ; 5.812 ; 5.787 ;
+; BusMuxOut[29] ; CONout      ; 5.503 ; 5.546 ; 6.304 ; 6.279 ;
+; BusMuxOut[30] ; CONout      ; 5.298 ; 5.341 ; 6.084 ; 6.059 ;
+; BusMuxOut[31] ; CONout      ; 3.551 ; 3.558 ; 4.103 ; 4.129 ;
+; IRout[19]     ; CONout      ; 3.507 ; 3.519 ; 4.071 ; 4.076 ;
+; IRout[20]     ; CONout      ; 3.621 ; 3.621 ; 4.187 ; 4.213 ;
++---------------+-------------+-------+-------+-------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; CONout        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[0]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[1]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[2]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[3]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[4]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[5]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[6]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[7]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[8]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[9]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[10]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[11]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[12]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[13]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[14]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[15]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[16]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[17]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[18]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[21]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[22]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[23]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[24]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[25]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[26]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[27]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[28]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[29]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[30]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[31]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; CONin                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[31]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[19]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout[20]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[28]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[16]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[17]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[18]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[19]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[0]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[1]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[2]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[3]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[4]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[5]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[6]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[7]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[8]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[9]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[10]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[11]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[12]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[13]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[14]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[15]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[29]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[30]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[20]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[21]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[22]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[23]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[24]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[25]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[26]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; BusMuxOut[27]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; CONout        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.68e-07 V                   ; 2.35 V              ; -0.0132 V           ; 0.2 V                                ; 0.027 V                              ; 5.26e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.68e-07 V                  ; 2.35 V             ; -0.0132 V          ; 0.2 V                               ; 0.027 V                             ; 5.26e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.36e-07 V                   ; 2.35 V              ; -0.00444 V          ; 0.18 V                               ; 0.019 V                              ; 7.23e-10 s                  ; 9.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.36e-07 V                  ; 2.35 V             ; -0.00444 V         ; 0.18 V                              ; 0.019 V                             ; 7.23e-10 s                 ; 9.82e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; CONout        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.72 V              ; -0.0747 V           ; 0.28 V                               ; 0.169 V                              ; 3.1e-10 s                   ; 3.01e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.72 V             ; -0.0747 V          ; 0.28 V                              ; 0.169 V                             ; 3.1e-10 s                  ; 3.01e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.53e-08 V                   ; 2.7 V               ; -0.0212 V           ; 0.204 V                              ; 0.049 V                              ; 4.85e-10 s                  ; 6.73e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.53e-08 V                  ; 2.7 V              ; -0.0212 V          ; 0.204 V                             ; 0.049 V                             ; 4.85e-10 s                 ; 6.73e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 34    ; 34   ;
+; Unconstrained Input Port Paths  ; 34    ; 34   ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 34    ; 34   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Thu Mar 29 10:37:57 2018
+Info: Command: quartus_sta phase2 -c phase2
+Info: qsta_default_script.tcl version: #1
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (21077): Core supply voltage is 1.2V
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'phase2.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332159): No clocks to report
+Info: Analyzing Slow 1200mV 85C Model
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info: Analyzing Fast 1200mV 0C Model
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 500 megabytes
+    Info: Processing ended: Thu Mar 29 10:38:06 2018
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -12,7 +12,7 @@ END ENTITY reg_Zero;
 architecture behaviour of reg_Zero is
 
 signal regToAnd : std_logic_vector(31 downto 0);
-signal notBAout : std_logic;
+
 component reg_32 IS
 	PORT(
 		clk, clr, Rin : IN STD_LOGIC;
@@ -20,13 +20,6 @@ component reg_32 IS
 		BusMuxIn : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
 		);
 END component;
-
-component notGate1bit is
-	port(
-		B	 		: in std_logic;
-		S			: out std_logic
-	);
-end component;
 
 component andGate_32vs1 is
 	port(
@@ -44,12 +37,8 @@ U0: reg_32 port map(
 	BusMuxOut => BusMuxOut,
 	BusMuxIn => regToAnd
 );
-U1: notGate1bit port map(
-	B	=> BAout,
-	S	=> notBAout
-); 
-U2: andGate_32vs1 port map(
-	A => notBAout,
+U1: andGate_32vs1 port map(
+	A => BAout,
 	B => regToAnd,
 	S => BusMuxIn
 );
