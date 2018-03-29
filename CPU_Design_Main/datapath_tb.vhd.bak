@@ -30,27 +30,25 @@ SIGNAL	Present_state:	State:=default;
 
 COMPONENT datapath is
 	PORT(
-entity datapath is
-	port(
-		Clock						: in std_logic;
-		clr 						: in std_logic;
+		Clock										: in std_logic;
+		clr 										: in std_logic;
 --bus signals coming out of register files into the bus
-		busR0						: inout std_logic_vector(31 downto 0);
-		busR1						: inout std_logic_vector(31 downto 0);
-		busR2						: inout std_logic_vector(31 downto 0);
-		busR3						: inout std_logic_vector(31 downto 0);
-		busR4						: inout std_logic_vector(31 downto 0);
-		busR5						: inout std_logic_vector(31 downto 0);
-		busR6						: inout std_logic_vector(31 downto 0);
-		busR7						: inout std_logic_vector(31 downto 0);
-		busR8						: inout std_logic_vector(31 downto 0);
-		busR9						: inout std_logic_vector(31 downto 0);
-		busR10					: inout std_logic_vector(31 downto 0); 
-		busR11					: inout std_logic_vector(31 downto 0);
-		busR12					: inout std_logic_vector(31 downto 0); 
-		busR13					: inout std_logic_vector(31 downto 0);
-		busR14					: inout std_logic_vector(31 downto 0); 
-		busR15 					: inout std_logic_vector(31 downto 0);
+		busR0										: inout std_logic_vector(31 downto 0);
+		busR1										: inout std_logic_vector(31 downto 0);
+		busR2										: inout std_logic_vector(31 downto 0);
+		busR3										: inout std_logic_vector(31 downto 0);
+		busR4										: inout std_logic_vector(31 downto 0);
+		busR5										: inout std_logic_vector(31 downto 0);
+		busR6										: inout std_logic_vector(31 downto 0);
+		busR7										: inout std_logic_vector(31 downto 0);
+		busR8										: inout std_logic_vector(31 downto 0);
+		busR9										: inout std_logic_vector(31 downto 0);
+		busR10									: inout std_logic_vector(31 downto 0); 
+		busR11									: inout std_logic_vector(31 downto 0);
+		busR12									: inout std_logic_vector(31 downto 0); 
+		busR13									: inout std_logic_vector(31 downto 0);
+		busR14									: inout std_logic_vector(31 downto 0); 
+		busR15 									: inout std_logic_vector(31 downto 0);
 		
 		busPCin 					: inout std_logic_vector(31 downto 0); 
 		busIRin  				: inout std_logic_vector(31 downto 0); 
@@ -64,10 +62,7 @@ entity datapath is
 		busZlowin  				: inout std_logic_vector(31 downto 0); 
 		busSignExtendedIn  	: inout std_logic_vector(31 downto 0); 		
 		encoderControlBus 	: inout std_logic_vector(4 downto 0);		
-		BusMuxOut 				: inout std_logic_vector(31 downto 0);
-		
-	   --CONFF control signals ADDED
-		CON_to_control 	: 	OUT std_LOGIC;	
+		BusMuxOut				: inout std_logic_vector(31 downto 0);
 		InPortin, OutPortin, HIin, LOin  : inout std_logic;		
 		
 --		conFFLogicInControl 					: in std_logic;
@@ -76,14 +71,7 @@ entity datapath is
 		IncPC, ReadChannel						: in std_logic;
 		Mdatain										: in std_logic_vector(31 downto 0);
 		registerFileIn 							: in std_logic_vector(15 downto 0);
-		logicALUSelect 							: in std_logic_vector(12 downto 0);
-		selGra, selGrb, selGrc, selRout, selBAout	: in std_logic;
-		r0in_r15in_Decoded					: out std_logic_vector(15 downto 0);
-		r0out_r15out_Decoded					: out std_logic_vector(15 downto 0);
-		ramReadSig, ramWriteSig				: in std_logic		
-	);
-end entity;
-		
+		logicALUSelect 							: in std_logic_vector(12 downto 0)
 	);
 END COMPONENT datapath;
 BEGIN

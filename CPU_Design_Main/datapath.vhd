@@ -38,7 +38,6 @@ entity datapath is
 		BusMuxOut 				: inout std_logic_vector(31 downto 0);
 		
 	   --CONFF control signals ADDED
-		CON_in		:		STD_LOGIC;
 		CON_to_control 	: 	OUT std_LOGIC;	
 		InPortin, OutPortin, HIin, LOin  : inout std_logic;		
 		
@@ -48,25 +47,15 @@ entity datapath is
 		IncPC, ReadChannel						: in std_logic;
 		Mdatain										: in std_logic_vector(31 downto 0);
 		registerFileIn 							: in std_logic_vector(15 downto 0);
-		logicALUSelect 							: in std_logic_vector(12 downto 0)
+		logicALUSelect 							: in std_logic_vector(12 downto 0);
+		selGra, selGrb, selGrc, selRout, selBAout	: in std_logic;
+		r0in_r15in_Decoded					: out std_logic_vector(15 downto 0);
+		r0out_r15out_Decoded					: out std_logic_vector(15 downto 0);
+		ramReadSig, ramWriteSig				: in std_logic		
 	);
 end entity;
 
 architecture datapath_arc of datapath is
-
-COMPONENT conFF
-	PORT
-	(
-		clk		:	 IN STD_LOGIC;
-		IRout		:	 IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-		BusMuxOut		:	 IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-		CONin		:	 IN STD_LOGIC;
-		CONout		:	 OUT STD_LOGIC
-	);
-END COMPONENT;
-
-
-
 
 component reg_32
 	port(
@@ -79,8 +68,6 @@ component reg_32
 	
 end component;	
 
-
-
 component zRegister
 	port(
 	C : in std_logic_vector(63 downto 0);
@@ -91,7 +78,7 @@ component registerFile
 	port
 	(
 		clk, clr 	: in std_logic;
-		Rin			: in std_logic_vector(15 downto 0);
+		Rin, BAout	: in std_logic_vector(15 downto 0);
 		BusMuxOut 	: in std_logic_vector(31 downto 0);
 		BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3,
 		BusMuxInR4, BusMuxInR5, BusMuxInR6, BusMuxInR7,
@@ -136,6 +123,15 @@ component ALU
 	);
 end component;
 
+COMPONENT conFF
+	PORT
+	(
+		clk		:	 IN STD_LOGIC;
+		IRout		:	 IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		BusMuxOut		:	 IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		CONout		:	 OUT STD_LOGIC
+	);
+END COMPONENT;
 component selectAndEncodeLogic is
 	port(
 		IRin										: in std_logic_vector(31 downto 0);
@@ -147,6 +143,14 @@ component selectAndEncodeLogic is
 	);
 end component;
 
+component memorySubsystem is
+	port(
+		BusMuxOut		: in std_logic_vector(31 downto 0);
+		BusMuxInMDR	: inout std_logic_vector(31 downto 0);
+		MDRin, MARin, clock, clear: in std_logic;
+		readSig, writeSig, mdrReadSig: in std_logic
+	);
+end component;
 --the main data path bus aka BusMuxOut
 
 
@@ -174,6 +178,7 @@ signal YtoA : std_logic_vector(31 downto 0);
 signal CtoZ : std_logic_vector(63 downto 0);
 signal MDMuxToMDR : std_logic_vector(31 downto 0);
 
+
 begin
 
 --PC: Program Counter
@@ -185,9 +190,6 @@ U0: reg_32	port map(
 		BusMuxIn => busPCin
 	);
 --IR: Instruction Register
---Need to account for multiple instruction types
---Need to account for Select and Encode Logic, CON FF logic,
---ConFF Logic has external input signal
 U1: reg_32	port map(
 		clk => Clock,
 		clr	=> clr,
@@ -196,21 +198,7 @@ U1: reg_32	port map(
 		BusMuxIn => busIRin
 	);
 --mar	
-U2: reg_32	port map(
-		clk => Clock,
-		clr	=> clr,
-		Rin => MARin,
-		BusMuxOut => BusMuxOut,
-		BusMuxIn => busMARin
-	);
---mdr	
-U3: reg_32	port map(
-		clk => Clock,
-		clr	=> clr,
-		Rin => MDRin,
-		BusMuxOut => MDMuxToMDR,
-		BusMuxIn => busMDRin
-	);
+
 --inport	
 U4: reg_32	port map(
 		clk => Clock,
@@ -246,7 +234,8 @@ U7: reg_32	port map(
 --regular registers
 datapath_register_file: registerFile port map(
 		clk => Clock,
-		clr => clr, 
+		clr => clr,
+		BAout => selBAout,
 		Rin => registerFileIn,
 		BusMuxOut => BusMuxOut,
 		BusMuxInR0 => busR0, 
@@ -323,23 +312,64 @@ U13: ALU port map(
 		B => BusMuxOut,
 		C => CtoZ
 	);
---multiplexerMDR
-U14: multiplexerMDR port map(
-		BusMuxOut 	=> BusMuxOut,
-		Mdatain 		=> Mdatain,
-		ReadChannel => ReadChannel, 
-		MDRMuxOut 	=> MDMuxToMDR
-	);
+
 	
+--CONff Logic
 U15: conFF PORT MAP(
 		clk	=> Clock,
-		IRout	=>busIRin,
+		IRout	=> busIRin,
 		BusMuxOut => BusMuxOut,
 		CONout	=> con_to_control
-
 );
-
-U16: selectEncode
+--Select and Encode Logic
+U16: selectAndEncodeLogic port map(
+		IRin=> busIRin,
+		Gra => selGra, 
+		Grb => selGrb,
+		Grc => selGrc, 
+		Rin => selRin, 
+		Rout => selRout,
+		BAout => selBAout,
+		BusMuxOut => BusMuxOut,
+		C_sign_extended => busSignExtendedIn,
+		r0in_r15in_Decoded => registerFileIn(15 downto 0),
+		r0out_r15out_Decoded	=> registerOut(15 downto 0)
+);
+	
+--Outport
+U17: memorySubsystem port map(
+		BusMuxOut => BusMuxOut,
+		BusMuxInMDR	=> BusMDRIn,
+		MDRin => MDRin, 
+		MARin => MARin, 
+		clock => Clock, 
+		clear => clr,
+		readSig => ramReadSig, 
+		writeSig => ramWriteSig, 
+		mdrReadSig =>  ReadChannel
+);
+--U2: reg_32	port map(
+--		clk => Clock,
+--		clr	=> clr,
+--		Rin => MARin,
+--		BusMuxOut => BusMuxOut,
+--		BusMuxIn => busMARin
+--	);
+----mdr	
+--U3: reg_32	port map(
+--		clk => Clock,
+--		clr	=> clr,
+--		Rin => MDRin,
+--		BusMuxOut => MDMuxToMDR,
+--		BusMuxIn => busMDRin
+--	);	
+----multiplexerMDR
+--U14: multiplexerMDR port map(
+--		BusMuxOut 	=> BusMuxOut,
+--		Mdatain 		=> Mdatain,
+--		ReadChannel => ReadChannel, 
+--		MDRMuxOut 	=> MDMuxToMDR
+--	);	
 	
 	
 end architecture datapath_arc;	
