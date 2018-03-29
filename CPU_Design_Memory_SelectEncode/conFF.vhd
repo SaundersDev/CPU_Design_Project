@@ -51,7 +51,7 @@ U0: decoder4bits port map(
 U1: conFFSubComponent1 port map(
 		decoderOutput => decoderOutput,
 		BusMuxOut => BusMuxOut,
-		conFFOutput => CONout,--orGateToFlipFlop,
+		conFFOutput => orGateToFlipFlop,
 		busOrOut => busOrOutInternal 
 );
 
@@ -59,5 +59,5 @@ U2: flipFlop port map(
 		clk => clk,
 		D => orGateToFlipFlop,
 		Q => CONout
---);
+);
 end architecture;

@@ -1,84 +1,68 @@
-# Reading C:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl 
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# ERROR: No extended dataflow license exists
 # do phase2_run_msim_rtl_vhdl.do 
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
 # vlib rtl_work
 # vmap work rtl_work
-# Copying C:\altera\13.0sp1\modelsim_ae\win32aloem/modelsim.ini to modelsim.ini
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
-# ** Warning: Copied C:\altera\13.0sp1\modelsim_ae\win32aloem/modelsim.ini to modelsim.ini.
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Memory_SelectEncode/reg_32.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeLogic.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity reg_32
-# -- Compiling architecture arc of reg_32
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Memory_SelectEncode/multiplexerMDR.vhd}
+# -- Compiling entity selectAndEncodeLogic
+# -- Compiling architecture behaviour of selectAndEncodeLogic
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/decoder16bits.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity multiplexerMDR
-# -- Compiling architecture behaviour of multiplexerMDR
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Memory_SelectEncode/ram.vhd}
+# -- Compiling entity decoder16bits
+# -- Compiling architecture behavioural of decoder16bits
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent1.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity ram
-# -- Compiling architecture SYN of ram
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Main/memorySubsystem.vhd}
+# -- Compiling entity selectAndEncodeSubComponent1
+# -- Compiling architecture behaviour of selectAndEncodeSubComponent1
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent2.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity memorySubsystem
-# -- Compiling architecture behaviour of memorySubsystem
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Main/regMAR.vhd}
+# -- Compiling entity selectAndEncodeSubComponent2
+# -- Compiling architecture behaviour of selectAndEncodeSubComponent2
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent3.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity regMAR
-# -- Compiling architecture arc of regMAR
+# -- Compiling entity selectAndEncodeSubComponent3
+# -- Compiling architecture behaviour of selectAndEncodeSubComponent3
 # 
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Memory_SelectEncode/../CPU_Design_Main/memorySubsystem_tb.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/../CPU_Design_Main/datapath_tb.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity memorySubsystem_tb
-# -- Compiling architecture behaviour of memorySubsystem_tb
+# -- Compiling entity datapath_tb
+# -- Compiling architecture datapath_tb_arc of datapath_tb
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  memorySubsystem_tb
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps memorySubsystem_tb 
-# //  ModelSim ALTERA 10.1d Nov  2 2012 
-# //
-# //  Copyright 1991-2012 Mentor Graphics Corporation
-# //  All Rights Reserved.
-# //
-# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
-# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
-# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
-# //
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  datapath_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps datapath_tb 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.memorysubsystem_tb(behaviour)
-# Loading work.memorysubsystem(behaviour)
-# Loading work.multiplexermdr(behaviour)
-# Loading work.reg_32(arc)
-# Loading work.regmar(arc)
-# Loading work.ram(syn)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading altera_mf.altera_common_conversion(body)
-# Loading altera_mf.altera_device_families(body)
-# Loading altera_mf.altsyncram(translated)
+# Loading work.datapath_tb(datapath_tb_arc)
+# ** Warning: (vsim-3473) Component instance "DUT0 : datapath" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /datapath_tb File: C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/../CPU_Design_Main/datapath_tb.vhd
 # 
 # add wave *
 # view structure
