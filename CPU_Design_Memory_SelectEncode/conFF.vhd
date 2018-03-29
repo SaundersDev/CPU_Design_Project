@@ -32,7 +32,6 @@ end component;
 component flipFlop is
    port(
       clk			: in std_logic;
-      clkEnable	: in std_logic;
       D 				: in std_logic;
       Q				: out std_logic
    );
@@ -53,14 +52,13 @@ U0: decoder4bits port map(
 U1: conFFSubComponent1 port map(
 		decoderOutput => decoderOutput,
 		BusMuxOut => BusMuxOut,
-		conFFOutput => CONout,--orGateToFlipFlop,
+		conFFOutput => orGateToFlipFlop,
 		busOrOut => busOrOutInternal 
 );
 
---U2: flipFlop port map(
---		clk => clk,
---		clkEnable => CONin,
---		D => orGateToFlipFlop,
---		Q => CONout
---);
+U2: flipFlop port map(
+		clk => clk,	--aka CONin
+		D => orGateToFlipFlop,
+		Q => CONout
+);
 end architecture;

@@ -1,5 +1,5 @@
 Analysis & Elaboration report for phase2
-Wed Mar 28 15:30:08 2018
+Thu Mar 29 00:06:13 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -9,9 +9,12 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Port Connectivity Checks: "conFFSubComponent1:U1"
-  6. Analysis & Elaboration Messages
+  4. Analysis & Elaboration IP Cores Summary
+  5. Source assignments for ram:U3|altsyncram:altsyncram_component|altsyncram_r2g1:auto_generated
+  6. Parameter Settings for User Entity Instance: ram:U3|altsyncram:altsyncram_component
+  7. altsyncram Parameter Settings by Entity Instance
+  8. Analysis & Elaboration Settings
+  9. Analysis & Elaboration Messages
 
 
 
@@ -37,10 +40,10 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Wed Mar 28 15:30:08 2018           ;
+; Analysis & Elaboration Status      ; Successful - Thu Mar 29 00:06:13 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; phase2                                          ;
-; Top-level Entity Name              ; conFF                                           ;
+; Top-level Entity Name              ; memorySubsystem                                 ;
 ; Family                             ; Cyclone III                                     ;
 ; Total logic elements               ; N/A until Partition Merge                       ;
 ;     Total combinational functions  ; N/A until Partition Merge                       ;
@@ -65,13 +68,112 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration IP Cores Summary                                                                                                                                              ;
++--------+--------------+---------+--------------+--------------+-------------------------+--------------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance         ; IP Include File                                                                            ;
++--------+--------------+---------+--------------+--------------+-------------------------+--------------------------------------------------------------------------------------------+
+; Altera ; RAM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |memorySubsystem|ram:U3 ; C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/ram.vhd ;
++--------+--------------+---------+--------------+--------------+-------------------------+--------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Source assignments for ram:U3|altsyncram:altsyncram_component|altsyncram_r2g1:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------+
+; Assignment                      ; Value              ; From ; To                             ;
++---------------------------------+--------------------+------+--------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                              ;
++---------------------------------+--------------------+------+--------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ram:U3|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-------------------------+
+; Parameter Name                     ; Value                ; Type                    ;
++------------------------------------+----------------------+-------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                 ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY              ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY            ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE            ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE          ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                 ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                 ;
+; WIDTH_A                            ; 32                   ; Signed Integer          ;
+; WIDTHAD_A                          ; 9                    ; Signed Integer          ;
+; NUMWORDS_A                         ; 512                  ; Signed Integer          ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                 ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                 ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                 ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                 ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                 ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                 ;
+; WIDTH_B                            ; 1                    ; Untyped                 ;
+; WIDTHAD_B                          ; 1                    ; Untyped                 ;
+; NUMWORDS_B                         ; 1                    ; Untyped                 ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                 ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                 ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                 ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                 ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                 ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                 ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                 ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                 ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                 ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                 ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                 ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                 ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer          ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                 ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                 ;
+; BYTE_SIZE                          ; 8                    ; Untyped                 ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                 ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                 ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                 ;
+; INIT_FILE                          ; UNUSED               ; Untyped                 ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                 ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                 ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                 ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                 ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                 ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                 ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                 ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                 ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                 ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                 ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                 ;
+; DEVICE_FAMILY                      ; Cyclone III          ; Untyped                 ;
+; CBXI_PARAMETER                     ; altsyncram_r2g1      ; Untyped                 ;
++------------------------------------+----------------------+-------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                   ;
++-------------------------------------------+----------------------------------------+
+; Name                                      ; Value                                  ;
++-------------------------------------------+----------------------------------------+
+; Number of entity instances                ; 1                                      ;
+; Entity Instance                           ; ram:U3|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                            ;
+;     -- WIDTH_A                            ; 32                                     ;
+;     -- NUMWORDS_A                         ; 512                                    ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                 ;
+;     -- WIDTH_B                            ; 1                                      ;
+;     -- NUMWORDS_B                         ; 1                                      ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                           ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                              ;
++-------------------------------------------+----------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Settings                                                                                      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP3C16F484C6       ;                    ;
-; Top-level entity name                                                      ; conFF              ; phase2             ;
+; Top-level entity name                                                      ; memorySubsystem    ; phase2             ;
 ; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -152,24 +254,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "conFFSubComponent1:U1"                                                                 ;
-+----------+-------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type  ; Severity ; Details                                                                             ;
-+----------+-------+----------+-------------------------------------------------------------------------------------+
-; busorout ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+-------+----------+-------------------------------------------------------------------------------------+
-
-
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Elaboration
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Mar 28 15:30:06 2018
+    Info: Processing started: Thu Mar 29 00:06:11 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off phase2 -c phase2 --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file memorysubsystem.vhd
+    Info (12022): Found design unit 1: memorySubsystem-beahaviour
+    Info (12023): Found entity 1: memorySubsystem
 Info (12021): Found 2 design units, including 1 entities, in source file orgate_tb.vhd
     Info (12022): Found design unit 1: orGate_tb-behaviour
     Info (12023): Found entity 1: orGate_tb
@@ -257,18 +353,82 @@ Info (12021): Found 2 design units, including 1 entities, in source file conffsu
 Info (12021): Found 2 design units, including 1 entities, in source file flipflop_tb.vhd
     Info (12022): Found design unit 1: flipFlop_tb-behaviour
     Info (12023): Found entity 1: flipFlop_tb
-Info (12127): Elaborating entity "conFF" for the top level hierarchy
-Info (12128): Elaborating entity "decoder4bits" for hierarchy "decoder4bits:U0"
-Info (10041): Inferred latch for "output[0]" at decoder4bits.vhd(16)
-Info (10041): Inferred latch for "output[1]" at decoder4bits.vhd(16)
-Info (10041): Inferred latch for "output[2]" at decoder4bits.vhd(16)
-Info (10041): Inferred latch for "output[3]" at decoder4bits.vhd(16)
-Info (12128): Elaborating entity "conFFSubComponent1" for hierarchy "conFFSubComponent1:U1"
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 536 megabytes
-    Info: Processing ended: Wed Mar 28 15:30:08 2018
+Info (12021): Found 2 design units, including 1 entities, in source file memorysubsystem_tb.vhd
+    Info (12022): Found design unit 1: memorySubsystem_tb-behaviour
+    Info (12023): Found entity 1: memorySubsystem_tb
+Info (12021): Found 2 design units, including 1 entities, in source file notgate.vhd
+    Info (12022): Found design unit 1: notGate-behaviour
+    Info (12023): Found entity 1: notGate
+Info (12021): Found 2 design units, including 1 entities, in source file notgate1bit.vhd
+    Info (12022): Found design unit 1: notGate1bit-behaviour
+    Info (12023): Found entity 1: notGate1bit
+Info (12021): Found 2 design units, including 1 entities, in source file regmar.vhd
+    Info (12022): Found design unit 1: regMAR-arc
+    Info (12023): Found entity 1: regMAR
+Info (12021): Found 2 design units, including 1 entities, in source file ram_tb.vhd
+    Info (12022): Found design unit 1: ram_tb-behaviour
+    Info (12023): Found entity 1: ram_tb
+Info (12127): Elaborating entity "memorySubsystem" for the top level hierarchy
+Info (12128): Elaborating entity "multiplexerMDR" for hierarchy "multiplexerMDR:U0"
+Info (10041): Inferred latch for "MDRMuxOut[0]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[1]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[2]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[3]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[4]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[5]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[6]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[7]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[8]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[9]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[10]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[11]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[12]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[13]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[14]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[15]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[16]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[17]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[18]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[19]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[20]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[21]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[22]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[23]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[24]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[25]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[26]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[27]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[28]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[29]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[30]" at multiplexerMDR.vhd(14)
+Info (10041): Inferred latch for "MDRMuxOut[31]" at multiplexerMDR.vhd(14)
+Info (12128): Elaborating entity "reg_32" for hierarchy "reg_32:U1"
+Info (12128): Elaborating entity "regMAR" for hierarchy "regMAR:U2"
+Info (12128): Elaborating entity "ram" for hierarchy "ram:U3"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ram:U3|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "ram:U3|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "ram:U3|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "intended_device_family" = "Cyclone III"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "512"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "widthad_a" = "9"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_r2g1.tdf
+    Info (12023): Found entity 1: altsyncram_r2g1
+Info (12128): Elaborating entity "altsyncram_r2g1" for hierarchy "ram:U3|altsyncram:altsyncram_component|altsyncram_r2g1:auto_generated"
+Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 555 megabytes
+    Info: Processing ended: Thu Mar 29 00:06:13 2018
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
 
 
