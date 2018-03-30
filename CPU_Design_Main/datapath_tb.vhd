@@ -31,7 +31,8 @@ SIGNAL	Present_state:	State:=default;
 --Part 2
 signal BAout_tb  : std_logic;
 signal CONout_tb : std_logic;
-
+signal selGra_tb, selGrb_tb, selGrc_tb, selRin_tb, selRout_tb : std_logic;
+signal dummyr0out_r15out_Decoded_tb, dummyr0in_r15in_Decoded_tb : std_logic_vector(15 downto 0);
 COMPONENT datapath is
 	PORT(
 		Clock										: in std_logic;
@@ -77,7 +78,9 @@ COMPONENT datapath is
 		registerFileIn 							: in std_logic_vector(15 downto 0);
 		logicALUSelect 							: in std_logic_vector(12 downto 0);
 		BAout											: in std_logic;
-		CONout										: out std_logic
+		CONout										: out std_logic;
+		selGra, selGrb, selGrc, selRin, selRout : in std_logic;
+		dummyr0out_r15out_Decoded, dummyr0in_r15in_Decoded : out std_logic_vector(15 downto 0)
 	);
 END COMPONENT datapath;
 BEGIN
@@ -127,7 +130,14 @@ DUT0 : datapath	PORT MAP (
 	Mdatain 	=>	Mdatain_tb,
 	logicALUSelect => logicALUSelect_tb,
 	BAout => BAout_tb,
-	CONout=> CONout_tb
+	CONout=> CONout_tb,
+	selGra => selGra_tb,
+	selGrb => selGrb_tb,
+	selGrc => selGrc_tb, 
+	selRin => selRin_tb, 
+	selRout => selRout_tb,
+	dummyr0out_r15out_Decoded => dummyr0out_r15out_Decoded_tb,
+	dummyr0in_r15in_Decoded => dummyr0in_r15in_Decoded_tb
 	);
 	
 	Clock_process:PROCESS is

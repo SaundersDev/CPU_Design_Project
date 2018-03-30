@@ -46,7 +46,9 @@ entity datapath is
 		registerFileIn 							: in std_logic_vector(15 downto 0);
 		logicALUSelect 							: in std_logic_vector(12 downto 0);
 		BAout											: in std_logic;
-		CONout										: out std_logic
+		CONout										: out std_logic;
+		selGra, selGrb, selGrc, selRin, selRout : in std_logic;
+		dummyr0out_r15out_Decoded, dummyr0in_r15in_Decoded : out std_logic_vector(15 downto 0)
 	);
 end entity;
 
@@ -124,7 +126,16 @@ component conFF is
 		CONout									: out std_logic
 	);
 end component;
-
+component selectAndEncodeLogic is
+	port(
+		IRin										: in std_logic_vector(31 downto 0);
+		Gra, Grb, Grc, Rin, Rout, BAout	: in std_logic;
+		BusMuxOut								: in std_logic_vector(31 downto 0);
+		C_sign_extended						: out std_logic_vector(31 downto 0);
+		r0in_r15in_Decoded					: out std_logic_vector(15 downto 0);
+		r0out_r15out_Decoded					: out std_logic_vector(15 downto 0)
+	);
+end component;
 
 --internal signals****************************************************************************** 
 signal YtoA : std_logic_vector(31 downto 0);
@@ -133,6 +144,7 @@ signal MDMuxToMDR : std_logic_vector(31 downto 0);
 
 --Part 2
 signal IRtoConFFLogic : std_logic_vector(31 downto 0);
+signal IRtoSelectAndEncodeLogic : std_logic_vector(31 downto 0);
 
 --*****************************Circuit Building**************************************************
 begin
@@ -298,6 +310,19 @@ U15: conFF port map(
 		IRout			=> busIRin, --Or IRtoConFFLogic? Figure out how this works
 		BusMuxOut	=> BusMuxOut,
 		CONout		=> CONout
+);
+U16: selectAndEncodeLogic port map(
+		IRin		=> busIRin,
+		Gra		=> selGra,
+		Grb		=> selGrb,
+		Grc		=> selGrc,
+		Rin		=> selRin,
+		Rout		=> selRout,
+		BAout		=> BAout,
+		BusMuxOut	=> BusMuxOut,
+		C_sign_extended => busSignExtendedIn,
+		r0in_r15in_Decoded => dummyr0in_r15in_Decoded,		--change to registerFileIn					
+		r0out_r15out_Decoded	=> dummyr0out_r15out_Decoded	--change to registerOut
 );
 	
 	

@@ -159,6 +159,34 @@
 # -- Loading package std_logic_1164
 # -- Compiling entity multiplexerMDR
 # -- Compiling architecture behaviour of multiplexerMDR
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeLogic.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity selectAndEncodeLogic
+# -- Compiling architecture behaviour of selectAndEncodeLogic
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/decoder16bits.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity decoder16bits
+# -- Compiling architecture behavioural of decoder16bits
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity selectAndEncodeSubComponent1
+# -- Compiling architecture behaviour of selectAndEncodeSubComponent1
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent2.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity selectAndEncodeSubComponent2
+# -- Compiling architecture behaviour of selectAndEncodeSubComponent2
 # vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/conFF.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -201,6 +229,13 @@
 # -- Loading package std_logic_1164
 # -- Compiling entity flipFlop
 # -- Compiling architecture behaviour of flipFlop
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent3.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity selectAndEncodeSubComponent3
+# -- Compiling architecture behaviour of selectAndEncodeSubComponent3
 # vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/datapath.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -264,10 +299,11 @@
 # Loading work.decoder4bits(behavioural)
 # Loading work.conffsubcomponent1(behaviour)
 # Loading work.flipflop(behaviour)
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/busSignExtendedIn(31 downto 0) has no driver.
-# 
-# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
-# 
+# Loading work.selectandencodelogic(behaviour)
+# Loading work.selectandencodesubcomponent1(behaviour)
+# Loading work.decoder16bits(behavioural)
+# Loading work.selectandencodesubcomponent2(behaviour)
+# Loading work.selectandencodesubcomponent3(behaviour)
 # 
 # add wave *
 # view structure
