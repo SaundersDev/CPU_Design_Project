@@ -2,6 +2,6 @@
 <LOG_ROOT>
 	<PROJECT NAME="phase2">
 		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|ALU:U12|divider:U11|lpm_divide:LPM_DIVIDE_component" CBX_FILE_NAME="lpm_divide_hjp.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|memorySubsystem:U2|ram:U3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_r2g1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|memorySubsystem:U2|ram:U3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_ral1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
