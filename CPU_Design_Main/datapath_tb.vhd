@@ -29,8 +29,8 @@ TYPE	State IS(default, Reg_load1a, Reg_load1b, Reg_load2a, Reg_load2b, Reg_load3
 SIGNAL	Present_state:	State:=default;
 
 --Part 2
-signal BAout_tb :std_logic;
-
+signal BAout_tb  : std_logic;
+signal CONout_tb : std_logic;
 
 COMPONENT datapath is
 	PORT(
@@ -76,7 +76,8 @@ COMPONENT datapath is
 		Mdatain										: in std_logic_vector(31 downto 0);
 		registerFileIn 							: in std_logic_vector(15 downto 0);
 		logicALUSelect 							: in std_logic_vector(12 downto 0);
-		BAout											: std_logic
+		BAout											: in std_logic;
+		CONout										: out std_logic
 	);
 END COMPONENT datapath;
 BEGIN
@@ -125,7 +126,8 @@ DUT0 : datapath	PORT MAP (
 	ReadChannel =>	Read_tb,
 	Mdatain 	=>	Mdatain_tb,
 	logicALUSelect => logicALUSelect_tb,
-	BAout => BAout_tb
+	BAout => BAout_tb,
+	CONout=> CONout_tb
 	);
 	
 	Clock_process:PROCESS is

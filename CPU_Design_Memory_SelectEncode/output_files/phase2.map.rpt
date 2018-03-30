@@ -1,5 +1,5 @@
 Analysis & Elaboration report for phase2
-Fri Mar 30 15:11:20 2018
+Fri Mar 30 15:31:18 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -12,12 +12,13 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   4. Analysis & Elaboration IP Cores Summary
   5. Parameter Settings for User Entity Instance: ALU:U13|divider:U11|lpm_divide:LPM_DIVIDE_component
   6. Analysis & Elaboration Settings
-  7. Port Connectivity Checks: "ALU:U13|thirtyTwoBitRippleCarrySubtractor:U10|negGate:U0"
-  8. Port Connectivity Checks: "ALU:U13|thirtyTwoBitRippleCarrySubtractor:U10"
-  9. Port Connectivity Checks: "ALU:U13|negGate:U4|thirtyTwoBitRippleCarryAdder:U1"
- 10. Port Connectivity Checks: "ALU:U13|negGate:U4"
- 11. Port Connectivity Checks: "ALU:U13|thirtyTwoBitRippleCarryAdder:U0"
- 12. Analysis & Elaboration Messages
+  7. Port Connectivity Checks: "conFF:U15|conFFSubComponent1:U1"
+  8. Port Connectivity Checks: "ALU:U13|thirtyTwoBitRippleCarrySubtractor:U10|negGate:U0"
+  9. Port Connectivity Checks: "ALU:U13|thirtyTwoBitRippleCarrySubtractor:U10"
+ 10. Port Connectivity Checks: "ALU:U13|negGate:U4|thirtyTwoBitRippleCarryAdder:U1"
+ 11. Port Connectivity Checks: "ALU:U13|negGate:U4"
+ 12. Port Connectivity Checks: "ALU:U13|thirtyTwoBitRippleCarryAdder:U0"
+ 13. Analysis & Elaboration Messages
 
 
 
@@ -43,7 +44,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Fri Mar 30 15:11:20 2018           ;
+; Analysis & Elaboration Status      ; Successful - Fri Mar 30 15:31:18 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; phase2                                          ;
 ; Top-level Entity Name              ; datapath                                        ;
@@ -190,6 +191,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "conFF:U15|conFFSubComponent1:U1"                                                       ;
++----------+-------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                             ;
++----------+-------+----------+-------------------------------------------------------------------------------------+
+; busorout ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+-------+----------+-------------------------------------------------------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "ALU:U13|thirtyTwoBitRippleCarrySubtractor:U10|negGate:U0"                           ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -246,7 +256,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Elaboration
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Mar 30 15:11:17 2018
+    Info: Processing started: Fri Mar 30 15:31:13 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off phase2 -c phase2 --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /users/master/documents/github/cpu_design_project/cpu_design_alu/alu/thirtytwobitripplecarrysubtractor.vhd
@@ -571,10 +581,19 @@ Info (10041): Inferred latch for "MDRMuxOut[28]" at multiplexerMDR.vhd(14)
 Info (10041): Inferred latch for "MDRMuxOut[29]" at multiplexerMDR.vhd(14)
 Info (10041): Inferred latch for "MDRMuxOut[30]" at multiplexerMDR.vhd(14)
 Info (10041): Inferred latch for "MDRMuxOut[31]" at multiplexerMDR.vhd(14)
-Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 53 warnings
+Info (12128): Elaborating entity "conFF" for hierarchy "conFF:U15"
+Info (12128): Elaborating entity "decoder4bits" for hierarchy "conFF:U15|decoder4bits:U0"
+Info (10041): Inferred latch for "output[0]" at decoder4bits.vhd(16)
+Info (10041): Inferred latch for "output[1]" at decoder4bits.vhd(16)
+Info (10041): Inferred latch for "output[2]" at decoder4bits.vhd(16)
+Info (10041): Inferred latch for "output[3]" at decoder4bits.vhd(16)
+Info (12128): Elaborating entity "conFFSubComponent1" for hierarchy "conFF:U15|conFFSubComponent1:U1"
+Info (12128): Elaborating entity "flipFlop" for hierarchy "conFF:U15|flipFlop:U2"
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 54 warnings
     Info: Peak virtual memory: 611 megabytes
-    Info: Processing ended: Fri Mar 30 15:11:20 2018
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Processing ended: Fri Mar 30 15:31:18 2018
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
 
 

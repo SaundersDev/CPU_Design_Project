@@ -45,7 +45,8 @@ entity datapath is
 		Mdatain										: in std_logic_vector(31 downto 0);
 		registerFileIn 							: in std_logic_vector(15 downto 0);
 		logicALUSelect 							: in std_logic_vector(12 downto 0);
-		BAout											: in std_logic
+		BAout											: in std_logic;
+		CONout										: out std_logic
 	);
 end entity;
 
@@ -114,34 +115,26 @@ component ALU
 		C								: out std_logic_vector(63 downto 0)
 	);
 end component;
+--Part 2
+component conFF is
+	port(
+		clk										: in std_logic;
+		IRout										: in std_logic_vector(31 downto 0);
+		BusMuxOut								: in std_logic_vector(31 downto 0);
+		CONout									: out std_logic
+	);
+end component;
 
---the main data path bus aka BusMuxOut
 
-
-----bus signals coming out of register files into the bus
---signal	busR0, busR1, busR2, busR3,
---		busR4, busR5, busR6, busR7,
---		busR8, busR9, busR10, busR11,
---		busR12, busR13, busR14, busR15 : std_logic_vector(31 downto 0);
---signal	busPCin, busIRin, busMARin, busMDRin,
---			busInPortin, busOutPortin, busHIin, busLOin,
---			busZhighin, busZlowin, busSignExtendedIn  : std_logic_vector(31 downto 0); 
---signal 	InPortin, OutPortin, HIin, LOin  : std_logic;
-
---encoder signals
---signal registerOut : std_logic_vector(22 downto 0);
---signal encoderControlBus : std_logic_vector(4 downto 0);
-
---selecting signals going into registers
---signal IRsel : std_logic;
---signal logicALUSelect : std_logic_vector(12 downto 0);
---signal logicControl : std_logic_vector(31 downto 0);
-
---internal signals 
+--internal signals****************************************************************************** 
 signal YtoA : std_logic_vector(31 downto 0);
 signal CtoZ : std_logic_vector(63 downto 0);
 signal MDMuxToMDR : std_logic_vector(31 downto 0);
 
+--Part 2
+signal IRtoConFFLogic : std_logic_vector(31 downto 0);
+
+--*****************************Circuit Building**************************************************
 begin
 
 --PC: Program Counter
@@ -299,6 +292,13 @@ U14: multiplexerMDR port map(
 		ReadChannel => ReadChannel, 
 		MDRMuxOut 	=> MDMuxToMDR
 	);
+--ConFFLogic
+U15: conFF port map(
+		clk			=>  Clock,
+		IRout			=> busIRin, --Or IRtoConFFLogic? Figure out how this works
+		BusMuxOut	=> BusMuxOut,
+		CONout		=> CONout
+);
 	
 	
 end architecture datapath_arc;	

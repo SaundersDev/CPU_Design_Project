@@ -159,6 +159,20 @@
 # -- Loading package std_logic_1164
 # -- Compiling entity multiplexerMDR
 # -- Compiling architecture behaviour of multiplexerMDR
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/conFF.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity conFF
+# -- Compiling architecture behaviour of conFF
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/conFFSubComponent1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity conFFSubComponent1
+# -- Compiling architecture behaviour of conFFSubComponent1
 # vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/reg_Zero.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -173,6 +187,20 @@
 # -- Loading package std_logic_1164
 # -- Compiling entity andGate_32vs1
 # -- Compiling architecture behaviour of andGate_32vs1
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/decoder4bits.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity decoder4bits
+# -- Compiling architecture behavioural of decoder4bits
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/flipFlop.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flipFlop
+# -- Compiling architecture behaviour of flipFlop
 # vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/datapath.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -232,6 +260,10 @@
 # Loading lpm.lpm_divide(behave)
 # Loading work.booth_multiplier(behaviour)
 # Loading work.multiplexermdr(behaviour)
+# Loading work.conff(behaviour)
+# Loading work.decoder4bits(behavioural)
+# Loading work.conffsubcomponent1(behaviour)
+# Loading work.flipflop(behaviour)
 # ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/busSignExtendedIn(31 downto 0) has no driver.
 # 
 # This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
