@@ -3,8 +3,9 @@ use ieee.std_logic_1164.all;
 
 entity memorySubsystem is
 	port(
-		BusMuxOut		: in std_logic_vector(31 downto 0);
+		BusMuxOut, Mdatain	: in std_logic_vector(31 downto 0);
 		BusMuxInRAM, BusMuxInMDR	: inout std_logic_vector(31 downto 0);
+		BusMuxInMAR : inout std_logic_vector(8 downto 0);		
 		MDRin, MARin, clock, clear: in std_logic;
 		readSig, writeSig, mdrReadSig: in std_logic
 	);
@@ -49,12 +50,11 @@ component ram IS
 END component;
 
 signal mdMuxToMDR, mdrToRam: std_logic_vector(31 downto 0);
-signal address : std_logic_vector(8 downto 0);
 begin
 --MDMUX
 U0: multiplexerMDR port map(
 		BusMuxOut => BusMuxOut,
-		Mdatain => BusMuxInMDR,
+		Mdatain => Mdatain,	--busMuxInRAM
 		ReadChannel => mdrReadSig,
 		MDRMuxOut => mdMuxToMDR
 );
@@ -72,11 +72,11 @@ U2: regMAR port map(
 	clr => clear,
 	Rin => MARin,
 	BusMuxOut => BusMuxOut,
-	BusMuxIn => address
+	BusMuxIn => BusMuxInMAR
 );
 --RAM
 U3: ram port map(
-		address => address,
+		address => BusMuxInMAR,
 		clock => clock,
 		data => BusMuxInMDR,
 		rden => readSig,

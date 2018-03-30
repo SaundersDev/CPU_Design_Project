@@ -11,7 +11,8 @@ signal	busR0_tb, busR1_tb, busR2_tb, busR3_tb, busR4_tb,
 			busR5_tb, busR6_tb, busR7_tb, busR8_tb, busR9_tb, 
 			busR10_tb, busR11_tb, busR12_tb, 
 			busR13_tb, busR14_tb, busR15_tb						: std_logic_vector(31 downto 0); --outputs from each register
-signal busPCin_tb, busIRin_tb, busMARin_tb, busMDRin_tb					: std_logic_vector(31 downto 0);
+signal busPCin_tb, busIRin_tb, busMDRin_tb: std_logic_vector(31 downto 0);
+signal busMARin_tb : std_logic_vector(8 downto 0); 					
 signal busInPortin_tb, busOutPortIn_tb, busHIin_tb, busLOin_tb			: std_logic_vector(31 downto 0);			
 signal busZhighin_tb, busZlowin_tb, busSignExtendedIn_tb	: std_logic_vector(31 downto 0);
 signal encoderControlBus_tb 										: std_logic_vector(4 downto 0);
@@ -19,8 +20,8 @@ signal InPortin_tb, OutPortin_tb, HIin_tb, LOin_tb			: std_logic;
 signal registerOut_tb	 											: std_logic_vector(31 downto 0);
 --signal PCout_tb, Zlowout_tb, MDRout_tb 						: std_logic;
 SIGNAL MARin_tb, Zin_tb, PCin_tb, MDRin_tb, IRin_tb, Yin_tb:	std_logic;
-SIGNAL	IncPC_tb, Read_tb							:	std_logic;
-SIGNAL	Mdatain_tb												:	std_logic_vector(31 downto 0);
+SIGNAL	IncPC_tb, Read_tb											:	std_logic;
+SIGNAL	Mdatain_tb													:	std_logic_vector(31 downto 0);
 signal 	registerFileIn_tb 										: std_logic_vector(15 downto 0);
 signal	logicALUSelect_tb											: std_logic_vector(12 downto 0);
 signal  BusMuxOut_tb : std_logic_vector(31 downto 0);
@@ -59,7 +60,7 @@ COMPONENT datapath is
 		
 		busPCin 					: inout std_logic_vector(31 downto 0); 
 		busIRin  				: inout std_logic_vector(31 downto 0); 
-		busMARin  				: inout std_logic_vector(31 downto 0);
+		busMARin  				: inout std_logic_vector(8 downto 0);
 		busMDRin  				: inout std_logic_vector(31 downto 0); 
 		busInPortin  			: inout std_logic_vector(31 downto 0); 
 		busOutPortin			: inout std_logic_vector(31 downto 0); 
@@ -70,8 +71,7 @@ COMPONENT datapath is
 		busSignExtendedIn  	: inout std_logic_vector(31 downto 0); 		
 		encoderControlBus 	: inout std_logic_vector(4 downto 0);		
 		BusMuxOut				: inout std_logic_vector(31 downto 0);
-		InPortin, OutPortin, HIin, LOin  : inout std_logic;		
-		
+		InPortin, OutPortin, HIin, LOin  : inout std_logic;				
 --		conFFLogicInControl 					: in std_logic;
 		registerOut	 								: in std_logic_vector(31 downto 0); 
 		MARin, Zin, PCin, MDRin, IRin, Yin	: in std_logic;		--Can't be used as Rin
