@@ -48,7 +48,9 @@ entity datapath is
 		BAout											: in std_logic;
 		CONout										: out std_logic;
 		selGra, selGrb, selGrc, selRin, selRout : in std_logic;
-		dummyr0out_r15out_Decoded, dummyr0in_r15in_Decoded : out std_logic_vector(15 downto 0)
+		dummyr0out_r15out_Decoded, dummyr0in_r15in_Decoded : out std_logic_vector(15 downto 0);
+		dummyBusMuxInRAM, dummyBusMuxInMDR	: inout std_logic_vector(31 downto 0);
+		ramReadSig, ramWriteSig, mdrReadSig : in std_logic		
 	);
 end entity;
 
@@ -117,6 +119,7 @@ component ALU
 		C								: out std_logic_vector(63 downto 0)
 	);
 end component;
+
 --Part 2
 component conFF is
 	port(
@@ -134,6 +137,14 @@ component selectAndEncodeLogic is
 		C_sign_extended						: out std_logic_vector(31 downto 0);
 		r0in_r15in_Decoded					: out std_logic_vector(15 downto 0);
 		r0out_r15out_Decoded					: out std_logic_vector(15 downto 0)
+	);
+end component;
+component memorySubsystem is
+	port(
+		BusMuxOut		: in std_logic_vector(31 downto 0);
+		BusMuxInRAM, BusMuxInMDR		: inout std_logic_vector(31 downto 0);
+		MDRin, MARin, clock, clear: in std_logic;
+		readSig, writeSig, mdrReadSig: in std_logic
 	);
 end component;
 
@@ -324,6 +335,17 @@ U16: selectAndEncodeLogic port map(
 		r0in_r15in_Decoded => dummyr0in_r15in_Decoded,		--change to registerFileIn					
 		r0out_r15out_Decoded	=> dummyr0out_r15out_Decoded	--change to registerOut
 );
-	
+U17: memorySubsystem port map(
+		BusMuxOut		=> BusMuxOut,
+		BusMuxInMDR		=> dummyBusMuxInMDR,
+		BusMuxInRAM		=> dummyBusMuxInRAM,
+		MDRin				=> MDRin,
+		MARin				=> MARin,
+		clock				=> Clock,
+		clear				=> clr,
+		readSig			=> ramReadSig,
+		writeSig			=> ramWriteSig,
+		mdrReadSig		=> mdrReadSig
+	);	
 	
 end architecture datapath_arc;	

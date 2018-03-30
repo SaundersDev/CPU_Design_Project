@@ -32,7 +32,9 @@ SIGNAL	Present_state:	State:=default;
 signal BAout_tb  : std_logic;
 signal CONout_tb : std_logic;
 signal selGra_tb, selGrb_tb, selGrc_tb, selRin_tb, selRout_tb : std_logic;
+signal dummyBusMuxInMDR_tb, dummyBusMuxInRAM_tb : std_logic_vector(31 downto 0);
 signal dummyr0out_r15out_Decoded_tb, dummyr0in_r15in_Decoded_tb : std_logic_vector(15 downto 0);
+signal ramReadSig_tb, ramWriteSig_tb, mdrReadSig_tb : std_logic;
 COMPONENT datapath is
 	PORT(
 		Clock										: in std_logic;
@@ -80,7 +82,9 @@ COMPONENT datapath is
 		BAout											: in std_logic;
 		CONout										: out std_logic;
 		selGra, selGrb, selGrc, selRin, selRout : in std_logic;
-		dummyr0out_r15out_Decoded, dummyr0in_r15in_Decoded : out std_logic_vector(15 downto 0)
+		dummyr0out_r15out_Decoded, dummyr0in_r15in_Decoded : out std_logic_vector(15 downto 0);
+		dummyBusMuxInRAM, dummyBusMuxInMDR	: inout std_logic_vector(31 downto 0);
+		ramReadSig, ramWriteSig, mdrReadSig : in std_logic	
 	);
 END COMPONENT datapath;
 BEGIN
@@ -136,8 +140,13 @@ DUT0 : datapath	PORT MAP (
 	selGrc => selGrc_tb, 
 	selRin => selRin_tb, 
 	selRout => selRout_tb,
+	dummyBusMuxInRAM => dummyBusMuxInRAM_tb,
+	dummyBusMuxInMDR => dummyBusMuxInMDR_tb,
 	dummyr0out_r15out_Decoded => dummyr0out_r15out_Decoded_tb,
-	dummyr0in_r15in_Decoded => dummyr0in_r15in_Decoded_tb
+	dummyr0in_r15in_Decoded => dummyr0in_r15in_Decoded_tb,
+	ramReadSig => ramReadSig_tb,
+	ramWriteSig => ramWriteSig_tb,
+	mdrReadSig => mdrReadSig_tb
 	);
 	
 	Clock_process:PROCESS is

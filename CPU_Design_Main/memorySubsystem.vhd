@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 entity memorySubsystem is
 	port(
 		BusMuxOut		: in std_logic_vector(31 downto 0);
-		BusMuxInMDR	: inout std_logic_vector(31 downto 0);
+		BusMuxInRAM, BusMuxInMDR	: inout std_logic_vector(31 downto 0);
 		MDRin, MARin, clock, clear: in std_logic;
 		readSig, writeSig, mdrReadSig: in std_logic
 	);
@@ -64,7 +64,7 @@ U1: reg_32 port map(
 	clr => clear,
 	Rin => MDRin,
 	BusMuxOut => mdMuxToMDR,
-	BusMuxIn => mdrToRam
+	BusMuxIn => BusMuxInMDR
 );
 --MAR
 U2: regMAR port map(
@@ -78,9 +78,9 @@ U2: regMAR port map(
 U3: ram port map(
 		address => address,
 		clock => clock,
-		data => mdrToRam,
+		data => BusMuxInMDR,
 		rden => readSig,
 		wren => writeSig,
-		q => BusMuxInMDR
+		q => BusMuxInRAM
 );
 end architecture;

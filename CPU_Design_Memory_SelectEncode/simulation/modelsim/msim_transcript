@@ -159,6 +159,13 @@
 # -- Loading package std_logic_1164
 # -- Compiling entity multiplexerMDR
 # -- Compiling architecture behaviour of multiplexerMDR
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/ram.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ram
+# -- Compiling architecture SYN of ram
 # vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeLogic.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -250,6 +257,20 @@
 # -- Loading package std_logic_1164
 # -- Compiling entity registerFile
 # -- Compiling architecture behaviour of registerFile
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/memorySubsystem.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity memorySubsystem
+# -- Compiling architecture behaviour of memorySubsystem
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/regMAR.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity regMAR
+# -- Compiling architecture arc of regMAR
 # 
 # vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/../CPU_Design_Main/datapath_tb.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -304,6 +325,15 @@
 # Loading work.decoder16bits(behavioural)
 # Loading work.selectandencodesubcomponent2(behaviour)
 # Loading work.selectandencodesubcomponent3(behaviour)
+# Loading work.memorysubsystem(behaviour)
+# Loading work.regmar(arc)
+# Loading work.ram(syn)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+# ** Warning: Design size of 233 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
 # 
 # add wave *
 # view structure
