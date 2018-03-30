@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="phase2">
+		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|ALU:U13|divider:U11|lpm_divide:LPM_DIVIDE_component" CBX_FILE_NAME="lpm_divide_hjp.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

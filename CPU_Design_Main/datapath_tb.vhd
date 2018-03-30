@@ -25,11 +25,12 @@ signal 	registerFileIn_tb 										: std_logic_vector(15 downto 0);
 signal	logicALUSelect_tb											: std_logic_vector(12 downto 0);
 signal  BusMuxOut_tb : std_logic_vector(31 downto 0);
 signal	HI, LO, IR				: std_logic_vector(31 downto 0);
-signal selGra_tb, selGrb_tb, selGrc_tb, selRout_tb, selBAout_tb, selRin_tb	: std_logic;
-signal r0in_r15in_Decoded_tb, r0out_r15out_Decoded_tb		: std_logic_vector(15 downto 0);
-signal ramReadSig_tb, ramWriteSig_tb : std_logic;
 TYPE	State IS(default, Reg_load1a, Reg_load1b, Reg_load2a, Reg_load2b, Reg_load3a, Reg_load3b, T0, T1, T2, T3, T4, T5);
 SIGNAL	Present_state:	State:=default;
+
+--Part 2
+signal BAout_tb :std_logic;
+
 
 COMPONENT datapath is
 	PORT(
@@ -45,8 +46,8 @@ COMPONENT datapath is
 		busR6										: inout std_logic_vector(31 downto 0);
 		busR7										: inout std_logic_vector(31 downto 0);
 		busR8										: inout std_logic_vector(31 downto 0);
-		bus9R										: inout std_logic_vector(31 downto 0);
-		bus10R									: inout std_logic_vector(31 downto 0); 
+		busR9										: inout std_logic_vector(31 downto 0);
+		busR10									: inout std_logic_vector(31 downto 0); 
 		busR11									: inout std_logic_vector(31 downto 0);
 		busR12									: inout std_logic_vector(31 downto 0); 
 		busR13									: inout std_logic_vector(31 downto 0);
@@ -69,16 +70,13 @@ COMPONENT datapath is
 		InPortin, OutPortin, HIin, LOin  : inout std_logic;		
 		
 --		conFFLogicInControl 					: in std_logic;
-		registerOut	 								: inout std_logic_vector(31 downto 0); 
+		registerOut	 								: in std_logic_vector(31 downto 0); 
 		MARin, Zin, PCin, MDRin, IRin, Yin	: in std_logic;		--Can't be used as Rin
 		IncPC, ReadChannel						: in std_logic;
 		Mdatain										: in std_logic_vector(31 downto 0);
-		registerFileIn 							: inout std_logic_vector(15 downto 0);
+		registerFileIn 							: in std_logic_vector(15 downto 0);
 		logicALUSelect 							: in std_logic_vector(12 downto 0);
-		selGra, selGrb, selGrc, selRout, selBAout, selRin	: in std_logic;
-		r0in_r15in_Decoded					: out std_logic_vector(15 downto 0);
-		r0out_r15out_Decoded					: out std_logic_vector(15 downto 0);
-		ramReadSig, ramWriteSig				: in std_logic			
+		BAout											: std_logic
 	);
 END COMPONENT datapath;
 BEGIN
@@ -95,8 +93,8 @@ DUT0 : datapath	PORT MAP (
 	busR6 => busR6_tb,
 	busR7 => busR7_tb,
 	busR8 => busR8_tb,
-	bus9R => busR9_tb,
-	bus10R=> busR10_tb,
+	busR9 => busR9_tb,
+	busR10=> busR10_tb,
 	busR11=> busR11_tb,
 	busR12=> busR12_tb,
 	busR13=> busR13_tb,
@@ -127,15 +125,7 @@ DUT0 : datapath	PORT MAP (
 	ReadChannel =>	Read_tb,
 	Mdatain 	=>	Mdatain_tb,
 	logicALUSelect => logicALUSelect_tb,
-	selGra => selGra_tb,
-	selGrb => selGrb_tb,
-	selGrc => selGrc_tb,
-	selRout => selRout_tb,
-	selBAout => selBAout_tb,
-	selRin => selRin_tb,
-	ramReadSig => ramReadSig_tb,
-	ramWriteSig => ramWriteSig_tb
-	
+	BAout => BAout_tb
 	);
 	
 	Clock_process:PROCESS is
@@ -182,7 +172,7 @@ DUT0 : datapath	PORT MAP (
 			
 			when Default =>
 				clr_tb <= '1'; 
-				
+				BAout_tb <= '1';
 				for bowden in 0 to 31 loop
 					registerOut_tb(bowden) <='0';
 				end loop;
@@ -202,7 +192,7 @@ DUT0 : datapath	PORT MAP (
 				MDRin_tb  <= '0', '1' after 10 ns, '0' after 25 ns;
 			WHEN Reg_load1b => 
 				registerOut_tb <= x"00100000" after 10 ns, x"00000000" after 25 ns;
-				registerFileIn_tb(1) <= '1' after 10 ns, '0' after 25 ns;	
+				registerFileIn_tb(0) <= '1' after 10 ns, '0' after 25 ns;	
 				
 			WHEN Reg_load2a => 
 				Mdatain_tb <= x"00000014";
@@ -210,7 +200,7 @@ DUT0 : datapath	PORT MAP (
 				MDRin_tb  <= '1' after 10 ns, '0' after 25 ns;
 			WHEN Reg_load2b => 
 				registerOut_tb <= x"00100000" after 10 ns, x"00000000" after 25 ns;
-				registerFileIn_tb(2) <= '1' after 10 ns, '0' after 25 ns;	
+				registerFileIn_tb(1) <= '1' after 10 ns, '0' after 25 ns;	
 			
 			WHEN Reg_load3a => 
 				Mdatain_tb <= x"00000016";
@@ -218,7 +208,7 @@ DUT0 : datapath	PORT MAP (
 				MDRin_tb  <= '1' after 10 ns, '0' after 25 ns;
 			WHEN Reg_load3b => 
 				registerOut_tb <= x"00100000" after 10 ns, x"00000000" after 25 ns;
-				registerFileIn_tb(3) <= '1' after 10 ns, '0' after 25 ns;				
+				registerFileIn_tb(2) <= '1' after 10 ns, '0' after 25 ns;				
 			
 			
 			WHEN T0 =>
@@ -253,18 +243,18 @@ DUT0 : datapath	PORT MAP (
 				registerOut_tb(21) 	<= '0';
 				IRin_tb 	<= '0';
 				
-				registerOut_tb(1) 	<= '1';
+				registerOut_tb(0) 	<= '1';
 				Yin_tb 					<= '1';
 			
 			WHEN T4 =>
-				registerOut_tb(1) 	<= '0';
+				registerOut_tb(0) 	<= '0';
 				Yin_tb 					<= '0';
 				logicALUSelect_tb 	<= "0000001000000";			
-				registerOut_tb(2) 	<= '1';
+				registerOut_tb(1) 	<= '1';
 				Zin_tb 					<= '1';
 			
 			WHEN T5 =>
-				registerOut_tb(2) 		<= '0';
+				registerOut_tb(1) 		<= '0';
 				Zin_tb 						<= '0';
 			
 				registerOut_tb(18) 		<= '1'; 
