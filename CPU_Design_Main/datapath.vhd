@@ -40,16 +40,16 @@ entity datapath is
 		InPortin, OutPortin, HIin, LOin  : inout std_logic;		
 		Mdatain: in std_logic_vector(31 downto 0);
 --		conFFLogicInControl 					: in std_logic;
-		registerOut	 								: in std_logic_vector(31 downto 0); 
+		inputValuesHere, registerOut			: in std_logic_vector(31 downto 0); 
 		MARin, Zin, PCin, MDRin, IRin, Yin	: in std_logic;		--Can't be used as Rin
 		IncPC, ReadChannel						: in std_logic;
-		registerFileIn 							: in std_logic_vector(15 downto 0);
-		logicALUSelect 							: in std_logic_vector(12 downto 0);
+		registerFileIn 							: inout std_logic_vector(15 downto 0);
+		logicALUSelect 							: in std_logic_vector(13 downto 0);
 		BAout											: in std_logic;
 		CONout										: out std_logic;
 		selGra, selGrb, selGrc, selRin, selRout : in std_logic;
-		dummyr0out_r15out_Decoded, dummyr0in_r15in_Decoded : out std_logic_vector(15 downto 0);
-		dummyBusMuxInRAM, dummyBusMuxInMDR	: inout std_logic_vector(31 downto 0);
+--		dummyr0out_r15out_Decoded, dummyr0in_r15in_Decoded : out std_logic_vector(15 downto 0);
+--		dummyBusMuxInRAM, dummyBusMuxInMDR	: inout std_logic_vector(31 downto 0);
 		ramReadSig, ramWriteSig, mdrReadSig : in std_logic					
 	);
 end entity;
@@ -107,13 +107,20 @@ component encoder32bits
 end component;
 component ALU
 	port(
-		control						: in std_logic_vector(12 downto 0);
+		control						: in std_logic_vector(13 downto 0);
 		A, B     					: in std_logic_vector(31 downto 0);
 		C								: out std_logic_vector(63 downto 0)
 	);
 end component;
 
 --Part 2
+component regPC IS
+	PORT(
+		clk, clr, Rin : IN STD_LOGIC;
+		BusMuxOut : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		BusMuxIn : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+		);
+END component;
 component conFF is
 	port(
 		clk										: in std_logic;
@@ -149,12 +156,13 @@ signal CtoZ : std_logic_vector(63 downto 0);
 --Part 2
 signal IRtoConFFLogic : std_logic_vector(31 downto 0);
 signal IRtoSelectAndEncodeLogic : std_logic_vector(31 downto 0);
+signal registerFileOutSig : std_logic_vector(15 downto 0);
 
 --*****************************Circuit Building**************************************************
 begin
-
+registerFileOutSig <= registerOut(15 downto 0);
 --PC: Program Counter
-U0: reg_32	port map(
+U0: regPC	port map(
 		clk => Clock,
 		clr	=> clr,
 		Rin => PCin,
@@ -207,7 +215,7 @@ U3: reg_32	port map(
 		clk => Clock,
 		clr	=> clr,
 		Rin => InPortin,
-		BusMuxOut => BusMuxOut,
+		BusMuxOut => inputValuesHere,
 		BusMuxIn => busInPortin
 );	
 --outport
@@ -338,7 +346,7 @@ U14: selectAndEncodeLogic port map(
 		BAout		=> BAout,
 		BusMuxOut	=> BusMuxOut,
 		C_sign_extended => busSignExtendedIn,
-		r0in_r15in_Decoded => dummyr0in_r15in_Decoded,		--change to registerFileIn					
-		r0out_r15out_Decoded	=> dummyr0out_r15out_Decoded	--change to registerOut
+		r0in_r15in_Decoded => registerFileIn,--dummyr0in_r15in_Decoded,		--change to registerFileIn					
+		r0out_r15out_Decoded	=> registerFileOutSig--dummyr0out_r15out_Decoded	--change to registerOut
 );
 end architecture datapath_arc;	

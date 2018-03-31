@@ -1,0 +1,7 @@
+Sat Mar 31 1:33:05 AM Eastern Daylight Time 2018
+Trace back: bad window path name ""
+    while executing
+"winfo rootx $_w"
+    (command bound to event)
+  <2: ::tkerror {bad window path name ""}
+  <1: ::bgerror {bad window path name ""}

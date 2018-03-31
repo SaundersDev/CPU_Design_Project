@@ -54,7 +54,7 @@ begin
 --MDMUX
 U0: multiplexerMDR port map(
 		BusMuxOut => BusMuxOut,
-		Mdatain => Mdatain,	--busMuxInRAM
+		Mdatain => busMuxInRAM,	--Mdatain
 		ReadChannel => mdrReadSig,
 		MDRMuxOut => mdMuxToMDR
 );

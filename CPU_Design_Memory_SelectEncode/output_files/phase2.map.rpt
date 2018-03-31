@@ -1,5 +1,5 @@
 Analysis & Elaboration report for phase2
-Fri Mar 30 18:32:20 2018
+Sat Mar 31 02:34:27 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -15,14 +15,17 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   7. Parameter Settings for User Entity Instance: ALU:U12|divider:U11|lpm_divide:LPM_DIVIDE_component
   8. altsyncram Parameter Settings by Entity Instance
   9. Analysis & Elaboration Settings
- 10. Port Connectivity Checks: "conFF:U13|conFFSubComponent1:U1"
- 11. Port Connectivity Checks: "ALU:U12|thirtyTwoBitRippleCarrySubtractor:U10|negGate:U0"
- 12. Port Connectivity Checks: "ALU:U12|thirtyTwoBitRippleCarrySubtractor:U10"
- 13. Port Connectivity Checks: "ALU:U12|negGate:U4|thirtyTwoBitRippleCarryAdder:U1"
- 14. Port Connectivity Checks: "ALU:U12|negGate:U4"
- 15. Port Connectivity Checks: "ALU:U12|thirtyTwoBitRippleCarryAdder:U0"
- 16. In-System Memory Content Editor Settings
- 17. Analysis & Elaboration Messages
+ 10. Port Connectivity Checks: "selectAndEncodeLogic:U14"
+ 11. Port Connectivity Checks: "conFF:U13|conFFSubComponent1:U1"
+ 12. Port Connectivity Checks: "ALU:U12|pcIncrement:U13|thirtyTwoBitRippleCarryAdder:U0"
+ 13. Port Connectivity Checks: "ALU:U12|pcIncrement:U13"
+ 14. Port Connectivity Checks: "ALU:U12|thirtyTwoBitRippleCarrySubtractor:U10|negGate:U0"
+ 15. Port Connectivity Checks: "ALU:U12|thirtyTwoBitRippleCarrySubtractor:U10"
+ 16. Port Connectivity Checks: "ALU:U12|negGate:U4|thirtyTwoBitRippleCarryAdder:U1"
+ 17. Port Connectivity Checks: "ALU:U12|negGate:U4"
+ 18. Port Connectivity Checks: "ALU:U12|thirtyTwoBitRippleCarryAdder:U0"
+ 19. In-System Memory Content Editor Settings
+ 20. Analysis & Elaboration Messages
 
 
 
@@ -48,7 +51,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Fri Mar 30 18:32:20 2018           ;
+; Analysis & Elaboration Status      ; Successful - Sat Mar 31 02:34:27 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; phase2                                          ;
 ; Top-level Entity Name              ; datapath                                        ;
@@ -286,6 +289,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
++--------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "selectAndEncodeLogic:U14"                                                                           ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                 ; Type   ; Severity ; Details                                                                             ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; r0out_r15out_decoded ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "conFF:U13|conFFSubComponent1:U1"                                                       ;
 +----------+-------+----------+-------------------------------------------------------------------------------------+
@@ -293,6 +305,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+-------------------------------------------------------------------------------------+
 ; busorout ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +----------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:U12|pcIncrement:U13|thirtyTwoBitRippleCarryAdder:U0" ;
++----------+-------+----------+-------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                               ;
++----------+-------+----------+-------------------------------------------------------+
+; a[31..1] ; Input ; Info     ; Stuck at GND                                          ;
+; a[0]     ; Input ; Info     ; Stuck at VCC                                          ;
++----------+-------+----------+-------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:U12|pcIncrement:U13"                                                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cin  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -360,7 +392,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Elaboration
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Mar 30 18:32:15 2018
+    Info: Processing started: Sat Mar 31 02:34:22 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off phase2 -c phase2 --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /users/master/documents/github/cpu_design_project/cpu_design_alu/alu/thirtytwobitripplecarrysubtractor.vhd
@@ -516,8 +548,16 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
 Info (12021): Found 2 design units, including 1 entities, in source file /users/master/documents/github/cpu_design_project/cpu_design_main/datapath_tb.vhd
     Info (12022): Found design unit 1: datapath_tb-datapath_tb_arc
     Info (12023): Found entity 1: datapath_tb
+Info (12021): Found 2 design units, including 1 entities, in source file pcincrement.vhd
+    Info (12022): Found design unit 1: pcIncrement-behaviour
+    Info (12023): Found entity 1: pcIncrement
+Info (12021): Found 2 design units, including 1 entities, in source file regpc.vhd
+    Info (12022): Found design unit 1: regPC-arc
+    Info (12023): Found entity 1: regPC
 Info (12127): Elaborating entity "datapath" for the top level hierarchy
-Info (12128): Elaborating entity "reg_32" for hierarchy "reg_32:U0"
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(159): object "registerFileOutSig" assigned a value but never read
+Info (12128): Elaborating entity "regPC" for hierarchy "regPC:U0"
+Info (12128): Elaborating entity "reg_32" for hierarchy "reg_32:U1"
 Info (12128): Elaborating entity "memorySubsystem" for hierarchy "memorySubsystem:U2"
 Info (12128): Elaborating entity "multiplexerMDR" for hierarchy "memorySubsystem:U2|multiplexerMDR:U0"
 Info (10041): Inferred latch for "MDRMuxOut[0]" at multiplexerMDR.vhd(14)
@@ -578,7 +618,6 @@ Info (12128): Elaborating entity "altsyncram_ral1" for hierarchy "memorySubsyste
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ihb2.tdf
     Info (12023): Found entity 1: altsyncram_ihb2
 Info (12128): Elaborating entity "altsyncram_ihb2" for hierarchy "memorySubsystem:U2|ram:U3|altsyncram:altsyncram_component|altsyncram_ral1:auto_generated|altsyncram_ihb2:altsyncram1"
-Critical Warning (127003): Can't find Memory Initialization File or Hexadecimal (Intel-Format) File C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/ramInitialization.mif -- setting all initial values to 0
 Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "memorySubsystem:U2|ram:U3|altsyncram:altsyncram_component|altsyncram_ral1:auto_generated|sld_mod_ram_rom:mgl_prim2"
 Info (12130): Elaborated megafunction instantiation "memorySubsystem:U2|ram:U3|altsyncram:altsyncram_component|altsyncram_ral1:auto_generated|sld_mod_ram_rom:mgl_prim2"
 Info (12133): Instantiated megafunction "memorySubsystem:U2|ram:U3|altsyncram:altsyncram_component|altsyncram_ral1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter:
@@ -627,63 +666,67 @@ Warning (10492): VHDL Process Statement warning at multiplexer32bits.vhd(44): si
 Warning (10492): VHDL Process Statement warning at multiplexer32bits.vhd(45): signal "BusMuxIn_InPort" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at multiplexer32bits.vhd(46): signal "C_sign_extended" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:U12"
-Warning (10540): VHDL Signal Declaration warning at ALU.vhd(36): used explicit default value for signal "wastedCarryInAdd" because signal was never assigned a value
-Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(36): object "wastedCarryOutAdd" assigned a value but never read
-Warning (10540): VHDL Signal Declaration warning at ALU.vhd(36): used explicit default value for signal "wastedCarryInNeg" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at ALU.vhd(36): used explicit default value for signal "wastedCarryInSub" because signal was never assigned a value
-Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(38): object "wastedCarryOutNeg" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(38): object "wastedCarryOutSub" assigned a value but never read
-Warning (10540): VHDL Signal Declaration warning at ALU.vhd(41): used explicit default value for signal "nothing" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at ALU.vhd(42): used explicit default value for signal "everything" because signal was never assigned a value
-Warning (10492): VHDL Process Statement warning at ALU.vhd(244): signal "everything" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(246): signal "nothing" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(250): signal "everything" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(252): signal "nothing" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(258): signal "chooseSignage" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(259): signal "chooseSignage" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(262): signal "nothing" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(263): signal "nothing" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10540): VHDL Signal Declaration warning at ALU.vhd(37): used explicit default value for signal "wastedCarryInAdd" because signal was never assigned a value
+Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(37): object "wastedCarryOutAdd" assigned a value but never read
+Warning (10540): VHDL Signal Declaration warning at ALU.vhd(37): used explicit default value for signal "wastedCarryInNeg" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at ALU.vhd(37): used explicit default value for signal "wastedCarryInSub" because signal was never assigned a value
+Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(39): object "wastedCarryOutNeg" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(39): object "wastedCarryOutSub" assigned a value but never read
+Warning (10540): VHDL Signal Declaration warning at ALU.vhd(37): used explicit default value for signal "wastedCarryInPC" because signal was never assigned a value
+Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(40): object "wastedCarryOutPC" assigned a value but never read
+Warning (10540): VHDL Signal Declaration warning at ALU.vhd(43): used explicit default value for signal "nothing" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at ALU.vhd(44): used explicit default value for signal "everything" because signal was never assigned a value
+Warning (10492): VHDL Process Statement warning at ALU.vhd(262): signal "everything" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at ALU.vhd(264): signal "nothing" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(265): signal "nothing" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(266): signal "nothing" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(267): signal "nothing" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(268): signal "nothing" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(269): signal "nothing" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(268): signal "everything" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at ALU.vhd(270): signal "nothing" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(270): signal "notResult" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at ALU.vhd(241): inferring latch(es) for signal or variable "chooseSignage", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "chooseSignage[0]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[1]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[2]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[3]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[4]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[5]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[6]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[7]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[8]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[9]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[10]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[11]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[12]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[13]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[14]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[15]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[16]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[17]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[18]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[19]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[20]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[21]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[22]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[23]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[24]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[25]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[26]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[27]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[28]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[29]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[30]" at ALU.vhd(241)
-Info (10041): Inferred latch for "chooseSignage[31]" at ALU.vhd(241)
+Warning (10492): VHDL Process Statement warning at ALU.vhd(276): signal "chooseSignage" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(277): signal "chooseSignage" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(280): signal "nothing" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(281): signal "nothing" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(282): signal "nothing" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(283): signal "nothing" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(284): signal "nothing" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(285): signal "nothing" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(286): signal "nothing" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(287): signal "nothing" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(288): signal "nothing" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(288): signal "pcResult" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(289): signal "nothing" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(289): signal "notResult" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at ALU.vhd(259): inferring latch(es) for signal or variable "chooseSignage", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "chooseSignage[0]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[1]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[2]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[3]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[4]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[5]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[6]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[7]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[8]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[9]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[10]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[11]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[12]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[13]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[14]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[15]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[16]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[17]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[18]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[19]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[20]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[21]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[22]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[23]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[24]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[25]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[26]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[27]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[28]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[29]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[30]" at ALU.vhd(259)
+Info (10041): Inferred latch for "chooseSignage[31]" at ALU.vhd(259)
 Info (12128): Elaborating entity "thirtyTwoBitRippleCarryAdder" for hierarchy "ALU:U12|thirtyTwoBitRippleCarryAdder:U0"
 Info (12128): Elaborating entity "fullAdder" for hierarchy "ALU:U12|thirtyTwoBitRippleCarryAdder:U0|fullAdder:U0"
 Info (12128): Elaborating entity "andGate" for hierarchy "ALU:U12|andGate:U1"
@@ -725,6 +768,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/add_
     Info (12023): Found entity 1: add_sub_vnc
 Info (12128): Elaborating entity "add_sub_vnc" for hierarchy "ALU:U12|divider:U11|lpm_divide:LPM_DIVIDE_component|lpm_divide_hjp:auto_generated|sign_div_unsign_39h:divider|alt_u_div_t8f:divider|add_sub_vnc:add_sub_1"
 Info (12128): Elaborating entity "booth_multiplier" for hierarchy "ALU:U12|booth_multiplier:U12"
+Info (12128): Elaborating entity "pcIncrement" for hierarchy "ALU:U12|pcIncrement:U13"
+Warning (10540): VHDL Signal Declaration warning at pcIncrement.vhd(14): used explicit default value for signal "increment" because signal was never assigned a value
 Info (12128): Elaborating entity "conFF" for hierarchy "conFF:U13"
 Info (12128): Elaborating entity "decoder4bits" for hierarchy "conFF:U13|decoder4bits:U0"
 Info (10041): Inferred latch for "output[0]" at decoder4bits.vhd(16)
@@ -759,9 +804,9 @@ Info (10041): Inferred latch for "output[15]" at decoder16bits.vhd(16)
 Info (12128): Elaborating entity "selectAndEncodeSubComponent2" for hierarchy "selectAndEncodeLogic:U14|selectAndEncodeSubComponent2:U2"
 Info (12128): Elaborating entity "selectAndEncodeSubComponent3" for hierarchy "selectAndEncodeLogic:U14|selectAndEncodeSubComponent3:U3"
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 55 warnings
-    Info: Peak virtual memory: 610 megabytes
-    Info: Processing ended: Fri Mar 30 18:32:20 2018
+Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 60 warnings
+    Info: Peak virtual memory: 613 megabytes
+    Info: Processing ended: Sat Mar 31 02:34:27 2018
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:04
 
