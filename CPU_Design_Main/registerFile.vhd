@@ -6,7 +6,7 @@ USE ieee.std_logic_1164.all;
 entity registerFile is 
 	port
 	(
-		clk, clr , BAout	: in std_logic;
+		clk, clr,  BAout 	: in std_logic;
 		Rin	: in std_logic_vector(15 downto 0);
 		BusMuxOut 	: in std_logic_vector(31 downto 0);
 		BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3,
