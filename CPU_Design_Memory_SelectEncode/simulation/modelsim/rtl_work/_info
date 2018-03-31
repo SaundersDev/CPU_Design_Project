@@ -16,7 +16,7 @@ L26
 VF58SKHX9jUFYk3HBU806E1
 Z8 OV;C;10.1d;51
 31
-Z9 !s108 1522449160.910000
+Z9 !s108 1522455430.452000
 Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/ALU.vhd|
 Z11 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/ALU.vhd|
 Z12 o-93 -work work -O0
@@ -52,7 +52,7 @@ L4
 VGf<SJkfEWP0iAIO2IbTJ=1
 R8
 31
-Z16 !s108 1522449159.758000
+Z16 !s108 1522455429.657000
 Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/andGate.vhd|
 Z18 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/andGate.vhd|
 R12
@@ -87,7 +87,7 @@ L5
 V95FEH^LGo6HDeWzWHU:X_0
 R8
 31
-Z21 !s108 1522449164.559000
+Z21 !s108 1522455434.829000
 Z22 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/andGate_32vs1.vhd|
 Z23 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/andGate_32vs1.vhd|
 R12
@@ -124,7 +124,7 @@ L6
 VU^:]>oKc?mS9Z;`Y[JERW0
 R8
 31
-Z27 !s108 1522449159.532000
+Z27 !s108 1522455429.355000
 Z28 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/booth_multiplier.vhd|
 Z29 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/booth_multiplier.vhd|
 R12
@@ -161,7 +161,7 @@ L4
 VOZI8L6GR?mAFR3JTA[V[z3
 R8
 31
-Z33 !s108 1522449163.514000
+Z33 !s108 1522455433.740000
 Z34 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/conFF.vhd|
 Z35 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/conFF.vhd|
 R12
@@ -196,7 +196,7 @@ L4
 VhQTfU]cYl>L7eL6L8RAcC2
 R8
 31
-Z38 !s108 1522449163.785000
+Z38 !s108 1522455434.323000
 Z39 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/conFFSubComponent1.vhd|
 Z40 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/conFFSubComponent1.vhd|
 R12
@@ -231,7 +231,7 @@ L4
 V6D[MKZEbY]S6C^Nli2T`A2
 R8
 31
-Z44 !s108 1522449166.175000
+Z44 !s108 1522455436.477000
 Z45 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/datapath.vhd|
 Z46 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/datapath.vhd|
 R12
@@ -268,7 +268,7 @@ VkV:D`lP>L7VnnLkz3INPG1
 R8
 31
 !i10b 1
-Z50 !s108 1522449167.801000
+Z50 !s108 1522455438.389000
 Z51 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/../CPU_Design_Main/datapath_tb.vhd|
 Z52 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/../CPU_Design_Main/datapath_tb.vhd|
 R12
@@ -301,7 +301,7 @@ L4
 VDm;ZKSb?^>[SZ2n<P`Bk;0
 R8
 31
-Z55 !s108 1522449162.346000
+Z55 !s108 1522455432.351000
 Z56 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/decoder16bits.vhd|
 Z57 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/decoder16bits.vhd|
 R12
@@ -336,7 +336,7 @@ L4
 VWDcm_0ZJ<E8`]H0LkJ2d51
 R8
 31
-Z60 !s108 1522449164.897000
+Z60 !s108 1522455435.361000
 Z61 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/decoder4bits.vhd|
 Z62 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/decoder4bits.vhd|
 R12
@@ -371,7 +371,7 @@ L42
 VBm@<bLk:6O]8nn5YezUPU3
 R8
 31
-Z65 !s108 1522449159.281000
+Z65 !s108 1522455426.832000
 Z66 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/divider.vhd|
 Z67 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/divider.vhd|
 R12
@@ -406,7 +406,7 @@ L4
 V7jW4LbLY^L]:HiP:E@X>T2
 R8
 31
-Z70 !s108 1522449159.023000
+Z70 !s108 1522455426.633000
 Z71 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/encoder32bits.vhd|
 Z72 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/encoder32bits.vhd|
 R12
@@ -441,7 +441,7 @@ L4
 V<1B27ZMFmPQlEde;Wz`6=0
 R8
 31
-Z76 !s108 1522449165.155000
+Z76 !s108 1522455435.795000
 Z77 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/flipFlop.vhd|
 Z78 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/flipFlop.vhd|
 R12
@@ -476,7 +476,7 @@ L4
 VjQIb<8O02KlO_?[U2?aE20
 R8
 31
-Z81 !s108 1522449158.570000
+Z81 !s108 1522455426.409000
 Z82 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/fullAdder.vhd|
 Z83 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/fullAdder.vhd|
 R12
@@ -511,7 +511,7 @@ L4
 V<GfX^4KdHEe4V9:1ENo5J3
 R8
 31
-Z87 !s108 1522449166.913000
+Z87 !s108 1522455437.604000
 Z88 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/memorySubsystem.vhd|
 Z89 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/memorySubsystem.vhd|
 R12
@@ -546,7 +546,7 @@ L4
 Veo_4YGcMDo?]OPX0aMId?3
 R8
 31
-Z92 !s108 1522449160.273000
+Z92 !s108 1522455429.938000
 Z93 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/multiplexer32bits.vhd|
 Z94 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/multiplexer32bits.vhd|
 R12
@@ -581,7 +581,7 @@ L4
 VB6XNeV7HQjgZW;UT8^9oc0
 R8
 31
-Z97 !s108 1522449161.655000
+Z97 !s108 1522455431.008000
 Z98 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/multiplexerMDR.vhd|
 Z99 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/multiplexerMDR.vhd|
 R12
@@ -616,7 +616,7 @@ L4
 VzVIILBPgleOjlmI:1l6XS0
 R8
 31
-Z102 !s108 1522449158.244000
+Z102 !s108 1522455426.206000
 Z103 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/negGate.vhd|
 Z104 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/negGate.vhd|
 R12
@@ -651,7 +651,7 @@ L4
 VE]G79dNcC>NWG_?3`MGU30
 R8
 31
-Z107 !s108 1522449157.976000
+Z107 !s108 1522455425.905000
 Z108 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/notGate.vhd|
 Z109 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/notGate.vhd|
 R12
@@ -686,7 +686,7 @@ L4
 V_KbS2HHLJ`UElk_Yb6BLb3
 R8
 31
-Z112 !s108 1522449157.498000
+Z112 !s108 1522455425.546000
 Z113 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/orGate.vhd|
 Z114 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/orGate.vhd|
 R12
@@ -721,7 +721,7 @@ L42
 V?LnGh@[I_PZZMAX[M1UKf0
 R8
 31
-Z118 !s108 1522449161.898000
+Z118 !s108 1522455431.814000
 Z119 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/ram.vhd|
 Z120 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/ram.vhd|
 R12
@@ -756,7 +756,7 @@ L4
 VS]Yk^6PkFo8C^:QOgIiQ21
 R8
 31
-Z123 !s108 1522449161.241000
+Z123 !s108 1522455430.718000
 Z124 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/reg_32.vhd|
 Z125 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/reg_32.vhd|
 R12
@@ -791,7 +791,7 @@ L4
 V2cUb@?RR@U?H?Pg[1:Zdo3
 R8
 31
-Z128 !s108 1522449164.298000
+Z128 !s108 1522455434.584000
 Z129 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/reg_Zero.vhd|
 Z130 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/reg_Zero.vhd|
 R12
@@ -826,7 +826,7 @@ L6
 Vn_bWmR`oFaS8^m9BRb1VD0
 R8
 31
-Z134 !s108 1522449166.523000
+Z134 !s108 1522455437.284000
 Z135 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/registerFile.vhd|
 Z136 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/registerFile.vhd|
 R12
@@ -861,7 +861,7 @@ L4
 V^B9[_Y>D71S;Rl_M@CWHM3
 R8
 31
-Z140 !s108 1522449167.455000
+Z140 !s108 1522455437.985000
 Z141 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/regMAR.vhd|
 Z142 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/regMAR.vhd|
 R12
@@ -896,7 +896,7 @@ L6
 V:D5;neGK`aGfbiPMNc4fR1
 R8
 31
-Z145 !s108 1522449156.987000
+Z145 !s108 1522455425.340000
 Z146 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/rotateLeft.vhd|
 Z147 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/rotateLeft.vhd|
 R12
@@ -931,7 +931,7 @@ L6
 VBVjJ0M3hedVb7c7M0Z[hn3
 R8
 31
-Z150 !s108 1522449156.742000
+Z150 !s108 1522455425.144000
 Z151 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/rotateRight.vhd|
 Z152 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/rotateRight.vhd|
 R12
@@ -966,7 +966,7 @@ L4
 VBz9:MRAc;fn3MKX3LE?:k2
 R8
 31
-Z155 !s108 1522449162.124000
+Z155 !s108 1522455432.149000
 Z156 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeLogic.vhd|
 Z157 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeLogic.vhd|
 R12
@@ -1001,7 +1001,7 @@ L4
 V@meZ3@07mjR[P8:C2;g;93
 R8
 31
-Z160 !s108 1522449162.601000
+Z160 !s108 1522455433.190000
 Z161 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent1.vhd|
 Z162 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent1.vhd|
 R12
@@ -1036,7 +1036,7 @@ L4
 VJiNOceB8O=7;Pc_n2X0DD1
 R8
 31
-Z165 !s108 1522449163.224000
+Z165 !s108 1522455433.441000
 Z166 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent2.vhd|
 Z167 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent2.vhd|
 R12
@@ -1071,7 +1071,7 @@ L5
 V]aWaeFXgX=<WB:`eOE7eH3
 R8
 31
-Z170 !s108 1522449165.676000
+Z170 !s108 1522455436.096000
 Z171 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent3.vhd|
 Z172 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent3.vhd|
 R12
@@ -1108,7 +1108,7 @@ L6
 Vl48A3NKQHaJNVBb;iZ?gz2
 R8
 31
-Z176 !s108 1522449156.108000
+Z176 !s108 1522455424.936000
 Z177 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/shiftLeft.vhd|
 Z178 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/shiftLeft.vhd|
 R12
@@ -1145,7 +1145,7 @@ L6
 VQaW^Pf^f>IO12C?HAZdh41
 R8
 31
-Z181 !s108 1522449155.653000
+Z181 !s108 1522455424.342000
 Z182 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/shiftRight.vhd|
 Z183 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/shiftRight.vhd|
 R12
@@ -1180,7 +1180,7 @@ L6
 VkIO;_fGneMjFKCTgOQZIf2
 R8
 31
-Z186 !s108 1522449154.873000
+Z186 !s108 1522455423.892000
 Z187 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/shiftRightArithmetic.vhd|
 Z188 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/shiftRightArithmetic.vhd|
 R12
@@ -1215,7 +1215,7 @@ L6
 Vg1OjKGA=M>i;O4l]0@?jo2
 R8
 31
-Z191 !s108 1522449154.455000
+Z191 !s108 1522455423.612000
 Z192 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/thirtyTwoBitRippleCarryAdder.vhd|
 Z193 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/thirtyTwoBitRippleCarryAdder.vhd|
 R12
@@ -1251,7 +1251,7 @@ L5
 VX7XRmdImHRP]1:HMb<^>00
 R8
 31
-Z196 !s108 1522449154.064000
+Z196 !s108 1522455423.353000
 Z197 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/thirtyTwoBitRippleCarrySubtractor.vhd|
 Z198 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/thirtyTwoBitRippleCarrySubtractor.vhd|
 R12
@@ -1289,7 +1289,7 @@ L6
 VO6>ZH33N3cE7?]60zo33U1
 R8
 31
-Z201 !s108 1522449160.621000
+Z201 !s108 1522455430.180000
 Z202 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/zRegister.vhd|
 Z203 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/zRegister.vhd|
 R12

@@ -1,8 +1,14 @@
 
-CPU_Design_Main/encoder32bits.vhd
-CPU_Design_Main/encoder32bits.vhd
-CPU_Design_Main/encoder32bits.vhd
-CPU_Design_Main/multiplexer32bits.vhd
-CPU_Design_Main/multiplexerMDR.vhd
-CPU_Design_Main/reg_32.vhd
-*.flock
+All Phase 2 Subcomponents are built and tested to work.
+
+
+Start with datapath working from phase 1.
+
+Iterate over the following:
+	Add component, add ports, signals, portmap
+	Test until it works
+
+If Phase 1 datapath_tb works with Phase 2 ports
+	Build load instruction.
+Else
+	Continue to iterate
