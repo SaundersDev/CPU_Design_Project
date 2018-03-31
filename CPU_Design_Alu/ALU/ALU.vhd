@@ -17,7 +17,6 @@
 --division
 -- A has Adding, subtracting, multiplying and dividing
 -- B has 
--- incPC
 library IEEE;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
@@ -36,8 +35,7 @@ end entity;
 architecture behaviour of ALU is
 signal 	wastedCarryInAdd, wastedCarryOutAdd,
 			wastedCarryInNeg, wastedCarryInSub,
-			wastedCarryOutNeg, wastedCarryOutSub,
-			wastedCarryInPC, wastedCarryOutPC	: std_logic := '0';
+			wastedCarryOutNeg, wastedCarryOutSub : std_logic := '0';
 			
 			
 signal nothing 		: std_logic_vector(31 downto 0) := "00000000000000000000000000000000";
@@ -146,22 +144,13 @@ component rotateRight is
 	);
 end component;
 
-component pcIncrement is
-	port(
-		B		:	in std_logic_vector(31 downto 0);
-		Cin	:	in std_logic;
-		S		:	out std_logic_vector(31 downto 0);
-		Cout 	:	out std_logic
-	);
-end component;
-
 signal addResult, subResult 				: std_logic_vector(31 downto 0);
 signal divResult1, divResult2 			: std_logic_vector(31 downto 0);
 signal shlResult								: std_logic_vector(31 downto 0);
 signal shrResult, shraResult				: std_logic_vector(31 downto 0);
 signal rolResult, rorResult				: std_logic_vector(31 downto 0);
 signal andResult, orResult					: std_logic_vector(31 downto 0);
-signal notResult, negResult, pcResult	: std_logic_vector(31 downto 0);
+signal notResult, negResult				: std_logic_vector(31 downto 0);
 signal mulResult	: std_logic_vector(63 downto 0);
 
 
@@ -248,44 +237,36 @@ U12: booth_multiplier port map(
 		B => B,
 		C => mulResult
 );
-U13: pcIncrement port map(
-		B		=> B,
-		Cin	=> wastedCarryInPC,
-		S		=> pcResult,
-		Cout 	=> wastedCarryOutPC
-	);
-
 	
 process(control, addResult, subResult, mulResult, divResult1, divResult2, shlResult, shrResult, shraResult, rolResult, rorResult, andResult, orResult, negResult)
 begin
-	if addResult(31) = '1' and control = "00000000000001" then
+	if addResult(31) = '1' and control = "0000000000001" then
 		chooseSignage <= everything;
-	elsif addResult(31) = '0' and control = "00000000000001" then
+	elsif addResult(31) = '0' and control = "0000000000001" then
 		chooseSignage <= nothing;
 	end if;
 	
-	if subResult(31) = '0' and control = "00000000000010" then
+	if subResult(31) = '0' and control = "0000000000010" then
 		chooseSignage <= everything;
-	elsif subResult(31) = '1' and control = "00000000000010" then
+	elsif subResult(31) = '1' and control = "0000000000010" then
 		chooseSignage <= nothing;
 	end if;
 	
 	
 --	C <= nothing & shlResult;
 	case control is
-		when "00000000000001" => C <= chooseSignage & addResult;		--ADD 2's complement
-		when "00000000000010" => C <= chooseSignage & subResult;		--SUB 2's complement
-		when "00000000000100" => C <= mulResult;			 		--MUL 2's complement
-		when "00000000001000" =>	C <= divResult1 & divResult2;	--divResult--DIV 2's complement
-		when "00000000010000" => C <= nothing & shlResult;		--SHL 2's complement
-		when "00000000100000" => C <= nothing & shrResult;		--SHR 2's complement
-		when "00000001000000" => C <= nothing & shraResult;		--SHRA 2's complement
-		when "00000010000000" => C <= nothing & rolResult;		--ROR 2's complement
-		when "00000100000000" => C <= nothing & rorResult;		--ROL 2's complement
-		when "00001000000000" => C <= nothing & andResult;		--AND 2's complement
-		when "00010000000000" => C <= nothing & orResult;		--OR 2's complement
-		when "00100000000000" => C <= nothing & negResult;		--NEG 2's complement
-		when "01000000000000" => C <= nothing & pcResult;		--PC 2's complement
+		when "0000000000001" => C <= chooseSignage & addResult;		--ADD 2's complement
+		when "0000000000010" => C <= chooseSignage & subResult;		--SUB 2's complement
+		when "0000000000100" => C <= mulResult;			 		--MUL 2's complement
+		when "0000000001000" =>	C <= divResult1 & divResult2;	--divResult--DIV 2's complement
+		when "0000000010000" => C <= nothing & shlResult;		--SHL 2's complement
+		when "0000000100000" => C <= nothing & shrResult;		--SHR 2's complement
+		when "0000001000000" => C <= nothing & shraResult;		--SHRA 2's complement
+		when "0000010000000" => C <= nothing & rolResult;		--ROR 2's complement
+		when "0000100000000" => C <= nothing & rorResult;		--ROL 2's complement
+		when "0001000000000" => C <= nothing & andResult;		--AND 2's complement
+		when "0010000000000" => C <= nothing & orResult;		--OR 2's complement
+		when "0100000000000" => C <= nothing & negResult;		--NEG 2's complement
 		when others 			=> C <= nothing & notResult;		--NOT 1's complement
 	end case;
 end process;
