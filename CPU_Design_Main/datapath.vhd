@@ -9,54 +9,33 @@ entity datapath is
 		--standard c signals
 		Clock, clr						: in std_logic;
 		
---bus signals coming out of register files into the bus
-		busR0						: inout std_logic_vector(31 downto 0);
-		busR1						: inout std_logic_vector(31 downto 0);
-		busR2						: inout std_logic_vector(31 downto 0);
-		busR3						: inout std_logic_vector(31 downto 0);
-		busR4						: inout std_logic_vector(31 downto 0);
-		busR5						: inout std_logic_vector(31 downto 0);
-		busR6						: inout std_logic_vector(31 downto 0);
-		busR7						: inout std_logic_vector(31 downto 0);
-		busR8						: inout std_logic_vector(31 downto 0);
-		busR9						: inout std_logic_vector(31 downto 0);
-		busR10					: inout std_logic_vector(31 downto 0); 
-		busR11					: inout std_logic_vector(31 downto 0);
-		busR12					: inout std_logic_vector(31 downto 0); 
-		busR13					: inout std_logic_vector(31 downto 0);
-		busR14					: inout std_logic_vector(31 downto 0); 
-		busR15 					: inout std_logic_vector(31 downto 0);
+		--control signals for register enable
+		MARin, MDRin, IOin, IOout, Zin, Yin, PCin, IRin, HIin, LOin	: 	IN std_logic;
 		
-		busPCin 				: inout std_logic_vector(31 downto 0); 
-		busIRin  				: inout std_logic_vector(31 downto 0); 
-		busMARin  				: inout std_logic_vector(31 downto 0);
-		busMDRin  				: inout std_logic_vector(31 downto 0); 
-		busInPortin  			: inout std_logic_vector(31 downto 0); 
-		outPort_to_IO			: inout std_logic_vector(31 downto 0); 
-		busHIin  				: inout std_logic_vector(31 downto 0); 
-		busLOin  				: inout std_logic_vector(31 downto 0); 
-		busZhighin				: inout std_logic_vector(31 downto 0); 
-		busZlowin  				: inout std_logic_vector(31 downto 0); 
-		busSignExtendedIn  	: inout std_logic_vector(31 downto 0); 		
-		encoderControlBus 	: inout std_logic_vector(4 downto 0);		
-		BusMuxOut 				: inout std_logic_vector(31 downto 0);
+		--Select and Encode Logics input signals
+		selGra, selGrb, selGrc, selRin, selRout, selBAout	:	IN	std_logic;
+		ram_complete_to_control : inout std_logic;
+		--CON FF control signals
+		CON_in		:		std_logic;
 		
-	   --CONFF control signals
-		CON_in			: 	in std_logic;
-		CON_to_control 	: 	OUT std_LOGIC;	
-		InPortin, OutPortin, HIin, LOin  : inout std_logic;		
+		--Multiplexor 32 select signals
+		--HIout, LOout, Zhighout, Zlowout, PCout, MDRout, InPortout, Cout
+		registerOut : INout std_logic_vector(31 downto 0);												--changed from in to inout
+		regOut		: Inout std_logic_vector(15 downto 0);
+		--To Memory subsystem control signals not covered so far							
+		read_notWrite		:		IN std_logic;					
 		
---		conFFLogicInControl 					: in std_logic;
-		registerOut	 : inout std_logic_vector(31 downto 0); 
-		MARin, Zin, PCin, MDRin, IRin, Yin	: in std_logic;		--Can't be used as Rin
-		IncPC, ReadChannel						: in std_logic;
-		Mdatain										: in std_logic_vector(31 downto 0);
-		registerFileIn 							: inout std_logic_vector(15 downto 0);
-		logicALUSelect 							: in std_logic_vector(13 downto 0);
-		selGra, selGrb, selGrc, selRout, selBAout, selRin	: in std_logic;
-		r0in_r15in_Decoded					: out std_logic_vector(15 downto 0);
-		r0out_r15out_Decoded					: out std_logic_vector(15 downto 0);
-		ramReadSig, ramWriteSig				: in std_logic		
+		--Control Signals for ALU
+		logicALUSelect  : in std_logic_vector(13 downto 0); 
+		
+		
+		--set OUTPUTS
+		readWrite_to_memory, CON_to_control 	: 	OUT std_LOGIC;
+		shiftValue_to_control		:  OUT STD_LOGIC_VECTOR(4 downto 0);
+		IR_to_control, MAR_to_memory, outPort_to_IO : OUT std_LOGIC_VECTOR(31 downto 0); 
+		BusMuxOut : INOUT std_LOGIC_VECTOR(31 downto 0);
+		memoryData_to_computerSystem	: 	OUT std_LOGIC_VECTOR(31 downto 0);
+		memoryData_to_datapath	:	IN std_LOGIC_VECTOR(31 downto 0)
 	);
 end datapath;
 
@@ -67,7 +46,7 @@ component ALU
 	port(
 		control						: in std_logic_vector(13 downto 0);
 		A, B     					: in std_logic_vector(31 downto 0);
-		C								: out std_logic_vector(63 downto 0)
+		C							: out std_logic_vector(63 downto 0)
 	);
 end component;
 
@@ -83,27 +62,16 @@ component IO_Units
 		toBus :  OUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		toIO :  OUT  STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
-	
-	
-component reg_32
-	port(
-		clk			: in std_logic;
-		clr			: in std_logic;
-		Rin 			: in std_logic;
-		BusMuxOut 	: in std_logic_vector(31 downto 0);
-		BusMuxIn 	: out std_logic_vector(31 downto 0)
-	);
-end component;	
-
+end component;
 --Z Register
 component zRegister
 	port(
 		C : in std_logic_vector(63 downto 0);
+		Zin, clk : IN STD_LOGIC;
 		Zhigh, Zlow : out std_logic_vector(31 downto 0)
 	);
-end component;
-
---Y Register needed
+end component;	
+	
 
 --RegisterFile 
 component registerFile
@@ -121,6 +89,17 @@ end component;
 
 
 --PC Register
+
+component reg_32
+	port(
+		clk			: in std_logic;
+		clr			: in std_logic;
+		Rin 			: in std_logic;
+		BusMuxOut 	: in std_logic_vector(31 downto 0);
+		BusMuxIn 	: out std_logic_vector(31 downto 0)
+	);
+end component;	
+
 
 --IR Register
 
@@ -159,11 +138,9 @@ end component;
 
 
 component encoder32bits
-	port (
-		
+	port (	
 		input  : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
-		output : OUT STD_LOGIC_VECTOR(4 downto 0)
-		
+		output : OUT STD_LOGIC_VECTOR(4 downto 0)	
 	);
 end component;
 
@@ -193,39 +170,40 @@ end component;
 
 component memorySubsystem is
 	port(
-		BusMuxOut		: in std_logic_vector(31 downto 0);
+		BusMuxOut	: in std_logic_vector(31 downto 0);
 		BusMuxInMDR	: inout std_logic_vector(31 downto 0);
 		MDRin, MARin, clock, clear: in std_logic;
-		readSig, writeSig, mdrReadSig: in std_logic
+		read_notWrite : in std_logic;
+		ram_complete_to_control	 : inout std_logic
 	);
 end component;
 --the main data path bus aka BusMuxOut
 
 
 ----bus signals coming out of register files into the bus
---signal	busR0, busR1, busR2, busR3,
---		busR4, busR5, busR6, busR7,
---		busR8, busR9, busR10, busR11,
---		busR12, busR13, busR14, busR15 : std_logic_vector(31 downto 0);
---signal	busPCin, busIRin, busMARin, busMDRin,
---			busInPortin, busOutPortin, busHIin, busLOin,
---			busZhighin, busZlowin, busSignExtendedIn  : std_logic_vector(31 downto 0); 
+signal	busR0, busR1, busR2, busR3,
+		busR4, busR5, busR6, busR7,
+		busR8, busR9, busR10, busR11,
+		busR12, busR13, busR14, busR15 : std_logic_vector(31 downto 0);
+signal	busPCin, busIRin, busMARin, busMDRin,
+			busInPortin, busOutPortin, busHIin, busLOin,
+			busZhighin, busZlowin, busSignExtendedIn  : std_logic_vector(31 downto 0); 
 --signal 	InPortin, OutPortin, HIin, LOin  : std_logic;
-
+signal registerFileIn : std_logic_vector(15 downto 0);
 --encoder signals
 --signal registerOut : std_logic_vector(22 downto 0);
---signal encoderControlBus : std_logic_vector(4 downto 0);
+signal encoderControlBus : std_logic_vector(4 downto 0);
 
 --selecting signals going into registers
 --signal IRsel : std_logic;
 --signal logicALUSelect : std_logic_vector(12 downto 0);
 --signal logicControl : std_logic_vector(31 downto 0);
 
---internal signals 
+--NULLS ADDED COMPONENTS
 signal YtoA : std_logic_vector(31 downto 0);
 signal CtoZ : std_logic_vector(63 downto 0);
 signal MDMuxToMDR : std_logic_vector(31 downto 0);
-
+signal complete : std_logic;
 
 begin
 
@@ -249,8 +227,8 @@ U1: reg_32	port map(
 U2: IO_Units port map( 
 		clk => Clock,
 		clr => clr,
-		In_cs => InPortin,
-		Out_cs => OutPortin,
+		In_cs => IOin,
+		Out_cs => IOout,
 		toInPort => IO_to_inPort,
 		toOutPort => BusMuxOut,
 		toBus => busInPortin,
@@ -309,6 +287,8 @@ U9: reg_32	port map(
 --z register	
 U10: zRegister port map(
 		C => CtoZ,
+		clk => Clock,
+		Zin => Zin,
 		Zhigh => busZhighin,
 		Zlow => busZlowin
 	);
@@ -369,20 +349,19 @@ U16: selectAndEncodeLogic port map(
 		BusMuxOut => BusMuxOut,
 		C_sign_extended => busSignExtendedIn,
 		r0in_r15in_Decoded => registerFileIn(15 downto 0),
-		r0out_r15out_Decoded	=> registerOut(15 downto 0)
+		r0out_r15out_Decoded	=> regOut
 );
 	
 --Outport
 U17: memorySubsystem port map(
 		BusMuxOut => BusMuxOut,
+		ram_complete_to_control => ram_complete_to_control,
 		BusMuxInMDR	=> BusMDRIn,
 		MDRin => MDRin, 
 		MARin => MARin, 
 		clock => Clock, 
 		clear => clr,
-		readSig => ramReadSig, 
-		writeSig => ramWriteSig, 
-		mdrReadSig =>  ReadChannel
+		read_notWrite => read_notWrite
 );
 --U2: reg_32	port map(
 --		clk => Clock,

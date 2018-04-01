@@ -16,6 +16,7 @@ port(
 		clk										: in std_logic;
 		IRout										: in std_logic_vector(31 downto 0);
 		BusMuxOut								: in std_logic_vector(31 downto 0);
+		CONin										: in std_logic;
 		CONout									: out std_logic
 	);
 END component conFF;
@@ -26,6 +27,7 @@ begin
 		clk	=> clk_tb,
 		IRout => IRout_tb,
 		BusMuxOut => BusMuxOut_tb,
+		CONin => CONin_tb,
 		CONout => CONout_tb		
 	);
 	
@@ -34,10 +36,12 @@ begin
 	
 		wait for 1 ns;
 		clk_tb		<= '0';
+		CONin_tb		<= '0';
 		IRout_tb		<= x"00000000";
 		BusMuxOut_tb<= x"07ff0000";		
 		wait for 9 ns;
 		clk_tb		<= '1';
+		CONin_tb		<= '1';
 		wait for 10 ns;	
 		clk_tb		<= '0';
 		IRout_tb<= x"00080000";	

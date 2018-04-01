@@ -3,18 +3,19 @@ use ieee.std_logic_1164.all;
 
 entity memorySubsystem is
 	port(
-		BusMuxOut		: in std_logic_vector(31 downto 0);
+		BusMuxOut	: in std_logic_vector(31 downto 0);
+		ram_complete_to_control	 : inout std_logic;
 		BusMuxInMDR	: inout std_logic_vector(31 downto 0);
 		MDRin, MARin, clock, clear: in std_logic;
-		readSig, writeSig, mdrReadSig: in std_logic
+		read_notWrite : in std_logic
 	);
 end entity;
 	
 architecture behaviour of memorySubsystem is
-component notGate is
-	port(
+--component notGate is
+	--port(
 		
-	);
+	--);
 component multiplexerMDR is 
 	port(
 		BusMuxOut, Mdatain: IN STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -53,13 +54,26 @@ END component;
 
 signal mdMuxToMDR, mdrToRam: std_logic_vector(31 downto 0);
 signal address : std_logic_vector(8 downto 0);
-signal readSig, writeSig		: std_logic;
+signal writeSig		: std_logic;
+signal complete : std_logic;
 begin
+
+--ADDED CODE
+writeSig <= not read_notWrite;
+
+ramCompletionSignalGeneration : process (BusMuxInMDR(8 DOWNTO 0), writeSig)
+begin
+	complete <= '0', '1' after 45 ns;
+end process;
+ram_complete_to_control <= complete;
+--ADDED CODE
+
+
 --MDMUX
 U0: multiplexerMDR port map(
 		BusMuxOut => BusMuxOut,
 		Mdatain => BusMuxInMDR,
-		ReadChannel => mdrReadSig,
+		ReadChannel => read_notWrite,
 		MDRMuxOut => mdMuxToMDR
 );
 --MDR Reg
@@ -83,7 +97,7 @@ U3: ram port map(
 		address => address,
 		clock => clock,
 		data => mdrToRam,
-		rden => readSig,
+		rden => read_notWrite,
 		wren => writeSig,
 		q => BusMuxInMDR
 );

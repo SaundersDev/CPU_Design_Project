@@ -255,18 +255,18 @@ begin
 	
 --	C <= nothing & shlResult;
 	case control is
-		when "0000000000001" => C <= chooseSignage & addResult;		--ADD 2's complement
-		when "0000000000010" => C <= chooseSignage & subResult;		--SUB 2's complement
-		when "0000000000100" => C <= mulResult;			 		--MUL 2's complement
-		when "0000000001000" =>	C <= divResult1 & divResult2;	--divResult--DIV 2's complement
-		when "0000000010000" => C <= nothing & shlResult;		--SHL 2's complement
-		when "0000000100000" => C <= nothing & shrResult;		--SHR 2's complement
-		when "0000001000000" => C <= nothing & shraResult;		--SHRA 2's complement
-		when "0000010000000" => C <= nothing & rolResult;		--ROR 2's complement
-		when "0000100000000" => C <= nothing & rorResult;		--ROL 2's complement
-		when "0001000000000" => C <= nothing & andResult;		--AND 2's complement
-		when "0010000000000" => C <= nothing & orResult;		--OR 2's complement
-		when "0100000000000" => C <= nothing & negResult;		--NEG 2's complement
+		when "00000000000001" => C <= chooseSignage & addResult;		--ADD 2's complement
+		when "00000000000010" => C <= chooseSignage & subResult;		--SUB 2's complement
+		when "00000000000100" => C <= mulResult;			 		--MUL 2's complement
+		when "00000000001000" => C <= divResult1 & divResult2;	--divResult--DIV 2's complement
+		when "00000000010000" => C <= nothing & shlResult;		--SHL 2's complement
+		when "00000000100000" => C <= nothing & shrResult;		--SHR 2's complement
+		when "00000001000000" => C <= nothing & shraResult;		--SHRA 2's complement
+		when "00000010000000" => C <= nothing & rolResult;		--ROR 2's complement
+		when "00000100000000" => C <= nothing & rorResult;		--ROL 2's complement
+		when "00001000000000" => C <= nothing & andResult;		--AND 2's complement
+		when "00010000000000" => C <= nothing & orResult;		--OR 2's complement
+		when "00100000000000" => C <= nothing & negResult;		--NEG 2's complement
 		when others 			=> C <= nothing & notResult;		--NOT 1's complement
 	end case;
 end process;

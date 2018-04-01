@@ -25,7 +25,7 @@ library work;
 
 entity ALU is
 port(
-	control						: in std_logic_vector(12 downto 0);
+	control						: in std_logic_vector(13 downto 0);
 	A, B     					: in std_logic_vector(31 downto 0);
 	C								: out std_logic_vector(63 downto 0)
 
