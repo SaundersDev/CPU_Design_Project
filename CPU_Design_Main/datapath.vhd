@@ -149,6 +149,20 @@ component memorySubsystem is
 	);
 end component;
 
+component IO_Units IS 
+	PORT
+	(
+		clk :  IN  STD_LOGIC;
+		clr :  IN  STD_LOGIC;
+		In_cs :  IN  STD_LOGIC;
+		Out_cs :  IN  STD_LOGIC;
+		toInPort :  IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
+		toOutPort :  IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
+		toBus :  OUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
+		toIO :  OUT  STD_LOGIC_VECTOR(31 DOWNTO 0)
+	);
+END component;
+
 --internal signals****************************************************************************** 
 signal YtoA : std_logic_vector(31 downto 0);
 signal CtoZ : std_logic_vector(63 downto 0);
@@ -210,24 +224,34 @@ U2: memorySubsystem port map(
 --		BusMuxIn => busMDRin
 --	);	
 --		
---inport	
-U3: reg_32	port map(
+U3: IO_Units port map(
 		clk => Clock,
-		clr	=> clr,
-		Rin => InPortin,
-		BusMuxOut => inputValuesHere,
-		BusMuxIn => busInPortin
-);	
---outport
-U4: reg_32	port map(
-		clk => Clock,
-		clr	=> clr,
-		Rin => OutPortin,
-		BusMuxOut => BusMuxOut,
-		BusMuxIn => busOutPortin
-);
+		clr 	=> clr,
+		In_cs => Inportin,
+		Out_cs => OutPortin,
+		toInPort => inputValuesHere,
+		toOutPort => busMuxOut,
+		toBus 	 => busInPortin,
+		toIO 		=> busOutPortIn
+	);
+----inport	
+--U3: reg_32	port map(
+--		clk => Clock,
+--		clr	=> clr,
+--		Rin => InPortin,
+--		BusMuxOut => inputValuesHere,
+--		BusMuxIn => busInPortin
+--);	
+----outport
+--U4: reg_32	port map(
+--		clk => Clock,
+--		clr	=> clr,
+--		Rin => OutPortin,
+--		BusMuxOut => BusMuxOut,
+--		BusMuxIn => busOutPortin
+--);
 --hi
-U5: reg_32	port map(
+U4: reg_32	port map(
 		clk => Clock,
 		clr	=> clr,
 		Rin => HIin,
@@ -235,7 +259,7 @@ U5: reg_32	port map(
 		BusMuxIn => busHIin
 );
 --lo
-U6: reg_32	port map(
+U5: reg_32	port map(
 		clk => Clock,
 		clr	=> clr,
 		Rin => LOin,
@@ -243,7 +267,7 @@ U6: reg_32	port map(
 		BusMuxIn => busLOin
 );
 --regular registers
-U7: registerFile port map(
+U6: registerFile port map(
 		clk => Clock,
 		clr => clr, 
 		Rin => registerFileIn,
@@ -268,7 +292,7 @@ U7: registerFile port map(
 	);
 
 --y register
-U8: reg_32	port map(
+U7: reg_32	port map(
 		clk => Clock,
 		clr	=> clr,
 		Rin => Yin,
@@ -276,19 +300,19 @@ U8: reg_32	port map(
 		BusMuxIn => YtoA
 );
 --z register	
-U9: zRegister port map(
+U8: zRegister port map(
 		C => CtoZ,
 		Zhigh => busZhighin,
 		Zlow => busZlowin
 	);
 
 --	encoder for bus
-U10: encoder32bits port map(
+U9: encoder32bits port map(
 		input	=> registerOut,
 		output 	=> encoderControlBus
 	);
 --	multiplexer for bus
-U11: multiplexer32bits port map(
+U10: multiplexer32bits port map(
 		BusMuxIn_R0		=> busR0, 
 		BusMuxIn_R1 	=> busR1, 
 		BusMuxIn_R2 	=> busR2, 
@@ -317,7 +341,7 @@ U11: multiplexer32bits port map(
 		encoderSignal 	=> encoderControlBus
 	);
 --alu	
-U12: ALU port map(
+U11: ALU port map(
 		control => logicALUSelect,
 		A => YtoA,
 		B => BusMuxOut,
@@ -330,13 +354,13 @@ U12: ALU port map(
 --		ReadChannel => ReadChannel, 
 --	);
 --ConFFLogic
-U13: conFF port map(
+U12: conFF port map(
 		clk			=>  Clock,
 		IRout			=> busIRin, --Or IRtoConFFLogic? Figure out how this works
 		BusMuxOut	=> BusMuxOut,
 		CONout		=> CONout
 );
-U14: selectAndEncodeLogic port map(
+U13: selectAndEncodeLogic port map(
 		IRin		=> busIRin,
 		Gra		=> selGra,
 		Grb		=> selGrb,

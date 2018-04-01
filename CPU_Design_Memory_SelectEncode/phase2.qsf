@@ -172,4 +172,5 @@ set_global_assignment -name EDA_TEST_BENCH_FILE ../CPU_Design_Main/memorySubsyst
 set_global_assignment -name EDA_TEST_BENCH_FILE ../CPU_Design_Main/datapath_tb.vhd -section_id datapath_tb
 set_global_assignment -name VHDL_FILE pcIncrement.vhd
 set_global_assignment -name VHDL_FILE regPC.vhd
+set_global_assignment -name VHDL_FILE IO_units.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
