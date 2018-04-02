@@ -11,7 +11,7 @@ ENTITY datapath_tb IS
 END;
 
 ARCHITECTURE datapath_tb_arc OF datapath_tb IS
-	SIGNAL registerOut_tb : STD_LOGIC_VECTOR(31 downto 0);
+--	SIGNAL registerOut_tb : STD_LOGIC_VECTOR(31 downto 0);
 	signal regOut_tb : std_logic_vector(15 downto 0);
 	SIGNAL HIin_tb  :  STD_LOGIC;
 	SIGNAL IR_to_control_tb : STD_LOGIC_VECTOR (31 downto 0);
@@ -21,10 +21,10 @@ ARCHITECTURE datapath_tb_arc OF datapath_tb IS
 	SIGNAL IncPC_tb : STD_LOGIC;
 	SIGNAL memoryData_to_datapath_tb   :  std_logic_vector (31 downto 0); --didn't find
 	SIGNAL BAout_tb   :  STD_LOGIC;
-	SIGNAL PCout : STD_LOGIC;
+	SIGNAL PCout_tb : STD_LOGIC;
 	SIGNAL MDRout_tb : STD_LOGIC;-- registerOut_tb(21)
 --	SIGNAL encoderControlBus_tb : STD_LOGIC_VECTOR(4 downto 0); -- shiftValue_to_control
-	SIGNAL sub_cs   :  STD_LOGIC;
+--	SIGNAL sub_cs_tb   :  STD_LOGIC;
 	SIGNAL IOout_tb   :  STD_LOGIC;
 	SIGNAL div_cs_tb   :  STD_LOGIC;
 	SIGNAL Clock_tb	: STD_LOGIC;
@@ -45,7 +45,7 @@ ARCHITECTURE datapath_tb_arc OF datapath_tb IS
 	SIGNAL Zlowout_tb : STD_LOGIC;
 	SIGNAL Rout_from_control_tb : STD_LOGIC;
 	--added in the following		
-	signal PCout_tb : std_logic;
+--	signal PCout_tb : std_logic;
 	signal sub_cs_tb	: std_logic;
 	signal Rin_from_control_tb : std_logic;
 	signal selRout_tb : std_logic;
@@ -74,7 +74,8 @@ ARCHITECTURE datapath_tb_arc OF datapath_tb IS
 
 COMPONENT datapath is
 	PORT(
-	  registerOut : inout std_logic_vector(31 downto 0); --HIout, LOout, Zhighout, Zlowout, MDRout, HIout, LOout, Cout
+  	  Cout, InPortout, MDRout, PCout, Zlowout, Zhighout, Loout, HIout: inout std_logic;
+--	  registerOut : inout std_logic_vector(31 downto 0); --HIout, LOout, Zhighout, Zlowout, MDRout, HIout, LOout, Cout
 	  regOut		: Inout std_logic_vector(15 downto 0);
 	  HIin  : in STD_LOGIC; 
       IR_to_control  : out std_logic_vector (31 downto 0); 
@@ -142,8 +143,8 @@ BEGIN
 --Important Signals that allow registerOut and logicALUSelect to map onto this file. Uses concatenation
 alu <= not_cs_tb & IncPC_tb & negate_cs_tb & OR_cs_tb & and_cs_tb & rotate_left_cs_tb & rotate_right_cs_tb & shift_right_arithmetic_cs_tb 
 		& shift_right_logical_cs_tb & shift_left_cs_tb & div_cs_tb & mult_cs_tb & sub_cs_tb & ADD_cs_tb;
-reg <= "000000000" & InPortout_tb & MDRout_tb & PCout_tb & Zlowout_tb & Zhighout_tb & LOout_tb & HIout_tb & regOut_tb(15 downto 0);
-	
+--registerOut_tb <= x"00" & Cout_tb & InPortout_tb & MDRout_tb & PCout_tb & Zlowout_tb & Zhighout_tb & LOout_tb & HIout_tb & regOut_tb(15 downto 0);
+
 	DUT0 : datapath	PORT MAP (
 	  regOut => regOut_tb,
 	  HIin   => HIin_tb,
@@ -155,20 +156,20 @@ reg <= "000000000" & InPortout_tb & MDRout_tb & PCout_tb & Zlowout_tb & Zhighout
     --  logicALUSelect(12)   => IncPC_tb,
       memoryData_to_datapath   => memoryData_to_datapath_tb,
       selBAout   => BAout_tb,
-   --   registerOut(20) => PCout_tb,
-   --   registerOut(21) => MDRout_tb,
+      PCout => PCout_tb,
+      MDRout => MDRout_tb,
  --     encoderControlBus   => encoderControlBus_tb, --shiftValue_to_control
 		logicALUSelect => alu,
-		registerOut => reg,
+--		registerOut => registerOut_tb,
 	--   logicALUSelect(1) => sub_cs_tb,
       IOout   => IOout_tb,
     --  logicALUSelect(3)  => div_cs_tb,
       clock   => clock_tb,
-    --  registerOut(22) => InPortout_tb, 
+		InPortout => InPortout_tb, 
 	  MARin   => MARin_tb,
    --   logicALUSelect(2)   => mult_cs_tb,
       Zin   => Zin_tb,
-   --   registerOut(16) => HIout_tb, 
+      HIout => HIout_tb, 
      -- logicALUSelect(7)   => rotate_right_cs_tb,
       selGra   => selGra_tb,
       selGrb   => selGrb_tb,
@@ -176,16 +177,16 @@ reg <= "000000000" & InPortout_tb & MDRout_tb & PCout_tb & Zlowout_tb & Zhighout
 	  selRin   => Rin_from_control_tb,
 	  MDRin   => MDRin_tb,
       PCin   => PCin_tb,
-    --  registerOut(18)   => Zhighout_tb,
+      Zhighout   => Zhighout_tb,
       CON_to_control   => CON_to_control_tb,
-    --  registerOut(19)   => Zlowout_tb,
+		Zlowout => Zlowout_tb,
       selRout   => Rout_from_control_tb,
   --    logicALUSelect(10)   => OR_cs_tb,
    --   logicALUSelect(0)   => ADD_cs_tb,
 --	  busMDRin   => memoryData_to_computerSystem_tb,
 	  IRin   => IRin_tb,
       clr   => clr_tb,
-   --   registerOut(17)  => LOout_tb ,
+		Loout  => LOout_tb ,
 	  IO_to_inPort   => IO_to_inPort_tb,
 	--  logicALUSelect(4)  => shift_left_cs_tb,
 --	  readChannel => readChannel_tb,		
@@ -195,7 +196,7 @@ reg <= "000000000" & InPortout_tb & MDRout_tb & PCout_tb & Zlowout_tb & Zhighout
     --  logicALUSelect(6)   => shift_right_arithmetic_cs_tb,
       BusMuxOut   => busLine_tb,
    --   logicALUSelect(5)   => shift_right_logical_cs_tb,
-   --   registerOut(23)   => Cout_tb,
+		Cout  => Cout_tb,
 	--  logicALUSelect(13) => not_cs_tb,
       IOin   => IOin_tb,
       read_notWrite   => read_notWrite_tb,
@@ -306,7 +307,7 @@ reg <= "000000000" & InPortout_tb & MDRout_tb & PCout_tb & Zlowout_tb & Zhighout
 	BEGIN
 		CASE Present_state IS -- assert the required signals in each clock cycle
 	WHEN Default =>
-		PCout_tb <= '0';Zlowout_tb <= '0'; MDRout_tb <= '0';
+
 		MARin_tb <= '0'; Zin_tb <= '0';
 		PCin_tb <= '0'; MDRin_tb <= '0'; IRin_tb <= '0'; Yin_tb <= '0';
 		IncPC_tb <= '0'; read_notWrite_tb <= '0', '1' after 1 ns; AND_cs_tb <= '0';
@@ -315,7 +316,10 @@ reg <= "000000000" & InPortout_tb & MDRout_tb & PCout_tb & Zlowout_tb & Zhighout
 		negate_cs_tb <= '0'; shift_right_logical_cs_tb <= '0'; LOin_tb <= '0'; Cout_tb <= '0'; ADD_cs_tb <= '0'; not_cs_tb <= '0';	
 		or_cs_tb <= '0'; sub_cs_tb <= '0'; IOin_tb <= '0'; InPortout_tb <= '0';
 		
-		
+		PCout_tb <= '0';Zlowout_tb <= '0'; MDRout_tb <= '0';
+		Zhighout_tb <= '0'; Zlowout_tb <= '0';
+		HIout_tb <= '0';
+		selRin_tb <= '0'; selRout_tb <= '0';
 		selGra_tb <= '0'; selGrb_tb <= '0'; selGrc_tb <= '0'; Rin_from_control_tb <= '0'; Rout_from_control_tb <= '0'; BAout_tb <= '0';
 		CON_in_tb <= '0';
 		IO_to_inPort_tb <= x"0000ffff";

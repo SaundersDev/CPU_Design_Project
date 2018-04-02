@@ -14,12 +14,10 @@ BEGIN
 	SingleRegister:
 	PROCESS (clk, clr, Rin, BusMuxOut)
 	BEGIN
-		IF (rising_edge(clk) AND (Rin = '1')) THEN
 			IF (clr = '0') THEN
 				BusMuxIn <= (others => '0' );
-			ELSE
+			elsIF (rising_edge(clk) AND (Rin = '1')) THEN
 				BusMuxIn <= BusMuxOut;
 			END IF;
-		END IF;
 	END PROCESS;
 END ARCHITECTURE arc;

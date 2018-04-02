@@ -52,7 +52,7 @@ component ram IS
 	);
 END component;
 
-signal mdMuxToMDR, mdrToRam: std_logic_vector(31 downto 0);
+signal mdMuxToMDR, mdrToRam, BusMuxInRAM : std_logic_vector(31 downto 0);
 signal address : std_logic_vector(8 downto 0);
 signal writeSig		: std_logic;
 signal complete : std_logic;
@@ -72,7 +72,7 @@ ram_complete_to_control <= complete;
 --MDMUX
 U0: multiplexerMDR port map(
 		BusMuxOut => BusMuxOut,
-		Mdatain => BusMuxInMDR,
+		Mdatain => BusMuxInRAM,
 		ReadChannel => read_notWrite,
 		MDRMuxOut => mdMuxToMDR
 );
@@ -82,7 +82,7 @@ U1: reg_32 port map(
 	clr => clear,
 	Rin => MDRin,
 	BusMuxOut => mdMuxToMDR,
-	BusMuxIn => mdrToRam
+	BusMuxIn => BusMuxInMDR
 );
 --MAR
 U2: regMAR port map(
@@ -96,9 +96,9 @@ U2: regMAR port map(
 U3: ram port map(
 		address => address,
 		clock => clock,
-		data => mdrToRam,
+		data => BusMuxInMDR,
 		rden => read_notWrite,
 		wren => writeSig,
-		q => BusMuxInMDR
+		q => BusMuxInRAM
 );
 end architecture;

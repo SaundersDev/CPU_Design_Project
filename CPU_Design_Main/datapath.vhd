@@ -17,10 +17,10 @@ entity datapath is
 		ram_complete_to_control : inout std_logic;
 		--CON FF control signals
 		CON_in		:		std_logic;
-		
+		Cout, InPortout, MDRout, PCout, Zlowout, Zhighout, Loout, HIout: inout std_logic;
 		--Multiplexor 32 select signals
 		--HIout, LOout, Zhighout, Zlowout, PCout, MDRout, InPortout, Cout
-		registerOut : INout std_logic_vector(31 downto 0);												--changed from in to inout
+		--registerOut : INout std_logic_vector(31 downto 0);												--changed from in to inout
 		regOut		: Inout std_logic_vector(15 downto 0);
 		--To Memory subsystem control signals not covered so far							
 		read_notWrite		:		IN std_logic;					
@@ -40,7 +40,6 @@ entity datapath is
 end datapath;
 
 architecture datapath_arc of datapath is
-
 --ALU COMPONENT
 component ALU
 	port(
@@ -202,10 +201,11 @@ signal encoderControlBus : std_logic_vector(4 downto 0);
 --NULLS ADDED COMPONENTS
 signal YtoA : std_logic_vector(31 downto 0);
 signal CtoZ : std_logic_vector(63 downto 0);
-signal MDMuxToMDR : std_logic_vector(31 downto 0);
+--signal MDMuxToMDR : std_logic_vector(31 downto 0);
 signal complete : std_logic;
 
 begin
+--registerOut <= x"00" & Cout & InPortout & MDRout & PCout & Zlowout & Zhighout & Loout & HIout & regOut;	
 
 --PC: Program Counter
 U0: reg_32	port map(
@@ -295,7 +295,16 @@ U10: zRegister port map(
 
 --	encoder for bus
 U11: encoder32bits port map(
-		input	=> registerOut,
+		input(31 downto 24)	=> x"00",
+		input(23)	=> Cout,
+		input(22)	=> InPortout,
+		input(21)	=> MDRout,
+		input(20)	=> PCout,
+		input(19)	=> Zlowout,
+		input(18)	=> Zhighout,
+		input(17)	=> Loout,
+		input(16)	=> HIout,
+		input(15 downto 0)	=> regOut,		
 		output 	=> encoderControlBus
 	);
 --	multiplexer for bus

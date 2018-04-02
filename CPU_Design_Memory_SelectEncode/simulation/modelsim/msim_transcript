@@ -1,4 +1,4 @@
-# Reading C:/altera/13.0sp1/modelsim_ae/tcl/vsim/pref.tcl 
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
 # ERROR: No extended dataflow license exists
 # do phase2_run_msim_rtl_vhdl.do 
 # if {[file exists rtl_work]} {
@@ -6,19 +6,19 @@
 # }
 # vlib rtl_work
 # vmap work rtl_work
-# Copying C:\altera\13.0sp1\modelsim_ae\win32aloem/modelsim.ini to modelsim.ini
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
-# ** Warning: Copied C:\altera\13.0sp1\modelsim_ae\win32aloem/modelsim.ini to modelsim.ini.
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Main/multiplexer32bits.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/multiplexer32bits.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity multiplexer32bits
 # -- Compiling architecture behavioural of multiplexer32bits
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Alu/ALU/zRegister.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/zRegister.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -27,7 +27,7 @@
 # -- Loading package STD_LOGIC_SIGNED
 # -- Compiling entity zRegister
 # -- Compiling architecture behaviour of zRegister
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Alu/ALU/thirtyTwoBitRippleCarrySubtractor.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/thirtyTwoBitRippleCarrySubtractor.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -35,28 +35,28 @@
 # -- Loading package std_logic_arith
 # -- Compiling entity thirtyTwoBitRippleCarrySubtractor
 # -- Compiling architecture behaviour of thirtyTwoBitRippleCarrySubtractor
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Alu/ALU/thirtyTwoBitRippleCarryAdder.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/thirtyTwoBitRippleCarryAdder.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity thirtyTwoBitRippleCarryAdder
 # -- Compiling architecture bdf_type of thirtyTwoBitRippleCarryAdder
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Alu/ALU/shiftRightArithmetic.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/shiftRightArithmetic.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity shiftRightArithmetic
 # -- Compiling architecture behaviour of shiftRightArithmetic
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Alu/ALU/shiftRight.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/shiftRight.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity shiftRight
 # -- Compiling architecture behaviour of shiftRight
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Alu/ALU/shiftLeft.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/shiftLeft.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -65,63 +65,63 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity shiftLeft
 # -- Compiling architecture behaviour of shiftLeft
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Alu/ALU/rotateRight.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/rotateRight.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity rotateRight
 # -- Compiling architecture behaviour of rotateRight
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Alu/ALU/rotateLeft.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/rotateLeft.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity rotateLeft
 # -- Compiling architecture behaviour of rotateLeft
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Alu/ALU/orGate.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/orGate.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity orGate
 # -- Compiling architecture behaviour of orGate
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Alu/ALU/notGate.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/notGate.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity notGate
 # -- Compiling architecture behaviour of notGate
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Alu/ALU/negGate.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/negGate.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity negGate
 # -- Compiling architecture behaviour of negGate
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Alu/ALU/fullAdder.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/fullAdder.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity fullAdder
 # -- Compiling architecture behaviour of fullAdder
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Alu/ALU/encoder32bits.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/encoder32bits.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity encoder32bits
 # -- Compiling architecture behavioural of encoder32bits
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Alu/ALU/divider.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/divider.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity divider
 # -- Compiling architecture SYN of divider
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Alu/ALU/booth_multiplier.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/booth_multiplier.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -130,14 +130,14 @@
 # -- Loading package STD_LOGIC_SIGNED
 # -- Compiling entity booth_multiplier
 # -- Compiling architecture behaviour of booth_multiplier
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Alu/ALU/andGate.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/andGate.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity andGate
 # -- Compiling architecture behaviour of andGate
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Alu/ALU/ALU.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/ALU.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -145,141 +145,141 @@
 # -- Loading package std_logic_arith
 # -- Compiling entity ALU
 # -- Compiling architecture behaviour of ALU
-# ** Warning: C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Alu/ALU/ALU.vhd(243): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 14 is not equal to right length 13).
+# ** Warning: C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/ALU.vhd(243): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 14 is not equal to right length 13).
 # 
-# ** Warning: C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Alu/ALU/ALU.vhd(245): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 14 is not equal to right length 13).
+# ** Warning: C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/ALU.vhd(245): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 14 is not equal to right length 13).
 # 
-# ** Warning: C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Alu/ALU/ALU.vhd(249): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 14 is not equal to right length 13).
+# ** Warning: C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/ALU.vhd(249): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 14 is not equal to right length 13).
 # 
-# ** Warning: C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Alu/ALU/ALU.vhd(251): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 14 is not equal to right length 13).
+# ** Warning: C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/ALU.vhd(251): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 14 is not equal to right length 13).
 # 
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Memory_SelectEncode/reg_32.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/reg_32.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity reg_32
 # -- Compiling architecture arc of reg_32
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Memory_SelectEncode/multiplexerMDR.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/multiplexerMDR.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity multiplexerMDR
 # -- Compiling architecture behaviour of multiplexerMDR
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Memory_SelectEncode/ram.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/ram.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity ram
 # -- Compiling architecture SYN of ram
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Memory_SelectEncode/selectAndEncodeLogic.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeLogic.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity selectAndEncodeLogic
 # -- Compiling architecture behaviour of selectAndEncodeLogic
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Memory_SelectEncode/decoder16bits.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/decoder16bits.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity decoder16bits
 # -- Compiling architecture behavioural of decoder16bits
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent1.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent1.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity selectAndEncodeSubComponent1
 # -- Compiling architecture behaviour of selectAndEncodeSubComponent1
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent2.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent2.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity selectAndEncodeSubComponent2
 # -- Compiling architecture behaviour of selectAndEncodeSubComponent2
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Memory_SelectEncode/conFF.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/conFF.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity conFF
 # -- Compiling architecture behaviour of conFF
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Memory_SelectEncode/conFFSubComponent1.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/conFFSubComponent1.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity conFFSubComponent1
 # -- Compiling architecture behaviour of conFFSubComponent1
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Memory_SelectEncode/reg_Zero.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/reg_Zero.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity reg_Zero
 # -- Compiling architecture behaviour of reg_Zero
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Memory_SelectEncode/andGate_32vs1.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/andGate_32vs1.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity andGate_32vs1
 # -- Compiling architecture behaviour of andGate_32vs1
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Memory_SelectEncode/decoder4bits.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/decoder4bits.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity decoder4bits
 # -- Compiling architecture behavioural of decoder4bits
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Memory_SelectEncode/flipFlop.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/flipFlop.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity flipFlop
 # -- Compiling architecture behaviour of flipFlop
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent3.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/selectAndEncodeSubComponent3.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity selectAndEncodeSubComponent3
 # -- Compiling architecture behaviour of selectAndEncodeSubComponent3
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Main/datapath.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/datapath.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity datapath
 # -- Compiling architecture datapath_arc of datapath
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Main/registerFile.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/registerFile.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity registerFile
 # -- Compiling architecture behaviour of registerFile
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Main/memorySubsystem.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/memorySubsystem.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity memorySubsystem
 # -- Compiling architecture behaviour of memorySubsystem
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Main/regMAR.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/regMAR.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity regMAR
 # -- Compiling architecture arc of regMAR
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Memory_SelectEncode/IO_units.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/IO_units.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -287,7 +287,7 @@
 # -- Compiling entity IO_Units
 # -- Compiling architecture behaviour of IO_Units
 # 
-# vcom -93 -work work {C:/Users/14dph3/Desktop/CPU_Design_Project-Phase2/CPU_Design_Project-Phase2/CPU_Design_Memory_SelectEncode/../CPU_Design_Main/datapath_tb.vhd}
+# vcom -93 -work work {C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Memory_SelectEncode/../CPU_Design_Main/datapath_tb.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -300,15 +300,6 @@
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  datapath_tb
 # vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps datapath_tb 
-# //  ModelSim ALTERA 10.1d Nov  2 2012 
-# //
-# //  Copyright 1991-2012 Mentor Graphics Corporation
-# //  All Rights Reserved.
-# //
-# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
-# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
-# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
-# //
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -360,131 +351,38 @@
 # Loading work.decoder4bits(behavioural)
 # Loading work.conffsubcomponent1(behaviour)
 # Loading work.flipflop(behaviour)
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(31) has no driver.
+# ** Warning: Design size of 232 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/Cout has no driver.
 # 
 # This port will contribute value (U) to the signal network.
 # 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(30) has no driver.
+# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/InPortout has no driver.
 # 
 # This port will contribute value (U) to the signal network.
 # 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(29) has no driver.
+# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/MDRout has no driver.
 # 
 # This port will contribute value (U) to the signal network.
 # 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(28) has no driver.
+# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/PCout has no driver.
 # 
 # This port will contribute value (U) to the signal network.
 # 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(27) has no driver.
+# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/Zlowout has no driver.
 # 
 # This port will contribute value (U) to the signal network.
 # 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(26) has no driver.
+# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/Zhighout has no driver.
 # 
 # This port will contribute value (U) to the signal network.
 # 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(25) has no driver.
+# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/Loout has no driver.
 # 
 # This port will contribute value (U) to the signal network.
 # 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(24) has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(23) has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(22) has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(21) has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(20) has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(19) has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(18) has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(17) has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(16) has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(15) has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(14) has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(13) has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(12) has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(11) has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(10) has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(9) has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(8) has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(7) has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(6) has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(5) has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(4) has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(3) has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(2) has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(1) has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
-# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/registerOut(0) has no driver.
+# ** Warning: (vsim-8683) Uninitialized inout port /datapath_tb/DUT0/HIout has no driver.
 # 
 # This port will contribute value (U) to the signal network.
 # 
