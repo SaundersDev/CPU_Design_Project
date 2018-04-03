@@ -16,8 +16,8 @@ entity datapath is
 		selGra, selGrb, selGrc, selRin, selRout, selBAout	:	IN	std_logic;
 		ram_complete_to_control : inout std_logic;
 		--CON FF control signals
-		CON_in		:		std_logic;
-		Cout, InPortout, MDRout, PCout, Zlowout, Zhighout, Loout, HIout: inout std_logic;
+		CON_in		:		in std_logic;
+		Cout, InPortout, MDRout, PCout, Zlowout, Zhighout, Loout, HIout: in std_logic;
 		--Multiplexor 32 select signals
 		--HIout, LOout, Zhighout, Zlowout, PCout, MDRout, InPortout, Cout
 		--registerOut : INout std_logic_vector(31 downto 0);												--changed from in to inout
@@ -27,15 +27,15 @@ entity datapath is
 		
 		--Control Signals for ALU
 		logicALUSelect  : in std_logic_vector(13 downto 0); 
-		
+		outPort_to_IO : out std_logic_vector(31 downto 0);
 		
 		--set OUTPUTS
 		readWrite_to_memory, CON_to_control 	: 	OUT std_LOGIC;
 		shiftValue_to_control		:  OUT STD_LOGIC_VECTOR(4 downto 0);
-		IR_to_control, MAR_to_memory, outPort_to_IO : OUT std_LOGIC_VECTOR(31 downto 0); 
+	--	IR_to_control, MAR_to_memory, outPort_to_IO : OUT std_LOGIC_VECTOR(31 downto 0); 
 		BusMuxOut : INOUT std_LOGIC_VECTOR(31 downto 0);
-		memoryData_to_computerSystem	: 	OUT std_LOGIC_VECTOR(31 downto 0);
-		memoryData_to_datapath	:	IN std_LOGIC_VECTOR(31 downto 0)
+		memoryData_to_computerSystem	: 	OUT std_LOGIC_VECTOR(31 downto 0)
+	--	memoryData_to_datapath	:	IN std_LOGIC_VECTOR(31 downto 0)
 	);
 end datapath;
 

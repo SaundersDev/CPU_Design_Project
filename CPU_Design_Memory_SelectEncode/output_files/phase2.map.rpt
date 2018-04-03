@@ -1,5 +1,5 @@
 Analysis & Elaboration report for phase2
-Sun Apr 01 22:32:42 2018
+Tue Apr 03 10:45:43 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -48,7 +48,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Sun Apr 01 22:32:42 2018           ;
+; Analysis & Elaboration Status      ; Successful - Tue Apr 03 10:45:43 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; phase2                                          ;
 ; Top-level Entity Name              ; datapath                                        ;
@@ -360,7 +360,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Elaboration
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Apr 01 22:32:38 2018
+    Info: Processing started: Tue Apr 03 10:45:36 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off phase2 -c phase2 --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /users/master/documents/github/cpu_design_project/cpu_design_main/multiplexer32bits.vhd
@@ -537,8 +537,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file io_unit
 Info (12127): Elaborating entity "datapath" for the top level hierarchy
 Warning (10541): VHDL Signal Declaration warning at datapath.vhd(33): used implicit default value for signal "readWrite_to_memory" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10541): VHDL Signal Declaration warning at datapath.vhd(34): used implicit default value for signal "shiftValue_to_control" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(35): used implicit default value for signal "IR_to_control" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(35): used implicit default value for signal "MAR_to_memory" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10541): VHDL Signal Declaration warning at datapath.vhd(37): used implicit default value for signal "memoryData_to_computerSystem" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Info (12128): Elaborating entity "reg_32" for hierarchy "reg_32:U0"
 Info (12128): Elaborating entity "IO_Units" for hierarchy "IO_Units:U2"
@@ -736,10 +734,10 @@ Info (10041): Inferred latch for "output[3]" at decoder4bits.vhd(16)
 Info (12128): Elaborating entity "conFFSubComponent1" for hierarchy "conFF:conFlipF|conFFSubComponent1:U1"
 Info (12128): Elaborating entity "flipFlop" for hierarchy "conFF:conFlipF|flipFlop:U2"
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 60 warnings
+Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 58 warnings
     Info: Peak virtual memory: 609 megabytes
-    Info: Processing ended: Sun Apr 01 22:32:42 2018
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Processing ended: Tue Apr 03 10:45:43 2018
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:05
 
 

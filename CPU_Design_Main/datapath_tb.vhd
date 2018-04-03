@@ -14,12 +14,12 @@ ARCHITECTURE datapath_tb_arc OF datapath_tb IS
 --	SIGNAL registerOut_tb : STD_LOGIC_VECTOR(31 downto 0);
 	signal regOut_tb : std_logic_vector(15 downto 0);
 	SIGNAL HIin_tb  :  STD_LOGIC;
-	SIGNAL IR_to_control_tb : STD_LOGIC_VECTOR (31 downto 0);
+	--SIGNAL IR_to_control_tb : STD_LOGIC_VECTOR (31 downto 0);
 	SIGNAL rotate_left_cs_tb   :  STD_LOGIC;
 	SIGNAL Yin_tb : STD_LOGIC;
 	SIGNAL LOin_tb : STD_LOGIC;
 	SIGNAL IncPC_tb : STD_LOGIC;
-	SIGNAL memoryData_to_datapath_tb   :  std_logic_vector (31 downto 0); --didn't find
+--	SIGNAL memoryData_to_datapath_tb   :  std_logic_vector (31 downto 0); --didn't find
 	SIGNAL BAout_tb   :  STD_LOGIC;
 	SIGNAL PCout_tb : STD_LOGIC;
 	SIGNAL MDRout_tb : STD_LOGIC;-- registerOut_tb(21)
@@ -71,19 +71,18 @@ ARCHITECTURE datapath_tb_arc OF datapath_tb IS
 	SIGNAL IOin_tb   :  STD_LOGIC;
 	SIGNAL read_notWrite_tb   :  STD_LOGIC;
 	SIGNAL ram_complete_to_control_tb : STD_LOGIC;
-
 COMPONENT datapath is
 	PORT(
-  	  Cout, InPortout, MDRout, PCout, Zlowout, Zhighout, Loout, HIout: inout std_logic;
+  	  Cout, InPortout, MDRout, PCout, Zlowout, Zhighout, Loout, HIout: in std_logic;
 --	  registerOut : inout std_logic_vector(31 downto 0); --HIout, LOout, Zhighout, Zlowout, MDRout, HIout, LOout, Cout
 	  regOut		: Inout std_logic_vector(15 downto 0);
 	  HIin  : in STD_LOGIC; 
-      IR_to_control  : out std_logic_vector (31 downto 0); 
+    --  IR_to_control  : out std_logic_vector (31 downto 0); 
       --rotate_left_cs  logicALUSelect(8) 
       Yin  : in STD_LOGIC ; 
       LOin  : in STD_LOGIC ; 
       --IncPC   logicALUSelect(12) 
-      memoryData_to_datapath  : inout std_logic_vector (31 downto 0); 
+   --   memoryData_to_datapath  : inout std_logic_vector (31 downto 0); 
       selBAout  : in STD_LOGIC ;
       --PCout  registerOut_tb(20) 
       --MDRout registerOut_tb(21)
@@ -148,13 +147,13 @@ alu <= not_cs_tb & IncPC_tb & negate_cs_tb & OR_cs_tb & and_cs_tb & rotate_left_
 	DUT0 : datapath	PORT MAP (
 	  regOut => regOut_tb,
 	  HIin   => HIin_tb,
-      IR_to_control   => IR_to_control_tb, --not used
+  --    IR_to_control   => IR_to_control_tb, --not used
     --  logicALUSelect(8)   => rotate_left_cs_tb,
       Yin   => Yin_tb,
       LOin   => LOin_tb,
 		CON_in => CON_in_tb,
     --  logicALUSelect(12)   => IncPC_tb,
-      memoryData_to_datapath   => memoryData_to_datapath_tb,
+  --    memoryData_to_datapath   => memoryData_to_datapath_tb,
       selBAout   => BAout_tb,
       PCout => PCout_tb,
       MDRout => MDRout_tb,
@@ -163,6 +162,7 @@ alu <= not_cs_tb & IncPC_tb & negate_cs_tb & OR_cs_tb & and_cs_tb & rotate_left_
 --		registerOut => registerOut_tb,
 	--   logicALUSelect(1) => sub_cs_tb,
       IOout   => IOout_tb,
+		outPort_to_IO =>outPort_to_IO_tb,
     --  logicALUSelect(3)  => div_cs_tb,
       clock   => clock_tb,
 		InPortout => InPortout_tb, 
@@ -190,7 +190,6 @@ alu <= not_cs_tb & IncPC_tb & negate_cs_tb & OR_cs_tb & and_cs_tb & rotate_left_
 	  IO_to_inPort   => IO_to_inPort_tb,
 	--  logicALUSelect(4)  => shift_left_cs_tb,
 --	  readChannel => readChannel_tb,		
-	  outPort_to_IO   => outPort_to_IO_tb,
     --  logicALUSelect(9)   => and_cs_tb,
     --  logicALUSelect(11)   => negate_cs_tb,
     --  logicALUSelect(6)   => shift_right_arithmetic_cs_tb,
