@@ -348,11 +348,11 @@ alu <= not_cs_tb & IncPC_tb & negate_cs_tb & OR_cs_tb & and_cs_tb & rotate_left_
 				--turn off signals
 				Zlowout_tb 	<= '0'; --zlowOUT
 				PCin_tb    				<= '0';
-				read_notWrite_tb   	<= '0';
+				--read_notWrite_tb   	<= '0';
 				MDRin_tb 				<= '0';
-			
+				--InPortout_tb <= '0';
 				--turn on signals
-				MDRout_tb 	<= '1'; -- MDRout
+				MDRout_tb 	<= '1'; -- MDRout 
 				IRin_tb 	<= '1';
 	WHEN T3 =>
 				--turn off signals
@@ -361,8 +361,10 @@ alu <= not_cs_tb & IncPC_tb & negate_cs_tb & OR_cs_tb & and_cs_tb & rotate_left_
 				
 				--turn on signals
 				CASE Present_instruction IS
-						WHEN ldi | ld =>
-							selGrb_tb <= '1'; BAout_tb <= '1'; Yin_tb <= '1';
+						WHEN ld =>
+							selGrb_tb <= '1'; BAout_tb <= '1'; Yin_tb <= '1'; selRin_tb <= '1';
+						WHEN ldi =>
+							selGrb_tb <= '1'; BAout_tb <= '1'; Yin_tb <= '1'; selRin_tb <= '1';
 						WHEN st =>
 							selGrb_tb <= '1'; BAout_tb <= '1'; Yin_tb <= '1';
 						WHEN addi | andi | ori | mul => 
@@ -386,9 +388,12 @@ alu <= not_cs_tb & IncPC_tb & negate_cs_tb & OR_cs_tb & and_cs_tb & rotate_left_
 			
 	WHEN T4 =>
 			CASE Present_instruction IS
-					WHEN ldi | ld =>
-						selGrb_tb <= '0'; BAout_tb <= '0'; Yin_tb <= '0';
+					WHEN ld =>
+						selGrb_tb <= '0'; BAout_tb <= '0'; Yin_tb <= '0';selRin_tb <= '0';
 						Cout_tb <= '1'; ADD_cs_tb <= '1'; Zin_tb <= '1';
+					WHEN ldi =>
+						selGrb_tb <= '0'; BAout_tb <= '0'; Yin_tb <= '0';selRin_tb <= '0';
+						Cout_tb <= '1'; ADD_cs_tb <= '1'; Zin_tb <= '1';						
 					WHEN st => 
 						selGrb_tb <= '0'; BAout_tb <= '0'; Yin_tb <= '0';
 						Cout_tb <= '1'; ADD_cs_tb <= '1'; Zin_tb <= '1';
@@ -420,9 +425,12 @@ alu <= not_cs_tb & IncPC_tb & negate_cs_tb & OR_cs_tb & and_cs_tb & rotate_left_
 				END CASE;
 	WHEN T5 =>
 				CASE Present_instruction IS
-						WHEN ldi | ld =>
+						WHEN ldi =>
 							Cout_tb <= '0'; ADD_cs_tb <= '0'; Zin_tb <= '0';
-							Zlowout_tb <= '1'; MARin_tb <= '1';
+							Zlowout_tb <= '1'; selGra_tb <= '1'; BAout_tb <= '1'; Rin_from_control_tb <= '1';
+						when ld =>
+							Cout_tb <= '0'; ADD_cs_tb <= '0'; Zin_tb <= '0';
+							Zlowout_tb <= '1'; MARin_tb <= '1';							
 						WHEN st => 
 							Cout_tb <= '0'; ADD_cs_tb <= '0'; Zin_tb <= '0';
 							Zlowout_tb <= '1'; MARin_tb <= '1';
@@ -443,9 +451,11 @@ alu <= not_cs_tb & IncPC_tb & negate_cs_tb & OR_cs_tb & and_cs_tb & rotate_left_
 					END CASE;
 	WHEN T6 =>
 				CASE Present_instruction IS
-						WHEN ldi | ld =>
+						WHEN ld =>
 							Zlowout_tb <= '0'; MARin_tb <= '0';
 							read_notWrite_tb <= '1'; MDRin_tb <= '1';
+						when ldi =>
+							Zlowout_tb <= '1'; selGra_tb <= '1'; BAout_tb <= '1'; Rin_from_control_tb <= '1';
 						WHEN st => 
 							Zlowout_tb <= '0'; MARin_tb<= '0';
 							MDRin_tb <= '1'; selGra_tb <= '1'; BAout_tb <= '1'; read_notWrite_tb <= '0';

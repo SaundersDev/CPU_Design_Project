@@ -208,7 +208,7 @@ begin
 --registerOut <= x"00" & Cout & InPortout & MDRout & PCout & Zlowout & Zhighout & Loout & HIout & regOut;	
 
 --PC: Program Counter
-U0: reg_32	port map(
+PC: reg_32	port map(
 		clk => Clock,
 		clr	=> clr,
 		Rin => PCin,
@@ -216,7 +216,7 @@ U0: reg_32	port map(
 		BusMuxIn => busPCin
 	);
 --IR: Instruction Register
-U1: reg_32	port map(
+IR: reg_32	port map(
 		clk => Clock,
 		clr	=> clr,
 		Rin => IRin,
@@ -224,7 +224,7 @@ U1: reg_32	port map(
 		BusMuxIn => busIRin
 	);
 --mar	
-U2: IO_Units port map( 
+IO: IO_Units port map( 
 		clk => Clock,
 		clr => clr,
 		In_cs => IOin,
@@ -236,7 +236,7 @@ U2: IO_Units port map(
 	);
 
 --hi
-U6: reg_32	port map(
+HI: reg_32	port map(
 		clk => Clock,
 		clr	=> clr,
 		Rin => HIin,
@@ -244,7 +244,7 @@ U6: reg_32	port map(
 		BusMuxIn => busHIin
 );
 --lo
-U7: reg_32	port map(
+LO: reg_32	port map(
 		clk => Clock,
 		clr	=> clr,
 		Rin => LOin,
@@ -277,7 +277,7 @@ datapath_register_file: registerFile port map(
 	);
 
 --y register
-U9: reg_32	port map(
+Y: reg_32	port map(
 		clk => Clock,
 		clr	=> clr,
 		Rin => Yin,
@@ -285,7 +285,7 @@ U9: reg_32	port map(
 		BusMuxIn => YtoA
 );
 --z register	
-U10: zRegister port map(
+Z: zRegister port map(
 		C => CtoZ,
 		clk => Clock,
 		Zin => Zin,
@@ -294,7 +294,7 @@ U10: zRegister port map(
 	);
 
 --	encoder for bus
-U11: encoder32bits port map(
+Encoder: encoder32bits port map(
 		input(31 downto 24)	=> x"00",
 		input(23)	=> Cout,
 		input(22)	=> InPortout,
@@ -308,7 +308,7 @@ U11: encoder32bits port map(
 		output 	=> encoderControlBus
 	);
 --	multiplexer for bus
-U12: multiplexer32bits port map(
+Multiplexer: multiplexer32bits port map(
 		BusMuxIn_R0		=> busR0, 
 		BusMuxIn_R1 	=> busR1, 
 		BusMuxIn_R2 	=> busR2, 
@@ -330,24 +330,22 @@ U12: multiplexer32bits port map(
 		BusMuxIn_Zhigh => busZhighin,
 		BusMuxIn_Zlow 	=> busZlowin,
 		BusMuxIn_PC 	=> busPCin,
-		BusMuxIn_MDR 	=> busMDRin,
+		BusMuxIn_MDR 	=> BusMDRIn,
 		BusMuxIn_InPort=> busInPortin,
 		C_sign_extended=> busSignExtendedIn,		
 		BusMuxOut 		=> BusMuxOut,
 		encoderSignal 	=> encoderControlBus
 	);
 --alu	
-U13: ALU port map(
+Arithmetic: ALU port map(
 		control => logicALUSelect,
 		A => YtoA,
 		B => BusMuxOut,
 		C => CtoZ
 	);
 
-	
-
 --Select and Encode Logic
-U16: selectAndEncodeLogic port map(
+SelectEncode: selectAndEncodeLogic port map(
 		IRin=> busIRin,
 		Gra => selGra, 
 		Grb => selGrb,
@@ -362,7 +360,7 @@ U16: selectAndEncodeLogic port map(
 );
 	
 --Outport
-U17: memorySubsystem port map(
+Memory: memorySubsystem port map(
 		BusMuxOut => BusMuxOut,
 		ram_complete_to_control => ram_complete_to_control,
 		BusMuxInMDR	=> BusMDRIn,

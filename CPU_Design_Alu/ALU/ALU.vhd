@@ -42,6 +42,13 @@ signal nothing 		: std_logic_vector(31 downto 0) := "000000000000000000000000000
 signal everything		: std_logic_vector(31 downto 0):= "11111111111111111111111111111111";
 signal chooseSignage : std_logic_vector(31 downto 0);
 
+component increment IS
+	PORT
+	(
+		datab		: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+		result		: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+	);
+END component;
 
 component booth_multiplier is
 	port(
@@ -146,7 +153,7 @@ end component;
 
 signal addResult, subResult 				: std_logic_vector(31 downto 0);
 signal divResult1, divResult2 			: std_logic_vector(31 downto 0);
-signal shlResult								: std_logic_vector(31 downto 0);
+signal shlResult, pcResult					: std_logic_vector(31 downto 0);
 signal shrResult, shraResult				: std_logic_vector(31 downto 0);
 signal rolResult, rorResult				: std_logic_vector(31 downto 0);
 signal andResult, orResult					: std_logic_vector(31 downto 0);
@@ -237,8 +244,13 @@ U12: booth_multiplier port map(
 		B => B,
 		C => mulResult
 );
+U13: increment PORT map
+	(
+		datab	=> B,
+		result => pcResult
+	);
 	
-process(control, addResult, subResult, mulResult, divResult1, divResult2, shlResult, shrResult, shraResult, rolResult, rorResult, andResult, orResult, negResult)
+process(control, addResult, subResult, mulResult, divResult1, divResult2, shlResult, shrResult, shraResult, rolResult, rorResult, andResult, orResult, negResult, pcResult)
 begin
 	if addResult(31) = '1' and control = "0000000000001" then
 		chooseSignage <= everything;
@@ -267,6 +279,7 @@ begin
 		when "00001000000000" => C <= nothing & andResult;		--AND 2's complement
 		when "00010000000000" => C <= nothing & orResult;		--OR 2's complement
 		when "00100000000000" => C <= nothing & negResult;		--NEG 2's complement
+		when "01000000000000" => C <= nothing & pcResult;
 		when others 			=> C <= nothing & notResult;		--NOT 1's complement
 	end case;
 end process;
