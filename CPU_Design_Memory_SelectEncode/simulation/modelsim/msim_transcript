@@ -370,10 +370,10 @@
 # 
 #           File in use by: 15js11  Hostname: BAIN142  ProcessID: 1056
 # 
-#           Attempting to use alternate WLF file "./wlftx2rxtt".
+#           Attempting to use alternate WLF file "./wlfttr16xd".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftx2rxtt
+#           Using alternate file: ./wlfttr16xd
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
@@ -1398,8 +1398,35 @@
 #    Time: 60 ns  Iteration: 2  Instance: /datapath_tb/DUT0/Memory/U3/altsyncram_component
 add wave -position insertpoint sim:/datapath_tb/DUT0/PC/*
 add wave -position insertpoint sim:/datapath_tb/DUT0/IR/*
-add wave -position insertpoint sim:/datapath_tb/DUT0/datapath_register_file/*
+add wave -position insertpoint  \
+sim:/datapath_tb/DUT0/IO/In_cs \
+sim:/datapath_tb/DUT0/IO/Out_cs \
+sim:/datapath_tb/DUT0/IO/toBus \
+sim:/datapath_tb/DUT0/IO/toIO \
+sim:/datapath_tb/DUT0/IO/toInPort \
+sim:/datapath_tb/DUT0/IO/toOutPort
+add wave -position insertpoint  \
+sim:/datapath_tb/DUT0/HI/BusMuxIn \
+sim:/datapath_tb/DUT0/HI/BusMuxOut \
+sim:/datapath_tb/DUT0/HI/Rin
+add wave -position insertpoint  \
+sim:/datapath_tb/DUT0/LO/BusMuxIn \
+sim:/datapath_tb/DUT0/LO/BusMuxOut \
+sim:/datapath_tb/DUT0/LO/Rin
+add wave -position insertpoint  \
+sim:/datapath_tb/DUT0/Y/BusMuxIn \
+sim:/datapath_tb/DUT0/Y/BusMuxOut \
+sim:/datapath_tb/DUT0/Y/Rin
+add wave -position insertpoint  \
+sim:/datapath_tb/DUT0/Z/Zhigh \
+sim:/datapath_tb/DUT0/Z/Zin \
+sim:/datapath_tb/DUT0/Z/Zlow
 add wave -position insertpoint sim:/datapath_tb/DUT0/Multiplexer/*
+add wave -position insertpoint  \
+sim:/datapath_tb/DUT0/Memory/BusMuxInMDR \
+sim:/datapath_tb/DUT0/Memory/BusMuxInRAM \
+sim:/datapath_tb/DUT0/Memory/BusMuxOut \
+sim:/datapath_tb/DUT0/Memory/mdMuxToMDR
 restart -f
 run -all
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).

@@ -11,132 +11,93 @@ ENTITY datapath_tb IS
 END;
 
 ARCHITECTURE datapath_tb_arc OF datapath_tb IS
---	SIGNAL registerOut_tb : STD_LOGIC_VECTOR(31 downto 0);
-	signal regOut_tb : std_logic_vector(15 downto 0);
-	SIGNAL HIin_tb  :  STD_LOGIC;
-	--SIGNAL IR_to_control_tb : STD_LOGIC_VECTOR (31 downto 0);
-	SIGNAL rotate_left_cs_tb   :  STD_LOGIC;
-	SIGNAL Yin_tb : STD_LOGIC;
-	SIGNAL LOin_tb : STD_LOGIC;
-	SIGNAL IncPC_tb : STD_LOGIC;
---	SIGNAL memoryData_to_datapath_tb   :  std_logic_vector (31 downto 0); --didn't find
-	SIGNAL BAout_tb   :  STD_LOGIC;
-	SIGNAL PCout_tb : STD_LOGIC;
-	SIGNAL MDRout_tb : STD_LOGIC;-- registerOut_tb(21)
---	SIGNAL encoderControlBus_tb : STD_LOGIC_VECTOR(4 downto 0); -- shiftValue_to_control
---	SIGNAL sub_cs_tb   :  STD_LOGIC;
-	SIGNAL IOout_tb   :  STD_LOGIC;
-	SIGNAL div_cs_tb   :  STD_LOGIC;
-	SIGNAL Clock_tb	: STD_LOGIC;
-	SIGNAL InPortout_tb : STD_LOGIC;-- registerOut_tb(22)
-	SIGNAL MARin_tb : STD_LOGIC;
-	SIGNAL mult_cs_tb : STD_LOGIC;
-	SIGNAL Zin_tb : STD_LOGIC;
-	SIGNAL HIout_tb : STD_LOGIC;-- registerOut_tb(16)
-	SIGNAL rotate_right_cs_tb   :  STD_LOGIC;
-	SIGNAL selGra_tb : STD_LOGIC;
-	SIGNAL selGrb_tb : STD_LOGIC;
-	SIGNAL selGrc_tb : STD_LOGIC;
-	SIGNAL selRin_tb : STD_LOGIC;
-	SIGNAL MDRin_tb : STD_LOGIC;
-	SIGNAL PCin_tb : STD_LOGIC;
-	SIGNAL Zhighout_tb : STD_LOGIC; --registerOut_tb(18)
-	SIGNAL CON_to_control_tb   :  STD_LOGIC;
-	SIGNAL Zlowout_tb : STD_LOGIC;
-	SIGNAL Rout_from_control_tb : STD_LOGIC;
-	--added in the following		
---	signal PCout_tb : std_logic;
-	signal sub_cs_tb	: std_logic;
-	signal Rin_from_control_tb : std_logic;
-	signal selRout_tb : std_logic;
-	--
-	signal readChannel_tb : std_logic;
-	SIGNAL or_cs_tb   :  STD_LOGIC;
-	SIGNAL add_cs_tb   :  STD_LOGIC;
---	SIGNAL memoryData_to_computerSystem_tb   :  std_logic_vector (31 downto 0);
-	SIGNAL IRin_tb : STD_LOGIC;
-	SIGNAL clr_tb   :  STD_LOGIC;
-	SIGNAL LOout_tb : STD_LOGIC; -- registerOut_tb(17)
-	SIGNAL IO_to_inPort_tb   :  std_logic_vector (31 downto 0);
-	SIGNAL shift_left_cs_tb   :  STD_LOGIC;
-	SIGNAL outPort_to_IO_tb   :  std_logic_vector (31 downto 0);
-	SIGNAL CON_in_tb : STD_LOGIC;
-	SIGNAL and_cs_tb : STD_LOGIC;
-	SIGNAL negate_cs_tb : STD_LOGIC;
-	SIGNAL shift_right_arithmetic_cs_tb : STD_LOGIC;
-	SIGNAL busLine_tb : STD_LOGIC_VECTOR(31 downto 0);
-	SIGNAL shift_right_logical_cs_tb : STD_LOGIC;
-	SIGNAL Cout_tb : STD_LOGIC;
-	SIGNAL not_cs_tb   :  STD_LOGIC;
-	SIGNAL IOin_tb   :  STD_LOGIC;
-	SIGNAL read_notWrite_tb   :  STD_LOGIC;
-	SIGNAL ram_complete_to_control_tb : STD_LOGIC;
-COMPONENT datapath is
-	PORT(
-  	  Cout, InPortout, MDRout, PCout, Zlowout, Zhighout, Loout, HIout: in std_logic;
---	  registerOut : inout std_logic_vector(31 downto 0); --HIout, LOout, Zhighout, Zlowout, MDRout, HIout, LOout, Cout
-	  regOut		: Inout std_logic_vector(15 downto 0);
-	  HIin  : in STD_LOGIC; 
-    --  IR_to_control  : out std_logic_vector (31 downto 0); 
-      --rotate_left_cs  logicALUSelect(8) 
-      Yin  : in STD_LOGIC ; 
-      LOin  : in STD_LOGIC ; 
-      --IncPC   logicALUSelect(12) 
-   --   memoryData_to_datapath  : inout std_logic_vector (31 downto 0); 
-      selBAout  : in STD_LOGIC ;
-      --PCout  registerOut_tb(20) 
-      --MDRout registerOut_tb(21)
- --     encoderControlBus  : out std_logic_vector (4 downto 0);
-      logicALUSelect  : in STD_LOGIC_VECTOR(13 downto 0); 
-      IOout  : in STD_LOGIC ; 
-      --div_cs logicALUSelect(3)
-      clock  : in STD_LOGIC ; 
-     -- InPortout registerOut(22)
-      MARin  : in STD_LOGIC ; 
-      --mult_cs logicALUSelect(2)
-      Zin  : in STD_LOGIC ; 
-     -- HIout registerOut_tb(16)
-      --rotate_right_cs logicALUSelect(7)
-      selGra  : in STD_LOGIC ; 
-      selGrb  : in STD_LOGIC ; 
-      selGrc  : in STD_LOGIC ; 
-      selRin  : in STD_LOGIC ;
-		selRout	: in std_logic;
-      MDRin  : in STD_LOGIC ; 
-      PCin  : in STD_LOGIC ; 
-      --Zhighout  registerOut_tb(18)
-      CON_to_control  : out STD_LOGIC ; 
-      --Zlowout  registerOut_tb(19)
-      --selRin  : in STD_LOGIC ; --Rout_from_control
-      --OR_cs logicALUSelect(10)
-      --ADD_cs logicALUSelect(0)
-      --memoryData_to_computerSystem  : inout std_logic_vector (31 downto 0) ; 
-      IRin  : in STD_LOGIC ; 
-      clr  : in STD_LOGIC ; 
-     -- LOout  registerOut_tb(17)
-      IO_to_inPort  : in std_logic_vector (31 downto 0) ; 
-      --shift_left_cs logicALUSelect(4)
-      outPort_to_IO  : out std_logic_vector (31 downto 0) ; 
-      CON_in  : in STD_LOGIC ; 
-      --and_cs  logicALUSelect(9) 
-      --negate_cs logicALUSelect(11) 
-      --shift_right_arithmetic_cs logicALUSelect(6)
-      BusMuxOut  : inout std_logic_vector (31 downto 0) ; 
-      --shift_right_logical_cs logicALUSelect(5)  
-      -- Cout registerOut_tb(23)
-      --not_cs logicALUSelect(13)
-      IOin  : in STD_LOGIC ; 							
-		read_notWrite		:		IN std_logic;	
-      ram_complete_to_control : inout STD_LOGIC	
-	);
-END COMPONENT datapath;
-
 	TYPE State IS(default, T0, T1, T2, T3, T4, T5, T6, T7, T8);
 	TYPE opCode	IS (ld, ldi, st, addi, andi, ori, br, jr, jal, mul, mfHI, mfLO, inIO, outIO);
 	SIGNAL Present_state:	State := default;
 	SIGNAL Present_instruction: opCode := ld;
-	signal alu : std_logic_vector(13 downto 0);
-	signal reg : std_logic_vector(31 downto 0);
+	SIGNAL Clock_tb				: STD_LOGIC;
+	SIGNAL busLine_tb 			: STD_LOGIC_VECTOR(31 downto 0);
+	SIGNAL read_notWrite_tb   :  STD_LOGIC;
+	signal Rin_from_control_tb : STD_LOGIC;
+	SIGNAL Rout_from_control_tb: STD_LOGIC;
+	SIGNAL ram_done_cs_tb 		: STD_LOGIC;	
+	SIGNAL clr_tb  	 			:  STD_LOGIC;
+	SIGNAL IOout_tb   			: STD_LOGIC;
+	SIGNAL Cout_tb 				: STD_LOGIC;
+	SIGNAL InPortout_tb 			: STD_LOGIC;-- registerOut_tb(22)
+	SIGNAL MDRout_tb 				: STD_LOGIC;-- registerOut_tb(21)
+	SIGNAL PCout_tb 				: STD_LOGIC;
+	SIGNAL Zlowout_tb 			: STD_LOGIC;
+	SIGNAL Zhighout_tb 			: STD_LOGIC;
+	SIGNAL LOout_tb 				: STD_LOGIC; -- registerOut_tb(17)
+	SIGNAL HIout_tb 				: STD_LOGIC;
+	SIGNAL regOut_tb 				: std_logic_vector(15 downto 0);
+	SIGNAL IOin_tb   				:  STD_LOGIC;
+	SIGNAL IO_to_inPort_tb   	:  std_logic_vector (31 downto 0);
+	SIGNAL outPort_to_IO_tb    :  std_logic_vector (31 downto 0);
+	SIGNAL MDRin_tb 				: STD_LOGIC;
+	SIGNAL PCin_tb 				: STD_LOGIC;
+	SIGNAL IRin_tb 				: STD_LOGIC;
+	SIGNAL LOin_tb 				: STD_LOGIC;
+	SIGNAL HIin_tb  				: STD_LOGIC;
+	SIGNAL MARin_tb 				: STD_LOGIC;
+	SIGNAL Yin_tb 					: STD_LOGIC;
+	SIGNAL Zin_tb 					: STD_LOGIC;
+	signal alu : std_logic_vector(13 downto 0);		
+	SIGNAL add_cs_tb  			: STD_LOGIC;	
+	signal sub_cs_tb				: STD_LOGIC;
+	SIGNAL mult_cs_tb 			: STD_LOGIC;	
+	SIGNAL div_cs_tb  			: STD_LOGIC;
+	SIGNAL shift_left_cs_tb    :  STD_LOGIC;
+	SIGNAL shift_right_logical_cs_tb    : STD_LOGIC;
+	SIGNAL shift_right_arithmetic_cs_tb : STD_LOGIC;
+	SIGNAL rotate_left_cs_tb   : STD_LOGIC;
+	SIGNAL rotate_right_cs_tb  : STD_LOGIC;
+	SIGNAL and_cs_tb 				: STD_LOGIC;
+	SIGNAL or_cs_tb   			: STD_LOGIC;
+	SIGNAL negate_cs_tb 			: STD_LOGIC;	
+	SIGNAL IncPC_tb 				: STD_LOGIC;
+	SIGNAL not_cs_tb   			: STD_LOGIC;
+	SIGNAL BAout_tb   			: STD_LOGIC;
+	SIGNAL selGra_tb 				: STD_LOGIC;
+	SIGNAL selGrb_tb 				: STD_LOGIC;
+	SIGNAL selGrc_tb 				: STD_LOGIC;
+	SIGNAL selRin_tb 				: STD_LOGIC;
+	signal selRout_tb 			: STD_LOGIC;	
+	SIGNAL CON_in_tb : STD_LOGIC;
+	SIGNAL CON_to_control_tb   : STD_LOGIC;
+	signal readChannel_tb 		: STD_LOGIC;
+
+
+COMPONENT datapath is
+	PORT(
+ 		Clock, clr						: in std_logic;
+		IO_to_inPort : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		
+		--register enable signals
+		MARin, MDRin, IOin, IOout, Zin, Yin, PCin, IRin, HIin, LOin	: 	IN std_logic;
+		Cout, InPortout, MDRout, PCout, Zlowout, Zhighout, Loout, HIout: in std_logic;
+		regOut		: Inout std_logic_vector(15 downto 0);			
+		
+		--Select and Encode Logic signals
+		selGra, selGrb, selGrc, selRin, selRout, selBAout	:	IN	std_logic;
+		CON_in		:		in std_logic;
+		
+		--Memory Subsystem Signals
+		ram_done_cs : inout std_logic;					
+		read_notWrite		:		IN std_logic;					
+		
+		--Control Signals for ALU
+		logicALUSelect  : in std_logic_vector(13 downto 0); 
+		
+		--Output Signals
+		outPort_to_IO : out std_logic_vector(31 downto 0);
+		readWrite_to_memory, CON_to_control 	: 	OUT std_LOGIC;
+		shiftValue_to_control		:  OUT STD_LOGIC_VECTOR(4 downto 0);
+		BusMuxOut : INOUT std_LOGIC_VECTOR(31 downto 0);
+		memoryData_to_computerSystem	: 	OUT std_LOGIC_VECTOR(31 downto 0)
+	);
+END COMPONENT datapath;
 BEGIN
 
 --Important Signals that allow registerOut and logicALUSelect to map onto this file. Uses concatenation
@@ -145,61 +106,44 @@ alu <= not_cs_tb & IncPC_tb & negate_cs_tb & OR_cs_tb & and_cs_tb & rotate_left_
 --registerOut_tb <= x"00" & Cout_tb & InPortout_tb & MDRout_tb & PCout_tb & Zlowout_tb & Zhighout_tb & LOout_tb & HIout_tb & regOut_tb(15 downto 0);
 
 	DUT0 : datapath	PORT MAP (
-	  regOut => regOut_tb,
-	  HIin   => HIin_tb,
-  --    IR_to_control   => IR_to_control_tb, --not used
-    --  logicALUSelect(8)   => rotate_left_cs_tb,
-      Yin   => Yin_tb,
-      LOin   => LOin_tb,
-		CON_in => CON_in_tb,
-    --  logicALUSelect(12)   => IncPC_tb,
-  --    memoryData_to_datapath   => memoryData_to_datapath_tb,
-      selBAout   => BAout_tb,
-      PCout => PCout_tb,
-      MDRout => MDRout_tb,
- --     encoderControlBus   => encoderControlBus_tb, --shiftValue_to_control
-		logicALUSelect => alu,
---		registerOut => registerOut_tb,
-	--   logicALUSelect(1) => sub_cs_tb,
-      IOout   => IOout_tb,
-		outPort_to_IO =>outPort_to_IO_tb,
-    --  logicALUSelect(3)  => div_cs_tb,
-      clock   => clock_tb,
-		InPortout => InPortout_tb, 
-	  MARin   => MARin_tb,
-   --   logicALUSelect(2)   => mult_cs_tb,
+		clock   => clock_tb,
+		clr   => clr_tb,
+		BusMuxOut   => busLine_tb,
+  	   IO_to_inPort   => IO_to_inPort_tb,
+	   MARin   => MARin_tb,
+	   MDRin   => MDRin_tb,
+		regOut => regOut_tb,
+      IOin   => IOin_tb,
+      IOout   => IOout_tb,	  
       Zin   => Zin_tb,
+      Yin   => Yin_tb,
+      PCin   => PCin_tb,
+	   IRin   => IRin_tb,		
+		HIin   => HIin_tb,		
+      LOin   => LOin_tb,
+		Cout  => Cout_tb,		
+		InPortout => InPortout_tb,
+      MDRout => MDRout_tb,
+      PCout => PCout_tb,
+		Zlowout => Zlowout_tb,
+      Zhighout   => Zhighout_tb,
+		Loout  => LOout_tb ,
       HIout => HIout_tb, 
-     -- logicALUSelect(7)   => rotate_right_cs_tb,
+
       selGra   => selGra_tb,
       selGrb   => selGrb_tb,
       selGrc   => selGrc_tb,
-	  selRin   => Rin_from_control_tb,
-	  MDRin   => MDRin_tb,
-      PCin   => PCin_tb,
-      Zhighout   => Zhighout_tb,
-      CON_to_control   => CON_to_control_tb,
-		Zlowout => Zlowout_tb,
+	   selRin   => Rin_from_control_tb,
       selRout   => Rout_from_control_tb,
-  --    logicALUSelect(10)   => OR_cs_tb,
-   --   logicALUSelect(0)   => ADD_cs_tb,
---	  busMDRin   => memoryData_to_computerSystem_tb,
-	  IRin   => IRin_tb,
-      clr   => clr_tb,
-		Loout  => LOout_tb ,
-	  IO_to_inPort   => IO_to_inPort_tb,
-	--  logicALUSelect(4)  => shift_left_cs_tb,
---	  readChannel => readChannel_tb,		
-    --  logicALUSelect(9)   => and_cs_tb,
-    --  logicALUSelect(11)   => negate_cs_tb,
-    --  logicALUSelect(6)   => shift_right_arithmetic_cs_tb,
-      BusMuxOut   => busLine_tb,
-   --   logicALUSelect(5)   => shift_right_logical_cs_tb,
-		Cout  => Cout_tb,
-	--  logicALUSelect(13) => not_cs_tb,
-      IOin   => IOin_tb,
+      selBAout   => BAout_tb,	
+		CON_in => CON_in_tb,
+	   ram_done_cs => ram_done_cs_tb,
       read_notWrite   => read_notWrite_tb,
-	  ram_complete_to_control => ram_complete_to_control_tb
+		logicALUSelect => alu,
+		outPort_to_IO =>outPort_to_IO_tb,
+      CON_to_control   => CON_to_control_tb
+
+		
 		);
 	
 	Clock_process: PROCESS is
@@ -221,39 +165,39 @@ alu <= not_cs_tb & IncPC_tb & negate_cs_tb & OR_cs_tb & and_cs_tb & rotate_left_
 						Present_instruction <= ldi;
 					END IF;
 				WHEN T0 =>
-					IF (ram_complete_to_control_tb = '1') then
+					IF (ram_done_cs_tb = '1') then
 						Present_state <= T1;
 					end if;
 				WHEN T1 =>
-					IF (ram_complete_to_control_tb = '1') then
+					IF (ram_done_cs_tb = '1') then
 							Present_state <= T2;
 					end if;
 				WHEN T2 =>
-					IF (ram_complete_to_control_tb = '1') then
+					IF (ram_done_cs_tb = '1') then
 						Present_state <= T3;
 					end if;
 				WHEN T3 =>
-					IF (ram_complete_to_control_tb = '1') then
+					IF (ram_done_cs_tb = '1') then
 						Present_state <= T4;
 					end if;
 				WHEN T4 =>
-					IF (ram_complete_to_control_tb = '1') then
+					IF (ram_done_cs_tb = '1') then
 						Present_state <= T5;
 					end if;
 				WHEN T5 =>
-					IF (ram_complete_to_control_tb = '1') then
+					IF (ram_done_cs_tb = '1') then
 						Present_state <= T6;
 					end if;
 				WHEN T6 =>
-					IF (ram_complete_to_control_tb = '1') then
+					IF (ram_done_cs_tb = '1') then
 						Present_state <= T7;
 					end if;
 				WHEN T7 =>
-					IF (ram_complete_to_control_tb = '1') then
+					IF (ram_done_cs_tb = '1') then
 						Present_state <= T8;
 					end if;
 				WHEN T8 =>
-					IF (ram_complete_to_control_tb = '1') then
+					IF (ram_done_cs_tb = '1') then
 						Present_state <= T0;
 						CASE Present_instruction IS
 							WHEN	ldi =>

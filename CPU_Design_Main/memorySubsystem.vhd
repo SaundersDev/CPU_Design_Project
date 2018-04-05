@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 entity memorySubsystem is
 	port(
 		BusMuxOut	: in std_logic_vector(31 downto 0);
-		ram_complete_to_control	 : inout std_logic;
+		ram_done_cs	 : inout std_logic;
 		BusMuxInMDR	: inout std_logic_vector(31 downto 0);
 		MDRin, MARin, clock, clear: in std_logic;
 		read_notWrite : in std_logic
@@ -65,7 +65,7 @@ ramCompletionSignalGeneration : process (BusMuxInMDR(8 DOWNTO 0), writeSig, addr
 begin
 	complete <= '0', '1' after 45 ns;
 end process;
-ram_complete_to_control <= complete;
+ram_done_cs <= complete;
 --ADDED CODE
 
 
