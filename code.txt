@@ -1,0 +1,45 @@
+.org 0x0
+
+ldi R1, 200		;load 200 = 0xC8
+ld R2, R1, 1	; load 57 = 0x39
+addi R3, R2, 3	; 57 + 3 = 60 = 0x3C
+ori R4, R2, 6 	; 110 OR 11 1001 = 0011 1111 = 0x3F
+andi R5, R2, 15 ; 1111 AND 11 1001 = 1001 = 0x9
+brzr R0, BRANCH_1 ; R0 is still 0 therefore branch by 4
+
+.org 0xA
+BRANCH_1: brnz R5, BRANCH_2 ; R5 is 0x9 therefore branch by 4
+
+.org 0xF
+BRANCH_2: brpl R4, BRANCH_3 ; R4 is 0x3F therefore branch by 4
+
+.org 0x14
+BRANCH_3: brmi R4, 0x4 ; R4 is 0x3F therefore do NOT branch by 4
+jr R3	; jump to 0x3C
+
+.org 0x3C
+jal R4	; jump to 0x3F
+
+.org 0x3F
+mul R1, R2 ; 57 * 200 = 11 400 = 0x2C88
+mfhi R6	; high is 0
+mflo R7	; low is 2C88
+out R7	; send datapath_to_io should be 0x2C88
+in R8	; get data from io port (0xffff)
+st 502, R1	; store into 502
+st 303(R1), R0 ; store into 503
+st 304(R1), R2 ; store into 504
+st 305(R1), R3 ; store into 505
+st 306(R1), R4 ; store into 506
+st 307(R1), R5 ; store into 507
+st 308(R1), R6 ; store into 508
+st 309(R1), R7 ; store into 509
+st 310(R1), R8 ; store into 510
+
+
+.org 0xC8
+ThisPos: 0xc8 .word  ; 200 in decimal
+NextPos: 0x39 .word  ; 57 in decimal
+EmptyPos: 0x0 .word
+negative: 0xffff ffff .word ; -1 in decimal
+negative2: 0xffff fffe .word ; -2 in decimal

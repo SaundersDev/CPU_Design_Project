@@ -6,8 +6,8 @@ USE ieee.std_logic_1164.all;
 entity registerFile is 
 	port
 	(
-		clk, clr 	: in std_logic;
-		Rin			: in std_logic_vector(15 downto 0);
+		clk, clr , BAout	: in std_logic;
+		Rin	: in std_logic_vector(15 downto 0);
 		BusMuxOut 	: in std_logic_vector(31 downto 0);
 		BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3,
 		BusMuxInR4, BusMuxInR5, BusMuxInR6, BusMuxInR7,
@@ -29,11 +29,20 @@ component reg_32
 	);
 end component;
 
+component reg_Zero IS
+	PORT(
+		clk, clr, Rin, BAout : IN STD_LOGIC;
+		BusMuxOut : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		BusMuxIn : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+		);
+END component;
+
 begin
-U0: reg_32 PORT MAP(				
+U0: reg_Zero PORT MAP(				
 					clk			=> clk,
 					clr			=> clr,
 					Rin 			=> Rin(0),
+					BAout			=> BAout,
 					BusMuxOut 	=> BusMuxOut,
 					BusMuxIn 	=> BusMuxInR0
 				);

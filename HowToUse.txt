@@ -1,0 +1,14 @@
+Place a file named "code.asm" in the root directory of this folder and run the "assembler - shortcut"
+
+Your assembled code will be located in the file "assembled.asm"
+
+A sample input file is provided
+
+Notes:
+ - Type your input code from scratch. Copy and pasting from the phase 3 document will not work
+ - Characters such as '$' and ';' (For comments) are illegal and will cause it to fail
+ - If the program fails, it will produce no output
+ - All numbers are treated as decimal numbers. Convert your hex to decimal if you wish to use hex
+
+Labels and .org directives are to not be included in the assembly code. This is work you have to 
+manually follow when loading your memory with the assembly.
