@@ -89,7 +89,7 @@ selRin => selectAndEncodeLogic:SelectEncode.Rin
 selRout => selectAndEncodeLogic:SelectEncode.Rout
 selBAout => registerFile:datapath_register_file.BAout
 selBAout => selectAndEncodeLogic:SelectEncode.BAout
-CON_in => conFF:conFlipF.clk
+CON_in => conFF:conFFLogic.clk
 ram_done_cs <> memorySubsystem:Memory.ram_done_cs
 read_notWrite => memorySubsystem:Memory.read_notWrite
 logicALUSelect[0] => ALU:Arithmetic.control[0]
@@ -139,7 +139,7 @@ outPort_to_IO[29] <= IO_Units:IO.toIO[29]
 outPort_to_IO[30] <= IO_Units:IO.toIO[30]
 outPort_to_IO[31] <= IO_Units:IO.toIO[31]
 readWrite_to_memory <= readWrite_to_memory.DB_MAX_OUTPUT_PORT_TYPE
-CON_to_control <= conFF:conFlipF.CONout
+CON_to_control <= conFF:conFFLogic.CONout
 shiftValue_to_control[0] <= shiftValue_to_control[0].DB_MAX_OUTPUT_PORT_TYPE
 shiftValue_to_control[1] <= shiftValue_to_control[1].DB_MAX_OUTPUT_PORT_TYPE
 shiftValue_to_control[2] <= shiftValue_to_control[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -16279,7 +16279,7 @@ wren_a => ram_block1a30.PORTAWE
 wren_a => ram_block1a31.PORTAWE
 
 
-|datapath|conFF:conFlipF
+|datapath|conFF:conFFLogic
 clk => flipFlop:U2.clk
 IRout[0] => ~NO_FANOUT~
 IRout[1] => ~NO_FANOUT~
@@ -16348,7 +16348,7 @@ BusMuxOut[31] => conFFSubComponent1:U1.BusMuxOut[31]
 CONout <= flipFlop:U2.Q
 
 
-|datapath|conFF:conFlipF|decoder4bits:U0
+|datapath|conFF:conFFLogic|decoder4bits:U0
 input[0] => Equal0.IN1
 input[0] => Equal1.IN0
 input[0] => Equal2.IN1
@@ -16363,7 +16363,7 @@ output[2] <= output[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
 output[3] <= output[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|conFF:conFlipF|conFFSubComponent1:U1
+|datapath|conFF:conFFLogic|conFFSubComponent1:U1
 decoderOutput[0] => and0.IN1
 decoderOutput[1] => and1.IN1
 decoderOutput[2] => and2.IN0
@@ -16406,7 +16406,7 @@ conFFOutput <= finalOrOutput.DB_MAX_OUTPUT_PORT_TYPE
 busOrOut <> busOrOut
 
 
-|datapath|conFF:conFlipF|flipFlop:U2
+|datapath|conFF:conFFLogic|flipFlop:U2
 clk => Q~reg0.CLK
 D => Q~reg0.DATAIN
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE

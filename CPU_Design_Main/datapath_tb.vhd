@@ -284,10 +284,10 @@ alu <= not_cs_tb & IncPC_tb & negate_cs_tb & OR_cs_tb & and_cs_tb & rotate_left_
 				IncPC_tb <= '0';
 				
 				--turn on signals
-				Zlowout_tb 	<= '1'; --zlowOUT
-				PCin_tb    				<= '1';
-				read_notWrite_tb   	<= '1';
-				MDRin_tb 				<= '1';
+						Zlowout_tb 	<= '1'; --zlowOUT
+						PCin_tb    				<= '1';
+						read_notWrite_tb   	<= '1';
+						MDRin_tb 				<= '1';
 	WHEN T2 =>
 				--turn off signals
 				Zlowout_tb 	<= '0'; --zlowOUT
@@ -326,7 +326,7 @@ alu <= not_cs_tb & IncPC_tb & negate_cs_tb & OR_cs_tb & and_cs_tb & rotate_left_
 						WHEN outIO =>
 							IOout_tb <= '1'; selGra_tb <= '1'; Rout_from_control_tb <= '1';
 						WHEN inIO =>
-							InPortout_tb <= '1'; selGra_tb <= '1'; Rin_from_control_tb <= '1'; 
+							IOin_tb <= '1'; InPortout_tb <= '1'; selGra_tb <= '1'; Rin_from_control_tb <= '1'; 
 						WHEN OTHERS =>
 					END CASE;
 			
@@ -361,10 +361,13 @@ alu <= not_cs_tb & IncPC_tb & negate_cs_tb & OR_cs_tb & and_cs_tb & rotate_left_
 					WHEN jal =>
 						PCout_tb <= '0'; Rin_from_control_tb <= '0'; selGrb_tb <= '0';
 						selGra_tb <= '1'; Rout_from_control_tb <= '1'; PCin_tb <= '1';
-					WHEN mfHI | mfLO =>
+					WHEN mfHI | mfLO => 
 						HIout_tb <= '0'; LOout_tb <= '0'; Rin_from_control_tb <= '0'; selGra_tb <= '0';
-					WHEN outIO | inIO =>
-						InPortout_tb <= '0'; selGra_tb <= '0'; Rin_from_control_tb <= '0'; IOout_tb <= '0'; Rout_from_control_tb <= '0';
+					WHEN outIO =>
+						selGra_tb <= '0'; Rout_from_control_tb <= '0'; IOout_tb <= '0';
+					when inIO =>
+						InPortout_tb <= '0'; Rin_from_control_tb <= '0'; selGra_tb <= '0';
+						
 					WHEN OTHERS =>
 				END CASE;
 	WHEN T5 =>
@@ -390,7 +393,7 @@ alu <= not_cs_tb & IncPC_tb & negate_cs_tb & OR_cs_tb & and_cs_tb & rotate_left_
 						WHEN jal => --just reset signals
 							selGra_tb <= '0'; Rout_from_control_tb <= '0'; PCin_tb <= '0';
 						WHEN inIO =>
-							selGra_tb <= '0'; Rin_from_control_tb <= '0';
+						selGra_tb <= '0';
 						WHEN OTHERS =>
 					END CASE;
 	WHEN T6 =>
