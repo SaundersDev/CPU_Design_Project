@@ -474,7 +474,10 @@ alu <= not_cs_tb & IncPC_tb & negate_cs_tb & OR_cs_tb & and_cs_tb & rotate_left_
 				END CASE;
 	WHEN T7 =>
 				CASE Present_instruction IS
-						WHEN ldi | ld => 
+						when ldi => 
+						MDRin_tb <= '0';
+						MDRout_tb <= '1'; selGra_tb <= '1'; Rin_from_control_tb <= '1';
+						WHEN ld => 
 							MDRin_tb <= '0';
 							MDRout_tb <= '1'; selGra_tb <= '1'; Rin_from_control_tb <= '1';
 						WHEN st => --read_notWrite is reset in the final stage
