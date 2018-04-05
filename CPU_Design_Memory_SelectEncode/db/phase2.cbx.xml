@@ -1,7 +1,13 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="phase2">
+<<<<<<< HEAD
 		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|ALU:U11|divider:U11|lpm_divide:LPM_DIVIDE_component" CBX_FILE_NAME="lpm_divide_hjp.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|memorySubsystem:U2|ram:U3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_ral1.tdf"/>
+=======
+		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|ALU:Arithmetic|divider:U11|lpm_divide:LPM_DIVIDE_component" CBX_FILE_NAME="lpm_divide_hjp.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|ALU:Arithmetic|increment:U13|lpm_add_sub:LPM_ADD_SUB_component" CBX_FILE_NAME="add_sub_msh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|memorySubsystem:Memory|ram:U3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_1aj1.tdf"/>
+>>>>>>> phase2DrewProgre
 	</PROJECT>
 </LOG_ROOT>

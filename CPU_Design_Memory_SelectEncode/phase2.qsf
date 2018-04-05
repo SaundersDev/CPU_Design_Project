@@ -97,10 +97,15 @@ set_global_assignment -name EDA_TEST_BENCH_NAME memorySubsystem_tb -section_id e
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id memorySubsystem_tb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id memorySubsystem_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME memorySubsystem_tb -section_id memorySubsystem_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME ram_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ram_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ram_tb -section_id ram_tb
 set_global_assignment -name EDA_TEST_BENCH_NAME datapath_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id datapath_tb
-set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id datapath_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME datapath_tb -section_id datapath_tb
+set_global_assignment -name VHDL_FILE pcIncrement.vhd
+set_global_assignment -name VHDL_FILE ../CPU_Design_Main/multiplexer32bits.vhd
+set_global_assignment -name VHDL_FILE ../CPU_Design_Alu/ALU/zRegister.vhd
 set_global_assignment -name VHDL_FILE ../CPU_Design_Alu/ALU/thirtyTwoBitRippleCarrySubtractor.vhd
 set_global_assignment -name VHDL_FILE ../CPU_Design_Alu/ALU/thirtyTwoBitRippleCarryAdder.vhd
 set_global_assignment -name VHDL_FILE ../CPU_Design_Alu/ALU/shiftRotateComponent.vhd
@@ -109,16 +114,19 @@ set_global_assignment -name VHDL_FILE ../CPU_Design_Alu/ALU/shiftRight.vhd
 set_global_assignment -name VHDL_FILE ../CPU_Design_Alu/ALU/shiftLeft.vhd
 set_global_assignment -name VHDL_FILE ../CPU_Design_Alu/ALU/rotateRight.vhd
 set_global_assignment -name VHDL_FILE ../CPU_Design_Alu/ALU/rotateLeft.vhd
+set_global_assignment -name VHDL_FILE ../CPU_Design_Alu/ALU/orGate_tb.vhd
 set_global_assignment -name VHDL_FILE ../CPU_Design_Alu/ALU/orGate.vhd
+set_global_assignment -name VHDL_FILE ../CPU_Design_Alu/ALU/or_tb.vhd
 set_global_assignment -name VHDL_FILE ../CPU_Design_Alu/ALU/notGate.vhd
 set_global_assignment -name VHDL_FILE ../CPU_Design_Alu/ALU/negGate.vhd
 set_global_assignment -name VHDL_FILE ../CPU_Design_Alu/ALU/fullAdder.vhd
 set_global_assignment -name VHDL_FILE ../CPU_Design_Alu/ALU/encoder32bits.vhd
 set_global_assignment -name VHDL_FILE ../CPU_Design_Alu/ALU/divider.vhd
 set_global_assignment -name VHDL_FILE ../CPU_Design_Alu/ALU/booth_multiplier.vhd
+set_global_assignment -name VHDL_FILE ../CPU_Design_Alu/ALU/andGate_tb.vhd
 set_global_assignment -name VHDL_FILE ../CPU_Design_Alu/ALU/andGate.vhd
-set_global_assignment -name VHDL_FILE ../CPU_Design_Main/multiplexer32bits.vhd
-set_global_assignment -name VHDL_FILE ../CPU_Design_Alu/ALU/zRegister.vhd
+set_global_assignment -name VHDL_FILE ../CPU_Design_Alu/ALU/and_tb.vhd
+set_global_assignment -name VHDL_FILE ../CPU_Design_Alu/ALU/alu_tb.vhd
 set_global_assignment -name VHDL_FILE ../CPU_Design_Alu/ALU/ALU.vhd
 set_global_assignment -name VHDL_FILE reg_32.vhd
 set_global_assignment -name VHDL_FILE multiplexerMDR.vhd
@@ -153,11 +161,14 @@ set_global_assignment -name VHDL_FILE ../CPU_Design_Main/memorySubsystem.vhd
 set_global_assignment -name VHDL_FILE ../CPU_Design_Main/regMAR.vhd
 set_global_assignment -name VHDL_FILE ../CPU_Design_Main/memorySubsystem_tb.vhd
 set_global_assignment -name VHDL_FILE ../CPU_Design_Main/datapath_tb.vhd
-set_global_assignment -name VHDL_FILE ram.vhd
-set_global_assignment -name MIF_FILE ../ramInitialization.mif
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VHDL_FILE IO_units.vhd
+set_global_assignment -name MIF_FILE ramInitialization.mif
+set_global_assignment -name VHDL_FILE pcIncrement_tb.vhd
+set_global_assignment -name EDA_TEST_BENCH_NAME pcIncrement_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id pcIncrement_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1900 ns" -section_id pcIncrement_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME pcIncrement_tb -section_id pcIncrement_tb
+set_global_assignment -name QIP_FILE increment.qip
 set_global_assignment -name EDA_TEST_BENCH_FILE selectEncode_tb.vhd -section_id selectEncode_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE selectAndEncodeSubComponent1_tb.vhd -section_id selectAndEncodeSubComponent1_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE reg_IR_tb.vhd -section_id reg_IR_tb
@@ -169,8 +180,16 @@ set_global_assignment -name EDA_TEST_BENCH_FILE conFF_tb.vhd -section_id conFF_t
 set_global_assignment -name EDA_TEST_BENCH_FILE conFFSubComponent1_tb.vhd -section_id conFFSubComponent1_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE flipFlop_tb.vhd -section_id flipFlop_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE ../CPU_Design_Main/memorySubsystem_tb.vhd -section_id memorySubsystem_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE ../CPU_Design_Main/ram_tb.vhd -section_id ram_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE ../CPU_Design_Main/datapath_tb.vhd -section_id datapath_tb
+<<<<<<< HEAD
 set_global_assignment -name VHDL_FILE pcIncrement.vhd
 set_global_assignment -name VHDL_FILE regPC.vhd
 set_global_assignment -name VHDL_FILE IO_units.vhd
+=======
+set_global_assignment -name EDA_TEST_BENCH_FILE pcIncrement_tb.vhd -section_id pcIncrement_tb
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+>>>>>>> phase2DrewProgre
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

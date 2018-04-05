@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 Analysis & Elaboration Status : Successful - Sat Mar 31 17:58:53 2018
+=======
+Analysis & Elaboration Status : Successful - Thu Apr 05 17:03:44 2018
+>>>>>>> phase2DrewProgre
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : phase2
 Top-level Entity Name : datapath
