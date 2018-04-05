@@ -61,7 +61,7 @@ begin
 --ADDED CODE
 writeSig <= not read_notWrite;
 
-ramCompletionSignalGeneration : process (BusMuxInMDR(8 DOWNTO 0), writeSig)
+ramCompletionSignalGeneration : process (BusMuxInMDR(8 DOWNTO 0), writeSig, address)
 begin
 	complete <= '0', '1' after 45 ns;
 end process;

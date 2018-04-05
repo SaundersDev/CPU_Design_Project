@@ -330,7 +330,7 @@ alu <= not_cs_tb & IncPC_tb & negate_cs_tb & OR_cs_tb & and_cs_tb & rotate_left_
 				--turn on signals
 				PCout_tb <= '1';-- PCout
 				MARin_tb <= '1';
-				Zin_tb 	 <= '1';
+				Zin_tb 	<= '1';
 				IncPC_tb <= '1';
 	WHEN T1 =>
 				--turn off signals
@@ -362,7 +362,7 @@ alu <= not_cs_tb & IncPC_tb & negate_cs_tb & OR_cs_tb & and_cs_tb & rotate_left_
 				--turn on signals
 				CASE Present_instruction IS
 						WHEN ld =>
-							selGrb_tb <= '1'; BAout_tb <= '1'; Yin_tb <= '1'; --selRin_tb <= '1';
+							selGrb_tb <= '1'; BAout_tb <= '1'; Yin_tb <= '1'; selRin_tb <= '1';
 						WHEN ldi =>
 							selGrb_tb <= '1'; BAout_tb <= '1'; Yin_tb <= '1'; selRin_tb <= '1';
 						WHEN st =>
@@ -389,7 +389,7 @@ alu <= not_cs_tb & IncPC_tb & negate_cs_tb & OR_cs_tb & and_cs_tb & rotate_left_
 	WHEN T4 =>
 			CASE Present_instruction IS
 					WHEN ld =>
-						selGrb_tb <= '0'; BAout_tb <= '0'; Yin_tb <= '0'; --selRin_tb <= '0';
+						selGrb_tb <= '0'; BAout_tb <= '0'; Yin_tb <= '0'; selRin_tb <= '0';
 						Cout_tb <= '1'; ADD_cs_tb <= '1'; Zin_tb <= '1';
 					WHEN ldi =>
 						selGrb_tb <= '0'; BAout_tb <= '0'; Yin_tb <= '0';selRin_tb <= '0';

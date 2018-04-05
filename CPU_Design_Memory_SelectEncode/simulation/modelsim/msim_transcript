@@ -370,10 +370,10 @@
 # 
 #           File in use by: 15js11  Hostname: BAIN142  ProcessID: 1056
 # 
-#           Attempting to use alternate WLF file "./wlftmjjmzn".
+#           Attempting to use alternate WLF file "./wlftx2rxtt".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftmjjmzn
+#           Using alternate file: ./wlftx2rxtt
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
@@ -1398,6 +1398,7 @@
 #    Time: 60 ns  Iteration: 2  Instance: /datapath_tb/DUT0/Memory/U3/altsyncram_component
 add wave -position insertpoint sim:/datapath_tb/DUT0/PC/*
 add wave -position insertpoint sim:/datapath_tb/DUT0/IR/*
+add wave -position insertpoint sim:/datapath_tb/DUT0/datapath_register_file/*
 add wave -position insertpoint sim:/datapath_tb/DUT0/Multiplexer/*
 restart -f
 run -all
