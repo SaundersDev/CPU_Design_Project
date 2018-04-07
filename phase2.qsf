@@ -169,6 +169,10 @@ set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id pcIncrement_
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1900 ns" -section_id pcIncrement_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME pcIncrement_tb -section_id pcIncrement_tb
 set_global_assignment -name QIP_FILE increment.qip
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name EDA_TEST_BENCH_FILE selectEncode_tb.vhd -section_id selectEncode_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE selectAndEncodeSubComponent1_tb.vhd -section_id selectAndEncodeSubComponent1_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE reg_IR_tb.vhd -section_id reg_IR_tb
@@ -181,9 +185,5 @@ set_global_assignment -name EDA_TEST_BENCH_FILE conFFSubComponent1_tb.vhd -secti
 set_global_assignment -name EDA_TEST_BENCH_FILE flipFlop_tb.vhd -section_id flipFlop_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE ../CPU_Design_Main/memorySubsystem_tb.vhd -section_id memorySubsystem_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE ../CPU_Design_Main/ram_tb.vhd -section_id ram_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE ../CPU_Design_Main/datapath_tb.vhd -section_id datapath_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE CPU_Design_Main/datapath_tb.vhd -section_id datapath_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE pcIncrement_tb.vhd -section_id pcIncrement_tb
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

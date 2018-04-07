@@ -1,0 +1,1392 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Master\Documents\GitHub\CPU_Design_Project\simulation\modelsim
+Ealu
+Z1 w1522964635
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\Master\Documents\GitHub\CPU_Design_Project\simulation\modelsim
+Z6 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/ALU.vhd
+Z7 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/ALU.vhd
+l0
+L26
+V]fBVh_C1[@cHi]>M0n:_H1
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1523071749.890000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/ALU.vhd|
+Z11 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/ALU.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 NOLa`?]FM]Kh@YV`=]edA1
+!i10b 1
+Abehaviour
+R2
+R3
+R4
+DEx4 work 3 alu 0 22 ]fBVh_C1[@cHi]>M0n:_H1
+l164
+L35
+Vo^Y[jd^<L_UzfYfz0I?P>0
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 2c^i^_VP[P_6afZNkid3H1
+!i10b 1
+Eandgate
+Z14 w1522774918
+R3
+R4
+R5
+Z15 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/andGate.vhd
+Z16 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/andGate.vhd
+l0
+L4
+VGf<SJkfEWP0iAIO2IbTJ=1
+R8
+31
+Z17 !s108 1523071749.645000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/andGate.vhd|
+Z19 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/andGate.vhd|
+R12
+R13
+!s100 0ScAR?Me;TGkNE<OB4ocn2
+!i10b 1
+Abehaviour
+R3
+R4
+DEx4 work 7 andgate 0 22 Gf<SJkfEWP0iAIO2IbTJ=1
+l13
+L11
+V6CiH:1Bk^bz;dKj9PAhIe3
+R8
+31
+R17
+R18
+R19
+R12
+R13
+!s100 ;VZ@OJoniX5QEDO7;KbYY3
+!i10b 1
+Eandgate_32vs1
+Z20 w1522964641
+R3
+R4
+R5
+Z21 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/andGate_32vs1.vhd
+Z22 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/andGate_32vs1.vhd
+l0
+L5
+V95FEH^LGo6HDeWzWHU:X_0
+R8
+31
+Z23 !s108 1523071753.325000
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/andGate_32vs1.vhd|
+Z25 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/andGate_32vs1.vhd|
+R12
+R13
+!s100 jM`WW^GGkMclnldfbcZz90
+!i10b 1
+Abehaviour
+R3
+R4
+DEx4 work 13 andgate_32vs1 0 22 95FEH^LGo6HDeWzWHU:X_0
+l15
+L13
+VkdnH7ON]VA[@B8oO1BTgK0
+R8
+31
+R23
+R24
+R25
+R12
+R13
+!s100 :5OWXznRH`1Vd=cV@K7En0
+!i10b 1
+Ebooth_multiplier
+R14
+R2
+Z26 DPx4 ieee 16 std_logic_signed 0 22 E>OLoMaBGQ?hbGgOoNXM^1
+R3
+R4
+R5
+Z27 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/booth_multiplier.vhd
+Z28 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/booth_multiplier.vhd
+l0
+L6
+VU^:]>oKc?mS9Z;`Y[JERW0
+R8
+31
+Z29 !s108 1523071749.205000
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/booth_multiplier.vhd|
+Z31 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/booth_multiplier.vhd|
+R12
+R13
+!s100 ZhU:m;>1S;9[5`6AEdQND1
+!i10b 1
+Abehaviour
+R2
+R26
+R3
+R4
+DEx4 work 16 booth_multiplier 0 22 U^:]>oKc?mS9Z;`Y[JERW0
+l21
+L13
+VbiESOc]YLIed9:=kY_4HL0
+R8
+31
+R29
+R30
+R31
+R12
+R13
+!s100 h`K@S=7NfQldk7acHl7oF2
+!i10b 1
+Econff
+R20
+R3
+R4
+R5
+Z32 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/conFF.vhd
+Z33 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/conFF.vhd
+l0
+L4
+VOZI8L6GR?mAFR3JTA[V[z3
+R8
+31
+Z34 !s108 1523071752.482000
+Z35 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/conFF.vhd|
+Z36 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/conFF.vhd|
+R12
+R13
+!s100 <??jOW9ECRKL=R?AOWZgQ0
+!i10b 1
+Abehaviour
+R3
+R4
+DEx4 work 5 conff 0 22 OZI8L6GR?mAFR3JTA[V[z3
+l43
+L13
+V>aE2PHhnh0G;lm<X2Z:>L0
+R8
+31
+R34
+R35
+R36
+R12
+R13
+!s100 6a=k>@_UjZU[G>9@BSifE2
+!i10b 1
+Econffsubcomponent1
+R20
+R3
+R4
+R5
+Z37 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/conFFSubComponent1.vhd
+Z38 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/conFFSubComponent1.vhd
+l0
+L4
+VhQTfU]cYl>L7eL6L8RAcC2
+R8
+31
+Z39 !s108 1523071752.770000
+Z40 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/conFFSubComponent1.vhd|
+Z41 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/conFFSubComponent1.vhd|
+R12
+R13
+!s100 NknRlNG^BF=524iNCd=mU1
+!i10b 1
+Abehaviour
+R3
+R4
+DEx4 work 18 conffsubcomponent1 0 22 hQTfU]cYl>L7eL6L8RAcC2
+l15
+L13
+V:K86aPWkW@?PFJ4CLeLo_1
+R8
+31
+R39
+R40
+R41
+R12
+R13
+!s100 @YRAh9MmW@]d3:9oemnJ@1
+!i10b 1
+Edatapath
+Z42 w1523070428
+R3
+R4
+R5
+Z43 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/datapath.vhd
+Z44 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/datapath.vhd
+l0
+L4
+VQJK5=3]OUF:HeaaL5Amj73
+R8
+31
+Z45 !s108 1523071755.634000
+Z46 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/datapath.vhd|
+Z47 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/datapath.vhd|
+R12
+R13
+!s100 VXUfm3_in3:f^HLz5YHzz0
+!i10b 1
+Adatapath_arc
+R3
+R4
+DEx4 work 8 datapath 0 22 QJK5=3]OUF:HeaaL5Amj73
+l191
+L34
+V8]:OiU7Lo0QUb?BKXl0TO2
+R8
+31
+R45
+R46
+R47
+R12
+R13
+!s100 FzY4_Id:71TEEC6FW_;?K3
+!i10b 1
+Edatapath_tb
+R1
+R2
+Z48 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z49 DPx4 ieee 16 std_logic_textio 0 22 ?Il0a149GV276[?[UMDWh2
+R3
+R4
+R5
+Z50 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/datapath_tb.vhd
+Z51 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/datapath_tb.vhd
+l0
+L10
+VVnYQmF;H5j_ERb::TX2lJ2
+!s100 @2J9NUZeN3Ai_AhQfOOJf2
+R8
+31
+!i10b 1
+Z52 !s108 1523071758.482000
+Z53 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/datapath_tb.vhd|
+Z54 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/datapath_tb.vhd|
+R12
+R13
+Adatapath_tb_arc
+R2
+R48
+R49
+R3
+R4
+DEx4 work 11 datapath_tb 0 22 VnYQmF;H5j_ERb::TX2lJ2
+l101
+L13
+VfB0f;aBYa=>:G>;J6Eo6[0
+!s100 ikVX@YlhNi3<9Yh@9RE6z2
+R8
+31
+!i10b 1
+R52
+R53
+R54
+R12
+R13
+Edecoder16bits
+R20
+R3
+R4
+R5
+Z55 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/decoder16bits.vhd
+Z56 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/decoder16bits.vhd
+l0
+L4
+VDm;ZKSb?^>[SZ2n<P`Bk;0
+R8
+31
+Z57 !s108 1523071751.313000
+Z58 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/decoder16bits.vhd|
+Z59 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/decoder16bits.vhd|
+R12
+R13
+!s100 PiAgYhL]^SXlAeC3Fd6AX1
+!i10b 1
+Abehavioural
+R3
+R4
+DEx4 work 13 decoder16bits 0 22 Dm;ZKSb?^>[SZ2n<P`Bk;0
+l14
+L13
+V5zk@36;:kbD=H5Xc;VQ8]2
+R8
+31
+R57
+R58
+R59
+R12
+R13
+!s100 6?IMLMG5:h3SjUZ1:kK>`1
+!i10b 1
+Edecoder4bits
+R20
+R3
+R4
+R5
+Z60 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/decoder4bits.vhd
+Z61 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/decoder4bits.vhd
+l0
+L4
+VWDcm_0ZJ<E8`]H0LkJ2d51
+R8
+31
+Z62 !s108 1523071753.751000
+Z63 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/decoder4bits.vhd|
+Z64 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/decoder4bits.vhd|
+R12
+R13
+!s100 >`fcnW_UJzB>FWOB`a5TP0
+!i10b 1
+Abehavioural
+R3
+R4
+DEx4 work 12 decoder4bits 0 22 WDcm_0ZJ<E8`]H0LkJ2d51
+l14
+L13
+Vc=1291JDXFof=T?k?__fj2
+R8
+31
+R62
+R63
+R64
+R12
+R13
+!s100 jd=i1D_hPc:Qko1?7AjDc2
+!i10b 1
+Edivider
+R14
+R3
+R4
+R5
+Z65 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/divider.vhd
+Z66 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/divider.vhd
+l0
+L42
+VBm@<bLk:6O]8nn5YezUPU3
+R8
+31
+Z67 !s108 1523071748.974000
+Z68 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/divider.vhd|
+Z69 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/divider.vhd|
+R12
+R13
+!s100 ob5UzFOOCE8BS[CcKzT?;1
+!i10b 1
+Asyn
+R3
+R4
+DEx4 work 7 divider 0 22 Bm@<bLk:6O]8nn5YezUPU3
+l77
+L53
+V<@J=7[g;Dah>3H[3;fb@S1
+R8
+31
+R67
+R68
+R69
+R12
+R13
+!s100 3EiSEgQQY7B39=noJmO^]0
+!i10b 1
+Eencoder32bits
+R1
+R3
+R4
+R5
+Z70 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/encoder32bits.vhd
+Z71 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/encoder32bits.vhd
+l0
+L4
+V7jW4LbLY^L]:HiP:E@X>T2
+R8
+31
+Z72 !s108 1523071748.723000
+Z73 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/encoder32bits.vhd|
+Z74 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/encoder32bits.vhd|
+R12
+R13
+!s100 D0kdWGA2`aeR8oa7nSFoD0
+!i10b 1
+Abehavioural
+R3
+R4
+DEx4 work 13 encoder32bits 0 22 7jW4LbLY^L]:HiP:E@X>T2
+l14
+L13
+V:YbYl>P25YnD_HTD@D5>D0
+R8
+31
+R72
+R73
+R74
+R12
+R13
+!s100 N^i6APAmPmN]iSo8lA?G13
+!i10b 1
+Eflipflop
+R20
+R3
+R4
+R5
+Z75 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/flipFlop.vhd
+Z76 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/flipFlop.vhd
+l0
+L4
+V<1B27ZMFmPQlEde;Wz`6=0
+R8
+31
+Z77 !s108 1523071754.094000
+Z78 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/flipFlop.vhd|
+Z79 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/flipFlop.vhd|
+R12
+R13
+!s100 87TEM3`YLzo[mB7dJGNDE0
+!i10b 1
+Abehaviour
+R3
+R4
+DEx4 work 8 flipflop 0 22 <1B27ZMFmPQlEde;Wz`6=0
+l13
+L12
+V0:h<[mdZgOHlVSNh4ETYP1
+R8
+31
+R77
+R78
+R79
+R12
+R13
+!s100 izfV`Jo<I[gJId7UmcaOU2
+!i10b 1
+Efulladder
+R14
+R3
+R4
+R5
+Z80 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/fullAdder.vhd
+Z81 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/fullAdder.vhd
+l0
+L4
+VjQIb<8O02KlO_?[U2?aE20
+R8
+31
+Z82 !s108 1523071747.979000
+Z83 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/fullAdder.vhd|
+Z84 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/fullAdder.vhd|
+R12
+R13
+!s100 <gdc8zSW65C?8^@c;S:hX3
+!i10b 1
+Abehaviour
+R3
+R4
+DEx4 work 9 fulladder 0 22 jQIb<8O02KlO_?[U2?aE20
+l14
+L12
+VVSWzSPH97e;KDda?FYSni2
+R8
+31
+R82
+R83
+R84
+R12
+R13
+!s100 <18dbzdX2iocJ5_3XUL:o3
+!i10b 1
+Eincrement
+R20
+R3
+R4
+R5
+Z85 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/increment.vhd
+Z86 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/increment.vhd
+l0
+L42
+V7DYmN68TgAJcW6^N0Vfm33
+R8
+31
+Z87 !s108 1523071757.536000
+Z88 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/increment.vhd|
+Z89 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/increment.vhd|
+R12
+R13
+!s100 o<JQBhKHZTPj=<`kHlON>1
+!i10b 1
+Asyn
+R3
+R4
+DEx4 work 9 increment 0 22 7DYmN68TgAJcW6^N0Vfm33
+l74
+L51
+VZCnCG[J:ZkbOzSCd:kS=51
+R8
+31
+R87
+R88
+R89
+R12
+R13
+!s100 2LbgCOIF59h7VUADb[FR<2
+!i10b 1
+Eio_units
+R20
+R3
+R4
+R5
+Z90 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/IO_units.vhd
+Z91 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/IO_units.vhd
+l0
+L4
+V:oF^9o7KBC:XD=K?z4C4]1
+R8
+31
+Z92 !s108 1523071757.185000
+Z93 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/IO_units.vhd|
+Z94 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/IO_units.vhd|
+R12
+R13
+!s100 m=OGgaQP8TLi03B85Tezf3
+!i10b 1
+Abehaviour
+R3
+R4
+DEx4 work 8 io_units 0 22 :oF^9o7KBC:XD=K?z4C4]1
+l28
+L18
+VS2SQb__jh9Nk3>30nViMX0
+R8
+31
+R92
+R93
+R94
+R12
+R13
+!s100 92dRQ?P?^ZJ?<I1B[LP<n1
+!i10b 1
+Ememorysubsystem
+R1
+R3
+R4
+R5
+Z95 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/memorySubsystem.vhd
+Z96 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/memorySubsystem.vhd
+l0
+L4
+VYM:L<V3E^h1VO35`Mg[N[3
+R8
+31
+Z97 !s108 1523071756.503000
+Z98 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/memorySubsystem.vhd|
+Z99 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/memorySubsystem.vhd|
+R12
+R13
+!s100 Y:e6K@bm@U243@c6[WV[91
+!i10b 1
+Abehaviour
+R3
+R4
+DEx4 work 15 memorysubsystem 0 22 YM:L<V3E^h1VO35`Mg[N[3
+l59
+L14
+V2:33l^Gkbdbjm8m;1NG413
+R8
+31
+R97
+R98
+R99
+R12
+R13
+!s100 PT_hXm`fS:Q>oa_=FjW9z2
+!i10b 1
+Emultiplexer32bits
+R14
+R3
+R4
+R5
+Z100 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/multiplexer32bits.vhd
+Z101 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/multiplexer32bits.vhd
+l0
+L4
+Veo_4YGcMDo?]OPX0aMId?3
+R8
+31
+Z102 !s108 1523071743.705000
+Z103 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/multiplexer32bits.vhd|
+Z104 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/multiplexer32bits.vhd|
+R12
+R13
+!s100 C]CjNQ>FHcMIXBH>FB2S81
+!i10b 1
+Abehavioural
+R3
+R4
+DEx4 work 17 multiplexer32bits 0 22 eo_4YGcMDo?]OPX0aMId?3
+l19
+L18
+VE^SnMTW_22JiW`@PeLf[73
+R8
+31
+R102
+R103
+R104
+R12
+R13
+!s100 1]@Lz93QZzhaJAnjQL3JY3
+!i10b 1
+Emultiplexermdr
+R20
+R3
+R4
+R5
+Z105 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/multiplexerMDR.vhd
+Z106 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/multiplexerMDR.vhd
+l0
+L4
+VB6XNeV7HQjgZW;UT8^9oc0
+R8
+31
+Z107 !s108 1523071750.479000
+Z108 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/multiplexerMDR.vhd|
+Z109 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/multiplexerMDR.vhd|
+R12
+R13
+!s100 b;CXg^nNJ<Y_0nGdJ6R[V2
+!i10b 1
+Abehaviour
+R3
+R4
+DEx4 work 14 multiplexermdr 0 22 B6XNeV7HQjgZW;UT8^9oc0
+l13
+L12
+V>A@60YJ>QR[XXeH>n`cBf2
+R8
+31
+R107
+R108
+R109
+R12
+R13
+!s100 FW<<<8;h5@zS2hjiW<Y`20
+!i10b 1
+Eneggate
+R14
+R3
+R4
+R5
+Z110 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/negGate.vhd
+Z111 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/negGate.vhd
+l0
+L4
+VzVIILBPgleOjlmI:1l6XS0
+R8
+31
+Z112 !s108 1523071747.612000
+Z113 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/negGate.vhd|
+Z114 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/negGate.vhd|
+R12
+R13
+!s100 zX3Sn;PRhOWk3<_XWR4IY3
+!i10b 1
+Abehaviour
+R3
+R4
+DEx4 work 7 neggate 0 22 zVIILBPgleOjlmI:1l6XS0
+l35
+L13
+V`7RjzS47iJn:8JfU<Qz:e2
+R8
+31
+R112
+R113
+R114
+R12
+R13
+!s100 DhMh9UFaJ;jQYL;d=XQoL0
+!i10b 1
+Enotgate
+R14
+R3
+R4
+R5
+Z115 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/notGate.vhd
+Z116 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/notGate.vhd
+l0
+L4
+VE]G79dNcC>NWG_?3`MGU30
+R8
+31
+Z117 !s108 1523071747.347000
+Z118 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/notGate.vhd|
+Z119 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/notGate.vhd|
+R12
+R13
+!s100 8CW4^Kk@KTo0SYXjm?M[<3
+!i10b 1
+Abehaviour
+R3
+R4
+DEx4 work 7 notgate 0 22 E]G79dNcC>NWG_?3`MGU30
+l13
+L11
+VPOck9EQRmnzz1R3E?WWAC1
+R8
+31
+R117
+R118
+R119
+R12
+R13
+!s100 ==F7^^a5YUea?Kg<V7Af40
+!i10b 1
+Eorgate
+R14
+R3
+R4
+R5
+Z120 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/orGate.vhd
+Z121 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/orGate.vhd
+l0
+L4
+V_KbS2HHLJ`UElk_Yb6BLb3
+R8
+31
+Z122 !s108 1523071747.079000
+Z123 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/orGate.vhd|
+Z124 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/orGate.vhd|
+R12
+R13
+!s100 FRi9f7Ac8Z8J9a?f]7jE51
+!i10b 1
+Abehaviour
+R3
+R4
+DEx4 work 6 orgate 0 22 _KbS2HHLJ`UElk_Yb6BLb3
+l13
+L11
+VV=jN^900GmbWIam4AW8_k2
+R8
+31
+R122
+R123
+R124
+R12
+R13
+!s100 78KblhLGCXVO=8<1Olb]W2
+!i10b 1
+Eram
+Z125 w1522964642
+R3
+R4
+R5
+Z126 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/ram.vhd
+Z127 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/ram.vhd
+l0
+L42
+V?LnGh@[I_PZZMAX[M1UKf0
+R8
+31
+Z128 !s108 1523071757.967000
+Z129 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/ram.vhd|
+Z130 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/ram.vhd|
+R12
+R13
+!s100 V:Jf`5B9iaeOO5FQi9IRU2
+!i10b 1
+Asyn
+R3
+R4
+DEx4 work 3 ram 0 22 ?LnGh@[I_PZZMAX[M1UKf0
+l88
+L55
+VHBK8H=h_>8>]]4ZmCIaff0
+R8
+31
+R128
+R129
+R130
+R12
+R13
+!s100 ]E>X_1JR:EICP>jUUWzVT1
+!i10b 1
+Ereg_32
+R125
+R3
+R4
+R5
+Z131 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/reg_32.vhd
+Z132 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/reg_32.vhd
+l0
+L4
+VS]Yk^6PkFo8C^:QOgIiQ21
+R8
+31
+Z133 !s108 1523071750.216000
+Z134 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/reg_32.vhd|
+Z135 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/reg_32.vhd|
+R12
+R13
+!s100 1b^?QoFe9dSLcgdFSB;8@1
+!i10b 1
+Aarc
+R3
+R4
+DEx4 work 6 reg_32 0 22 S]Yk^6PkFo8C^:QOgIiQ21
+l13
+L12
+VE>VS@j<BX5Fb9j]R^nSNZ3
+R8
+31
+R133
+R134
+R135
+R12
+R13
+!s100 oHOj18]<;IISBoLOTYXe82
+!i10b 1
+Ereg_zero
+R125
+R3
+R4
+R5
+Z136 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/reg_Zero.vhd
+Z137 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/reg_Zero.vhd
+l0
+L4
+V2cUb@?RR@U?H?Pg[1:Zdo3
+R8
+31
+Z138 !s108 1523071753.040000
+Z139 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/reg_Zero.vhd|
+Z140 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/reg_Zero.vhd|
+R12
+R13
+!s100 2>lLYThJ8QCe58gHG5hXX0
+!i10b 1
+Abehaviour
+R3
+R4
+DEx4 work 8 reg_zero 0 22 2cUb@?RR@U?H?Pg[1:Zdo3
+l32
+L12
+V3EFkTZEfl6YDlinSbFXH72
+R8
+31
+R138
+R139
+R140
+R12
+R13
+!s100 nmXRzVnTR_?Im2QWiT9:V0
+!i10b 1
+Eregisterfile
+Z141 w1522964636
+R3
+R4
+R5
+Z142 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/registerFile.vhd
+Z143 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/registerFile.vhd
+l0
+L6
+Vn_bWmR`oFaS8^m9BRb1VD0
+R8
+31
+Z144 !s108 1523071755.979000
+Z145 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/registerFile.vhd|
+Z146 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/registerFile.vhd|
+R12
+R13
+!s100 MKX@?Y7UjX?2C_lDmzZbm2
+!i10b 1
+Abehaviour
+R3
+R4
+DEx4 work 12 registerfile 0 22 n_bWmR`oFaS8^m9BRb1VD0
+l40
+L19
+VLLW<g[EL371XAjEYOIho33
+R8
+31
+R144
+R145
+R146
+R12
+R13
+!s100 Hk8a9OggG^h57L?CPgR[70
+!i10b 1
+Eregmar
+R141
+R3
+R4
+R5
+Z147 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/regMAR.vhd
+Z148 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/regMAR.vhd
+l0
+L4
+V^B9[_Y>D71S;Rl_M@CWHM3
+R8
+31
+Z149 !s108 1523071756.850000
+Z150 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/regMAR.vhd|
+Z151 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Main/regMAR.vhd|
+R12
+R13
+!s100 `G80]T;c=<zcEUHj=[`Wg2
+!i10b 1
+Aarc
+R3
+R4
+DEx4 work 6 regmar 0 22 ^B9[_Y>D71S;Rl_M@CWHM3
+l13
+L12
+VdRz>HghD;;hXJE;E;DI]G1
+R8
+31
+R149
+R150
+R151
+R12
+R13
+!s100 ??OejS3HWEj^7QEl_76KU2
+!i10b 1
+Erotateleft
+R14
+R3
+R4
+R5
+Z152 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/rotateLeft.vhd
+Z153 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/rotateLeft.vhd
+l0
+L6
+V:D5;neGK`aGfbiPMNc4fR1
+R8
+31
+Z154 !s108 1523071746.792000
+Z155 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/rotateLeft.vhd|
+Z156 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/rotateLeft.vhd|
+R12
+R13
+!s100 ^Z0zi[W3>]:TbVV<jWMCJ1
+!i10b 1
+Abehaviour
+R3
+R4
+DEx4 work 10 rotateleft 0 22 :D5;neGK`aGfbiPMNc4fR1
+l15
+L13
+VXd7cYOT^X;3<Dd6cYUKQm3
+R8
+31
+R154
+R155
+R156
+R12
+R13
+!s100 5I;LOGN^ohSZg4bW6CkTZ1
+!i10b 1
+Erotateright
+R14
+R3
+R4
+R5
+Z157 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/rotateRight.vhd
+Z158 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/rotateRight.vhd
+l0
+L6
+VBVjJ0M3hedVb7c7M0Z[hn3
+R8
+31
+Z159 !s108 1523071746.534000
+Z160 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/rotateRight.vhd|
+Z161 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/rotateRight.vhd|
+R12
+R13
+!s100 H<hc@P@J3oRdl88m?H@603
+!i10b 1
+Abehaviour
+R3
+R4
+DEx4 work 11 rotateright 0 22 BVjJ0M3hedVb7c7M0Z[hn3
+l15
+L13
+V[8THU8m5^ooWi[c_Wdl?K3
+R8
+31
+R159
+R160
+R161
+R12
+R13
+!s100 e>n]U5HWP=eeD;J4moh=Z0
+!i10b 1
+Eselectandencodelogic
+R125
+R3
+R4
+R5
+Z162 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/selectAndEncodeLogic.vhd
+Z163 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/selectAndEncodeLogic.vhd
+l0
+L4
+VBz9:MRAc;fn3MKX3LE?:k2
+R8
+31
+Z164 !s108 1523071751.017000
+Z165 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/selectAndEncodeLogic.vhd|
+Z166 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/selectAndEncodeLogic.vhd|
+R12
+R13
+!s100 b4WAeoEzz=gi?BFk0^z1b3
+!i10b 1
+Abehaviour
+R3
+R4
+DEx4 work 20 selectandencodelogic 0 22 Bz9:MRAc;fn3MKX3LE?:k2
+l49
+L15
+VnRo73<RUiPYF<PO<Y<BDb0
+R8
+31
+R164
+R165
+R166
+R12
+R13
+!s100 <>`8cH_>o[MDZk`GWSB5W3
+!i10b 1
+Eselectandencodesubcomponent1
+R125
+R3
+R4
+R5
+Z167 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/selectAndEncodeSubComponent1.vhd
+Z168 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/selectAndEncodeSubComponent1.vhd
+l0
+L4
+V@meZ3@07mjR[P8:C2;g;93
+R8
+31
+Z169 !s108 1523071751.571000
+Z170 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/selectAndEncodeSubComponent1.vhd|
+Z171 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/selectAndEncodeSubComponent1.vhd|
+R12
+R13
+!s100 fRKOaL5?bKAVckm?^`Y:@1
+!i10b 1
+Abehaviour
+R3
+R4
+DEx4 work 28 selectandencodesubcomponent1 0 22 @meZ3@07mjR[P8:C2;g;93
+l13
+L12
+V;Lzc=WcLWUzVGL`]W^oUi2
+R8
+31
+R169
+R170
+R171
+R12
+R13
+!s100 oe83jXC_?ZWzL;8a5gEHD3
+!i10b 1
+Eselectandencodesubcomponent2
+R125
+R3
+R4
+R5
+Z172 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/selectAndEncodeSubComponent2.vhd
+Z173 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/selectAndEncodeSubComponent2.vhd
+l0
+L4
+VJiNOceB8O=7;Pc_n2X0DD1
+R8
+31
+Z174 !s108 1523071751.880000
+Z175 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/selectAndEncodeSubComponent2.vhd|
+Z176 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/selectAndEncodeSubComponent2.vhd|
+R12
+R13
+!s100 3;_?bBUU?lAz7NHoR_KJI2
+!i10b 1
+Abehaviour
+R3
+R4
+DEx4 work 28 selectandencodesubcomponent2 0 22 JiNOceB8O=7;Pc_n2X0DD1
+l14
+L13
+VdYTFK105IC_ga82eLUJ<92
+R8
+31
+R174
+R175
+R176
+R12
+R13
+!s100 m?;dcoUeVkUKh0Al>QX=j0
+!i10b 1
+Eselectandencodesubcomponent3
+R125
+R3
+R4
+R5
+Z177 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/selectAndEncodeSubComponent3.vhd
+Z178 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/selectAndEncodeSubComponent3.vhd
+l0
+L5
+V]aWaeFXgX=<WB:`eOE7eH3
+R8
+31
+Z179 !s108 1523071754.554000
+Z180 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/selectAndEncodeSubComponent3.vhd|
+Z181 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/selectAndEncodeSubComponent3.vhd|
+R12
+R13
+!s100 K8FNGRlDXjCjFed]g=LMA0
+!i10b 1
+Abehaviour
+R3
+R4
+DEx4 work 28 selectandencodesubcomponent3 0 22 ]aWaeFXgX=<WB:`eOE7eH3
+l14
+L12
+VjjoBo@[n?RZaWM:kj4gQZ1
+R8
+31
+R179
+R180
+R181
+R12
+R13
+!s100 [lDn=UYVZz=^lYO_3G0Ym3
+!i10b 1
+Eshiftleft
+R14
+R2
+R48
+R3
+R4
+R5
+Z182 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/shiftLeft.vhd
+Z183 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/shiftLeft.vhd
+l0
+L6
+Vl48A3NKQHaJNVBb;iZ?gz2
+R8
+31
+Z184 !s108 1523071746.248000
+Z185 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/shiftLeft.vhd|
+Z186 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/shiftLeft.vhd|
+R12
+R13
+!s100 @koU9K5fj]j=7iXU2;PNY2
+!i10b 1
+Abehaviour
+R2
+R48
+R3
+R4
+DEx4 work 9 shiftleft 0 22 l48A3NKQHaJNVBb;iZ?gz2
+l16
+L13
+V8d;BgR4LZ6bDjOPY9ZFfJ3
+R8
+31
+R184
+R185
+R186
+R12
+R13
+!s100 LTYPH6h0RFcgILCO`<zad0
+!i10b 1
+Eshiftright
+R14
+R3
+R4
+R5
+Z187 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/shiftRight.vhd
+Z188 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/shiftRight.vhd
+l0
+L6
+VQaW^Pf^f>IO12C?HAZdh41
+R8
+31
+Z189 !s108 1523071745.893000
+Z190 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/shiftRight.vhd|
+Z191 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/shiftRight.vhd|
+R12
+R13
+!s100 4UBom0]H>mRLZZabFa]TK2
+!i10b 1
+Abehaviour
+R3
+R4
+DEx4 work 10 shiftright 0 22 QaW^Pf^f>IO12C?HAZdh41
+l15
+L13
+VReW7>XA33I8<XQJSf0V6m1
+R8
+31
+R189
+R190
+R191
+R12
+R13
+!s100 M5iGi6ocPKJg<6zFU=i6h1
+!i10b 1
+Eshiftrightarithmetic
+R14
+R3
+R4
+R5
+Z192 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/shiftRightArithmetic.vhd
+Z193 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/shiftRightArithmetic.vhd
+l0
+L6
+VkIO;_fGneMjFKCTgOQZIf2
+R8
+31
+Z194 !s108 1523071745.613000
+Z195 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/shiftRightArithmetic.vhd|
+Z196 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/shiftRightArithmetic.vhd|
+R12
+R13
+!s100 nkE1aa^6R36PVzgl1D0hE1
+!i10b 1
+Abehaviour
+R3
+R4
+DEx4 work 20 shiftrightarithmetic 0 22 kIO;_fGneMjFKCTgOQZIf2
+l16
+L13
+VNFzPN85XY4]eEO??Db6Ub3
+R8
+31
+R194
+R195
+R196
+R12
+R13
+!s100 m]GHl>cZzHaobPggf`a`31
+!i10b 1
+Ethirtytwobitripplecarryadder
+R14
+R3
+R4
+R5
+Z197 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/thirtyTwoBitRippleCarryAdder.vhd
+Z198 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/thirtyTwoBitRippleCarryAdder.vhd
+l0
+L6
+Vg1OjKGA=M>i;O4l]0@?jo2
+R8
+31
+Z199 !s108 1523071745.112000
+Z200 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/thirtyTwoBitRippleCarryAdder.vhd|
+Z201 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/thirtyTwoBitRippleCarryAdder.vhd|
+R12
+R13
+!s100 3Vh<inmWhhT9RiHj^gJKU3
+!i10b 1
+Abdf_type
+R3
+R4
+DEx4 work 28 thirtytwobitripplecarryadder 0 22 g1OjKGA=M>i;O4l]0@?jo2
+l33
+L17
+VNjKIUVY;:ZGGY_ainG0Y=3
+R8
+31
+R199
+R200
+R201
+R12
+R13
+!s100 ZNAK1OgKU@^^bc9KnRz`Q1
+!i10b 1
+Ethirtytwobitripplecarrysubtractor
+R14
+R2
+R3
+R4
+R5
+Z202 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/thirtyTwoBitRippleCarrySubtractor.vhd
+Z203 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/thirtyTwoBitRippleCarrySubtractor.vhd
+l0
+L5
+VX7XRmdImHRP]1:HMb<^>00
+R8
+31
+Z204 !s108 1523071744.535000
+Z205 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/thirtyTwoBitRippleCarrySubtractor.vhd|
+Z206 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/thirtyTwoBitRippleCarrySubtractor.vhd|
+R12
+R13
+!s100 h69mUa<;6bR2_7elOC0E]2
+!i10b 1
+Abehaviour
+R2
+R3
+R4
+DEx4 work 33 thirtytwobitripplecarrysubtractor 0 22 X7XRmdImHRP]1:HMb<^>00
+l43
+L15
+Vo8XAV4R]0]8@D_jGVYXHV3
+R8
+31
+R204
+R205
+R206
+R12
+R13
+!s100 Bzg8<H:IE:eEgZK6;7G3R3
+!i10b 1
+Ezregister
+R1
+R2
+R26
+R3
+R4
+R5
+Z207 8C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/zRegister.vhd
+Z208 FC:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/zRegister.vhd
+l0
+L6
+VT8GiR1>d4YMMiC>ME0__62
+R8
+31
+Z209 !s108 1523071744.189000
+Z210 !s90 -reportprogress|300|-93|-work|work|C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/zRegister.vhd|
+Z211 !s107 C:/Users/Master/Documents/GitHub/CPU_Design_Project/CPU_Design_Alu/ALU/zRegister.vhd|
+R12
+R13
+!s100 MSV`^71;ML;zXc1EKm:T:0
+!i10b 1
+Abehaviour
+R2
+R26
+R3
+R4
+DEx4 work 9 zregister 0 22 T8GiR1>d4YMMiC>ME0__62
+l15
+L14
+V`4598PbkoeFFo0GTOkkZK1
+R8
+31
+R209
+R210
+R211
+R12
+R13
+!s100 j3@_j:AAaoPn^n7bZFni73
+!i10b 1

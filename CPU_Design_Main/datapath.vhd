@@ -151,24 +151,23 @@ component memorySubsystem is
 	);
 end component;
 --the main data path bus aka BusMuxOut
-
-<<<<<<< HEAD
-component IO_Units IS 
-	PORT
-	(
-		clk :  IN  STD_LOGIC;
-		clr :  IN  STD_LOGIC;
-		In_cs :  IN  STD_LOGIC;
-		Out_cs :  IN  STD_LOGIC;
-		toInPort :  IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
-		toOutPort :  IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
-		toBus :  OUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
-		toIO :  OUT  STD_LOGIC_VECTOR(31 DOWNTO 0)
-	);
-END component;
+--
+--component IO_Units IS 
+--	PORT
+--	(
+--		clk :  IN  STD_LOGIC;
+--		clr :  IN  STD_LOGIC;
+--		In_cs :  IN  STD_LOGIC;
+--		Out_cs :  IN  STD_LOGIC;
+--		toInPort :  IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
+--		toOutPort :  IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
+--		toBus :  OUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
+--		toIO :  OUT  STD_LOGIC_VECTOR(31 DOWNTO 0)
+--	);
+--END component;
 
 --internal signals****************************************************************************** 
-=======
+
 ----bus signals coming out of register files into the bus
 signal	busR0, busR1, busR2, busR3,
 		busR4, busR5, busR6, busR7,
@@ -184,7 +183,6 @@ signal registerFileIn : std_logic_vector(15 downto 0);
 signal encoderControlBus : std_logic_vector(4 downto 0);
 
 --NULLS ADDED COMPONENTS
->>>>>>> phase2DrewProgre
 signal YtoA : std_logic_vector(31 downto 0);
 signal CtoZ : std_logic_vector(63 downto 0);
 --signal MDMuxToMDR : std_logic_vector(31 downto 0);
@@ -207,21 +205,6 @@ IR: reg_32	port map(
 		BusMuxOut => BusMuxOut,
 		BusMuxIn => busIRin
 	);
-<<<<<<< HEAD
-U2: memorySubsystem port map(
-		BusMuxOut		=> BusMuxOut,
-		Mdatain			=> Mdatain,
-		BusMuxInMDR		=> busMDRIn,
-		BusMuxInRAM		=> busRAMin,
-		BusMuxInMAR		=> busMARin,
-		MDRin				=> MDRin,
-		MARin				=> MARin,
-		clock				=> Clock,
-		clear				=> clr,
-		readSig			=> ramReadSig,
-		writeSig			=> ramWriteSig,
-		mdrReadSig		=> ReadChannel	--mdrReadSig
-	);	
 --U2: reg_32	port map(
 --		clk => Clock,
 --		clr	=> clr,
@@ -237,16 +220,6 @@ U2: memorySubsystem port map(
 --		BusMuxIn => busMDRin
 --	);	
 --		
-U3: IO_Units port map(
-		clk => Clock,
-		clr 	=> clr,
-		In_cs => Inportin,
-		Out_cs => OutPortin,
-		toInPort => inputValuesHere,
-		toOutPort => busMuxOut,
-		toBus 	 => busInPortin,
-		toIO 		=> busOutPortIn
-	);
 ----inport	
 --U3: reg_32	port map(
 --		clk => Clock,
@@ -263,9 +236,7 @@ U3: IO_Units port map(
 --		BusMuxOut => BusMuxOut,
 --		BusMuxIn => busOutPortin
 --);
---hi
-U4: reg_32	port map(
-=======
+
 --mar	
 IO: IO_Units port map( 
 		clk => Clock,
@@ -280,19 +251,14 @@ IO: IO_Units port map(
 
 --hi
 HI: reg_32	port map(
->>>>>>> phase2DrewProgre
 		clk => Clock,
 		clr	=> clr,
 		Rin => HIin,
 		BusMuxOut => BusMuxOut,
 		BusMuxIn => busHIin
 );
---lo
-<<<<<<< HEAD
-U5: reg_32	port map(
-=======
+
 LO: reg_32	port map(
->>>>>>> phase2DrewProgre
 		clk => Clock,
 		clr	=> clr,
 		Rin => LOin,
@@ -300,11 +266,7 @@ LO: reg_32	port map(
 		BusMuxIn => busLOin
 );
 --regular registers
-<<<<<<< HEAD
-U6: registerFile port map(
-=======
 datapath_register_file: registerFile port map(
->>>>>>> phase2DrewProgre
 		clk => Clock,
 		clr => clr,
 		BAout => selBAout,
@@ -329,11 +291,9 @@ datapath_register_file: registerFile port map(
 	);
 
 --y register
-<<<<<<< HEAD
-U7: reg_32	port map(
-=======
+
 Y: reg_32	port map(
->>>>>>> phase2DrewProgre
+
 		clk => Clock,
 		clr	=> clr,
 		Rin => Yin,
@@ -341,11 +301,8 @@ Y: reg_32	port map(
 		BusMuxIn => YtoA
 );
 --z register	
-<<<<<<< HEAD
-U8: zRegister port map(
-=======
+
 Z: zRegister port map(
->>>>>>> phase2DrewProgre
 		C => CtoZ,
 		clk => Clock,
 		Zin => Zin,
@@ -353,15 +310,6 @@ Z: zRegister port map(
 		Zlow => busZlowin
 	);
 
---	encoder for bus
-<<<<<<< HEAD
-U9: encoder32bits port map(
-		input	=> registerOut,
-		output 	=> encoderControlBus
-	);
---	multiplexer for bus
-U10: multiplexer32bits port map(
-=======
 Encoder: encoder32bits port map(
 		input(31 downto 24)	=> x"00",
 		input(23)	=> Cout,
@@ -377,7 +325,6 @@ Encoder: encoder32bits port map(
 	);
 --	multiplexer for bus
 Multiplexer: multiplexer32bits port map(
->>>>>>> phase2DrewProgre
 		BusMuxIn_R0		=> busR0, 
 		BusMuxIn_R1 	=> busR1, 
 		BusMuxIn_R2 	=> busR2, 
@@ -406,40 +353,12 @@ Multiplexer: multiplexer32bits port map(
 		encoderSignal 	=> encoderControlBus
 	);
 --alu	
-<<<<<<< HEAD
-U11: ALU port map(
-=======
 Arithmetic: ALU port map(
->>>>>>> phase2DrewProgre
 		control => logicALUSelect,
 		A => YtoA,
 		B => BusMuxOut,
 		C => CtoZ
 	);
-<<<<<<< HEAD
-----multiplexerMDR
---U14: multiplexerMDR port map(
---		BusMuxOut 	=> BusMuxOut,
---		Mdatain		=> Mdatain,
---		ReadChannel => ReadChannel, 
---	);
---ConFFLogic
-U12: conFF port map(
-		clk			=>  Clock,
-		IRout			=> busIRin, --Or IRtoConFFLogic? Figure out how this works
-		BusMuxOut	=> BusMuxOut,
-		CONout		=> CONout
-);
-U13: selectAndEncodeLogic port map(
-		IRin		=> busIRin,
-		Gra		=> selGra,
-		Grb		=> selGrb,
-		Grc		=> selGrc,
-		Rin		=> selRin,
-		Rout		=> selRout,
-		BAout		=> BAout,
-		BusMuxOut	=> BusMuxOut,
-=======
 
 --Select and Encode Logic
 SelectEncode: selectAndEncodeLogic port map(
@@ -451,7 +370,6 @@ SelectEncode: selectAndEncodeLogic port map(
 		Rout => selRout,
 		BAout => selBAout,
 		BusMuxOut => BusMuxOut,
->>>>>>> phase2DrewProgre
 		C_sign_extended => busSignExtendedIn,
 		r0in_r15in_Decoded => registerFileIn(15 downto 0),
 		r0out_r15out_Decoded	=> regOut

@@ -18,11 +18,7 @@ architecture behaviour of pcIncrement is
 		port(
 			A		:   in std_logic_vector(31 downto 0);
 			B		:	in std_logic_vector(31 downto 0);
-<<<<<<< HEAD
 			Cin		:	in std_logic;
-=======
-			Cin	:	in std_logic;
->>>>>>> 2704547c977d60c94936c2aac88b2ba7a81f9dda
 			S		:	out std_logic_vector(31 downto 0);
 			Cout 	:	out std_logic
 		);
